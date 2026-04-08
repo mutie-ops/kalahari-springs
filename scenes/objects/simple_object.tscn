@@ -7,9 +7,9 @@
 size = Vector2(10, 4)
 
 [node name="SimpleObject" type="StaticBody2D"]
-z_index = -1
 collision_mask = 0
 script = ExtResource("1_n4sul")
+size = 3
 style = 1
 random = true
 
@@ -17,8 +17,7 @@ random = true
 texture = ExtResource("1_jad2w")
 hframes = 4
 vframes = 2
-frame = 4
+frame = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_n4sul")
-disabled = true

@@ -1,0 +1,10 @@
+title: Program
+---
+// demonstrates declare statement 
+
+/// If the player has been told they should talk to the ship.
+<<declare $should_see_ship = false>>
+
+/// Whether the ship has relayed Sally's warning to the player.
+<<declare $sally_warning = false>>
+===

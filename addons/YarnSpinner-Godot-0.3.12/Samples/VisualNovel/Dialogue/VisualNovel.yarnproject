@@ -1,0 +1,20 @@
+{
+  "projectFileVersion": 3,
+  "sourceFiles": [
+    "**/*.yarn"
+  ],
+  "excludeFiles": [],
+  "localisation": {
+    "ja": {
+      "assets": "",
+      "strings": "res://Samples/VisualNovel/Localization/VisualNovel_ja.csv"
+    },
+    "es": {
+      "assets": "",
+      "strings": "res://Samples/VisualNovel/Localization/VisualNovel_es.csv"
+    }
+  },
+  "baseLanguage": "en",
+  "compilerOptions": {},
+  "definitionsFiles": []
+}

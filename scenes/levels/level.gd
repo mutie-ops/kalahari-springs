@@ -2,12 +2,12 @@ extends Node2D
 
 var plant_scene = preload("res://scenes/objects/plant.tscn")
 var plant_info_scene = preload("res://scenes/ui/plant_info.tscn")
-var projectile_scene = preload("res://scenes/machines/projectile.tscn")
+var projectile_scene = preload("res://scenes/objects/machines/projectile.tscn")
 var blob_scene = preload("res://scenes/objects/blob.tscn")
 var machine_scenes = {
-	Enum.Machine.SPRINKLER: preload("res://scenes/machines/sprinkler.tscn"),
-	Enum.Machine.SCARECROW: preload("res://scenes/machines/scare_crow.tscn"),
-	Enum.Machine.FISHER: preload("res://scenes/machines/fisher.tscn")}
+	Enum.Machine.SPRINKLER: preload("res://scenes/objects/machines/sprinkler.tscn"),
+	Enum.Machine.SCARECROW: preload("res://scenes/objects/machines/scare_crow.tscn"),
+	Enum.Machine.FISHER: preload("res://scenes/objects/machines/fisher.tscn")}
 var used_cells: Array[Vector2i]
 var raining: bool:
 	set(value):

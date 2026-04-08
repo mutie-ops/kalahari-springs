@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Enum="*res://global/enums.gd"
 Data="*res://global/data.gd"
+YarnSpinner="*res://addons/yarn_spinner/yarn_spinner.gd"
 
 [display]
 
@@ -29,6 +30,10 @@ window/size/viewport_height=1080
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/yarn_spinner/plugin.cfg")
 
 [input]
 
