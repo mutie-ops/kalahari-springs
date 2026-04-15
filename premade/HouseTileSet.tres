@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cw45kfg2c8mfk"]
+[gd_resource type="TileSet" format=3 uid="uid://cw45kfg2c8mfk"]
 
 [ext_resource type="Texture2D" uid="uid://berfritppni12" path="res://graphics/tilesets/walls_nofloor.png" id="1_jldhs"]
 

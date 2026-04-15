@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://prqhluye08u2"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://prqhluye08u2"]
 
 [ext_resource type="Texture2D" uid="uid://bnibimj6j0k3o" path="res://graphics/machines/fisher.png" id="1_b14hb"]
 

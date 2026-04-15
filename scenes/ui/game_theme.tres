@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://rhcgh2v8xs3h"]
+[gd_resource type="Theme" format=3 uid="uid://rhcgh2v8xs3h"]
 
 [ext_resource type="FontFile" uid="uid://pctatblkht3m" path="res://graphics/fonts/HomeVideo-Regular.ttf" id="1_5x5vq"]
 [ext_resource type="Texture2D" uid="uid://c8w5bgiupw84o" path="res://graphics/ui/frame.png" id="2_6q0ak"]

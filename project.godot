@@ -23,7 +23,7 @@ config/icon="res://icon.svg"
 
 Enum="*res://global/enums.gd"
 Data="*res://global/data.gd"
-YarnSpinner="*res://addons/yarn_spinner/yarn_spinner.gd"
+YarnSpinner="*uid://bhiw7fae5n1e8"
 
 [display]
 
