@@ -1,0 +1,21 @@
+Naledi: I spend three, sometimes four hours a day at that river.
+Naledi: My girls are old enough to remember when I had more time. When I used to sew in the afternoons.
+Naledi: I had a stall here — a proper one. Wraps, headpieces. People came specifically for my work.
+Naledi: [meeting Hippo's eyes] I had to close it when the water got worse. There simply was not enough time left in the day.
+Naledi: If someone could help carry — even part of the week —
+Naledi: [stopping, looking at the Roller] With that, you could do in one trip what takes me half a morning.
+Naledi: Would you? Help with the water?
+- Yes. I will help.
+    Hippo: Yes. Tell me what you need.
+    Naledi: [a small exhale — the sound of something releasing]
+    Naledi: I cannot remember the last time someone just... said yes like that.
+    set {Naledi.water_burden_quest_active} = true
+    [signal]quest_start_water_burden
+- I will find a Roller and come back.
+    Hippo: I will find a Roller for the job. It will be faster.
+    Naledi: [a quiet laugh — surprised and genuine]
+    Naledi: Of course you will. Of course.
+    set {Naledi.water_burden_quest_active} = true
+    [signal]quest_start_water_burden
+- I cannot right now.
+    jump naledi_quest_declined/

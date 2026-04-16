@@ -767,33 +767,33 @@ position = Vector2(597, 145)
 position = Vector2(656, 154)
 
 [node name="SimpleObject" parent="Objects" unique_id=31375128 instance=ExtResource("8_ouxo3")]
+z_index = -1
 position = Vector2(17, 201)
-style = 0
+size = 1
 
 [node name="SimpleObject3" parent="Objects" unique_id=1994679797 instance=ExtResource("8_ouxo3")]
 z_index = -1
 position = Vector2(47, 191)
-size = 0
+size = 1
+style = 0
 
 [node name="SimpleObject4" parent="Objects" unique_id=1631730394 instance=ExtResource("8_ouxo3")]
-z_index = -1
 position = Vector2(-37, 254)
-size = 1
+style = 0
 
 [node name="SimpleObject5" parent="Objects" unique_id=516940558 instance=ExtResource("8_ouxo3")]
-z_index = -1
 position = Vector2(63, 240)
-size = 1
 
 [node name="SimpleObject6" parent="Objects" unique_id=1679375636 instance=ExtResource("8_ouxo3")]
-z_index = -1
 position = Vector2(-30, 238)
-size = 0
+size = 2
+style = 0
 
 [node name="SimpleObject7" parent="Objects" unique_id=703086767 instance=ExtResource("8_ouxo3")]
 z_index = -1
 position = Vector2(-72, 311)
-size = 0
+size = 1
+style = 0
 
 [node name="SimpleObject8" parent="Objects" unique_id=872910966 instance=ExtResource("8_ouxo3")]
 z_index = -1
@@ -801,31 +801,31 @@ position = Vector2(-47, 365)
 size = 1
 
 [node name="SimpleObject9" parent="Objects" unique_id=1242806073 instance=ExtResource("8_ouxo3")]
-z_index = -1
 position = Vector2(-90, 367)
-size = 1
+size = 2
 style = 0
 
 [node name="SimpleObject10" parent="Objects" unique_id=1735882230 instance=ExtResource("8_ouxo3")]
-z_index = -1
 position = Vector2(-79, 511)
-size = 1
-style = 0
+size = 2
 
 [node name="SimpleObject11" parent="Objects" unique_id=31209036 instance=ExtResource("8_ouxo3")]
 z_index = -1
 position = Vector2(-93, 503)
 size = 0
+style = 0
 
 [node name="SimpleObject12" parent="Objects" unique_id=1693911264 instance=ExtResource("8_ouxo3")]
 position = Vector2(-24, 550)
 size = 2
+style = 0
 
 [node name="House" parent="Objects" unique_id=21333447 instance=ExtResource("10_qogh7")]
+visible = false
 position = Vector2(232, 224)
 
 [node name="Character" parent="Objects" unique_id=1305730439 instance=ExtResource("11_mq31s")]
-position = Vector2(524, 177)
+position = Vector2(306, 320)
 dialog = Array[String](["I am the hat mouse", "State your business!"])
 fin_dialog = "You have purchased all the hats!"
 texture = ExtResource("12_b8j7q")
@@ -833,7 +833,7 @@ shop_type = 1
 has_fin_animation = true
 
 [node name="Character2" parent="Objects" unique_id=97098946 instance=ExtResource("11_mq31s")]
-position = Vector2(-40, 535)
+position = Vector2(2, 519)
 dialog = Array[String](["I sell machines! ", "What would you like?"])
 fin_dialog = "Well done! :)"
 texture = ExtResource("13_qhnmj")

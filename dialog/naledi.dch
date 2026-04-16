@@ -1,0 +1,31 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 0.31640625, 0, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "dialog-style-2",
+"suffix": ""
+},
+&"default_portrait": "Default",
+&"description": "The village's informal leader ",
+&"display_name": "Naledi",
+&"mirror": false,
+&"nicknames": ["Ledi"],
+&"offset": Vector2(0, 120),
+&"portraits": {
+"Default": {
+"export_overrides": {
+"image": "\"res://graphics/npcs/naledi_default.png\""
+},
+"mirror": false,
+"offset": Vector2(76, -336),
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

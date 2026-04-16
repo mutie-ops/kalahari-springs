@@ -1,0 +1,6 @@
+set {Naledi.water_burden_thanked} = true
+[signal]add_goodwill_20
+[signal]quest_complete_water_burden
+Naledi: [she sees Hippo coming and stops what she is doing]
+Naledi: I was hoping you would come by today.
+...full gratitude scene...

@@ -1,0 +1,4 @@
+if {Naledi.hippo_has_roller} == true:
+    jump naledi_quest_offer_with_roller/
+else:
+    jump naledi_quest_offer_without_roller/

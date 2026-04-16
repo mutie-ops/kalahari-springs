@@ -1,0 +1,20 @@
+Naledi: [looking up from sorting fabric] Ah. Good morning.
+Naledi: You look like you slept. I envy you that.
+- Ask if she is alright
+    Hippo: You look tired, Naledi. Are you alright?
+    Naledi: [a short, humourless laugh] Tired. Yes, that is one word for it.
+    Naledi: I was at the river before sunrise. Third morning in a row.
+    Naledi: By the time I have carried enough water for the household it is already mid-morning. The girls need to eat, the stall needs attention —
+    Naledi: [she stops herself] I am sorry. You do not need to hear all of this.
+    jump naledi_quest_offer_stall_mention/
+- Comment on the market stall
+    Hippo: The stall is looking quiet today.
+    Naledi: [a complicated expression — something between pride and grief] Yes. It has been quiet for a long time.
+    Naledi: I used to sew. Sold pieces here at the Gathering Tree — chitenge wraps, headwraps, small things.
+    Naledi: [quietly] That was before the water became what it is now.
+    jump naledi_quest_offer_stall_mention/
+- Say nothing, wait
+    Naledi: [noticing Hippo standing there] You are very patient, you know that?
+    Naledi: I was just thinking about sleep. About what it would feel like to sleep until the sun was actually up.
+    Naledi: The water does not wait, though. It never waits.
+    jump naledi_quest_offer_stall_mention/

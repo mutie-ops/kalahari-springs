@@ -1,0 +1,13 @@
+Naledi: [her eyes going straight to the Roller] You brought it.
+Naledi: I watched you from here yesterday. You made one trip to the river and came back with — how much does that hold?
+Hippo: Ninety litres.
+Naledi: [quietly] Ninety litres.
+Naledi: I made four trips yesterday. Each one nearly twenty litres on my head.
+Naledi: [she does the arithmetic without saying it out loud, and something moves in her face]
+Naledi: Hippo. Can I ask you something?
+- Of course.
+    Hippo: Of course. Ask.
+    jump naledi_quest_offer_direct_ask/
+- What is it?
+    Hippo: What is it?
+    jump naledi_quest_offer_direct_ask/

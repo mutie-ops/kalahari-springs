@@ -1,0 +1,11 @@
+join naledi left
+join hippo right
+
+if {Naledi.water_burden_quest_complete} == true and {Naledi.water_burden_thanked} == false:
+    jump naledi_quest_complete_gratitude/
+elif {Naledi.water_burden_quest_active} == true:
+    jump naledi_quest_active_checkin/
+elif {Naledi.hearts_naledi} < 2:
+    jump naledi_before_quest_distant/
+else:
+    jump naledi_quest_offer_main/

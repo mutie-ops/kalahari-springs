@@ -1,0 +1,6 @@
+- I will help. Tell me when you need water.
+    ...accept dialogue...
+    set {Naledi.water_burden_quest_active} = true
+    [signal]quest_start_water_burden
+- I cannot right now.
+    jump naledi_quest_declined/
