@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b0xrggy0l8ef5"]
+
+[ext_resource type="Texture2D" uid="uid://dbphfw4tf2s7v" path="res://graphics/objects/boulder-sml-07.tres" id="1_4vp0x"]
+
+[node name="Boulders" type="Node2D" unique_id=367017821]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1782571486]
+texture = ExtResource("1_4vp0x")

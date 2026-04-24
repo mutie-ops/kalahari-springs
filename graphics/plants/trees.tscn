@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cvwyp17kdlt1m"]
+
+[ext_resource type="Texture2D" uid="uid://davyn0wgvtb38" path="res://graphics/plants/tree-bramble-02.tres" id="1_41uef"]
+
+[node name="Node2D" type="Node2D" unique_id=1585366740]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=242477600]
+texture = ExtResource("1_41uef")

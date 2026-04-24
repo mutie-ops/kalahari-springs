@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://cfubwlwc4svks"]
+
+[ext_resource type="Texture2D" uid="uid://c2t68oygmqebb" path="res://graphics/objects/boulders.png" id="1_plkcu"]
+
+[resource]
+atlas = ExtResource("1_plkcu")
+region = Rect2(0, 209.75, 81.5, 68.5)
