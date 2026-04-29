@@ -1589,7 +1589,7 @@ position = Vector2(189, 458)
 texture = ExtResource("52_8e6uo")
 
 [node name="GatheringPavillion" type="Sprite2D" parent="Objects" unique_id=1003007105]
-position = Vector2(377, 472)
+position = Vector2(386, 465)
 texture = ExtResource("53_72owr")
 
 [node name="Tree" parent="Objects" unique_id=522295828 instance=ExtResource("7_mbbpy")]

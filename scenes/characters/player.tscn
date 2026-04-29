@@ -1,4 +1,4 @@
-[gd_scene load_steps=184 format=3 uid="uid://b0mnopqlx5dix"]
+[gd_scene format=3 uid="uid://b0mnopqlx5dix"]
 
 [ext_resource type="Script" uid="uid://dbmbhotl3mjb4" path="res://scenes/characters/player.gd" id="2_76oj4"]
 [ext_resource type="Texture2D" uid="uid://bp3sfnx2rutrs" path="res://graphics/characters/main/main_basic.png" id="3_6eyoc"]
@@ -14,6 +14,21 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_atpat"]
 radius = 4.0
 height = 8.0
+
+[sub_resource type="Animation" id="Animation_hdner"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
 
 [sub_resource type="Animation" id="Animation_2l4js"]
 resource_name = "axe_down"
@@ -446,7 +461,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_rp718"]
 resource_name = "idle_down"
-length = 0.4
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -455,7 +470,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
@@ -463,7 +478,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_yewv4"]
 resource_name = "idle_left"
-length = 0.4
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -472,15 +487,15 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [34, 35]
+"values": [33, 34]
 }
 
 [sub_resource type="Animation" id="Animation_yhyq5"]
 resource_name = "idle_right"
-length = 0.4
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -489,7 +504,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [67, 68]
@@ -763,10 +778,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.2120977, 0.4, 0.6333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [2, 3, 4, 5]
+"values": [2, 3, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_6eyoc"]
@@ -942,6 +957,7 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kqtwu"]
 _data = {
+&"RESET": SubResource("Animation_hdner"),
 &"axe_down": SubResource("Animation_2l4js"),
 &"axe_left": SubResource("Animation_jk2m4"),
 &"axe_right": SubResource("Animation_j8g38"),
@@ -1529,7 +1545,6 @@ transitions = ["Axe", "Hoe", SubResource("AnimationNodeStateMachineTransition_n7
 graph_offset = Vector2(-664, -927)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_inhyd"]
-graph_offset = Vector2(-338.09277, -625.4498)
 nodes/output/position = Vector2(1069.5652, -104.34783)
 nodes/ToolStateMachine/node = SubResource("AnimationNodeStateMachine_w5sjy")
 nodes/ToolStateMachine/position = Vector2(104.34783, 104.34783)
@@ -1543,29 +1558,28 @@ nodes/FishBlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_aqa0x")
 nodes/FishBlendSpace2D/position = Vector2(634.7826, -8.695652)
 node_connections = [&"output", 0, &"FishBlend", &"ToolOneShot", 0, &"MoveStateMachine", &"ToolOneShot", 1, &"ToolStateMachine", &"FishBlend", 0, &"ToolOneShot", &"FishBlend", 1, &"FishBlendSpace2D"]
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1939110972]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("2_76oj4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1386973280]
 texture = ExtResource("3_6eyoc")
 hframes = 33
 vframes = 4
+frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127240967]
 shape = SubResource("CapsuleShape2D_atpat")
 
-[node name="Animation" type="Node" parent="."]
+[node name="Animation" type="Node" parent="." unique_id=1081846997]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animation" unique_id=193646859]
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_kqtwu")
-}
-autoplay = "idle_down"
+libraries/ = SubResource("AnimationLibrary_kqtwu")
+speed_scale = 0.3
 
-[node name="AnimationTree" type="AnimationTree" parent="Animation"]
+[node name="AnimationTree" type="AnimationTree" parent="Animation" unique_id=1591864928]
 root_node = NodePath("../..")
 tree_root = SubResource("AnimationNodeBlendTree_inhyd")
 anim_player = NodePath("../AnimationPlayer")
@@ -1583,40 +1597,41 @@ parameters/ToolOneShot/request = 0
 parameters/FishBlend/blend_amount = 0.0
 parameters/FishBlendSpace2D/blend_position = Vector2(0, 0)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=772577939]
 zoom = Vector2(4, 4)
 
-[node name="ToolUI" parent="." instance=ExtResource("3_76oj4")]
+[node name="ToolUI" parent="." unique_id=194591279 instance=ExtResource("3_76oj4")]
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=319231974]
 target_position = Vector2(0, 20)
 collision_mask = 8
 
-[node name="FishingGame" parent="." instance=ExtResource("4_dyp2m")]
+[node name="FishingGame" parent="." unique_id=1153331381 instance=ExtResource("4_dyp2m")]
+visible = false
 position = Vector2(40, 0)
 
-[node name="Sounds" type="Node2D" parent="."]
+[node name="Sounds" type="Node2D" parent="." unique_id=208055130]
 
-[node name="Axe" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Axe" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1492100595]
 stream = ExtResource("5_atpat")
 
-[node name="Fish" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Fish" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1537806929]
 stream = ExtResource("6_qgnko")
 
-[node name="Hoe" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Hoe" type="AudioStreamPlayer2D" parent="Sounds" unique_id=844007129]
 stream = ExtResource("7_7vyk4")
 
-[node name="Seed" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Seed" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1419779641]
 stream = ExtResource("8_2l4js")
 
-[node name="Water" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Water" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1974753124]
 stream = ExtResource("9_jk2m4")
 
-[node name="Step" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Step" type="AudioStreamPlayer2D" parent="Sounds" unique_id=969908468]
 stream = ExtResource("10_7vyk4")
 volume_db = -15.0
 
-[node name="StepTimer" type="Timer" parent="Sounds"]
+[node name="StepTimer" type="Timer" parent="Sounds" unique_id=216087273]
 wait_time = 0.5
 
 [connection signal="animation_finished" from="Animation/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
