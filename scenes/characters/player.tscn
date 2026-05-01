@@ -1153,7 +1153,7 @@ states/Start/position = Vector2(197.39131, 98.52552)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_6eyoc")
 states/Walk/position = Vector2(369.94974, -26.91195)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_a2luo"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_yewv4"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_76oj4")]
-graph_offset = Vector2(-158, -61)
+graph_offset = Vector2(-158, -194.28217)
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_yewv4"]
 
@@ -1545,6 +1545,7 @@ transitions = ["Axe", "Hoe", SubResource("AnimationNodeStateMachineTransition_n7
 graph_offset = Vector2(-664, -927)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_inhyd"]
+graph_offset = Vector2(-1.4746063e-05, -245.52255)
 nodes/output/position = Vector2(1069.5652, -104.34783)
 nodes/ToolStateMachine/node = SubResource("AnimationNodeStateMachine_w5sjy")
 nodes/ToolStateMachine/position = Vector2(104.34783, 104.34783)

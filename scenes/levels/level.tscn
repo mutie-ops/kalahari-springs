@@ -13,14 +13,15 @@
 [ext_resource type="Shader" uid="uid://2dfugyjih0oe" path="res://shaders/circle_transition.gdshader" id="9_icy5c"]
 [ext_resource type="PackedScene" uid="uid://cqhykhx23v1su" path="res://scenes/levels/house.tscn" id="10_qogh7"]
 [ext_resource type="PackedScene" uid="uid://gxfhn8vu2d0l" path="res://scenes/ui/plant_info_container.tscn" id="10_rmjfq"]
-[ext_resource type="Texture2D" uid="uid://dsai4ywo7lqqd" path="res://graphics/objects/boulder-lrg-01.tres" id="10_xp3ar"]
+[ext_resource type="PackedScene" uid="uid://cmtd78wgmkmhx" path="res://graphics/objects/BoulderLrg01.tscn" id="10_tntks"]
+[ext_resource type="PackedScene" uid="uid://cagc4p07vimcf" path="res://graphics/objects/BoulderLrg02.tscn" id="11_b8i65"]
 [ext_resource type="PackedScene" uid="uid://bj0b5gapbidjy" path="res://scenes/characters/character.tscn" id="11_mq31s"]
-[ext_resource type="Texture2D" uid="uid://kf3785txnflh" path="res://graphics/objects/boulder-lrg-02.tres" id="11_suqb0"]
 [ext_resource type="Texture2D" uid="uid://cjtrp4pxnekxi" path="res://graphics/characters/mouse.png" id="12_b8j7q"]
-[ext_resource type="Texture2D" uid="uid://74a40vsdfjpq" path="res://graphics/objects/boulder-lrg-03.tres" id="12_e6wem"]
+[ext_resource type="PackedScene" uid="uid://bxk6qs1umg0t6" path="res://graphics/objects/BoulderLrg03.tscn" id="12_nss4m"]
 [ext_resource type="Texture2D" uid="uid://da1u0rhfjt8a3" path="res://graphics/weather/drops.png" id="12_xfk5q"]
-[ext_resource type="Texture2D" uid="uid://cbjumbnv0ko1d" path="res://graphics/objects/boulder-lrg-04.tres" id="13_jfn6u"]
 [ext_resource type="Texture2D" uid="uid://cn4s3loq3j21r" path="res://graphics/characters/cat.png" id="13_qhnmj"]
+[ext_resource type="PackedScene" uid="uid://3wf6xxsms16g" path="res://graphics/objects/BoulderLrg04.tscn" id="13_shov2"]
+[ext_resource type="PackedScene" uid="uid://c3cwkbwiek6ag" path="res://graphics/objects/BoulderLrg05.tscn" id="14_8okjc"]
 [ext_resource type="Texture2D" uid="uid://bgy21bgc52rkn" path="res://graphics/objects/boulder-md-01.tres" id="14_sfh7l"]
 [ext_resource type="Texture2D" uid="uid://dpgieachk6yns" path="res://graphics/objects/boulder-md-02.tres" id="15_gllcl"]
 [ext_resource type="Texture2D" uid="uid://bhsey3jpdodgf" path="res://graphics/objects/boulder-md-03.tres" id="16_6frpu"]
@@ -1384,25 +1385,20 @@ y_sort_enabled = true
 [node name="Player" parent="Objects" unique_id=1465421677 instance=ExtResource("2_b2cq8")]
 position = Vector2(186, 342)
 
-[node name="BoulderLrg01" type="Sprite2D" parent="Objects" unique_id=2093710583]
-position = Vector2(536, 435)
-texture = ExtResource("10_xp3ar")
+[node name="BoulderLrg01" parent="Objects" unique_id=1818154890 instance=ExtResource("10_tntks")]
+position = Vector2(535, 435)
 
-[node name="BoulderLrg02" type="Sprite2D" parent="Objects" unique_id=1934180663]
-position = Vector2(395, 345)
-texture = ExtResource("11_suqb0")
+[node name="BoulderLrg02" parent="Objects" unique_id=741066768 instance=ExtResource("11_b8i65")]
+position = Vector2(396, 344)
 
-[node name="BoulderLrg03" type="Sprite2D" parent="Objects" unique_id=23193645]
-position = Vector2(51, 254)
-texture = ExtResource("12_e6wem")
+[node name="BoulderLrg03" parent="Objects" unique_id=1983408356 instance=ExtResource("12_nss4m")]
+position = Vector2(50, 255)
 
-[node name="BoulderLrg04" type="Sprite2D" parent="Objects" unique_id=2087077451]
-position = Vector2(530, 204)
-texture = ExtResource("13_jfn6u")
+[node name="BoulderLrg04" parent="Objects" unique_id=2023356785 instance=ExtResource("13_shov2")]
+position = Vector2(532, 204)
 
-[node name="BoulderLrg05" type="Sprite2D" parent="Objects" unique_id=741406882]
-position = Vector2(-461, 363)
-texture = ExtResource("13_jfn6u")
+[node name="BoulderLrg05" parent="Objects" unique_id=2079090371 instance=ExtResource("14_8okjc")]
+position = Vector2(-462, 364)
 
 [node name="BoulderMd01" type="Sprite2D" parent="Objects" unique_id=1024981655]
 position = Vector2(292, 382)
