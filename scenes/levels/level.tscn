@@ -22,20 +22,22 @@
 [ext_resource type="Texture2D" uid="uid://cn4s3loq3j21r" path="res://graphics/characters/cat.png" id="13_qhnmj"]
 [ext_resource type="PackedScene" uid="uid://3wf6xxsms16g" path="res://graphics/objects/BoulderLrg04.tscn" id="13_shov2"]
 [ext_resource type="PackedScene" uid="uid://c3cwkbwiek6ag" path="res://graphics/objects/BoulderLrg05.tscn" id="14_8okjc"]
-[ext_resource type="Texture2D" uid="uid://bgy21bgc52rkn" path="res://graphics/objects/boulder-md-01.tres" id="14_sfh7l"]
-[ext_resource type="Texture2D" uid="uid://dpgieachk6yns" path="res://graphics/objects/boulder-md-02.tres" id="15_gllcl"]
-[ext_resource type="Texture2D" uid="uid://bhsey3jpdodgf" path="res://graphics/objects/boulder-md-03.tres" id="16_6frpu"]
+[ext_resource type="PackedScene" uid="uid://d2d3sdeui2rbm" path="res://graphics/objects/BoulderMd01.tscn" id="15_b8i65"]
+[ext_resource type="PackedScene" uid="uid://cbcbob3tww3iq" path="res://graphics/objects/BoulderMd02.tscn" id="16_nss4m"]
 [ext_resource type="PackedScene" uid="uid://c423xo3vr8gm7" path="res://scenes/ui/shop_ui.tscn" id="16_qhnmj"]
 [ext_resource type="PackedScene" uid="uid://bjuiwygspkh17" path="res://scenes/ui/resource_ui.tscn" id="17_jyre1"]
-[ext_resource type="Texture2D" uid="uid://sf860qb1xy8y" path="res://graphics/objects/boulder-md-04.tres" id="17_n40pv"]
-[ext_resource type="Texture2D" uid="uid://cfubwlwc4svks" path="res://graphics/objects/boulder-md-05.tres" id="18_f3dul"]
+[ext_resource type="PackedScene" uid="uid://ctosb72s323qk" path="res://graphics/objects/BoulderMd09.tscn" id="17_shov2"]
 [ext_resource type="Texture2D" uid="uid://fnmyohadow27" path="res://graphics/icons/delete.png" id="18_qhnmj"]
-[ext_resource type="Texture2D" uid="uid://dm77ywt3rmam0" path="res://graphics/objects/boulder-md-06.tres" id="19_jf6tn"]
+[ext_resource type="PackedScene" uid="uid://u3c0eqnhlpe2" path="res://graphics/objects/BoulderMd03.tscn" id="18_shov2"]
+[ext_resource type="PackedScene" uid="uid://pwg21tu8viap" path="res://graphics/objects/BoulderMd04.tscn" id="19_8okjc"]
 [ext_resource type="AudioStream" uid="uid://cmmksm2j2lpov" path="res://audio/music.mp3" id="20_4ab0e"]
-[ext_resource type="Texture2D" uid="uid://rv8rdm3jnscw" path="res://graphics/objects/boulder-md-07.tres" id="20_v62sy"]
+[ext_resource type="PackedScene" uid="uid://w8314eip3n3o" path="res://graphics/objects/BoulderMd05.tscn" id="20_hkrhu"]
 [ext_resource type="Texture2D" uid="uid://chyik6n8tk5gu" path="res://graphics/objects/boulder-sml-01.tres" id="21_a70f2"]
+[ext_resource type="PackedScene" uid="uid://wx71duw18622" path="res://graphics/objects/BoulderMd06.tscn" id="21_l4bmn"]
 [ext_resource type="AudioStream" uid="uid://cpi4s4v86b026" path="res://audio/rain.mp3" id="21_p62il"]
+[ext_resource type="PackedScene" uid="uid://x46bhgj8q2rf" path="res://graphics/objects/BoulderMd07.tscn" id="22_g4khr"]
 [ext_resource type="Texture2D" uid="uid://bxw0nkxssrpo4" path="res://graphics/objects/boulder-sml-02.tres" id="22_qblvb"]
+[ext_resource type="PackedScene" uid="uid://6uawtav3yh15" path="res://graphics/objects/BoulderMd08.tscn" id="23_8okjc"]
 [ext_resource type="Texture2D" uid="uid://cxnkpqb0oqo7p" path="res://graphics/objects/boulder-sml-03.tres" id="23_pan58"]
 [ext_resource type="Texture2D" uid="uid://cia56pudsu77s" path="res://graphics/objects/boulder-sml-04.tres" id="24_5umom"]
 [ext_resource type="Texture2D" uid="uid://bw0bej8sxrhsv" path="res://graphics/objects/boulder-sml-05.tres" id="25_sm75l"]
@@ -1400,41 +1402,33 @@ position = Vector2(532, 204)
 [node name="BoulderLrg05" parent="Objects" unique_id=2079090371 instance=ExtResource("14_8okjc")]
 position = Vector2(-462, 364)
 
-[node name="BoulderMd01" type="Sprite2D" parent="Objects" unique_id=1024981655]
-position = Vector2(292, 382)
-texture = ExtResource("14_sfh7l")
+[node name="BoulderMd01" parent="Objects" unique_id=886286638 instance=ExtResource("15_b8i65")]
+position = Vector2(290, 382)
 
-[node name="BoulderMd02" type="Sprite2D" parent="Objects" unique_id=1003508761]
-position = Vector2(438, -85)
-texture = ExtResource("15_gllcl")
+[node name="BoulderMd02" parent="Objects" unique_id=1452403230 instance=ExtResource("16_nss4m")]
+position = Vector2(434, -86)
 
-[node name="BoulderMd09" type="Sprite2D" parent="Objects" unique_id=1076491471]
-position = Vector2(-179, 453)
-texture = ExtResource("15_gllcl")
+[node name="BoulderMd09" parent="Objects" unique_id=928521879 instance=ExtResource("17_shov2")]
+position = Vector2(-178, 451)
 
-[node name="BoulderMd03" type="Sprite2D" parent="Objects" unique_id=183668333]
-position = Vector2(121, 293)
-texture = ExtResource("16_6frpu")
+[node name="BoulderMd03" parent="Objects" unique_id=1875243507 instance=ExtResource("18_shov2")]
+position = Vector2(119, 289)
 
-[node name="BoulderMd04" type="Sprite2D" parent="Objects" unique_id=1373110759]
+[node name="BoulderMd04" parent="Objects" unique_id=1679486029 instance=ExtResource("19_8okjc")]
 position = Vector2(-56, 623)
-texture = ExtResource("17_n40pv")
 
-[node name="BoulderMd05" type="Sprite2D" parent="Objects" unique_id=1577959743]
-position = Vector2(-90, 209)
-texture = ExtResource("18_f3dul")
+[node name="BoulderMd05" parent="Objects" unique_id=2030640847 instance=ExtResource("20_hkrhu")]
+position = Vector2(-90, 208)
 
-[node name="BoulderMd06" type="Sprite2D" parent="Objects" unique_id=304632190]
-position = Vector2(514, 574)
-texture = ExtResource("19_jf6tn")
+[node name="BoulderMd06" parent="Objects" unique_id=1520103244 instance=ExtResource("21_l4bmn")]
+position = Vector2(511, 568)
 
-[node name="BoulderMd08" type="Sprite2D" parent="Objects" unique_id=532259181]
+[node name="BoulderMd07" parent="Objects" unique_id=1827347283 instance=ExtResource("22_g4khr")]
+position = Vector2(180, -14)
+rotation = -0.16722986
+
+[node name="BoulderMd08" parent="Objects" unique_id=499866218 instance=ExtResource("23_8okjc")]
 position = Vector2(-402, 47)
-texture = ExtResource("19_jf6tn")
-
-[node name="BoulderMd07" type="Sprite2D" parent="Objects" unique_id=2107788232]
-position = Vector2(177, -13)
-texture = ExtResource("20_v62sy")
 
 [node name="BoulderSml01" type="Sprite2D" parent="Objects" unique_id=1005030863]
 position = Vector2(349, 261)

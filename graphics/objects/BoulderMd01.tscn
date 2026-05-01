@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d2d3sdeui2rbm"]
+
+[ext_resource type="Texture2D" uid="uid://bgy21bgc52rkn" path="res://graphics/objects/boulder-md-01.tres" id="1_x65ac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lew5i"]
+size = Vector2(61, 36)
+
+[node name="BoulderLrg01" type="Node2D" unique_id=1818154890]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1679283942]
+texture = ExtResource("1_x65ac")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1837038964]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1334636860]
+position = Vector2(5, 2)
+shape = SubResource("RectangleShape2D_lew5i")

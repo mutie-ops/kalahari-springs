@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dsai4ywo7lqqd" path="res://graphics/objects/boulder-lrg-01.tres" id="1_htf2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wwemq"]
-size = Vector2(62.5, 55)
+size = Vector2(38.55607, 55.038826)
 
 [node name="BoulderLrg01" type="Node2D" unique_id=1818154890]
 
@@ -13,5 +13,6 @@ texture = ExtResource("1_htf2l")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1837038964]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=388358434]
-position = Vector2(-5.25, 8.5)
+position = Vector2(-25.975521, -13.257636)
+rotation = -1.1254543
 shape = SubResource("RectangleShape2D_wwemq")
