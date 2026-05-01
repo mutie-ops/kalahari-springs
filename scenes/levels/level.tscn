@@ -1408,9 +1408,6 @@ position = Vector2(290, 382)
 [node name="BoulderMd02" parent="Objects" unique_id=1452403230 instance=ExtResource("16_nss4m")]
 position = Vector2(434, -86)
 
-[node name="BoulderMd09" parent="Objects" unique_id=928521879 instance=ExtResource("17_shov2")]
-position = Vector2(-178, 451)
-
 [node name="BoulderMd03" parent="Objects" unique_id=1875243507 instance=ExtResource("18_shov2")]
 position = Vector2(119, 289)
 
@@ -1429,6 +1426,9 @@ rotation = -0.16722986
 
 [node name="BoulderMd08" parent="Objects" unique_id=499866218 instance=ExtResource("23_8okjc")]
 position = Vector2(-402, 47)
+
+[node name="BoulderMd09" parent="Objects" unique_id=928521879 instance=ExtResource("17_shov2")]
+position = Vector2(-178, 451)
 
 [node name="BoulderSml01" type="Sprite2D" parent="Objects" unique_id=1005030863]
 position = Vector2(349, 261)
