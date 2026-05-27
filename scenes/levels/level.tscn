@@ -72,6 +72,7 @@
 [ext_resource type="Texture2D" uid="uid://ccgrrao0fkvhj" path="res://graphics/structures/cooperative.tres" id="52_jup16"]
 [ext_resource type="Texture2D" uid="uid://b7rnfybgknpao" path="res://graphics/structures/gatheringpavillion.tres" id="53_72owr"]
 [ext_resource type="Texture2D" uid="uid://tkwycvdxe7ao" path="res://graphics/structures/spring-water-basin.tres" id="58_8okjc"]
+[ext_resource type="PackedScene" uid="uid://dj3ig64fcs2x0" path="res://graphics/characters/naledi/naledi_npc.tscn" id="65_hkrhu"]
 
 [sub_resource type="Gradient" id="Gradient_ouxo3"]
 offsets = PackedFloat32Array(0, 0.294849, 0.4777975, 1)
@@ -1519,6 +1520,10 @@ texture = ExtResource("39_tntks")
 position = Vector2(9, 330)
 texture = ExtResource("40_b8i65")
 
+[node name="TreeSml02" type="Sprite2D" parent="Objects" unique_id=1782510892]
+position = Vector2(-20, 39)
+texture = ExtResource("49_8okjc")
+
 [node name="TreeSml03" type="Sprite2D" parent="Objects" unique_id=698301423]
 position = Vector2(302, 194)
 texture = ExtResource("40_b8i65")
@@ -1639,9 +1644,8 @@ texture = ExtResource("13_qhnmj")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Objects" unique_id=407979153]
 
-[node name="TreeSml02" type="Sprite2D" parent="Objects" unique_id=1782510892]
-position = Vector2(-20, 39)
-texture = ExtResource("49_8okjc")
+[node name="NalediNPC" parent="Objects" unique_id=386603033 instance=ExtResource("65_hkrhu")]
+position = Vector2(79, 364)
 
 [node name="Overlay" type="Node2D" parent="." unique_id=114813407]
 metadata/_edit_lock_ = true
