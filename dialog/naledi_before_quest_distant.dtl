@@ -2,7 +2,7 @@ if {Naledi.hippo_has_roller} == true:
     Naledi: That is an interesting thing you are rolling around.
     Naledi: I have heard of them. Hippo Rollers. My aunt's village had one, years ago.
     Naledi: ...She said it changed everything.
-    Naledi: [a pause, then quietly back to work] Well. Good morning.
+    Naledi: Well. Good morning.
 else:
     Naledi: Good morning.
-    Naledi: [returning her attention to the market stall] Let me know if you need anything from the stall.
+    Naledi: Let me know if you need anything from the stall.

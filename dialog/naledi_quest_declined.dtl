@@ -1,14 +1,11 @@
 set {Naledi.water_burden_quest_active} = false
-Naledi: [a small nod, her expression closing slightly]
 Naledi: No — of course. I understand. I should not have asked.
 - I am sorry. Things are complicated right now.
     Hippo: I am sorry, Naledi. I have too much on my hands right now.
-    Naledi: [quietly] Yes. We all do.
-    Naledi: [returning to her work, her voice carefully neutral]
+    Naledi: Yes. We all do.
     Naledi: Let me know if you need anything from the stall.
     [signal]subtract_goodwill_5
 - Perhaps another time. Not today.
     Hippo: Not today. But I have not forgotten you asked.
-    Naledi: [meeting his eyes briefly]
     Naledi: That is something, I suppose.
-    Naledi: [a pause] The offer stands, if you change your mind.
+    Naledi: The offer stands, if you change your mind.

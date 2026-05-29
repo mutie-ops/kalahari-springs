@@ -1,16 +1,13 @@
-Naledi: [a pause. She folds a piece of fabric carefully before speaking.]
 Naledi: There is a sewing machine at the back of my house. It belonged to my mother.
 Naledi: I have not used it in almost two years.
 if {Naledi.naledi_mentioned_stall} == false:
     set {Naledi.naledi_mentioned_stall} = true
     Naledi: Every morning I think — today I will find two hours. Two hours is all I need to cut and stitch a wrap.
     Naledi: But then there is the river. And then there is breakfast. And then the girls, and the stall, and by the time —
-    Naledi: [she shakes her head]
     Naledi: You know what is strange? I am not even tired of the walking. I am tired of what the walking takes away.
 else:
     Naledi: I keep thinking about it. The machine. It is just sitting there.
-Naledi: [looking at Hippo directly for the first time in the conversation]
 Naledi: I do not suppose... you would consider helping with the water? Even two or three mornings a week.
 Naledi: I would not ask if I had any other way to —
-Naledi: [stopping herself] No. I am sorry. That is too much to ask of someone I barely know.
+Naledi: No. I am sorry. That is too much to ask of someone I barely know.
 jump naledi_quest_decision/
