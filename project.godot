@@ -50,7 +50,7 @@ layout/style_directory={
 "": "res://dialog/dialog-style-2.tres",
 "dialog-style-2": "res://dialog/dialog-style-2.tres"
 }
-layout/style_list=["res://dialog/dialog-style-2.tres"]
+layout/style_list=["res://dialog/dialog-style-2.tres", "res://dialog/dialog_ui/kalahari_default_textbox.tres"]
 layout/default_style="res://dialog/dialog-style-2.tres"
 variables={
 "Naledi": {
@@ -97,6 +97,7 @@ audio/channel_defaults={
 }
 }
 text/autocolor_names=true
+glossary/default_case_sensitive=true
 
 [display]
 

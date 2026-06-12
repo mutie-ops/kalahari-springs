@@ -33,6 +33,7 @@ func _on_player_tool_use(tool: Enum.Tool, pos: Vector2) -> void:
 	grid_coord.x += -1 if pos.x < 0 else 0
 	grid_coord.y += -1 if pos.y < 0 else 0
 	var has_soil = grid_coord in $Layers/SoilLayer.get_used_cells()
+	
 	match tool:
 		Enum.Tool.HOE:
 			var cell = $Layers/GrassLayer.get_cell_tile_data(grid_coord) as TileData

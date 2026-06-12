@@ -38,18 +38,19 @@ scene = ExtResource("5_0w8e8")
 script = ExtResource("2_01641")
 scene = ExtResource("6_m6yh4")
 overrides = {
-"box_color_custom": "Color(1, 0.7190181, 0.37695313, 1)",
+"box_color_custom": "Color(1, 0.9019608, 0.7137255, 1)",
 "box_color_use_global": "false",
-"box_size": "Vector2(1000, 200)",
-"name_label_alignment": "1",
-"name_label_box_modulate": "Color(0.72, 0.43488, 0.08640001, 1)",
+"box_margin_bottom": "20.0",
+"box_panel": "\"res://dialog/dialog_ui/kalahari_textbox.tres\"",
+"box_size": "Vector2(1000, 250)",
+"name_label_box_modulate": "Color(0.72156864, 0.43529412, 0.08627451, 0)",
+"name_label_box_offset": "Vector2(100, 44)",
 "name_label_box_use_global_color": "false",
-"name_label_custom_font_size": "30.0",
+"name_label_custom_font_size": "28.0",
 "name_label_use_character_color": "false",
 "name_label_use_global_color": "false",
 "name_label_use_global_font_size": "false",
-"text_custom_color": "Color(0.11, 0.07333334, 0, 1)",
-"text_size": "30.0",
+"text_size": "25.0",
 "text_use_global_color": "false",
 "text_use_global_size": "false"
 }
