@@ -370,9 +370,11 @@ radius = 21.023796
 script = ExtResource("1_hjxb7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87035413]
-position = Vector2(54, 41)
+position = Vector2(55, 41)
 sprite_frames = SubResource("SpriteFrames_dwlrb")
-animation = &"walk_up"
+animation = &"walk_right"
+frame = 4
+frame_progress = 0.33277673
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=467225075]
 position = Vector2(54, 42)
