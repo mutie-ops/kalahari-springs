@@ -15,8 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://gxfhn8vu2d0l" path="res://scenes/ui/plant_info_container.tscn" id="10_rmjfq"]
 [ext_resource type="PackedScene" uid="uid://cmtd78wgmkmhx" path="res://graphics/objects/BoulderLrg01.tscn" id="10_tntks"]
 [ext_resource type="PackedScene" uid="uid://cagc4p07vimcf" path="res://graphics/objects/BoulderLrg02.tscn" id="11_b8i65"]
+[ext_resource type="Texture2D" uid="uid://cq7cqm7etrpd3" path="res://graphics/objects/bucket-empty.png" id="11_g4khr"]
 [ext_resource type="PackedScene" uid="uid://bj0b5gapbidjy" path="res://scenes/characters/character.tscn" id="11_mq31s"]
 [ext_resource type="Texture2D" uid="uid://cjtrp4pxnekxi" path="res://graphics/characters/mouse.png" id="12_b8j7q"]
+[ext_resource type="Texture2D" uid="uid://b00iunioqg14g" path="res://graphics/objects/bucket-full.png" id="12_jup16"]
 [ext_resource type="PackedScene" uid="uid://bxk6qs1umg0t6" path="res://graphics/objects/BoulderLrg03.tscn" id="12_nss4m"]
 [ext_resource type="Texture2D" uid="uid://da1u0rhfjt8a3" path="res://graphics/weather/drops.png" id="12_xfk5q"]
 [ext_resource type="Texture2D" uid="uid://cn4s3loq3j21r" path="res://graphics/characters/cat.png" id="13_qhnmj"]
@@ -1391,6 +1393,14 @@ position = Vector2(186, 342)
 
 [node name="BoulderLrg01" parent="Objects" unique_id=1818154890 instance=ExtResource("10_tntks")]
 position = Vector2(535, 435)
+
+[node name="BucketEmpty" type="Sprite2D" parent="Objects/BoulderLrg01" unique_id=1654854227]
+position = Vector2(-536, 159)
+texture = ExtResource("11_g4khr")
+
+[node name="BucketFull" type="Sprite2D" parent="Objects/BoulderLrg01" unique_id=1060130190]
+position = Vector2(-522, 171)
+texture = ExtResource("12_jup16")
 
 [node name="BoulderLrg02" parent="Objects" unique_id=741066768 instance=ExtResource("11_b8i65")]
 position = Vector2(396, 344)
