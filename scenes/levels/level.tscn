@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://crdbsib38ohef" path="res://scenes/levels/level.gd" id="1_urvlt"]
 [ext_resource type="Texture2D" uid="uid://yl6lml5py4rl" path="res://graphics/tilesets/dirt-tile.png" id="2_4ab0e"]
 [ext_resource type="PackedScene" uid="uid://b0mnopqlx5dix" path="res://scenes/characters/player.tscn" id="2_b2cq8"]
+[ext_resource type="PackedScene" uid="uid://wp87hfe1io43" path="res://Menu/game_menu.tscn" id="2_l4bmn"]
 [ext_resource type="Texture2D" uid="uid://bqj7q6akj0vww" path="res://graphics/tilesets/grass-dark.png" id="4_p62il"]
 [ext_resource type="Texture2D" uid="uid://doh0qu16dg2su" path="res://graphics/plants/shrubs-rocks_32x32.png" id="5_c3o0d"]
 [ext_resource type="Texture2D" uid="uid://vrdy2gp08qay" path="res://graphics/tilesets/soil_water.png" id="5_d4w6o"]
@@ -1341,6 +1342,8 @@ script = ExtResource("1_urvlt")
 daytime_color = SubResource("Gradient_ouxo3")
 rain_color = Color(0.8156863, 0.8156863, 0.8156863, 1)
 volume_curve = SubResource("Curve_4ab0e")
+
+[node name="GameMenuRoot" parent="." unique_id=1537923219 instance=ExtResource("2_l4bmn")]
 
 [node name="Layers" type="Node2D" parent="." unique_id=788305385]
 y_sort_enabled = true

@@ -25,6 +25,15 @@
 "offset": Vector2(76, -336),
 "scale": 1.0,
 "scene": ""
+},
+"concerned": {
+"export_overrides": {
+"image": "\"res://dialog/dialog_ui/profile-naledi-concerned_md.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
 }
 },
 &"scale": 1.0

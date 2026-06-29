@@ -370,7 +370,7 @@ radius = 21.023796
 script = ExtResource("1_hjxb7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87035413]
-position = Vector2(55, 41)
+position = Vector2(55, 0)
 sprite_frames = SubResource("SpriteFrames_dwlrb")
 animation = &"walk_down"
 

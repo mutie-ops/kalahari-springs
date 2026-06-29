@@ -19,11 +19,20 @@
 &"portraits": {
 "Default": {
 "export_overrides": {
-"image": "\"res://graphics/npcs/hippo_default.png\""
+"image": "\"res://dialog/dialog_ui/profile-hope-default_md.png\""
 },
 "mirror": false,
 "offset": Vector2(-76, -336),
 "scale": 1.0,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://dialog/dialog_ui/profile-hope-happy_md.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
 "scene": ""
 }
 },

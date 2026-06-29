@@ -1,7 +1,9 @@
-join naledi left
+join naledi (Default) left
 join hippo right
+update hippo (Happy)
 
 if {Naledi.water_burden_quest_complete} == true and {Naledi.water_burden_thanked} == false:
+    update naledi
     jump naledi_quest_complete_gratitude/
 elif {Naledi.water_burden_quest_active} == true:
     jump naledi_quest_active_checkin/

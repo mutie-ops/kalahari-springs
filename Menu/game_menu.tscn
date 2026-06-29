@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://wp87hfe1io43"]
+
+[ext_resource type="Script" uid="uid://brgu3rx011jol" path="res://Menu/GameMenu.gd" id="1_0j884"]
+
+[node name="GameMenuRoot" type="CanvasLayer" unique_id=1537923219]
+script = ExtResource("1_0j884")
+
+[node name="MenuPanel" type="Control" parent="." unique_id=1357527883]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimBackground" type="ColorRect" parent="MenuPanel" unique_id=1313037141]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="MainFrame" type="Panel" parent="MenuPanel" unique_id=479480176]
+clip_contents = true
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 670.0
+
+[node name="MainVBox" type="VBoxContainer" parent="MenuPanel/MainFrame" unique_id=1148301658]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="TopTabs" type="HBoxContainer" parent="MenuPanel/MainFrame/MainVBox" unique_id=388512783]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+
+[node name="InventoryButton" type="Button" parent="MenuPanel/MainFrame/MainVBox/TopTabs" unique_id=1469175619]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+localize_numeral_system = false
+text = "Inventory"
+
+[node name="LoadButton" type="Button" parent="MenuPanel/MainFrame/MainVBox/TopTabs" unique_id=1607057014]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Load"
+
+[node name="SaveButton" type="Button" parent="MenuPanel/MainFrame/MainVBox/TopTabs" unique_id=1645989702]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Save"
+
+[node name="CharacterButton" type="Button" parent="MenuPanel/MainFrame/MainVBox/TopTabs" unique_id=408360169]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "Character"
+
+[node name="CloseButton" type="Button" parent="MenuPanel/MainFrame/MainVBox/TopTabs" unique_id=668578978]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+text = "X"
+
+[node name="ContentArea" type="HBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs" unique_id=1076325595]
+layout_mode = 2
+
+[node name="InventoryPanel" type="PanelContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea" unique_id=145571050]
+custom_minimum_size = Vector2(390, 0)
+layout_mode = 2
+
+[node name="InventroyVbox" type="VBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/InventoryPanel" unique_id=1025966260]
+layout_mode = 2
+
+[node name="InventoryTitle" type="Label" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/InventoryPanel/InventroyVbox" unique_id=1648247913]
+layout_mode = 2
+
+[node name="CategoryTabs" type="HBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/InventoryPanel/InventroyVbox" unique_id=674527645]
+layout_mode = 2
+
+[node name="ItemGrid" type="GridContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/InventoryPanel/InventroyVbox" unique_id=350657097]
+custom_minimum_size = Vector2(62, 62)
+layout_mode = 2
+columns = 5
+
+[node name="BottomBar" type="HBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/InventoryPanel/InventroyVbox" unique_id=2101813675]
+layout_mode = 2
+
+[node name="ItemDetailsPanel" type="PanelContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea" unique_id=181084891]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+
+[node name="ItemDetailsVBox" type="VBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/ItemDetailsPanel" unique_id=1950825346]
+layout_mode = 2
+
+[node name="ItemDetailsTitle" type="Label" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/ItemDetailsPanel/ItemDetailsVBox" unique_id=1146157715]
+layout_mode = 2
+
+[node name="ItemIconPreview" type="TextureRect" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/ItemDetailsPanel/ItemDetailsVBox" unique_id=1784493437]
+layout_mode = 2
+
+[node name="ItemDescription" type="Label" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/ItemDetailsPanel/ItemDetailsVBox" unique_id=1403331126]
+layout_mode = 2
+
+[node name="CharacterPanel" type="PanelContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea" unique_id=231480086]
+custom_minimum_size = Vector2(390, 0)
+layout_mode = 2
+
+[node name="CharacterVBox" type="VBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/CharacterPanel" unique_id=2134189827]
+layout_mode = 2
+
+[node name="CharacterTitle" type="Label" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/CharacterPanel/CharacterVBox" unique_id=1353761234]
+layout_mode = 2
+
+[node name="PotraitAndInfo" type="HBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/CharacterPanel/CharacterVBox" unique_id=1341419337]
+layout_mode = 2
+
+[node name="StatsTitle" type="Label" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/CharacterPanel/CharacterVBox" unique_id=1363023462]
+layout_mode = 2
+
+[node name="StatsList" type="VBoxContainer" parent="MenuPanel/MainFrame/MainVBox/TopTabs/ContentArea/CharacterPanel/CharacterVBox" unique_id=1328235601]
+layout_mode = 2
