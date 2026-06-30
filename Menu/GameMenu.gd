@@ -55,7 +55,7 @@ const ITEM_DETAILS_PANEL_WIDTH := 360
 const CHARACTER_PANEL_WIDTH := 360
 
 const INVENTORY_SLOT_COUNT := 20
-const INVENTORY_GRID_COLUMNS := 4
+const INVENTORY_GRID_COLUMNS := 5
 
 
 # ============================================================
