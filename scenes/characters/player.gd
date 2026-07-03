@@ -22,7 +22,18 @@ var current_machine_index: int
 	Enum.Tool.WATER: $Sounds/Water,
 }
 
+var has_hippo_roller: bool = false
+var hippo_roller_scene = preload("res://scenes/objects/hippo_roller.tscn") # Make sure this path is correct!
+var hippo_roller_item_data := {
+	"name": "Hippo Roller",
+	"amount": 1,
+	"category": "Quest Items",
+	"description": "A barrel used to carry water efficiently.",
+	"icon": "res://resources/HippoRoller.tres" # Make sure this points to your icon!
+}
+
 signal tool_use(tool: Enum.Tool, pos: Vector2)
+
 signal diagnose
 signal day_change
 signal build(current_machine: Enum.Machine)
@@ -85,6 +96,10 @@ func get_basic_input():
 	if Input.is_action_just_pressed("build"):
 		current_state = Enum.State.BUILDING
 		current_machine = Data.unlocked_machines[current_machine_index] as Enum.Machine
+		
+	# --- ADD THIS DROP CHECK ---
+	if Input.is_action_just_pressed("drop_item") and has_hippo_roller:
+		drop_hippo_roller()
 
 
 func get_fishing_input():
@@ -120,22 +135,40 @@ func move():
 
 func animate():
 	if direction:
-		move_state_machine.travel('Walk')
+		# Check if we have the roller to play the right walk
+		if has_hippo_roller:
+			move_state_machine.travel('RollerWalk')
+		else:
+			move_state_machine.travel('Walk')
 		var direction_animation = Vector2(round(direction.x),round(direction.y))
 		$Animation/AnimationTree.set("parameters/MoveStateMachine/Idle/blend_position", direction_animation)
 		$Animation/AnimationTree.set("parameters/MoveStateMachine/Walk/blend_position", direction_animation)
 		$Animation/AnimationTree.set("parameters/FishBlendSpace2D/blend_position", direction_animation)
+		
+		# Set the roller blend positions
+		if has_hippo_roller:
+			$Animation/AnimationTree.set("parameters/MoveStateMachine/RollerIdle/blend_position", direction_animation)
+			$Animation/AnimationTree.set("parameters/MoveStateMachine/RollerWalk/blend_position", direction_animation)
 		for animation in Data.TOOL_STATE_ANIMATIONS.values():
 			var animation_name: String = "parameters/ToolStateMachine/"+ animation +"/blend_position"
 			$Animation/AnimationTree.set(animation_name, direction_animation)
 	else:
-		move_state_machine.travel('Idle')
+		# Check if we have the roller to play the right idle
+		if has_hippo_roller:
+			move_state_machine.travel('RollerIdle')
+		else:
+			move_state_machine.travel('Idle')
+		
 
 
 func start_fishing():
 	$FishingGame.reveal()
 	current_state = Enum.State.FISHING
-	$Animation/AnimationTree.set("parameters/FishBlend/blend_amount", 1)
+	$Animation/AnimationTree.set("parameters/FishBlend/blend_amo
+	return coord * Data.TILE_SIZE + Vector2i(8,8)
+
+
+func _on_step_timer_timeout() -> void:unt", 1)
 
 
 func stop_fishing():
@@ -166,8 +199,29 @@ func get_machine_coord() -> Vector2i:
 	var coord = Vector2i(pos.x / Data.TILE_SIZE, pos.y / Data.TILE_SIZE)
 	coord.x += -1 if pos.x < 0 else 0
 	coord.y += -1 if pos.y < 0 else 0
-	return coord * Data.TILE_SIZE + Vector2i(8,8)
-
-
-func _on_step_timer_timeout() -> void:
 	$Sounds/Step.play()
+	return coord * Data.TILE_SIZE + Vector2i(8,8) # <--- THIS IS THE LINE THAT WENT MISSINGs
+
+
+func equip_hippo_roller() -> void:
+	has_hippo_roller = true
+	
+	# Find the menu and add the item to the inventory
+	var menu = get_tree().get_first_node_in_group("GameMenu")
+	if menu != null:
+		if menu.has_method("add_item"):
+			menu.add_item(hippo_roller_item_data)
+
+func drop_hippo_roller() -> void:
+	has_hippo_roller = false
+	
+	# Find the menu and remove the item from the inventory
+	var menu = get_tree().get_first_node_in_group("GameMenu")
+	if menu != null:
+		if menu.has_method("remove_item"):
+			menu.remove_item("Hippo Roller")
+	
+	# Spawn the roller back into the world
+	var dropped_roller = hippo_roller_scene.instantiate()
+	dropped_roller.global_position = position + last_direction * 20 
+	get_parent().add_child(dropped_roller)

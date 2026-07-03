@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://sw0jgrk8jhtf"]
+
+[ext_resource type="Texture2D" uid="uid://wpqw1s3qv7i5" path="res://graphics/objects/hippo-roller.png" id="1_68dci"]
+
+[resource]
+atlas = ExtResource("1_68dci")
+region = Rect2(24, 0, 24, 24)

@@ -7,7 +7,8 @@ var blob_scene = preload("res://scenes/objects/blob.tscn")
 var machine_scenes = {
 	Enum.Machine.SPRINKLER: preload("res://scenes/objects/machines/sprinkler.tscn"),
 	Enum.Machine.SCARECROW: preload("res://scenes/objects/machines/scare_crow.tscn"),
-	Enum.Machine.FISHER: preload("res://scenes/objects/machines/fisher.tscn")}
+	Enum.Machine.FISHER: preload("res://scenes/objects/machines/fisher.tscn")
+}
 var used_cells: Array[Vector2i]
 var raining: bool:
 	set(value):
@@ -25,25 +26,33 @@ const MACHINE_PREVIEW_TEXTURES = {
 	Enum.Machine.SPRINKLER: {'texture':preload("res://graphics/icons/sprinkler.png"), 'offset': Vector2i(0,0)},
 	Enum.Machine.FISHER: {'texture':preload("res://graphics/icons/fisher.png"), 'offset': Vector2i(0,-4)},
 	Enum.Machine.SCARECROW: {'texture':preload("res://graphics/icons/scarecrow.png"), 'offset': Vector2i(0,-4)},
-	Enum.Machine.DELETE: {'texture':preload("res://graphics/icons/delete.png"), 'offset': Vector2i(0,0)}}
+	Enum.Machine.DELETE: {'texture':preload("res://graphics/icons/delete.png"), 'offset': Vector2i(0,0)}
+}
 
 
 func _on_player_tool_use(tool: Enum.Tool, pos: Vector2) -> void:
 	var grid_coord: Vector2i = Vector2i(int(pos.x / Data.TILE_SIZE),int(pos.y / Data.TILE_SIZE))
 	grid_coord.x += -1 if pos.x < 0 else 0
 	grid_coord.y += -1 if pos.y < 0 else 0
-	var has_soil = grid_coord in $Layers/SoilLayer.get_used_cells()
+	
+	# --- SOIL DISABLED ---
+	# var has_soil = grid_coord in $Layers/SoilLayer.get_used_cells()
+	var has_soil = false 
 	
 	match tool:
 		Enum.Tool.HOE:
 			var cell = $Layers/GrassLayer.get_cell_tile_data(grid_coord) as TileData
-			if cell and cell.get_custom_data('farmable'):
-				$Layers/SoilLayer.set_cells_terrain_connect([grid_coord], 0, 0)
-			if raining:
-				$Layers/SoilWaterLayer.set_cell(grid_coord, 0, Vector2i(randi_range(0,2),0))
+			# --- SOIL DISABLED ---
+			# if cell and cell.get_custom_data('farmable'):
+			# 	$Layers/SoilLayer.set_cells_terrain_connect([grid_coord], 0, 0)
+			# if raining:
+			# 	$Layers/SoilWaterLayer.set_cell(grid_coord, 0, Vector2i(randi_range(0,2),0))
+			pass
 		Enum.Tool.WATER:
 			if has_soil:
-				$Layers/SoilWaterLayer.set_cell(grid_coord, 0, Vector2i(randi_range(0,2),0))
+				# --- SOIL DISABLED ---
+				# $Layers/SoilWaterLayer.set_cell(grid_coord, 0, Vector2i(randi_range(0,2),0))
+				pass
 		Enum.Tool.FISH:
 			if not grid_coord in $Layers/GrassLayer.get_used_cells():
 				$Objects/Player.start_fishing()
@@ -112,9 +121,10 @@ func _process(_delta: float) -> void:
 	$Music/BGMusic.volume_db = volume_curve.sample(daytime_point)
 	$Overlay/DayTimeColor.color = color
 	
-	# machine preview 
+	# machine preview
 	$Overlay/MachinePreviewSprite.visible = player.current_state == Enum.State.BUILDING
 	$Overlay/MachinePreviewSprite.position = player.get_machine_coord() + MACHINE_PREVIEW_TEXTURES[player.current_machine]['offset']
+
 
 func day_restart():
 	var tween = create_tween()
@@ -126,8 +136,13 @@ func day_restart():
 
 func level_reset():
 	for plant in get_tree().get_nodes_in_group('Plants'):
-		plant.grow(plant.coord in $Layers/SoilWaterLayer.get_used_cells())
-	$Layers/SoilWaterLayer.clear()
+		# --- SOIL DISABLED ---
+		# plant.grow(plant.coord in $Layers/SoilWaterLayer.get_used_cells())
+		plant.grow(false)
+		
+	# --- SOIL DISABLED ---
+	# $Layers/SoilWaterLayer.clear()
+	
 	$Overlay/CanvasLayer/PlantInfoContainer.update_all()
 	
 	$Timers/DayTimer.start()
@@ -138,9 +153,10 @@ func level_reset():
 	raining = Data.forecast_rain
 	Data.forecast_rain = [true, false].pick_random()
 	
-	if raining:
-		for cell in $Layers/SoilLayer.get_used_cells():
-			$Layers/SoilWaterLayer.set_cell(cell, 0, Vector2i(randi_range(0,2),0))
+	# --- SOIL DISABLED ---
+	# if raining:
+	# 	for cell in $Layers/SoilLayer.get_used_cells():
+	# 		$Layers/SoilWaterLayer.set_cell(cell, 0, Vector2i(randi_range(0,2),0))
 
 
 func plant_death(coord: Vector2i):
@@ -156,12 +172,15 @@ func create_projectile(start_pos: Vector2, dir: Vector2):
 func water_plants(coord: Vector2i):
 	const SOIL_DIRECTIONS = [
 		Vector2i(-1, -1), Vector2i(0, -1), Vector2i(1, -1),
-		Vector2i(-1,  0),Vector2i(1,0), Vector2i(-1,  1), 
-		Vector2i(0,  1), Vector2i(1,  1)]
-	for dir in SOIL_DIRECTIONS:
-		var cell = coord + dir
-		if cell in $Layers/SoilLayer.get_used_cells():
-			$Layers/SoilWaterLayer.set_cell(cell, 0, Vector2i(randi_range(0,2),0))
+		Vector2i(-1, 0), Vector2i(1, 0), Vector2i(-1, 1), 
+		Vector2i(0, 1), Vector2i(1, 1)
+	]
+	
+	# --- SOIL DISABLED ---
+	# for dir in SOIL_DIRECTIONS:
+	# 	var cell = coord + dir
+	# 	if cell in $Layers/SoilLayer.get_used_cells():
+	# 		$Layers/SoilWaterLayer.set_cell(cell, 0, Vector2i(randi_range(0,2),0))
 
 
 func _on_blob_timer_timeout() -> void:

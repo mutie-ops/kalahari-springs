@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://yi8boi7cwh13"]
+
+[ext_resource type="Script" uid="uid://b54ukvaltuee8" path="res://scenes/objects/hippo_roller.gd" id="1_5hjgk"]
+[ext_resource type="Texture2D" uid="uid://sw0jgrk8jhtf" path="res://resources/HippoRoller.tres" id="1_78loe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hjgk"]
+radius = 11.005084
+height = 24.01014
+
+[node name="HippoRoller" type="Area2D" unique_id=338558915]
+collision_layer = 5
+collision_mask = 2
+script = ExtResource("1_5hjgk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1127967878]
+texture = ExtResource("1_78loe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2122362510]
+position = Vector2(-2, 1)
+rotation = 1.5760312
+shape = SubResource("CapsuleShape2D_5hjgk")

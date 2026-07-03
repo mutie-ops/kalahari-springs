@@ -31,7 +31,7 @@
 "image": "\"res://dialog/dialog_ui/profile-hope-happy_md.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
+"offset": Vector2(-76, -336),
 "scale": 1,
 "scene": ""
 }

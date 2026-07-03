@@ -5,8 +5,7 @@ extends CharacterBody2D
 
 # ── tuneable constants ─────────────────────────────────────────────
 const WALK_SPEED   := 30.0   # pixels per second
-const DIALOG_TIMELINE := "naledi_router"  # your Dialogic timeline name
-
+const DIALOG_TIMELINE := "Fetch Hippo Roller"  # your Dialogic timeline name
 # ── walk cycle definition ──────────────────────────────────────────
 # Each step: [direction_string, duration_seconds, pause_after_seconds]
 # direction "" means "stay put and idle in the stated facing direction"

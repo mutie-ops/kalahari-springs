@@ -191,6 +191,11 @@ var menu_open: bool = false
 var menu_panel: Control
 var item_description_label: Label
 var item_grid: GridContainer
+var item_details_icon: TextureRect
+var tab_inventory: HBoxContainer
+var tab_character: HBoxContainer
+var tab_load: PanelContainer
+var tab_save: PanelContainer
 
 var current_inventory_filter := "All"
 var previous_mouse_mode := Input.MOUSE_MODE_VISIBLE
@@ -202,6 +207,7 @@ var previous_mouse_mode := Input.MOUSE_MODE_VISIBLE
 
 func _ready() -> void:
 	# Put this menu above other HUDs / overlays / CanvasLayers.
+	add_to_group("GameMenu")
 	layer = 999
 
 	# Keep script active.
@@ -411,17 +417,44 @@ func _add_close_button(parent: HBoxContainer) -> void:
 # ============================================================
 
 func _build_content_area(parent: VBoxContainer) -> void:
-	var content_area := HBoxContainer.new()
+	# Change this to a standard Control so tabs can overlap each other
+	var content_area := Control.new()
 	content_area.name = "ContentArea"
 	content_area.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	content_area.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	content_area.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	content_area.add_theme_constant_override("separation", 14)
 	parent.add_child(content_area)
 
-	_build_inventory_panel(content_area)
-	_build_item_details_panel(content_area)
-	_build_character_panel(content_area)
+	# --- 1. INVENTORY TAB (Inventory + Details) ---
+	tab_inventory = HBoxContainer.new()
+	tab_inventory.name = "TabInventory"
+	tab_inventory.set_anchors_preset(Control.PRESET_FULL_RECT)
+	tab_inventory.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	tab_inventory.add_theme_constant_override("separation", 14)
+	content_area.add_child(tab_inventory)
+	
+	_build_inventory_panel(tab_inventory)
+	_build_item_details_panel(tab_inventory)
+
+	# --- 2. CHARACTER TAB ---
+	tab_character = HBoxContainer.new()
+	tab_character.name = "TabCharacter"
+	tab_character.set_anchors_preset(Control.PRESET_FULL_RECT)
+	tab_character.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	content_area.add_child(tab_character)
+	
+	# We pass tab_character so the character panel is built inside this tab
+	_build_character_panel(tab_character) 
+
+	# --- 3. LOAD & SAVE TABS (Placeholders for now) ---
+	tab_load = _build_placeholder_tab("Load Game Screen Will Go Here")
+	content_area.add_child(tab_load)
+	
+	tab_save = _build_placeholder_tab("Save Game Screen Will Go Here")
+	content_area.add_child(tab_save)
+
+	# Start by showing only the inventory tab
+	_switch_tab("Inventory")
 
 
 # ============================================================
@@ -681,7 +714,21 @@ func _build_item_details_panel(parent: HBoxContainer) -> void:
 	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	vbox.add_child(spacer)
-
+	
+	# --- CORRECTED IMAGE HOLDER BUILDER ---
+	item_details_icon = TextureRect.new()
+	item_details_icon.name = "ItemDetailsIcon"
+	item_details_icon.custom_minimum_size = Vector2(100, 100) 
+	item_details_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	item_details_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	
+	# Use size flags to center the image box instead of text alignment!
+	item_details_icon.size_flags_horizontal = Control.SIZE_SHRINK_CENTER 
+	
+	item_details_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	vbox.add_child(item_details_icon)
+	# --------------------------------------
+	
 	item_description_label = Label.new()
 	item_description_label.name = "ItemDescription"
 	item_description_label.text = "Select an item to see details."
@@ -703,13 +750,20 @@ func _on_item_pressed(item: Dictionary) -> void:
 	var amount: int = int(item.get("amount", 1))
 	var category: String = str(item.get("category", "Unknown"))
 	var description: String = str(item.get("description", "No description."))
-
+	var icon_path: String = str(item.get("icon", "")) # <--- GET ICON PATH
+	
 	print("Item clicked: ", item_name)
 
 	if item_description_label != null:
 		item_description_label.text = item_name + "\n\nCategory: " + category + "\nAmount: x" + str(amount) + "\n\n" + description
 
-
+	# --- ADD THESE LINES TO CHANGE THE VISUAL ICON ---
+	if item_details_icon != null:
+		if icon_path != "" and ResourceLoader.exists(icon_path):
+			item_details_icon.texture = load(icon_path)
+		else:
+			item_details_icon.texture = null # Clear it if there is no image
+	# -------------------------------------------------
 # ============================================================
 # RIGHT PANEL: CHARACTER INFORMATION
 # ============================================================
@@ -719,6 +773,7 @@ func _build_character_panel(parent: HBoxContainer) -> void:
 	panel.name = "CharacterPanel"
 	panel.custom_minimum_size = Vector2(CHARACTER_PANEL_WIDTH, 0)
 	panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 	panel.add_theme_stylebox_override(
@@ -858,11 +913,39 @@ func _build_bottom_hint(parent: VBoxContainer) -> void:
 
 
 # ============================================================
-# BUTTON CLICK TEST
+# BUTTON CLICK & TAB LOGIC
 # ============================================================
 
 func _on_button_pressed(button_name: String) -> void:
 	print("Button clicked: ", button_name)
+	
+	# If the button clicked matches one of our tabs, switch to it
+	if button_name in ["Inventory", "Load", "Save", "Character"]:
+		_switch_tab(button_name)
+
+
+func _switch_tab(tab_name: String) -> void:
+	# Hide everything first, then only show the requested tab
+	if tab_inventory: tab_inventory.visible = (tab_name == "Inventory")
+	if tab_character: tab_character.visible = (tab_name == "Character")
+	if tab_load: tab_load.visible = (tab_name == "Load")
+	if tab_save: tab_save.visible = (tab_name == "Save")
+
+
+func _build_placeholder_tab(text_label: String) -> PanelContainer:
+	var panel = PanelContainer.new()
+	panel.set_anchors_preset(Control.PRESET_FULL_RECT)
+	
+	panel.add_theme_stylebox_override("panel", _make_panel_style(INNER_PANEL_COLOR, INNER_PANEL_BORDER_COLOR, 1))
+	
+	var label = Label.new()
+	label.text = text_label
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.add_theme_color_override("font_color", NORMAL_TEXT_COLOR)
+	panel.add_child(label)
+	
+	return panel
 
 
 # ============================================================
@@ -913,3 +996,23 @@ func _make_button_style(bg_color: Color) -> StyleBoxFlat:
 	style.corner_radius_bottom_right = 3
 
 	return style
+
+func add_item(item_data: Dictionary) -> void:
+	var found = false
+	for item in inventory_items:
+		if item["name"] == item_data["name"]:
+			item["amount"] += item_data["amount"]
+			found = true
+			break
+	if not found:
+		inventory_items.append(item_data)
+	_populate_inventory_grid(current_inventory_filter)
+
+func remove_item(item_name: String, amount_to_remove: int = 1) -> void:
+	for i in range(inventory_items.size() - 1, -1, -1):
+		if inventory_items[i]["name"] == item_name:
+			inventory_items[i]["amount"] -= amount_to_remove
+			if inventory_items[i]["amount"] <= 0:
+				inventory_items.remove_at(i)
+			break
+	_populate_inventory_grid(current_inventory_filter)

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cmy02oogrp77k"]
+
+[ext_resource type="Script" uid="uid://5ah0e5xqpb8j" path="res://scenes/ui/quest_hud.gd" id="1_qa7di"]
+
+[node name="QuestHUD" type="CanvasLayer" unique_id=652308244]
+script = ExtResource("1_qa7di")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=477624201]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -511.0
+offset_bottom = 241.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=566013766]
+layout_mode = 2
+
+[node name="QuestTitle" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1212405685]
+layout_mode = 2
+
+[node name="QuestObjective" type="Label" parent="PanelContainer/VBoxContainer" unique_id=2144956718]
+layout_mode = 2

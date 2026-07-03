@@ -1,0 +1,6 @@
+join naledi (Default) left
+join hippo (Default) right
+hippo: Hello, you seem quite concerned, is something the matter
+naledi (concerned): Yes I want to fetch water before evening arrives.
+hippo (Happy): Don't worry I have a solution
+do QuestWeaverGlobal.start_quest_id("Hippo_roller_tutorial")

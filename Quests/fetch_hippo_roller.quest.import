@@ -1,0 +1,14 @@
+[remap]
+
+importer="quest_weaver.importer"
+type="Resource"
+uid="uid://ckgu5ki7i8883"
+path="res://.godot/imported/fetch_hippo_roller.quest-8014400a9aa59b1d6103e86ea02a8753.tres"
+
+[deps]
+
+source_file="res://Quests/fetch_hippo_roller.quest"
+dest_files=["res://.godot/imported/fetch_hippo_roller.quest-8014400a9aa59b1d6103e86ea02a8753.tres"]
+
+[params]
+
