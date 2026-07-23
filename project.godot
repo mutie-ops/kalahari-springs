@@ -36,7 +36,9 @@ directories/dch_directory={
 "naledi": "res://dialog/naledi.dch"
 }
 directories/dtl_directory={
-"Fetch Hippo Roller": "res://dialog/Fetch Hippo Roller.dtl",
+"Hippo_Act1": "res://dialog/Hippo_Act1.dtl",
+"Hippo_waiting": "res://dialog/Hippo_waiting.dtl",
+"Naledi_Act1": "res://dialog/Naledi_Act1.dtl",
 "naledi_before_quest_distant": "res://dialog/naledi_before_quest_distant.dtl",
 "naledi_quest_active_checkin": "res://dialog/naledi_quest_active_checkin.dtl",
 "naledi_quest_complete_gratitude": "res://dialog/naledi_quest_complete_gratitude.dtl",
@@ -65,6 +67,9 @@ variables={
 "water_burden_quest_active": false,
 "water_burden_quest_complete": false,
 "water_burden_thanked": false
+},
+"Naledi_Quests": {
+"water_burden_status": 0
 }
 }
 text/letter_speed=0.02
@@ -117,6 +122,10 @@ version_control/autoload_on_startup=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/quest_weaver/plugin.cfg")
+
+[global_group]
+
+hippo_roller_item=""
 
 [input]
 

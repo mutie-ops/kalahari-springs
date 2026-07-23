@@ -1,15 +1,10 @@
-[gd_resource type="Resource" script_class="QuestRegistry" format=3]
+[gd_resource type="Resource" script_class="QuestRegistry" format=3 uid="uid://c277h6l8ow0nh"]
 
-[ext_resource type="Script" path="res://addons/quest_weaver/core/quest_registry.gd" id="1_3vag5"]
+[ext_resource type="Script" uid="uid://c4a2r4gsgoabg" path="res://addons/quest_weaver/core/quest_registry.gd" id="1_3vag5"]
 
 [resource]
 script = ExtResource("1_3vag5")
 quest_path_map = {
-"end_screen": "res://addons/quest_weaver/examples/quests/Credits/end_screen.quest",
-&"main_heart_of_nestor": "res://addons/quest_weaver/examples/quests/main/start_first_task.quest",
-"questline": "res://addons/quest_weaver/examples/quests/main/questline.quest",
-"side_a_little_favor": "res://addons/quest_weaver/examples/quests/side/side_a_little_favor.quest",
-&"side_little_favor": "res://addons/quest_weaver/examples/quests/side/side_a_little_favor.quest",
-"start_first_task": "res://addons/quest_weaver/examples/quests/main/start_first_task.quest"
+&"Naledi_Act1": "res://Quests/fetch_hippo_roller.quest",
+"fetch_hippo_roller": "res://Quests/fetch_hippo_roller.quest"
 }
-metadata/_custom_type_script = "res://addons/quest_weaver/core/quest_registry.gd"

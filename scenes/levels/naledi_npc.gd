@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 # ── tuneable constants ─────────────────────────────────────────────
 const WALK_SPEED   := 30.0   # pixels per second
-const DIALOG_TIMELINE := "Fetch Hippo Roller"  # your Dialogic timeline name
+const DIALOG_TIMELINE := "Naledi_Act1"  # your Dialogic timeline name
 # ── walk cycle definition ──────────────────────────────────────────
 # Each step: [direction_string, duration_seconds, pause_after_seconds]
 # direction "" means "stay put and idle in the stated facing direction"
@@ -132,8 +132,10 @@ func _on_hope_entered(body: Node) -> void:
 		_play_anim("idle")
 		# Small delay so Hope finishes moving before dialog opens
 		await get_tree().create_timer(0.3).timeout
+		
+		# 1. Start the dialog
 		Dialogic.start(DIALOG_TIMELINE)
-
+		
 func _on_hope_exited(body: Node) -> void:
 	# Dialog closing is handled by timeline_ended signal instead
 	pass

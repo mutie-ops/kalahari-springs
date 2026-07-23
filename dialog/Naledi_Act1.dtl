@@ -1,0 +1,14 @@
+join naledi (Default) left
+join hippo (Default) right
+if {Naledi_Quests.water_burden_status} == 1.0:
+	naledi (concerned): Did you find the solution?
+elif {Naledi_Quests.water_burden_status} == 2:
+	naledi: Thank You you have found a roller
+	set {Naledi_Quests.water_burden_status} = 3.0
+elif {Naledi_Quests.water_burden_status} == 3.0:
+	naledi: Thank you again for helping me with the water
+else:
+	hippo (Default): Hello, you seem quite concerned, is something the matter?
+	naledi (concerned): Yes I want to fetch water before evening arrives.
+	hippo (Happy): Don't worry I have a solution.
+	set {Naledi_Quests.water_burden_status} = 1.0

@@ -78,6 +78,7 @@
 [ext_resource type="PackedScene" uid="uid://dj3ig64fcs2x0" path="res://graphics/characters/naledi/naledi_npc.tscn" id="65_hkrhu"]
 [ext_resource type="PackedScene" uid="uid://yi8boi7cwh13" path="res://scenes/objects/hippo_roller.tscn" id="77_rp5kh"]
 [ext_resource type="PackedScene" uid="uid://cmy02oogrp77k" path="res://scenes/ui/quest_hud.tscn" id="78_d1svo"]
+[ext_resource type="PackedScene" path="res://addons/quest_weaver/core/quest_controller.tscn" id="79_tns0x"]
 
 [sub_resource type="Gradient" id="Gradient_ouxo3"]
 offsets = PackedFloat32Array(0, 0.294849, 0.4777975, 1)
@@ -1754,10 +1755,12 @@ volume_db = -10.0
 stream = ExtResource("21_p62il")
 volume_db = -20.0
 
-[node name="HippoRoller" parent="." unique_id=338558915 instance=ExtResource("77_rp5kh")]
+[node name="HippoRoller" parent="." unique_id=338558915 groups=["hippo_roller_item"] instance=ExtResource("77_rp5kh")]
 position = Vector2(382, 160)
 
 [node name="QuestHUD" parent="." unique_id=652308244 instance=ExtResource("78_d1svo")]
+
+[node name="QuestController" parent="." unique_id=223020695 instance=ExtResource("79_tns0x")]
 
 [connection signal="build" from="Objects/Player" to="." method="_on_player_build"]
 [connection signal="close_shop" from="Objects/Player" to="." method="_on_player_close_shop"]
