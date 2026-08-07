@@ -23,6 +23,10 @@ var current_machine_index: int
 }
 
 var has_hippo_roller: bool = false
+
+var max_water: float = 90.0
+var current_water: float = 0.0
+
 var hippo_roller_scene = preload("res://scenes/objects/hippo_roller.tscn") # Make sure this path is correct!
 var hippo_roller_item_data := {
 	"name": "Hippo Roller",
@@ -39,6 +43,12 @@ signal day_change
 signal build(current_machine: Enum.Machine)
 signal machine_change(current_machine: Enum.Machine)
 signal close_shop
+signal hippo_roller_equipped
+signal water_updated(new_amount: float)
+
+
+func _ready() -> void:
+	add_to_group("player")
 
 func _physics_process(_delta: float) -> void:
 	match current_state:
@@ -205,6 +215,8 @@ func get_machine_coord() -> Vector2i:
 
 func equip_hippo_roller() -> void:
 	has_hippo_roller = true
+	hippo_roller_equipped.emit()
+	
 	
 	# Find the menu and add the item to the inventory
 	var menu = get_tree().get_first_node_in_group("GameMenu")
@@ -225,3 +237,19 @@ func drop_hippo_roller() -> void:
 	var dropped_roller = hippo_roller_scene.instantiate()
 	dropped_roller.global_position = position + last_direction * 20 
 	get_parent().add_child(dropped_roller)
+
+func add_water(amount: float) -> void:
+	if has_hippo_roller:
+		# clampf prevents the water from ever going above max_water (90)
+		current_water = clampf(current_water + amount, 0.0, max_water)
+		
+		# Broadcast the new amount to the UI!
+		water_updated.emit(current_water)
+		print("DEBUG: Filled from water source! Current level: ", current_water)
+
+func pour_water(amount: float) -> void:
+	if has_hippo_roller:
+		# Empty the roller, stopping at 0L
+		current_water = clampf(current_water - amount, 0.0, max_water)
+		water_updated.emit(current_water)
+		print("DEBUG: Poured water! Current water: ", current_water)
