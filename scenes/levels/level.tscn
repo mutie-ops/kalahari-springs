@@ -34,7 +34,6 @@
 [ext_resource type="Texture2D" uid="uid://fnmyohadow27" path="res://graphics/icons/delete.png" id="18_qhnmj"]
 [ext_resource type="PackedScene" uid="uid://u3c0eqnhlpe2" path="res://graphics/objects/BoulderMd03.tscn" id="18_shov2"]
 [ext_resource type="PackedScene" uid="uid://pwg21tu8viap" path="res://graphics/objects/BoulderMd04.tscn" id="19_8okjc"]
-[ext_resource type="AudioStream" uid="uid://cmmksm2j2lpov" path="res://audio/music.mp3" id="20_4ab0e"]
 [ext_resource type="PackedScene" uid="uid://w8314eip3n3o" path="res://graphics/objects/BoulderMd05.tscn" id="20_hkrhu"]
 [ext_resource type="Texture2D" uid="uid://chyik6n8tk5gu" path="res://graphics/objects/boulder-sml-01.tres" id="21_a70f2"]
 [ext_resource type="PackedScene" uid="uid://wx71duw18622" path="res://graphics/objects/BoulderMd06.tscn" id="21_l4bmn"]
@@ -77,6 +76,7 @@
 [ext_resource type="Texture2D" uid="uid://b7rnfybgknpao" path="res://graphics/structures/gatheringpavillion.tres" id="53_72owr"]
 [ext_resource type="PackedScene" uid="uid://dj3ig64fcs2x0" path="res://graphics/characters/naledi/naledi_npc.tscn" id="65_hkrhu"]
 [ext_resource type="PackedScene" uid="uid://cy2edbfo5csix" path="res://scenes/levels/water_source.tscn" id="75_eli2t"]
+[ext_resource type="AudioStream" uid="uid://p5sdcn7ohl81" path="res://audio/Moonlit Tavern Path.ogg" id="76_eli2t"]
 [ext_resource type="PackedScene" uid="uid://yi8boi7cwh13" path="res://scenes/objects/hippo_roller.tscn" id="77_rp5kh"]
 [ext_resource type="PackedScene" uid="uid://cmy02oogrp77k" path="res://scenes/ui/quest_hud.tscn" id="78_d1svo"]
 [ext_resource type="PackedScene" path="res://addons/quest_weaver/core/quest_controller.tscn" id="79_tns0x"]
@@ -1681,7 +1681,7 @@ texture = ExtResource("13_qhnmj")
 [node name="StaticBody2D" type="StaticBody2D" parent="Objects" unique_id=407979153]
 
 [node name="NalediNPC" parent="Objects" unique_id=386603033 instance=ExtResource("65_hkrhu")]
-position = Vector2(79, 364)
+position = Vector2(46, 372)
 
 [node name="Overlay" type="Node2D" parent="." unique_id=114813407]
 metadata/_edit_lock_ = true
@@ -1771,12 +1771,13 @@ position = Vector2(292, 185)
 [node name="Music" type="Node" parent="." unique_id=1998086291]
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="Music" unique_id=2023288483]
-stream = ExtResource("20_4ab0e")
-volume_db = -10.0
+stream = ExtResource("76_eli2t")
+volume_db = 10.0
+autoplay = true
+mix_target = 1
 
 [node name="Rain" type="AudioStreamPlayer" parent="Music" unique_id=47094074]
 stream = ExtResource("21_p62il")
-volume_db = -20.0
 
 [node name="HippoRoller" parent="." unique_id=338558915 groups=["hippo_roller_item"] instance=ExtResource("77_rp5kh")]
 position = Vector2(382, 160)

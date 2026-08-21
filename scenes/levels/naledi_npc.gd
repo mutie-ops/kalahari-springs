@@ -21,7 +21,7 @@ const WALK_STEPS := [
 	["",      0.0, 4.0],  # idle at origin
 	["left",  0.0, 0.0],   # snap to face left before repeat
 ]
-
+const container = true
 # ── state ──────────────────────────────────────────────────────────
 enum State { WALKING, IDLE, PAUSED }
 var _state        : State = State.IDLE
@@ -31,6 +31,7 @@ var _in_pause     : bool  = false
 var _pause_timer  : float = 0.0
 var _facing       : String = "left"
 var _dialog_open  : bool  = false
+var _container    :String  = "bucket_full"
 
 @onready var _sprite : AnimatedSprite2D = $AnimatedSprite2D
 @onready var _area   : Area2D           = $Area2D
@@ -119,7 +120,11 @@ func _advance_step() -> void:
 
 # ── animation helper ──────────────────────────────────────────────
 func _play_anim(type: String) -> void:
-	var anim_name := type + "_" + _facing
+	
+	var anim_name := type + "_" + _facing 
+	if container:
+		anim_name += "_" + _container
+	
 	if _sprite.animation != anim_name:
 		_sprite.play(anim_name)
 
