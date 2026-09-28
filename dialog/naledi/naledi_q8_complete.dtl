@@ -1,0 +1,16 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Three years the machine sat in that trunk.
+- And now it's here
+	Hope: And now it's here.
+	Naledi: And now it's here.
+	Naledi: I keep wanting to say something useful about it and there isn't anything useful to say.
+	Naledi: One more thing. This isn't for the stall.
+	- What is it?
+		Hope: What is it?
+		Naledi: It's for the pump handle. For Gogo's blessing.
+		Naledi: You don't unveil a thing like that with a rag over it.
+		Naledi: Don't tell her. She'll want to know what colour and then she'll have opinions.
+[signal arg="hearts:naledi:2"]
+set {GameState.quest_naledi_stall_reopening} = "complete"
+set {GameState.naledi_blessing_cloth_ready} = true

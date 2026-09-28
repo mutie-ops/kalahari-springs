@@ -1,0 +1,6 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: So the mill's not stiff. I thought it was stiff. It's broken, properly broken, and it's been broken a while and everyone's just been shoving it harder.
+Lebo: Which is what people do. Nobody ever comes and says 'this is making a noise.' They come when it stops entirely.
+set {GameState.lebo_seasonal_last_chapter} = 1

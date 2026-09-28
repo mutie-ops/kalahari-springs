@@ -1,0 +1,8 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: I've never wired a pump before. I've read about it.
+- Is that enough?
+	Hope: Is that enough?
+	Sipho: Reading isn't the same as doing. But Lebo's never read about it and he's done plenty, so between us we're probably one competent person.
+	set {GameState.quest_watering_hole_solar_install} = "active"
+	[signal arg="objective:Assist Lebo and Sipho with the solar pump installation"]

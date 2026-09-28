@@ -1,0 +1,7 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: This is the season that puts the borehole back on everyone's lips. Every year. Without fail.
+- Does that help?
+	Hope: Does that help?
+	Charity: It helps me. A case is easier to make in the month people are living inside the problem.
+set {GameState.charity_seasonal_last_chapter} = 5

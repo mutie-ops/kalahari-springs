@@ -1,0 +1,5 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+Petrus: Ground's drying and the grazing's thin already. Early for that.
+Petrus: I'll be walking them further before winter. Bad for the old ones.
+set {GameState.petrus_seasonal_last_chapter} = 4

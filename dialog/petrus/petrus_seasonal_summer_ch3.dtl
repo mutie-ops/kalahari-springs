@@ -1,0 +1,9 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Aggravated)
+Petrus: Rain's a mercy and it's also ruined the low track.
+- Ruined how?
+	Hope: Ruined how?
+	Petrus: Cut a channel through it about so deep. Cattle won't cross it and I'm not carrying a cow.
+	Petrus: Nobody's noticed yet because nobody walks stock down there but me.
+set {GameState.petrus_seasonal_last_chapter} = 3

@@ -1,0 +1,26 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Worried)
+Sipho: Zanele put my name forward. Months ago. She didn't tell me she'd done it.
+- What does it say?
+	Hope: What does it say?
+	Sipho: Full scholarship. Boarding. Engineering track from the second year.
+	Sipho: Polokwane.
+- Sipho, that's extraordinary
+	Hope: Sipho, that's extraordinary.
+	Sipho: It's four hours away.
+	Sipho: Gogo's seventy-four. Who does the water?
+	- There's a borehole now
+		Hope: There's a borehole now.
+		Sipho: ...There is, isn't there.
+		Sipho: I hadn't put those two things together until just now.
+	- That's not your job to solve alone
+		Hope: That's not your job to solve alone.
+		Sipho: It's been my job since I was nine.
+		Sipho: I don't know how to stop thinking about it that way.
+Sipho: I haven't told her yet. Gogo.
+- She already knows
+	Hope: She already knows.
+	Sipho: She would, wouldn't she.
+[signal arg="hearts:sipho:1"]
+set {GameState.sipho_scholarship_received} = true

@@ -1,0 +1,8 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: The application went in nine months ago. Charity says that is normal and I believe her.
+- Doesn't the waiting frustrate you?
+	Hope: Doesn't the waiting frustrate you?
+	Zanele: It would, if the school stopped while I waited. It does not stop. It is in the hall this morning the same as it was yesterday.
+	Zanele: If the money comes, we get a building. If it does not, we stay in the hall and I keep asking. Neither of those is a reason to teach less this week.
+set {GameState.zanele_seasonal_last_chapter} = 5

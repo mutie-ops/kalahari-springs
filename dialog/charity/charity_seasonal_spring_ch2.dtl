@@ -1,0 +1,8 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: Early rains, and two rollers arriving. The village is having an unusually good fortnight.
+- Should I not say that out loud?
+	Hope: Should I not say that out loud?
+	Charity: Say it. I've noticed people here are superstitious about good news and I refuse to be.
+set {GameState.charity_seasonal_last_chapter} = 2

@@ -1,0 +1,12 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: — and you put the manure in the bottom, not the top, because you're feeding the roots and not the birds.
+Ezekiel: Because the birds are quicker than you are. Next question.
+Ezekiel: That one at the back asked about the termites. Nobody asks about the termites.
+- You enjoyed that
+	Hope: You enjoyed that.
+	Ezekiel: It was a nuisance and it cost me an afternoon.
+	Ezekiel: She can bring them again next month.
+[signal arg="hearts:ezekiel:1"]
+set {GameState.ezekiel_taught_students} = true

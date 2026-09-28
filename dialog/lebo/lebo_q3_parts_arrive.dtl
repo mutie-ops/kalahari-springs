@@ -1,0 +1,13 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Worried)
+Lebo: Look at this. LOOK at it. Petrus has had this under a tarpaulin since — he said thirty-one years, is that right? Thirty-one years.
+Lebo: Soaked it in oil like he said, too. He was right about that, don't tell him.
+Lebo: ...Ah.
+- What?
+	Hope: What?
+	Lebo: Feed collar. Little brass thing, sits between the shaft and the housing, about so big.
+	Lebo: I had one. I definitely had one, I had a whole tin of odd fittings —
+	Lebo: That's the roof, that is. That's the east bench in the rains.
+	Lebo: Two parts found across the whole district and I'm beaten by a collar.
+set {GameState.mill_collar_missing} = true

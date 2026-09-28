@@ -1,0 +1,8 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: Mopane moths are out and the buds on the marula have swelled since Tuesday — Tuesday — which means we're inside the window.
+- How long a window?
+	Hope: How long a window?
+	Lindi: Days. Maybe a week. And then one night, and if you miss the night there isn't another one.
+set {GameState.lindi_seasonal_last_chapter} = 2

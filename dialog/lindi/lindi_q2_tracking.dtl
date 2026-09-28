@@ -1,0 +1,14 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: It's close. I need people and I need them ready, not ready-in-an-hour.
+- What is it?
+	Hope: What is it?
+	Lindi: Kumbi kumbi. The alates — the flying ones, the reproductives — they come up out of the mounds all at once after the right rain and they fly, and while they're flying you can gather them by the handful, and then it's over.
+	Lindi: One night. Not a season, not a week. One night, and then they're gone or they're underground and either way you've missed it.
+	- How do you know it's close?
+		Hope: How do you know it's close?
+		Lindi: Soil temperature and the rain and the way the mounds have been opening at the top. I've been checking three mounds since the start of the month.
+		Lindi: I'm right about this. I'm not always right but I'm right about this.
+	set {GameState.quest_lindi_kumbi_kumbi_one} = "active"
+	[signal arg="objective:Recruit volunteers before the flight; be ready when the rain trigger fires"]

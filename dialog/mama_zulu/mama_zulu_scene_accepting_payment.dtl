@@ -1,0 +1,15 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Worried)
+join  left
+Villager: My garden came in. I can pay now. I am paying.
+Mama Zulu\: It is not necessary.
+Villager: It was not necessary for you either.
+Mama Zulu\: ...Thank you.
+- That was hard for you
+	Hope: That was hard for you.
+	Mama Zulu\: Yes.
+	Mama Zulu\: I have been the one giving for twenty-six years. It is a comfortable place to stand.
+	Mama Zulu\: This is less comfortable. It is not worse.
+[signal arg="hearts:mama_zulu:1"]
+set {GameState.mama_zulu_accepted_payment} = true

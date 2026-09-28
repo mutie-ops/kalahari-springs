@@ -1,0 +1,16 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Worried)
+join Mama Zulu (Neutral) left
+Mama Zulu: Eat that tonight. Not tomorrow — tonight.
+Zanele: Mama, you cannot keep —
+Mama Zulu: I can.
+Zanele: At least let me —
+Mama Zulu: No.
+- Does she do that often?
+	Hope: Does she do that often?
+	Zanele: Every few weeks, for about six years, and she has never once let me pay her or thank her properly.
+	Zanele: I have decided that the thanking is not the part she wants. So I eat it, and I make sure she can see the empty pot when I return it.
+	Zanele: That seems to be the arrangement. It took me a while to work out what the arrangement was.
+[signal arg="hearts:zanele:1"]
+set {GameState.zanele_mama_zulu_food} = true

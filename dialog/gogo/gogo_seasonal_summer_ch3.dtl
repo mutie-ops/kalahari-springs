@@ -1,0 +1,4 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: Thunder all night. The roof held, which is more than my knees did.
+set {GameState.gogo_seasonal_last_chapter} = 3

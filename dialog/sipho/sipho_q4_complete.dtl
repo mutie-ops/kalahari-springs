@@ -1,0 +1,9 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: That's it. That's it running on sunlight.
+- Lebo taught you a few things
+	Hope: Lebo taught you a few things.
+	Sipho: He did. I taught him what a multimeter's for, so we're even.
+[signal arg="hearts:sipho:1"]
+set {GameState.quest_watering_hole_solar_install} = "complete"

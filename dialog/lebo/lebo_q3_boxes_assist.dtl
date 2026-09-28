@@ -1,0 +1,13 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+- I think I've got one
+	Hope: I think I've got one.
+	Lebo: You've got a feed collar.
+	Lebo: In your house. Just — in your house.
+	Lebo: That's the size. That's exactly the size.
+	- My grandmother kept boxes of this sort of thing
+		Hope: My grandmother kept boxes of this sort of thing.
+		Lebo: Course she did. Everyone in this village has had something out of that woman's boxes and half of them don't know it.
+		Lebo: Right — give it here and go away for two hours. I want to do this properly and I can't do it properly with someone watching.
+set {GameState.grandmothers_boxes_used_mill} = true

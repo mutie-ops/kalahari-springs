@@ -1,0 +1,6 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: Fourth dry season. They told me in my first week I wasn't ready for it.
+Charity: They were right, then. This one I'm not dreading at all — which has less to do with me and everything to do with the pump.
+set {GameState.charity_seasonal_last_chapter} = 9

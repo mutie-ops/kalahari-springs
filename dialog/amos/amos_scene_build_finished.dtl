@@ -1,0 +1,17 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+update Amos (Warm)
+- It's exactly the drawing
+	Hope: It's exactly the drawing.
+	Amos: Mm.
+	Amos: Nineteen years I've been building for other people. Paths, pens, drainage, someone's wall, someone's roof.
+	Amos: All of it needed doing. I'm not complaining about any of it.
+	Amos: But you build a thing for somebody else and when it's finished you walk away from it. That's right. That's how it should be.
+	Amos: This one I don't walk away from.
+	Amos: That's the difference. Took me nine years to get an afternoon free and this is what I did with it.
+- What will you use it for?
+	Hope: What will you use it for?
+	Amos: Sitting.
+	Amos: Good light in the afternoon.
+[signal arg="hearts:amos:3"]
+set {GameState.amos_build_finished} = true

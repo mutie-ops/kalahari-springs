@@ -1,0 +1,10 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Smaller outbreak this time. Maybe half what we had in the big year.
+- Is that a problem?
+	Hope: Is that a problem?
+	Lindi: It would have been. Two years ago half a haul that we couldn't keep was worse than no haul, because you spend the days gathering and then watch it go off.
+	Lindi: This time it all keeps. Every bit of it.
+	set {GameState.quest_lindi_mopane_efficient} = "active"
+	[signal arg="objective:Gather and process the second mopane outbreak"]

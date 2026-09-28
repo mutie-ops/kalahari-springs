@@ -1,0 +1,28 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: You have her walk.
+- Whose?
+	Hope: Whose?
+	Gogo: Your grandmother's. I'd know it anywhere. I watched it cross this village for sixty years.
+	Gogo: I'm Thandiwe. Everyone calls me Gogo now. Even people who aren't owed the right to.
+	- I remember you. A little.
+		Hope: I remember you. A little.
+		Gogo: A little is more than most get, at your age when you left.
+	- I'm sorry — I don't remember much
+		Hope: I'm sorry — I don't remember much.
+		Gogo: You were small. It isn't a debt you owe me.
+- You knew my grandmother?
+	Hope: You knew my grandmother?
+	Gogo: Knew her. Argued with her. Buried two husbands and outlasted her by only a season.
+	Gogo: She'd have liked watching you try to fix that roof.
+Gogo: You found the boxes, then.
+- How did you know?
+	Hope: How did you know?
+	Gogo: Because she never once, in forty years, threw anything away that might be useful later.
+	Gogo: Half this village has something of hers holding it together. She just never told anyone which half.
+set {GameState.gogo_confirmed_grandmother_boxes} = true
+Gogo: Come by when you have a moment that isn't a task. I have all the time you could want, and most days nobody asks for it.
+[signal arg="hearts:gogo:2"]
+set {GameState.quest_gogo_reunion} = "complete"
+[signal arg="unlock:Gogo Thandiwe active as standing NPC; gogo_ambient states become available"]

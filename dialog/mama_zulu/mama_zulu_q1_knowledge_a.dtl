@@ -1,0 +1,8 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: Bitter. Boil it, do not chew it. For a stomach that will not settle.
+- Where does it grow?
+	Hope: Where does it grow?
+	Mama Zulu\: You are not ready for where. Learn what it does first.
+	Mama Zulu\: Take it. You will need it before winter is out.
+set {GameState.mama_zulu_knowledge_a_seen} = true

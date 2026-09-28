@@ -1,0 +1,6 @@
+join Hope (Neutral) right
+if {GameState.interaction_location} != "market_stalls" and {GameState.interaction_location} != "water_queue" and {GameState.interaction_location} != "spring_basin" and {GameState.interaction_location} != "meetinghouse":
+	join Mama Zulu (Neutral) left
+	Mama Zulu: I will be along. The pot does not care what day it is.
+set {GameState.sunday_dressing_shown} = true
+set {GameState.village_beat_matched} = true

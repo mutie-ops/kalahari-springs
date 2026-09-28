@@ -1,0 +1,15 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: I've been reading about what a real system looks like. Not a drum — a proper one.
+Sipho: JoJo tank on a stand, so it gravity-feeds. Real gutters, not offcuts. And a first-flush diverter, which is the part nobody here has.
+- What does the diverter do?
+	Hope: What does the diverter do?
+	Sipho: Dumps the first run off the roof — the dust, the bird mess, whatever's been baking up there since the last rain.
+	Sipho: You lose maybe twenty litres and everything after it is clean. That's the whole difference between water you can drink and water you have to boil.
+	Sipho: I want to build one at the schoolhouse. Where everyone can see it working.
+	- How do we make that happen?
+		Hope: How do we make that happen?
+		Sipho: Charity says NGOs fund things that are already proven. So we prove it — measure what the schoolhouse loses now, show what it'd catch instead.
+		Sipho: I can do the numbers. I need help making them look like something an office in Polokwane will read.
+		set {GameState.quest_sipho_schoolhouse_case} = "active"
+		[signal arg="objective:Help Sipho document the schoolhouse's current shortfall and frame the NGO ask with Charity"]

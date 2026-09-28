@@ -1,0 +1,6 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: Petrus has not eaten here in nine days. He eats here every third day.
+- Is he all right?
+	Hope: Is he all right?
+	Mama Zulu\: That is the question. I am too busy to walk out there.

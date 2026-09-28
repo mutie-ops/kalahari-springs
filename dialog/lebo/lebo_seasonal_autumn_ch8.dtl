@@ -1,0 +1,7 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: There's borehole equipment in my yard. Actual borehole equipment, with a serial number on it, and someone from an organisation asked me where to put it.
+Lebo: Asked ME. Where to put it.
+Lebo: I said 'over there' with a lot of confidence. It was fine. It was the right answer.
+set {GameState.lebo_seasonal_last_chapter} = 8

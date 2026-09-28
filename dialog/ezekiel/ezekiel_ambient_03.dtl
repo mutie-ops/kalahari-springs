@@ -1,0 +1,15 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+- Why is my ground so hard?
+	Hope: Why is my ground so hard?
+	Ezekiel: Give me your hand.
+	Ezekiel: Squeeze. Now open.
+	Ezekiel: See how it sits in one piece? That's not soil, that's a brick. Water runs off a brick.
+	Ezekiel: You want it to break into crumbs when you open your hand. Crumbs let water in and hold it. A brick sheds it into the road.
+	- How do I fix it?
+		Hope: How do I fix it?
+		Ezekiel: Mulch. Anything dead and dry — leaves, stalks, grass cuttings. Lay it thick and leave it alone.
+		Ezekiel: Takes a season. Maybe two. Everybody wants it to take a week.
+		Ezekiel: ...Anyway. That's the start of it.
+set {GameState.ezekiel_ambient_34_toggle} = true

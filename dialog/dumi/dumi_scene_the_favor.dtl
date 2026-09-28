@@ -1,0 +1,20 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Aggravated)
+- Long day?
+	Hope: Long day?
+	Dumi: Walked to Ga-Kgapane and back to stand in a yard for two hours so somebody else could get roofing sheets at a fair price.
+	- What do you get out of it?
+		Hope: What do you get out of it?
+		Dumi: Nothing. I now owe the man a favour, which I'll pay some time, probably at an inconvenient moment.
+	- You could have taken a cut
+		Hope: You could have taken a cut.
+		Dumi: No.
+		Dumi: The moment I take a cut, every trade I broker gets looked at twice. 'What's Dumi getting.' And then people stop asking me, and then they take bad deals on their own.
+		Dumi: Sorry. That's the one thing I get sharp about.
+	- Don't apologise
+		Hope: Don't apologise.
+		Dumi: Mm. Well.
+		Dumi: It cost me a day and a favour. The family got a roof that doesn't leak. That's a good exchange rate.
+[signal arg="hearts:dumi:1"]
+set {GameState.dumi_favor_seen} = true

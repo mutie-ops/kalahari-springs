@@ -1,0 +1,10 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: Everything at once. Greens, fruit, and the mopane worms are absolutely everywhere.
+- Where do we start?
+	Hope: Where do we start?
+	Lindi: That's the actual question and I don't have a good answer. The worms won't wait — they'll pupate and then they're gone. The greens will hold two days. The fruit's already dropping.
+	Lindi: So we carry what we can and we make choices about the rest, and the choices are going to be a bit horrible.
+	set {GameState.quest_lindi_big_haul} = "active"
+	[signal arg="objective:Prioritise what to haul given limited container capacity over several days"]

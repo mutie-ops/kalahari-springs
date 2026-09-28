@@ -1,0 +1,7 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Quiet month. First quiet dry season I've had.
+Lebo: Normally by now I've got six people wanting the same pump part and none of them have got it.
+Lebo: I don't know what to do with a quiet month. I've started tidying. Amos thinks I'm ill.
+set {GameState.lebo_seasonal_last_chapter} = 9

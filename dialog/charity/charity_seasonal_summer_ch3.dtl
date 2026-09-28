@@ -1,0 +1,6 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Worried)
+Charity: Everything's wet and nothing burns, so I'm distributing tablets — which is a stopgap, and I want to be clear with you that I know it's a stopgap.
+Charity: A tablet is a thing you give people when you haven't yet got them a system.
+set {GameState.charity_seasonal_last_chapter} = 3

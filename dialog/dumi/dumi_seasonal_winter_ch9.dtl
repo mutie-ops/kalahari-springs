@@ -1,0 +1,6 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Warm)
+Dumi: Dry season, and I'm not rationing anything.
+Dumi: Nine winters I've stood behind this counter deciding who gets seed. This one I just — sell it to whoever asks.
+set {GameState.dumi_seasonal_last_chapter} = 9

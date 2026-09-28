@@ -1,0 +1,10 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Aggravated)
+Dumi: There's a man come through twice this month wanting to buy surplus at half what it's worth.
+- Will you sell?
+	Hope: Will you sell?
+	Dumi: No.
+	Dumi: He's counting on people being tired enough to take it.
+	Dumi: I've told him what a fair price is. He knows where to find me if he changes his mind.
+set {GameState.dumi_seasonal_last_chapter} = 4

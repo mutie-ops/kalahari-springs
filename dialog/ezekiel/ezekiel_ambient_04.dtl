@@ -1,0 +1,7 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Aggravated)
+- How are your knees?
+	Hope: How are your knees?
+	Ezekiel: They work.
+	Ezekiel: Mulch that bed before the rains. It'll matter.

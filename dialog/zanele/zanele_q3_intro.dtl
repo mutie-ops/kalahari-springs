@@ -1,0 +1,10 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: He goes on Thursday. There is nothing that needs doing, which is the difficulty.
+- Nothing?
+	Hope: Nothing?
+	Zanele: He has packed. Gogo has fed him. Naledi has given him a blanket he did not ask for and will not be able to carry.
+	Zanele: So there is nothing to arrange, and a week to get through, and I find I would rather be arranging something.
+	Zanele: These are for him. Do not let me give them to him myself on Thursday, because I will make a speech and he will be embarrassed and neither of us wants that.
+	set {GameState.quest_zanele_sipho_farewell} = "active"
+	[signal arg="objective:Help Sipho with his last preparations; be with Zanele on Thursday"]

@@ -1,0 +1,14 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Naledi's doing, this.
+- She thought it would help
+	Hope: She thought it would help.
+	Ezekiel: It will help. That's not the difficulty.
+	Ezekiel: Thirty-eight years I've fetched my own water. Knees have made a liar out of me.
+	- It's no trouble
+		Hope: It's no trouble.
+		Ezekiel: It's a morning. Don't tell me it's no trouble, I know exactly what it is.
+		Ezekiel: Right. You've got a garden up there that's mostly stones and optimism. I'll be paying you in what I know.
+		Ezekiel: That's the arrangement. I'm not asking whether it suits you.
+set {GameState.ezekiel_reciprocity_established} = true

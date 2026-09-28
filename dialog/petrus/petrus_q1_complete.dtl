@@ -1,0 +1,13 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+- Thank him and offer to pay
+	Hope: Thank you. What do I owe you?
+	Petrus: For tubing that's been under a drum since 1994?
+	Petrus: You can owe me nothing. That's the price.
+- Offer to bring him something
+	Hope: I'll bring you something.
+	Petrus: Don't.
+	Petrus: Come back when you need the next thing. That's how it works.
+[signal arg="hearts:petrus:1"]
+set {GameState.petrus_stash_open} = true
+[signal arg="unlock:Petrus's stash available as a recurring resource node"]

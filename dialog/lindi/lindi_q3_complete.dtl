@@ -1,0 +1,11 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Biggest haul I've ever been part of. Genuinely — I've been counting since I was fifteen and this is the biggest.
+- But?
+	Hope: But?
+	Lindi: But I walked past about the same amount again and left it standing.
+	Lindi: That's normal. That's every year. I'm only saying it because you asked.
+[signal arg="hearts:lindi:1"]
+set {GameState.quest_lindi_big_haul} = "complete"
+set {GameState.lindi_big_haul_complete} = true

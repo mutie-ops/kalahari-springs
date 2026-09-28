@@ -1,0 +1,6 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Worried)
+Ezekiel: Everyone's bringing in more than they can carry. Mine came in on one cart.
+Ezekiel: Third year of that.
+set {GameState.ezekiel_seasonal_last_chapter} = 0

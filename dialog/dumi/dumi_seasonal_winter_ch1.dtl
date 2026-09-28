@@ -1,0 +1,8 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: Half the village wants cabbage seed and I've got enough for a third of them.
+- How do you decide?
+	Hope: How do you decide?
+	Dumi: Households with the least. Then households with children.
+	Dumi: Not first-come. First-come rewards whoever has the time to queue, and the people with the least time are the people with the most need.
+set {GameState.dumi_seasonal_last_chapter} = 1

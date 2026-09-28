@@ -1,0 +1,16 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Auger's seized but it'll free up with oil. Mattock's better than mine ever was.
+- Petrus said they were doing nothing where they were
+	Hope: Petrus said they were doing nothing where they were.
+	Ezekiel: He would say that.
+	Ezekiel: He knows exactly what they're worth. That's why he said it that way — so I'd take them.
+Ezekiel: Right.
+- Do you want a hand with the digging?
+	Hope: Do you want a hand with the digging?
+	Ezekiel: No.
+	Ezekiel: This part I want to have done myself. If it works I'll want to know it was mine, and if it doesn't I'd rather not have anybody else standing in it.
+[signal arg="hearts:ezekiel:2"]
+set {GameState.quest_ezekiel_test_plot} = "complete"
+set {GameState.test_plot_planted} = true

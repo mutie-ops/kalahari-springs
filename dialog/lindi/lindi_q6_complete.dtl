@@ -1,0 +1,10 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Everything's on a rack. All of it. At dawn.
+- Last time?
+	Hope: Last time?
+	Lindi: Last time I was still sorting at noon and I lost a fifth of it to the heat.
+	Lindi: Two years. That's all it took, and it wasn't even clever — it was just some wood and somebody bothering to build it.
+[signal arg="hearts:lindi:1"]
+set {GameState.quest_lindi_kumbi_kumbi_two} = "complete"

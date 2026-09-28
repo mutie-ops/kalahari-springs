@@ -1,0 +1,12 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+- Is he all right?
+	Hope: Is he all right?
+	Mama Zulu\: He comes on the bad weeks.
+	- What does he talk about?
+		Hope: What does he talk about?
+		Mama Zulu\: That is his to tell you.
+		Mama Zulu\: If he wants you to know, he will say it. He has not, so he does not. Yet.
+	Mama Zulu\: He has been coming for four years.
+	Mama Zulu\: A man who farms is frightened at least once every season. It does not make him a poor farmer. It makes him a farmer.
+set {GameState.mama_zulu_ezekiel_confidant} = true

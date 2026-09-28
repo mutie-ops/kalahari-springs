@@ -1,0 +1,9 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Aggravated)
+Zanele: Twenty-eight this morning. In a room that was built for a meeting of about that many adults, standing.
+- Where do you put them?
+	Hope: Where do you put them?
+	Zanele: Two groups. Younger before lunch, older after.
+	Zanele: It means I teach two full days inside one day. I would rather that than turn a child away, and I have not turned one away yet.
+set {GameState.zanele_seasonal_last_chapter} = 3

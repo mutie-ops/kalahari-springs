@@ -1,0 +1,5 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+Petrus: Four cattle, three goats. Was eleven cattle when my father died.
+Petrus: Dry years take them slow. You don't notice until you count.
+set {GameState.petrus_seasonal_last_chapter} = 1

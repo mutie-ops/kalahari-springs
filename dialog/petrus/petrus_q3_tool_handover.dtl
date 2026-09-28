@@ -1,0 +1,22 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Warm)
+- Ezekiel sent me about tools
+	Hope: Ezekiel sent me about tools.
+	Petrus: Mm. Those four.
+	Petrus: Mattock, long spade, the hand auger, and a fork he'll pretend he didn't want.
+- Think his test plot will work?
+	Hope: Do you think his test plot will work?
+	Petrus: No idea. Never dug a pit like that in my life.
+	Petrus: Doesn't signify. He asked and they were sitting there.
+- That's generous
+	Hope: That's generous.
+	Petrus: Man's about to sell his father's land.
+	Petrus: I'm not going to be the reason he didn't get to try first.
+- What do you want for them?
+	Hope: What do you want for them?
+	Petrus: Nothing. And don't tell him that — tell him they were doing nothing where they were.
+	Petrus: He'll take them easier that way.
+[signal arg="hearts:petrus:2"]
+set {GameState.petrus_lent_ezekiel_tools} = true
+[signal arg="objective:Deliver the tools to Ezekiel's farm"]

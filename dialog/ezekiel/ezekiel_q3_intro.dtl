@@ -1,0 +1,15 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+Ezekiel: Right. Your plot.
+- Ezekiel — what's all this?
+	Hope: Ezekiel — what's all this?
+	Ezekiel: It's what I owe you and I'd like to get on with it before the ground goes hard.
+	- You don't owe me anything
+		Hope: You don't owe me anything.
+		Ezekiel: I do, and I've been carrying it since winter, and it's heavier than the barrow.
+		Ezekiel: So. You'll do the digging, because my knees are finished. I'll tell you where.
+	- Where do we start?
+		Hope: Where do we start?
+		Ezekiel: Good. That's the right question.
+set {GameState.quest_ezekiel_repay_hope} = "active"
+[signal arg="objective:Work Hope's plot under Ezekiel's direction — zai pits, mulch, stone catchment"]

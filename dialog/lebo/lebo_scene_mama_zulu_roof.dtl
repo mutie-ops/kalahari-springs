@@ -1,0 +1,15 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Aggravated)
+- You fixed Mama Zulu's roof
+	Hope: You fixed Mama Zulu's roof.
+	Lebo: I patched a corner. It's about a metre and a half of sheeting, it's not —
+	Lebo: I was there about the stove. You look up, you see daylight where there shouldn't be daylight. You'd have to be a monster to just carry on with the stove.
+- She tried to pay you
+	Hope: She tried to pay you.
+	Lebo: Twice! She kept putting money on the bench and I kept putting it back, and eventually I just left before she could do it a third time.
+	Lebo: You can't take money off Mama Zulu. That's — no. Everyone in this village has eaten free in that room.
+	Lebo: Frame was already up, that's the thing. Somebody had done the hard part years ago. Squared it properly and everything.
+	Lebo: I only had to finish it.
+[signal arg="hearts:lebo:1"]
+set {GameState.lebo_fixed_inn_roof} = true

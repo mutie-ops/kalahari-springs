@@ -1,0 +1,14 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Aggravated)
+Naledi: This village runs on people who are already tired.
+- Including you
+	Hope: Including you.
+	Naledi: There are four stalls that need moving before the fair and one of them belongs to a man who won't move it.
+	Naledi: So. Yes. Including me.
+- I'm not sure I'm any use here
+	Hope: I'm not sure I'm any use here.
+	Naledi: That is a thing people say in their second year. Not the first — the first year you are too busy to wonder.
+	Naledi: I am not going to tell you that you are. You would not believe me and you would be right not to.
+	Naledi: Ask me again after the rains.
+set {GameState.hope_doubts_raised} = true

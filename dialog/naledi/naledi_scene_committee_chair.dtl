@@ -1,0 +1,15 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Nobody even proposed anyone else.
+- Did you expect them to?
+	Hope: Did you expect them to?
+	Naledi: I expected a conversation. There wasn't one. Charity wrote my name down before the meeting started.
+	Naledi: Maintenance rota, spare parts, a fund for the pump seals, and someone to be shouted at when the queue is long.
+	Naledi: That's the whole of the job. It's the same job I've had all along with a better water source attached to it.
+- You don't sound thrilled
+	Hope: You don't sound thrilled.
+	Naledi: I'm not thrilled. I'm —
+	Naledi: I'm going to write a rota tonight for a borehole. In this village.
+	Naledi: Ask me again in a week and I'll probably be thrilled. Tonight I've a rota to write.
+[signal arg="hearts:naledi:1"]
+set {GameState.naledi_committee_chair} = true

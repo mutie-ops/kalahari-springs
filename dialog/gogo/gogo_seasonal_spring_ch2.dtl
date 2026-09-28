@@ -1,0 +1,6 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: Listen. The frogs know before we do.
+Gogo: They're never wrong.
+set {GameState.gogo_seasonal_last_chapter} = 2

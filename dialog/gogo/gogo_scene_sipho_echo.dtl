@@ -1,0 +1,10 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: He reminds me of someone.
+- Who?
+	Hope: Who?
+	Gogo: Someone who used to build things out of nothing in this same yard.
+	Gogo: That's a story for another day.
+Gogo: Has he shown you the gutter idea yet? Don't let him talk you out of trying it. He's usually right.
+set {GameState.gogo_sipho_mother_hint_given} = true

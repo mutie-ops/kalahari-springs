@@ -1,0 +1,13 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Those chard seedlings taken?
+- Two of them
+	Hope: Two of them.
+	Ezekiel: Two out of how many?
+	- Six
+		Hope: Six.
+		Ezekiel: Then it's not the seed, it's the ground. Seed doesn't fail four times in six.
+		Ezekiel: Mulch round the base of the two that lived. Thick. Don't let it touch the stem or you'll rot them.
+		Ezekiel: I'll come up and look at it sometime.
+set {GameState.ezekiel_advice_b_seen} = true

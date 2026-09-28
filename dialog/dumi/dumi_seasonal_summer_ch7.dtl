@@ -1,0 +1,6 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Warm)
+Dumi: Rains are good, gardens are producing, and for the first time I'm thinking about next year instead of this month.
+Dumi: That's a strange feeling in this job. I keep checking the sums to see if I've made a mistake.
+set {GameState.dumi_seasonal_last_chapter} = 7

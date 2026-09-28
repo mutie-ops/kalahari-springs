@@ -1,0 +1,6 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Aggravated)
+Charity: My daughter starts in the new schoolhouse after the rains.
+Charity: I've caught myself thinking about next year. Not the next submission window. Next year.
+set {GameState.charity_seasonal_last_chapter} = 8

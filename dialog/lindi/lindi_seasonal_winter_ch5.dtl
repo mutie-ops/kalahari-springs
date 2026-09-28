@@ -1,0 +1,5 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+Lindi: I've got three racks going and a smoke corner that keeps going out, and I've ruined about a kilo of perfectly good medlar learning why.
+Lindi: Nobody's done this here in years. Which means there's nobody to ask, which means I'm just — finding out.
+set {GameState.lindi_seasonal_last_chapter} = 5

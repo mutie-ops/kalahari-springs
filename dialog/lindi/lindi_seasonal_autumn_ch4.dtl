@@ -1,0 +1,6 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: The marula's coming in faster than anyone can use it and there is nothing I can do about that.
+Lindi: Knowing where the food is stops being the useful skill at exactly this point in the year.
+set {GameState.lindi_seasonal_last_chapter} = 4

@@ -1,0 +1,5 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Traders are coming through in better numbers than last autumn. Four more than last year, and one of them with a proper wagon.
+Naledi: I've had to redraw the whole ground plan. I'm not complaining — I'd rather that problem than the other one.
+set {GameState.naledi_seasonal_last_chapter} = 4

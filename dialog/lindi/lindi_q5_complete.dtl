@@ -1,0 +1,12 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: That's — look at that. That'll still be good in August.
+- You worked it out
+	Hope: You worked it out.
+	Lindi: WE worked it out, and more to the point I can teach it now, which is the actual thing.
+	Lindi: Show Mama Zulu. Show anyone. I don't want to be the only person in this village who can do this — that's how it got lost the first time.
+[signal arg="hearts:lindi:2"]
+set {GameState.quest_lindi_smoke_and_dry} = "complete"
+[signal arg="unlock:drying and smoke-curing preservation methods available to Hope/player"]
+set {GameState.preservation_methods_known} = true

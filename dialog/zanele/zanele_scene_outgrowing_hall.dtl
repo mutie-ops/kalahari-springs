@@ -1,0 +1,16 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Aggravated)
+Zanele: Twenty-eight. It was nineteen in March.
+- That's good, isn't it?
+	Hope: That's good, isn't it?
+	Zanele: It is the best thing that has happened to this school in eleven years, and it has made the room impossible.
+	Zanele: The hall is not a school. It is a hall that is kind enough to let us use it, and on Sundays we stack the desks against the wall and on meeting nights we take them out to the yard.
+	- Could you turn anyone away?
+		Hope: Could you turn anyone away?
+		Zanele: No.
+		Zanele: So we run two groups. Younger before lunch, older after, and I teach two full days inside one.
+Zanele: I have been asked several times what the school needs. I have always said books, because books are a thing people can imagine giving.
+Zanele: I am going to start saying a building. It is a larger thing to ask for and it is the true answer.
+[signal arg="hearts:zanele:2"]
+set {GameState.zanele_needs_building} = true

@@ -1,0 +1,13 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+Petrus: Mill parts.
+- Explain what Lebo needs
+	Hope: Lebo says he needs a grinding plate.
+	Petrus: I know what he needs. He's been telling people since the rains.
+	Petrus: There's a plate in the back, under the tarpaulin, off a mill my brother had at Nkowankowa.
+	- Ask if you can take it
+		Hope: Can I take it?
+		Petrus: It's under about forty years of other things and I'm not shifting them at my age.
+		Petrus: Clear the bench, move the drums off the tarpaulin, and we'll see what's under there. Might be nothing. My memory's not what it was.
+	set {GameState.quest_petrus_mill_stash} = "active"
+	[signal arg="objective:Clear access to the tarpaulin at the back of Petrus's yard"]

@@ -1,0 +1,18 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Aggravated)
+- What's that?
+	Hope: What's that?
+	Mama Zulu\: What is owed.
+	- That's a lot of names
+		Hope: That's a lot of names.
+		Mama Zulu\: Yes.
+	- Will they pay?
+		Hope: Will they pay?
+		Mama Zulu\: Some. Not most.
+Mama Zulu\: I keep it so that I know. Not so that I can collect.
+- Then why keep it?
+	Hope: Then why keep it?
+	Mama Zulu\: Because one day someone will be able to pay, and they will want to, and they will be ashamed to ask how much.
+	Mama Zulu\: Then I will know, and they will not have to say it out loud.
+set {GameState.mama_zulu_tally_seen} = true

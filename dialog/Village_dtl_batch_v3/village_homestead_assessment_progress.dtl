@@ -1,0 +1,27 @@
+join Hope (Neutral) right
+if {GameState.interaction_location} == "homestead_interior" and {GameState.homestead_roof_flagged} == false:
+	update Hope (Thoughtful)
+	Hope: [i]Not this week. Not this month, probably. But before the rains come back.[/i]
+	update Hope (Neutral)
+	[signal arg="restoration_goal:Repair the back-corner roof"]
+	set {GameState.homestead_roof_flagged} = true
+elif {GameState.interaction_object} == "screen_door" and {GameState.homestead_door_flagged} == false:
+	update Hope (Thoughtful)
+	Hope: [i]The frame is the problem. The door is fine. The door has been fine this whole time, holding on with one hinge, waiting for someone to notice it is the frame.[/i]
+	update Hope (Neutral)
+	[signal arg="restoration_goal:Rehang the screen door and repair the frame"]
+	set {GameState.homestead_door_flagged} = true
+elif {GameState.interaction_object} == "garden_bed" and {GameState.homestead_garden_flagged} == false:
+	update Hope (Thoughtful)
+	Hope: [i]She had a system. I am standing in the ruins of somebody's system.[/i]
+	update Hope (Neutral)
+	[signal arg="restoration_goal:Clear and replant the garden bed"]
+	set {GameState.homestead_garden_flagged} = true
+elif {GameState.interaction_object} == "water_drum" and {GameState.homestead_drum_flagged} == false:
+	update Hope (Thoughtful)
+	Hope: [i]Open to the sky. Every house here has one of these, open to the sky.[/i]
+	update Hope (Neutral)
+	[signal arg="restoration_goal:Clear the drum, fit a lid, repair the gutter run"]
+	set {GameState.homestead_drum_flagged} = true
+[signal arg="increment:homestead_rooms_assessed:1"]
+set {GameState.village_beat_matched} = true

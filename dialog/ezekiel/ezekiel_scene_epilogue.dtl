@@ -1,0 +1,14 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+Ezekiel: Whole village is doing it now. Every garden I walk past.
+- Because of you
+	Hope: Because of you.
+	Ezekiel: Because it works. I'd have done it thirty years ago if I'd known.
+Ezekiel: That letter's still on the table.
+- You never opened it
+	Hope: You never opened it.
+	Ezekiel: No.
+	Ezekiel: Kept it because I wanted to remember what nearly happened. Man forgets, otherwise. Gets a good year and thinks he was always going to be fine.
+	Ezekiel: I was three months off selling my father's land. That's the truth of it and I'd rather not lose hold of it.
+[signal arg="hearts:ezekiel:2"]
+set {GameState.ezekiel_arc_complete} = true

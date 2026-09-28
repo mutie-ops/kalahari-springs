@@ -1,0 +1,15 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Worried)
+- Is that bad news?
+	Hope: Is that bad news?
+	Ezekiel: It's an offer. Man in Polokwane wants the land.
+	- You haven't opened it
+		Hope: You haven't opened it.
+		Ezekiel: Don't need to. I know what number's in it, near enough. He's asked twice before.
+	- Going to sell?
+		Hope: Are you going to sell?
+		Ezekiel: My father farmed this. His father cleared it.
+		Ezekiel: That's not an answer. I know it's not an answer.
+Ezekiel: Three bad years. A man can carry two.
+set {GameState.ezekiel_letter_seen} = true

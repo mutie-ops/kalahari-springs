@@ -1,0 +1,11 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: Naledi sent you.
+- She did
+	Hope: She did.
+	Mama Zulu\: Good. I told her I did not need it. She ignored me, which was correct.
+	Mama Zulu\: Understand this now. I do not take things for nothing. You will be paid.
+	- You don't have to pay me
+		Hope: You don't have to pay me.
+		Mama Zulu\: Did I ask your opinion?
+set {GameState.mama_zulu_reciprocity_established} = true

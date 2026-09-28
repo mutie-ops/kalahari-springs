@@ -1,0 +1,15 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: Look at it. Look at the line.
+- How much?
+	Hope: How much?
+	Sipho: Two thousand two hundred litres. Off one night.
+	Sipho: The diverter took the first twenty and dumped them — you can see where it went, that patch there is filthy. And everything after it went in clean.
+	Sipho: It's not a guess anymore. It's not a drawing. It's two thousand two hundred litres and anyone can walk up and look at it.
+- You should be proud
+	Hope: You should be proud.
+	Sipho: I am. I'm really — yes. I am.
+[signal arg="hearts:sipho:2"]
+set {GameState.schoolhouse_system_proven} = true
+[signal arg="unlock:household tank petitions — sets up quest_sipho_tanks_rollout_main in Ch. 7"]

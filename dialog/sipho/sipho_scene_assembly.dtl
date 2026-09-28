@@ -1,0 +1,17 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+join Lebo (Neutral) left
+Sipho: Lebo's doing the gutters. He says my joints would leak and he's probably right.
+- You've been waiting a long time for this
+	Hope: You've been waiting a long time for this.
+	Sipho: Since our drum overflowed and went bad in a night. Feels longer than it was.
+	Sipho: It's strange having the actual thing. I've had the drawing of it in my head so long the real one feels like a copy.
+- Is it what you imagined?
+	Hope: Is it what you imagined?
+	Sipho: It's better. The drawing didn't have Lebo swearing at a downpipe in it.
+	Sipho: I heard that!
+	Lebo: You were meant to!
+[signal arg="hearts:sipho:1"]
+set {GameState.schoolhouse_system_built} = true
+set {GameState.sipho_schoolhouse_excitement_flag} = true

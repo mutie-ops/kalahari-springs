@@ -1,0 +1,14 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+- Why a radio, though? Of everything in Petrus's yard.
+	Hope: Why a radio, though? Of everything in Petrus's yard.
+	Lebo: Because there's no music here.
+	Lebo: I mean there's singing, obviously, there's always singing, Dumi's lot on Sundays and everyone at the fires — but that's us. That's us making it.
+	Lebo: I want the tree to have music coming out of the air on an ordinary Tuesday when nobody's decided to sing.
+	Lebo: This thing worked in 1974. Somebody sat and listened to it. It can do it again, it's only physics —
+	Lebo: — and about forty things I haven't got.
+- Will you finish it?
+	Hope: Will you finish it?
+	Lebo: It's basically done.
+set {GameState.lebo_radio_introduced} = true

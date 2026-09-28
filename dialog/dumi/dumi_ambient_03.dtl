@@ -1,0 +1,12 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Aggravated)
+- Know anyone with spare guttering?
+	Hope: Do you know anyone with spare guttering?
+	Dumi: I do.
+	- Who?
+		Hope: Who?
+		Dumi: I'd rather ask them first.
+		Dumi: It's not a secret. It's that if you turn up at their gate having heard it from me, they'll feel obliged, and then they'll say yes to something they can't afford.
+		Dumi: Give me two days. If they've got it spare and they want to, they'll offer it themselves and it'll cost them nothing to say no.
+set {GameState.dumi_economy_seen} = true

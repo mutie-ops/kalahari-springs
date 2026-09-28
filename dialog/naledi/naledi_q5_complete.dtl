@@ -1,0 +1,10 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: First access goes to the households with the most mouths. After that it's the same rotation as the rollers.
+- You've already written the schedule
+	Hope: You've already written the schedule.
+	Naledi: I wrote it the day Charity said the petition had gone in.
+	Naledi: It was either going to arrive or it wasn't. Either way I'd rather have the paper ready.
+[signal arg="hearts:naledi:1"]
+set {GameState.quest_naledi_solar_mill_placement} = "complete"

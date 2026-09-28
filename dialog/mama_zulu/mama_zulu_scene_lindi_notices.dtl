@@ -1,0 +1,16 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Aggravated)
+join Lindi (Neutral) left
+Mama Zulu\: It is a cough. I have had it a week.
+- Have you taken anything for it?
+	Hope: Have you taken anything for it?
+	Mama Zulu\: I am the person who gives other people things to take.
+- Does she know you're doing that?
+	Hope: Does she know you're doing that?
+	Lindi: Of course she knows. She hasn't said anything, which means I'm allowed to keep doing it.
+	Lindi: That's how it works with her. You just — do it, and nobody mentions it.
+Mama Zulu\: I can hear you.
+Lindi: I know!
+[signal arg="hearts:mama_zulu:1"]
+set {GameState.mama_zulu_lindi_reciprocity} = true

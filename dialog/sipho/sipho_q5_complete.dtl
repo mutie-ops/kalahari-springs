@@ -1,0 +1,11 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: Two more houses asked me this week and I didn't have tanks for them.
+- That's a good problem
+	Hope: That's a good problem.
+	Sipho: It's the best problem I've had.
+	Sipho: One of them had already worked out their own roof area before they came to me. Got it right, too.
+	Sipho: They didn't need me for that part anymore.
+[signal arg="hearts:sipho:1"]
+set {GameState.quest_sipho_tanks_rollout_main} = "complete"

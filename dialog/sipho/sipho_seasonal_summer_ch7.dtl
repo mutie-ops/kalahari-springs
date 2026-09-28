@@ -1,0 +1,6 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: Three houses filled their tanks off one storm on Tuesday.
+Sipho: Two years ago that same storm would have gone straight into the ground and we'd all still have queued the next morning.
+set {GameState.sipho_seasonal_last_chapter} = 7

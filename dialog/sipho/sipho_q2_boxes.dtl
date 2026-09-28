@@ -1,0 +1,12 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: This needs lashing. Cord, or netting — something with give in it, or it'll crack again first cold night.
+- I might have something
+	Hope: I might have something.
+	Sipho: This is perfect, actually. Where'd you get it?
+	- My grandmother kept boxes of things like this
+		Hope: My grandmother kept boxes of things like this.
+		Sipho: Of course she did. That explains the drum placement, too — she knew what she was doing.
+		Sipho: Right. Hold that end.
+set {GameState.grandmothers_boxes_used_gutter} = true

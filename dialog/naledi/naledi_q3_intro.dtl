@@ -1,0 +1,13 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Aggravated)
+- What's in there?
+	Hope: What's in there?
+	Naledi: Bongani's machine. Treadle. He used it more than I did — he was better at it, which annoyed me considerably at the time.
+	Naledi: It'll be seized solid. Three years in a trunk in this climate.
+	- Do you want to get it out?
+		Hope: Do you want to get it out?
+		Naledi: I want to see if it turns.
+		Naledi: That's all. I'm not deciding anything today.
+		set {GameState.quest_naledi_treadle_rediscovery} = "active"
+		[signal arg="objective:Help clear the storage space around the machine; find oil and a spare bobbin"]

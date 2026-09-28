@@ -1,0 +1,7 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: Can't cut this ground now. Not till the rains soften it.
+- So you wait?
+	Hope: So you wait?
+	Amos: Mm. Plan in the dry. Build in the wet.
+set {GameState.amos_seasonal_last_chapter} = 1

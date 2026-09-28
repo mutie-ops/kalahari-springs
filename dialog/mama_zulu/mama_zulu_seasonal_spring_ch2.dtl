@@ -1,0 +1,6 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Warm)
+Mama Zulu\: Rain. Good.
+Mama Zulu\: The greens will come back and people will stop looking at my pot with that face.
+set {GameState.mama_zulu_seasonal_last_chapter} = 2

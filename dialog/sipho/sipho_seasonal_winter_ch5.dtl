@@ -1,0 +1,9 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Aggravated)
+Sipho: It's done. Gutters, diverter, tank on the stand — all of it, finished.
+Sipho: And now I wait four months for weather.
+- That must be difficult for you
+	Hope: That must be difficult for you.
+	Sipho: You have no idea.
+set {GameState.sipho_seasonal_last_chapter} = 5

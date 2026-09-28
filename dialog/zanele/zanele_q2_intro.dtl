@@ -1,0 +1,11 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Worried)
+- It's done
+	Hope: It's done.
+	Zanele: It is done.
+	Zanele: I have been in here four times since Thursday. Each time to check something I had already checked.
+	Zanele: There is a great deal to do before Saturday. Chairs, mostly — we have forty-one children and about twenty-six chairs, so we are borrowing, and borrowed chairs must go back to the right houses.
+	Zanele: And someone must tell the outlying households. Not everyone comes past the post drum.
+	set {GameState.quest_zanele_schoolhouse_opening} = "active"
+	[signal arg="objective:Help with the opening — borrow and arrange seating, decorate, spread word"]

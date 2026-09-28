@@ -1,0 +1,8 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Warm)
+Petrus: Wife's knees are worse than mine. She'd tell you they're not.
+- Would she be right?
+	Hope: Would she be right?
+	Petrus: She's been right about most things for forty-one years.
+	Petrus: Not this.

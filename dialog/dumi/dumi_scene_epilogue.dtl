@@ -1,0 +1,25 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: Four pages. It took eleven drafts to get it down to four.
+- What does it say?
+	Hope: What does it say?
+	Dumi: What's shared, who decides, and how somebody joins. That's all it needs to say.
+	Dumi: Naledi will chair the water committee. This is the same idea pointed at tools and seed.
+Dumi: I studied agricultural economics. Ratios, yields, margins. I was good at it.
+- You still are
+	Hope: You still are.
+	Dumi: I am. And it turns out that's not what I do here.
+	Dumi: What I actually do is know who to ask, and remember what people did for each other four years ago, and be careful about whose name goes next to whose.
+	Dumi: There's no certificate for that. I've spent about nine years being faintly embarrassed that it's my whole job.
+- And now?
+	Hope: And now?
+	Dumi: Now I've written it into four pages and I'm going to ask the village to vote on it.
+	Dumi: Which is the same thing again, isn't it. Knowing who to ask.
+Dumi: The gathering stays in the hall. I asked people and they'd already decided — nobody wanted to move it, they were only waiting for someone to say so out loud.
+- That someone being you
+	Hope: That someone being you.
+	Dumi: That someone being me. As usual.
+	Dumi: My father used to say the village tells you what you are and you spend twenty years arguing with it.
+	Dumi: I've stopped arguing. It's a good hall and I've got the key.
+[signal arg="hearts:dumi:2"]
+set {GameState.dumi_arc_complete} = true

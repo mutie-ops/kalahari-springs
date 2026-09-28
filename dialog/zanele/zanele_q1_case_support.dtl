@@ -1,0 +1,9 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: He needs numbers for the NGO. I have eleven years of numbers.
+Zanele: Attendance, every day, since 2015. Nobody has ever asked me for them.
+- You kept all of these?
+	Hope: You kept all of these?
+	Zanele: I kept them because a number you did not write down is an opinion.
+	Zanele: I did not know what they were for. It turns out they were for this.
+set {GameState.zanele_case_support_seen} = true

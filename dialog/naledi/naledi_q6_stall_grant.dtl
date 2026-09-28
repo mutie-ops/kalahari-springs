@@ -1,0 +1,14 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: Lindi's been selling off a blanket on the ground for two years.
+- And now?
+	Hope: And now?
+	Naledi: And now she has customers who come looking for her specifically, which means she's a trader and not a person with a blanket.
+	Naledi: There's a pitch by the east side. Good light, out of the wind.
+	- That's generous
+		Hope: That's generous.
+		Naledi: It's commercial. Preserved goods keep — she can trade on days fresh produce can't.
+		Naledi: She's also my sister and she's earned it. But the first reason is the one I'll be giving publicly.
+set {GameState.naledi_lindi_stall_granted} = true
+[signal arg="hearts:naledi:1"]

@@ -1,0 +1,16 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: She's been assigned a desk. Her own desk, with her name on a card.
+Charity: She's put a stone on it. Just a stone she found. To make it hers.
+- That's a good sign
+	Hope: That's a good sign.
+	Charity: It's a very good sign. It's also —
+	Charity: I keep catching myself planning past my posting. Where the shade will be when that tree fills out. Whether we'd want a bigger place, eventually.
+	Charity: Those aren't posting thoughts.
+- What are they?
+	Hope: What are they?
+	Charity: You know precisely what they are. You've been having them yourself since about March.
+	Charity: We'll neither of us say it out loud yet. That's allowed.
+[signal arg="hearts:charity:2"]
+set {GameState.charity_home_realisation} = true

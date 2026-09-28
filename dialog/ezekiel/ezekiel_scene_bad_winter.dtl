@@ -1,0 +1,16 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Worried)
+- It's dark, Ezekiel
+	Hope: It's dark, Ezekiel.
+	Ezekiel: Ground doesn't know that.
+- You've been out here since before dawn
+	Hope: You've been out here since before dawn.
+	Ezekiel: Mm.
+	Ezekiel: Last time it went like this, I lost the whole east field in nine days. Nine. Watched it go.
+	Ezekiel: Can't watch it again. So I work.
+- Let me help
+	Hope: Let me help.
+	Ezekiel: No.
+	Ezekiel: You've got your own ground. Go and see to it.
+set {GameState.ezekiel_bad_winter_seen} = true

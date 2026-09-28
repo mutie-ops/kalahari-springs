@@ -1,0 +1,6 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Dry season, and I've got winter greens in the ground and water I don't have to walk for.
+Ezekiel: I'll believe it properly in about three years. But I've stopped waking up at four to worry about it.
+set {GameState.ezekiel_seasonal_last_chapter} = 9

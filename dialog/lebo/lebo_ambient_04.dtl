@@ -1,0 +1,8 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Worried)
+Lebo: It's here. It's definitely here, I had it Tuesday.
+- Can I help look?
+	Hope: Can I help look?
+	Lebo: No no no — you'd tidy. People tidy and then I can't find anything for a month.
+	Lebo: There IS a system. It's just not a system anyone else can use.

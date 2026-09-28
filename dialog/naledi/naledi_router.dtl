@@ -1,0 +1,88 @@
+if {GameState.chapter} == 8 and {GameState.borehole_complete} == true and {GameState.water_committee_formed} == true and {GameState.naledi_committee_chair} == false:
+	jump naledi_scene_committee_chair/
+elif {GameState.chapter} == 7 and {GameState.naledi_hearts} >= 7 and {GameState.leadership_talk_established} == true and {GameState.naledi_headwoman} == false:
+	jump naledi_scene_headwoman_election/
+elif {GameState.chapter} == 6 and {GameState.naledi_hearts} >= 7 and {GameState.hope_doubts_raised} == true and {GameState.naledi_firepit_ch6_complete} == false:
+	jump naledi_scene_firepit_ch6/
+elif {GameState.chapter} == 4 and {GameState.naledi_treadle_running} == true and {GameState.naledi_hearts} >= 6 and {GameState.naledi_stitching_seen} == false:
+	jump naledi_scene_treadle_stitching/
+elif {GameState.quest_naledi_stall_reopening} == "active" and {GameState.stall_setup_progress} == 1.0:
+	jump naledi_q8_complete/
+elif {GameState.quest_naledi_this_is_home} == "active" and {GameState.gogo_this_is_home_scene_complete} == true and {GameState.hope_decides_to_stay} == true:
+	jump naledi_q7_complete/
+elif {GameState.quest_naledi_solar_mill_placement} == "active" and {GameState.solar_mill_installed} == true:
+	jump naledi_q5_complete/
+elif {GameState.quest_naledi_treadle_rediscovery} == "active" and {GameState.treadle_parts_found} == true:
+	jump naledi_q3_complete/
+elif {GameState.quest_naledi_alternate_rotation_main} == "active" and {GameState.rotation_runs_completed} >= 6:
+	jump naledi_q1_complete/
+elif {GameState.quest_naledi_stall_reopening} == "active" and {GameState.stall_setup_progress} < 1.0:
+	jump naledi_q8_setup/
+elif {GameState.quest_naledi_solar_mill_placement} == "active" and {GameState.solar_mill_installed} == false:
+	jump naledi_q5_intro/
+elif {GameState.quest_naledi_treadle_rediscovery} == "active" and {GameState.treadle_parts_found} == false:
+	jump naledi_q3_working/
+elif {GameState.quest_naledi_alternate_rotation_main} == "active" and {GameState.rotation_runs_completed} < 6:
+	jump naledi_q1_checkin/
+elif {GameState.chapter} == 9 and {GameState.naledi_treadle_running} == true and {GameState.borehole_blessing_complete} == false and {GameState.quest_naledi_stall_reopening} == "inactive":
+	jump naledi_q8_intro/
+elif {GameState.chapter} == 9 and {GameState.quest_hope_job_offer} == "complete" and {GameState.quest_naledi_this_is_home} == "inactive":
+	jump naledi_q7_firepit/
+elif {GameState.chapter} == 8 and {GameState.lindi_reputation_established} == true and {GameState.naledi_lindi_stall_granted} == false:
+	jump naledi_q6_stall_grant/
+elif {GameState.chapter} == 8 and {GameState.solar_mill_delivered} == true and {GameState.quest_naledi_solar_mill_placement} == "inactive":
+	jump naledi_q5_intro/
+elif {GameState.chapter} == 5 and {GameState.roller_pen_built} == true and {GameState.naledi_pen_schedule_posted} == false:
+	jump naledi_q4_posting/
+elif {GameState.chapter} == 3 and {GameState.naledi_hearts} >= 5 and {GameState.naledi_visits_post_ch2} >= 5 and {GameState.quest_naledi_treadle_rediscovery} == "inactive":
+	jump naledi_q3_intro/
+elif {GameState.chapter} == 2 and {GameState.naledi_schedule_posted} == true and {GameState.naledi_hearts} >= 3 and {GameState.naledi_disputes_seen} == false:
+	jump naledi_q2_disputes/
+elif {GameState.chapter} == 2 and {GameState.roller_fleet_count} >= 5 and {GameState.naledi_schedule_posted} == false:
+	jump naledi_q2_schedule/
+elif {GameState.chapter} == 1 and {GameState.quest_spring_basin_first_run} == "complete" and {GameState.quest_naledi_alternate_rotation_main} == "inactive":
+	jump naledi_q1_intro/
+elif {GameState.naledi_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump naledi_seasonal_winter_ch9/
+elif {GameState.naledi_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.naledi_hearts_ambient} >= 8:
+	jump naledi_seasonal_autumn_ch8/
+elif {GameState.naledi_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.naledi_hearts_ambient} >= 7:
+	jump naledi_seasonal_summer_ch7/
+elif {GameState.naledi_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.naledi_hearts_ambient} >= 6:
+	jump naledi_seasonal_spring_ch6/
+elif {GameState.naledi_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.naledi_hearts_ambient} >= 5:
+	jump naledi_seasonal_winter_ch5/
+elif {GameState.naledi_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.naledi_hearts_ambient} >= 4:
+	jump naledi_seasonal_autumn_ch4/
+elif {GameState.naledi_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.naledi_hearts_ambient} >= 3:
+	jump naledi_seasonal_summer_ch3/
+elif {GameState.naledi_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump naledi_seasonal_spring_ch2/
+elif {GameState.naledi_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump naledi_seasonal_winter_ch1/
+elif {GameState.naledi_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump naledi_seasonal_autumn_ch0/
+elif {GameState.naledi_hearts_ambient} >= 10 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump naledi_ambient_10/
+elif {GameState.naledi_hearts_ambient} >= 9 and {GameState.naledi_headwoman} == true:
+	jump naledi_ambient_09/
+elif {GameState.naledi_hearts_ambient} >= 7 and {GameState.chapter} >= 6:
+	jump naledi_ambient_08/
+elif {GameState.naledi_hearts_ambient} >= 7:
+	jump naledi_ambient_07/
+elif {GameState.naledi_hearts_ambient} >= 5 and {GameState.roller_fleet_count} >= 5:
+	jump naledi_ambient_06/
+elif {GameState.naledi_hearts_ambient} >= 5:
+	jump naledi_ambient_05/
+elif {GameState.naledi_hearts_ambient} >= 3 and {GameState.chapter} >= 2:
+	jump naledi_ambient_04/
+elif {GameState.naledi_hearts_ambient} >= 3 and {GameState.quest_naledi_alternate_rotation_main} == "complete":
+	jump naledi_ambient_03/
+elif {GameState.naledi_hearts_ambient} >= 3:
+	jump naledi_ambient_03/
+elif {GameState.naledi_hearts_ambient} < 3 and {GameState.chapter} == 0:
+	jump naledi_ambient_01/
+elif {GameState.naledi_hearts_ambient} < 3 and {GameState.chapter} <= 1:
+	jump naledi_ambient_02/
+else:
+	jump naledi_ambient_02/

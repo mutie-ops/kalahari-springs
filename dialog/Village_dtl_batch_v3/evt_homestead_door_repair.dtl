@@ -1,0 +1,12 @@
+join Hope (Neutral) right
+update Hope (Thoughtful)
+Hope: [i]He has let in a piece of wood. Properly let it in, with a chisel, on a door that keeps out flies.[/i]
+update Hope (Neutral)
+update Hope (Thoughtful)
+Hope: [i]That is the third thing this year and I still have not thanked him for the first one.[/i]
+update Hope (Neutral)
+update Hope (Thoughtful)
+Hope: [i]He has not mentioned it once. Not once, in a village where Mama Zulu knows what I had for breakfast.[/i]
+update Hope (Neutral)
+set {GameState.evt_homestead_door_repair} = "complete"
+set {GameState.village_beat_matched} = true

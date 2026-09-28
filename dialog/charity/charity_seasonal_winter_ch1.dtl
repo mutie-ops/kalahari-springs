@@ -1,0 +1,5 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: Dry season is when the need is most documentable. That sounds callous and I'm afraid it's also true.
+Charity: The photographs I take in August do more work than anything I write in March.
+set {GameState.charity_seasonal_last_chapter} = 1

@@ -1,0 +1,13 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+- Are you all right?
+	Hope: Are you all right?
+	Zanele: I am thinking about something I did in March and have not told anybody about.
+	- Do you want to tell me?
+		Hope: Do you want to tell me?
+		Zanele: No. Not because I do not trust you — because saying it out loud makes it a thing that might happen.
+	Zanele: There is a point where keeping a person close is not the same as helping them. I have known that for a long time. I teach it to parents, sometimes, when they want a child to leave school and work.
+	Zanele: It is a different matter when —
+	Zanele: It is a different matter.
+[signal arg="hearts:zanele:1"]
+set {GameState.zanele_nomination_weight} = true

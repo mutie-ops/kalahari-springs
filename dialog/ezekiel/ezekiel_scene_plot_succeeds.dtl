@@ -1,0 +1,18 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Worried)
+Ezekiel: Same rain. Same seed. Same man.
+Ezekiel: That side's dust. This side's damp four days after.
+- Ezekiel, look at it
+	Hope: Ezekiel, look at it.
+	Ezekiel: I've been looking at it since Tuesday.
+	Ezekiel: I've been coming out here at first light to check it's still true.
+- What happens to the letter?
+	Hope: What happens to the letter?
+	Ezekiel: It's still on the table.
+	Ezekiel: It'll stay there. I'm not opening it and I'm not throwing it away, because I want to walk past it.
+Ezekiel: Whole farm. That's the next thing. Whole farm, and it'll take me two years and my knees won't thank me.
+Ezekiel: But I know what it does now. That's the difference between this year and every year before it.
+[signal arg="hearts:ezekiel:2"]
+set {GameState.test_plot_succeeded} = true
+[signal arg="unlock:irrigation kit interest → feeds Charity's Ch. 3–4 NGO thread"]

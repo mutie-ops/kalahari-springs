@@ -1,0 +1,15 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: People assume I hand things out. I don't — I have nothing to hand out.
+- Then what do you do?
+	Hope: Then what do you do?
+	Charity: I turn what this village already knows about itself into a document somebody in an office three hundred kilometres away will act on.
+	Charity: The need is never in question. The evidence for it usually is.
+- There's one water roller for the whole village
+	Hope: There's one water roller for the whole village.
+	Charity: Say that again, but tell me how you know it.
+	- I've been in the queue. Everyone shares the same one.
+		Hope: I've been in the queue. Everyone shares the same one.
+		Charity: Then that is not a complaint, it is an observation with a queue attached, and I can do something with an observation.
+		Charity: Come and find me again when I have had a week with it.
+set {GameState.hope_raised_roller_shortage} = true

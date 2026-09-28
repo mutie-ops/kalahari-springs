@@ -1,0 +1,8 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Aggravated)
+Ezekiel: Rains are coming. Small plot's marked out and the pits are dug.
+- Are you hopeful?
+	Hope: Are you hopeful?
+	Ezekiel: I'm testing something. That's different.
+set {GameState.ezekiel_seasonal_last_chapter} = 2

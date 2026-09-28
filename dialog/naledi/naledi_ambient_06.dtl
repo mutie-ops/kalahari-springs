@@ -1,0 +1,8 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Worried)
+Naledi: Two households both think they're owed Tuesday.
+- What did you do?
+	Hope: What did you do?
+	Naledi: Gave one of them Tuesday and the other the first slot on Saturday, which is better and they don't know it yet.
+	Naledi: They'll work it out in a month and neither will thank me. That's the job.

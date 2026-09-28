@@ -1,0 +1,13 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: It's nothing. A shawl.
+- Can I see?
+	Hope: Can I see?
+	Naledi: The edge is wrong. I'm out of practice.
+- You could sell those
+	Hope: You could sell those.
+	Naledi: No.
+	Naledi: Not yet. It's not —
+	Naledi: Half the village needs something mended and that's what the machine is for at present.
+[signal arg="hearts:naledi:1"]
+set {GameState.naledi_stitching_seen} = true

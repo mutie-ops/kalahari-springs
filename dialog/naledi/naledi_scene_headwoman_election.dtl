@@ -1,0 +1,15 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Worried)
+join Gogo (Neutral) left
+Gogo: Naledi Dube. Will you take it?
+Naledi: I've been doing the work for six years without the title. I don't know what the title changes.
+Gogo: It changes that nobody can tell you to stop.
+Naledi: Then yes.
+Naledi: They've made a great deal of fuss out there.
+- You've earned it
+	Hope: You've earned it.
+	Naledi: I've been doing the same job since I was twenty-six. The only thing that's different is that there's singing about it.
+	Naledi: It's not unpleasant. The singing.
+[signal arg="hearts:naledi:1"]
+set {GameState.naledi_headwoman} = true

@@ -1,0 +1,22 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+join Amos (Neutral) left
+Lebo: The Nkosi boy went Thursday.
+Amos: Mm.
+Lebo: I nearly went. Did you know that?
+Amos: I knew.
+Lebo: Ninety-nine. There was work in Polokwane, proper work, a man's brother-in-law wanted someone who could weld.
+Lebo: I had a bag packed for eleven days.
+Amos: Twelve.
+Lebo: ...Twelve.
+- Why did you stay?
+	Hope: Why did you stay?
+	Lebo: I couldn't work out who'd fix things.
+	Lebo: That's not noble. I want to be clear it's not noble. It was mostly that I couldn't picture the place without me in it, and that's vanity more than anything.
+Amos: It wasn't vanity.
+Lebo: ...No. All right.
+Lebo: I'm glad the boy went, though. He should go. There was never anything here that was going to hold him and there shouldn't have been.
+Lebo: There was something here that held me. Turns out that's different.
+[signal arg="hearts:lebo:2"]
+set {GameState.lebo_arc_complete} = true
+set {GameState.mkhize_brothers_epilogue_complete} = true

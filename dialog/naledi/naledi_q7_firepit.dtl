@@ -1,0 +1,15 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: You've had that letter three weeks and you haven't mentioned it once.
+- How do you know about it?
+	Hope: How do you know about it?
+	Naledi: Post drum. Everyone knows. Nobody's said anything because they're all afraid of the answer.
+	Naledi: I'm not going to tell you to stay. You'd hear it as a favour owed and then you'd stay for the wrong reason and resent it in four years.
+	- Then why bring it up?
+		Hope: Then why bring it up?
+		Naledi: Because nobody else will, and you've been carrying it alone, and that's a stupid way to decide anything.
+	- What would you do?
+		Hope: What would you do?
+		Naledi: I'd stay. But I've never had anywhere else to go, so my answer's worth very little.
+	set {GameState.quest_naledi_this_is_home} = "active"
+	[signal arg="objective:Sit with the question — speak with Gogo and Naledi before deciding"]

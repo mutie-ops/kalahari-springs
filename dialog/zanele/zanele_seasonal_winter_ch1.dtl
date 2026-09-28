@@ -1,0 +1,9 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: We did boiling times this morning, in among the reading.
+- You teach water safety?
+	Hope: You teach water safety?
+	Zanele: I teach whatever is going to hurt them if they do not know it.
+	Zanele: A rolling boil for one minute. Not a simmer, a rolling boil, and one full minute after it starts — that is the part everyone gets wrong.
+	Zanele: Six of them went home and told their mothers. Two of the mothers were doing it wrong.
+set {GameState.zanele_seasonal_last_chapter} = 1

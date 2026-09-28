@@ -1,0 +1,11 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Warm)
+Mama Zulu\: She has it wrong about the flowering. Not badly.
+- Aren't you going to tell her?
+	Hope: Aren't you going to tell her?
+	Mama Zulu\: She will find out. It is better learned than told.
+Mama Zulu\: My mother gave me that root. Her mother gave it to her. It stopped there, for a while.
+Mama Zulu\: It has not stopped.
+[signal arg="hearts:mama_zulu:2"]
+set {GameState.mama_zulu_legacy_complete} = true

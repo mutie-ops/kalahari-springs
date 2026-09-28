@@ -1,0 +1,15 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: The Dube girl's machine has been moved.
+- Naledi's?
+	Hope: Naledi's?
+	Mama Zulu\: It sat in that trunk three years. Now it is out and there is oil on the wheel.
+	Mama Zulu\: I walked over on Sunday. I did not ask her about it.
+	- What did you talk about?
+		Hope: What did you talk about?
+		Mama Zulu\: Nothing. I brought bread and I sat for an hour.
+	- Why not ask?
+		Hope: Why not ask?
+		Mama Zulu\: Because she would have said she was fine, and then she would have had to keep saying it.
+		Mama Zulu\: This way she did not have to say anything.
+set {GameState.mama_zulu_noticed_treadle} = true

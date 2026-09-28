@@ -1,0 +1,9 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: You're the one at the old Nkosi place — the granddaughter. I'd heard.
+- Word travels
+	Hope: Word travels.
+	Charity: It does, and I encourage it. Half my job is knowing who's arrived and what they've brought with them.
+	Charity: You brought a roller, I'm told. Ninety litres?
+	Charity: That's useful to know. Not for any particular reason yet.

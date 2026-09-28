@@ -1,0 +1,12 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: That'll hold. It's makeshift, but makeshift that works is still works.
+- Thank you
+	Hope: Thank you.
+	Sipho: One more thing, if you want it — the overflow's going to run off that side and do nothing.
+	Sipho: Put a few stones in a shallow line, angle it toward your beds. Costs you an afternoon and the garden gets every drop that misses the drum.
+	[signal arg="objective:Build a stone catchment to redirect overflow into the garden"]
+[signal arg="hearts:sipho:2"]
+set {GameState.quest_sipho_gutter_repair} = "complete"
+[signal arg="unlock:Hope's garden receives rainfall bonus during summer chapters"]

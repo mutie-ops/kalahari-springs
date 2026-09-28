@@ -1,0 +1,10 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+- Will the borehole happen?
+	Hope: Do you think the borehole will actually happen?
+	Petrus: Ground's the same ground it was when they promised it in ninety-eight.
+	- So — no?
+		Hope: So — no?
+		Petrus: I didn't say that.
+		Petrus: I said it's the same ground.
+set {GameState.petrus_sideways_seen} = true

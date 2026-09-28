@@ -1,0 +1,20 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: When I married Bongani I moved four houses down the same road. That's the whole distance I've ever travelled.
+- That's not the same as choosing to come back
+	Hope: That's not the same as choosing to come back.
+	Naledi: No. It's easier. I've never had to decide anything.
+	Naledi: So I can't tell you whether you belong here. I can tell you what I've watched.
+	Naledi: Mama Zulu keeps a cup out for you. Ezekiel asks after your garden before he asks after his own. The Nkosi boy explains things to you he doesn't bother explaining to adults.
+	Naledi: Gogo introduced you last month as Hope. Not as anyone's granddaughter. Just Hope.
+	- I hadn't noticed
+		Hope: I hadn't noticed.
+		Naledi: You wouldn't. You've been busy being useful.
+		Naledi: That's how it happens, though. Nobody decides you belong somewhere. You just look up one day and find that you've been being counted on for about a year.
+- What if I get it wrong?
+	Hope: What if I get it wrong?
+	Naledi: Then you'll have got it wrong here, among people who'll still be here afterward.
+	Naledi: That's the part that's worth something. Not the being right.
+[signal arg="hearts:naledi:2"]
+set {GameState.naledi_firepit_ch6_complete} = true

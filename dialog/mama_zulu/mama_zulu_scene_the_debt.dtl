@@ -1,0 +1,14 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+- Did they pay?
+	Hope: Did they pay?
+	Mama Zulu\: No. He died in Tzaneen. His sister sent word.
+	Mama Zulu\: He stayed here eleven weeks when his leg was broken. He could not have paid then and he could not have paid after.
+	- That must have been hard to carry
+		Hope: That must have been hard to carry.
+		Mama Zulu\: It was eleven weeks of food.
+		Mama Zulu\: I would do it again tomorrow. Both things are true.
+	- I'm sorry
+		Hope: I'm sorry.
+		Mama Zulu\: He was good company. That is not nothing.
+set {GameState.mama_zulu_debt_written_off} = true

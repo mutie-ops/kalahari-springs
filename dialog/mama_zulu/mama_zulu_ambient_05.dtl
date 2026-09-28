@@ -1,0 +1,11 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+- Think I'm doing enough here?
+	Hope: Do you think I'm doing enough here?
+	Mama Zulu\: What would 'enough' look like?
+	- I don't know
+		Hope: I don't know.
+		Mama Zulu\: Then you are not asking me the real question.
+	- I suppose it would look like this
+		Hope: I suppose it would look like this.
+		Mama Zulu\: Yes.

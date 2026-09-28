@@ -1,0 +1,70 @@
+if {GameState.chapter} == 9 and {GameState.amos_build_finished} == true and {GameState.amos_hearts} >= 6 and {GameState.amos_arc_complete} == false:
+	jump amos_scene_epilogue_design/
+elif {GameState.chapter} == 9 and {GameState.amos_hearts} >= 8 and {GameState.sipho_departed} == true and {GameState.mkhize_brothers_epilogue_complete} == false:
+	jump shared_mkhize_epilogue/
+elif {GameState.chapter} == 8 and {GameState.amos_build_tested} == true and {GameState.amos_hearts} >= 5 and {GameState.amos_build_finished} == false:
+	jump amos_scene_build_finished/
+elif {GameState.chapter} == 7 and {GameState.amos_build_started} == true and {GameState.amos_hearts} >= 5 and {GameState.amos_build_tested} == false:
+	jump amos_scene_build_tested/
+elif {GameState.chapter} == 6 and {GameState.amos_sketches_seen} == true and {GameState.amos_hearts} >= 5 and {GameState.amos_build_started} == false:
+	jump amos_scene_build_begins/
+elif {GameState.chapter} == 4 and {GameState.amos_hearts} >= 4 and {GameState.amos_road_crew_seen} == false:
+	jump amos_scene_road_crew/
+elif {GameState.chapter} == 1 and {GameState.amos_hearts} >= 2 and {GameState.lebo_pathway_patch_laid} == true and {GameState.amos_diagnosis_seen} == false:
+	jump amos_scene_the_diagnosis/
+elif {GameState.chapter} == 0 and {GameState.amos_hearts} >= 1 and {GameState.amos_sketches_seen} == false:
+	jump amos_scene_the_sketches/
+elif {GameState.quest_mkhize_storm_prep} == "active" and {GameState.storm_prep_progress} == 1.0:
+	jump amos_q3_complete/
+elif {GameState.quest_mkhize_roller_pen} == "active" and {GameState.pen_frame_complete} == true:
+	jump shared_roller_pen_build/
+elif {GameState.quest_amos_pathway_smoothing} == "active" and {GameState.grading_progress} == 1.0:
+	jump amos_q1_complete/
+elif {GameState.quest_mkhize_storm_prep} == "active" and {GameState.storm_prep_progress} < 1.0:
+	jump amos_q3_workday/
+elif {GameState.quest_amos_pathway_smoothing} == "active" and {GameState.grading_progress} < 1.0:
+	jump amos_q1_workday/
+elif {GameState.chapter} == 6 and {GameState.quest_mkhize_storm_prep} == "inactive":
+	jump amos_q3_intro/
+elif {GameState.chapter} == 2 and {GameState.quest_charity_proof_it_works_main} == "complete" and {GameState.roller_fleet_count} >= 5 and {GameState.quest_amos_pathway_smoothing} == "inactive":
+	jump amos_q1_intro/
+elif {GameState.amos_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump amos_seasonal_winter_ch9/
+elif {GameState.amos_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.amos_hearts_ambient} >= 8:
+	jump amos_seasonal_autumn_ch8/
+elif {GameState.amos_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.amos_hearts_ambient} >= 7:
+	jump amos_seasonal_summer_ch7/
+elif {GameState.amos_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.amos_hearts_ambient} >= 6:
+	jump amos_seasonal_spring_ch6/
+elif {GameState.amos_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.amos_hearts_ambient} >= 5:
+	jump amos_seasonal_winter_ch5/
+elif {GameState.amos_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.amos_hearts_ambient} >= 4:
+	jump amos_seasonal_autumn_ch4/
+elif {GameState.amos_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.amos_hearts_ambient} >= 3:
+	jump amos_seasonal_summer_ch3/
+elif {GameState.amos_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump amos_seasonal_spring_ch2/
+elif {GameState.amos_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump amos_seasonal_winter_ch1/
+elif {GameState.amos_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump amos_seasonal_autumn_ch0/
+elif {GameState.amos_hearts_ambient} >= 9 and {GameState.amos_build_finished} == true:
+	jump amos_ambient_08/
+elif {GameState.amos_hearts_ambient} >= 7 and {GameState.amos_build_started} == true:
+	jump amos_ambient_07/
+elif {GameState.amos_hearts_ambient} >= 7:
+	jump amos_ambient_06/
+elif {GameState.amos_hearts_ambient} >= 5 and {GameState.chapter} >= 4:
+	jump amos_ambient_06/
+elif {GameState.amos_hearts_ambient} >= 5:
+	jump amos_ambient_05/
+elif {GameState.amos_hearts_ambient} >= 3 and {GameState.chapter} >= 2:
+	jump amos_ambient_04/
+elif {GameState.amos_hearts_ambient} >= 3:
+	jump amos_ambient_03/
+elif {GameState.amos_hearts_ambient} < 3 and {GameState.chapter} == 2:
+	jump amos_ambient_02/
+elif {GameState.amos_hearts_ambient} < 3 and {GameState.chapter} <= 1:
+	jump amos_ambient_01/
+else:
+	jump amos_ambient_04/

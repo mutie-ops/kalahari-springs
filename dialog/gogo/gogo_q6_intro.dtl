@@ -1,0 +1,10 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: We'll bless the pump properly. Not a party first — the blessing first. The party can wait its turn.
+- What do you need from me?
+	Hope: What do you need from me?
+	Gogo: Gather people. Tell them to come as they are — not their good clothes, their true ones.
+	Gogo: And find Naledi's cloth. She's making something for the pump handle. Ask her yourself; I won't spoil it.
+	set {GameState.quest_gogo_borehole_blessing} = "active"
+	[signal arg="objective:Help gather the community and prepare the borehole site for the ceremony"]

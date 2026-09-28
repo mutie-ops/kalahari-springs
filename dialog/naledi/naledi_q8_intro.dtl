@@ -1,0 +1,13 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: I'm taking the pitch next to Lindi's. Starting Thursday.
+- For what?
+	Hope: For what?
+	Naledi: Fabric. Mending, some finished pieces. I've been stitching for two years in the evenings and it's either a stall or it's a cupboard full of things nobody wears.
+	- Naledi — that's wonderful
+		Hope: Naledi — that's wonderful.
+		Naledi: It's a stall.
+		Naledi: It's a stall I should have opened a long time ago. Yes.
+	Naledi: I need the pitch cleared and a sign hung. You're taller than me and I've a market to run.
+	set {GameState.quest_naledi_stall_reopening} = "active"
+	[signal arg="objective:Help clear the pitch, arrange the fabric, and hang the sign"]

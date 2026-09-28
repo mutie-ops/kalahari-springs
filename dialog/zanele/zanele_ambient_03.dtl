@@ -1,0 +1,9 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+- How is the school doing?
+	Hope: How is the school doing?
+	Zanele: The children are reading. Forty of them are reading, and two years ago that number was eleven.
+	Zanele: What I do not have is anywhere to put forty children.
+	Zanele: We are in a hall that holds thirty comfortably, on a tin roof that makes rain into an event, and I teach two groups because they will not fit at once.
+	Zanele: But they are reading. I want to say the reading part first, because it is the more important of the two facts.
+set {GameState.zanele_device_seen} = true

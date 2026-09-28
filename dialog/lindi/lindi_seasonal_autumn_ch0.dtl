@@ -1,0 +1,6 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Tail end of the good months. Everything left out there is either the last of it or it's not worth taking.
+Lindi: Which is a nice problem. In August it's all problem and no nice.
+set {GameState.lindi_seasonal_last_chapter} = 0

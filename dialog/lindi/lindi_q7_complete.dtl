@@ -1,0 +1,13 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Nothing left on the ground. Nothing going soft in a basket.
+- You remember the marula?
+	Hope: You remember the marula?
+	Lindi: I think about it every single time.
+	Lindi: I stood in that orchard and decided which households ate and which didn't, and I couldn't do anything about it because I only knew where food was, not how to hold onto it.
+	Lindi: This is the difference. This is the whole difference.
+[signal arg="hearts:lindi:2"]
+set {GameState.quest_lindi_mopane_efficient} = "complete"
+set {GameState.lindi_larder_established} = true
+[signal arg="unlock:quest_lindi_correspondence_course becomes available"]

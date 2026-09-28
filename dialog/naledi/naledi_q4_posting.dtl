@@ -1,0 +1,10 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: The schedule's been at the tree for two years and the rollers have never once been at the tree.
+- Nobody thought to move it?
+	Hope: Nobody thought to move it?
+	Naledi: Everybody thought about it. Nobody moved it.
+	Naledi: There. Now the plan is where the thing is. That's most of what organizing amounts to.
+set {GameState.naledi_pen_schedule_posted} = true
+[signal arg="hearts:naledi:1"]

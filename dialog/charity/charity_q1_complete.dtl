@@ -1,0 +1,13 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: This is good. This is better than good — the Nkosi boy's morning is worth three paragraphs of mine.
+- What happens now?
+	Hope: What happens now?
+	Charity: Now I write it properly, send it to Unity Water Foundation, and we wait. Months, most likely.
+	Charity: That is the process, not them. Most organisations you write to never answer at all. Unity Water answer, and they answer sooner than they need to.
+	Charity: I'd rather tell you that plainly now than have you asking me hopefully every week.
+	Charity: You'll ask hopefully every week regardless. Everyone does.
+[signal arg="hearts:charity:2"]
+set {GameState.quest_charity_roller_case_main} = "complete"
+set {GameState.roller_petition_submitted} = true

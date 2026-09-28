@@ -1,0 +1,8 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: That's the job done properly.
+- Will it hold?
+	Hope: Will it hold?
+	Amos: Yes.
+[signal arg="hearts:amos:2"]
+set {GameState.quest_mkhize_storm_prep} = "complete"

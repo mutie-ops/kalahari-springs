@@ -1,0 +1,14 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+- Working on a job?
+	Hope: Working on a job?
+- What is it, then?
+	Hope: What is it, then?
+- How long have you been drawing this?
+	Hope: How long have you been drawing this?
+	Amos: Nine years.
+- Why haven't you built it?
+	Hope: Why haven't you built it?
+	Amos: No time. No timber.
+	Amos: Paths always need doing first.
+set {GameState.amos_sketches_seen} = true

@@ -1,0 +1,8 @@
+join Hope (Neutral) right
+update Hope (Thoughtful)
+Hope: [i]Two years of letters about this place and I still do not know which way the market is.[/i]
+update Hope (Neutral)
+[signal arg="objective:Walk the village. The market, the spring, the school, the watering hole."]
+[signal arg="objective:No hurry. Nobody is expecting you."]
+set {GameState.quest_village_getting_reacquainted_main} = "active"
+set {GameState.village_beat_matched} = true

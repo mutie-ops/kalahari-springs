@@ -1,0 +1,6 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Worried)
+Petrus: Cattle came through the dry fat. Fat.
+Petrus: Haven't used that word about my animals in nine years.
+set {GameState.petrus_seasonal_last_chapter} = 8

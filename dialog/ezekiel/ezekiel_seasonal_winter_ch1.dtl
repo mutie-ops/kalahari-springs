@@ -1,0 +1,8 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Worried)
+Ezekiel: Spring basin and back is my morning. The whole of it, on these knees.
+- And then the farm?
+	Hope: And then the farm?
+	Ezekiel: And then whatever's left of the day. Which isn't much, this time of year.
+set {GameState.ezekiel_seasonal_last_chapter} = 1

@@ -1,0 +1,11 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: There's no point taking more than we can process. It just rots in a basket instead of rotting on the ground.
+- How much can we save?
+	Hope: How much can we save?
+	Lindi: A third. Maybe. If we're quick and we choose properly.
+	Lindi: Marula goes fastest so it goes first. Medlar will hold a few days more.
+	Lindi: And then we decide which households get it, which is the part I hate.
+	set {GameState.quest_lindi_glut_triage} = "active"
+	[signal arg="objective:Help Lindi prioritise the glut — fastest to spoil vs. greatest household need"]

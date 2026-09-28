@@ -1,0 +1,9 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: The gardeners want the north corner for their meetings. I've told them they can have it as long as they're finished before market hours.
+- You could have said no
+	Hope: You could have said no.
+	Naledi: I could have.
+	Naledi: But they'd have met anyway, badly, in the middle of everything, and then I'd have had to move them.
+	Naledi: It's easier to give people a corner than to explain why they can't have one.

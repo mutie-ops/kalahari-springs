@@ -1,0 +1,13 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+join Lebo (Neutral) left
+Lebo: See, a latch is the whole thing. You can build a beautiful pen and if the latch is rubbish then it's a fence with an opinion.
+Lebo: This one's off a gate at the old co-op building, and I've had it — Amos, how long have I had this latch?
+Amos: Long time.
+Lebo: Long time! There you go. Long time.
+Lebo: Hah — listen to that. That's a proper noise, that is.
+Amos: Mm.
+- Is it good?
+	Hope: Is it good?
+	Amos: It's good.
+[signal arg="hearts:amos:1"]

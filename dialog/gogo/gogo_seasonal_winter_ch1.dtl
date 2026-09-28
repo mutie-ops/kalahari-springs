@@ -1,0 +1,5 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: Clear skies for weeks. Beautiful, if you have enough water.
+Gogo: Less beautiful otherwise.
+set {GameState.gogo_seasonal_last_chapter} = 1

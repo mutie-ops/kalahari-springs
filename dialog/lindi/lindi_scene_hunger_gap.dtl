@@ -1,0 +1,16 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Three people asked me today what's still good to gather. Not 'is there anything' — what.
+- That's different?
+	Hope: That's different?
+	Lindi: Completely different. 'Is there anything' is a question you ask when you're frightened.
+	Lindi: 'What' is a question you ask when you're planning.
+Lindi: Half of what I told them came from Mama Zulu. The roots, mostly — I'd never have found those on my own and I've got them written down now in about four places so they don't go anywhere.
+- She'd be pleased
+	Hope: She'd be pleased.
+	Lindi: She knows. I've told her. She said 'mm,' which from her is a parade.
+Lindi: This is the part I'd have written up, if I'd finished. Four years of survey and a hunger gap nobody's afraid of.
+Lindi: Anyway. There's a rack that needs turning.
+[signal arg="hearts:lindi:1"]
+set {GameState.lindi_epilogue_scene_complete} = true

@@ -1,0 +1,16 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+- Lebo —
+	Hope: Lebo —
+	Lebo: Shh — shh, wait —
+Lebo: That's a man in a room somewhere reading out the price of goats.
+Lebo: And we can hear him. At my bench. In this village.
+- You did it
+	Hope: You did it.
+	Lebo: Two years and four months.
+	Lebo: Right — RIGHT. It goes to the tree. Tonight. I'm not waiting, I've waited two years, it goes to the tree tonight and we'll find something with music on it.
+	Lebo: Get Naledi. Get everyone. Get —
+	Lebo: Get my brother first. He's the one who's had to listen to me talk about this.
+[signal arg="hearts:lebo:3"]
+set {GameState.radio_works} = true

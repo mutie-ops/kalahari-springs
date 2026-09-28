@@ -1,0 +1,15 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Warm)
+join Naledi (Neutral) left
+Naledi: Head Teacher. Which she has been for eleven years without anybody writing it down.
+Zanele: They have been calling me 'the teacher' for eleven years. I did not know I minded until it changed.
+- It's about time
+	Hope: It's about time.
+	Zanele: It is about time. I would not have said so myself, and I am glad somebody did.
+	Zanele: There is a practical part too, which is the part I keep thinking about. Head Teacher is a position. A position can be applied for, and funded, and filled by somebody else one day.
+	Zanele: 'The teacher' was just me. If I had stopped, it would have stopped.
+	Zanele: Now it does not stop when I do. That is worth more to me than the title.
+[signal arg="hearts:zanele:3"]
+set {GameState.quest_zanele_schoolhouse_opening} = "complete"
+set {GameState.zanele_head_teacher} = true

@@ -1,0 +1,9 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: I'd been writing to the wrong people for two years. Two years.
+- What changed?
+	Hope: What changed?
+	Charity: Dumi. He mentioned a name at a funeral, of all places — a cousin of someone's, working at a trust in Tzaneen.
+	Charity: That name was worth more than every application I'd filed on my own.
+	Charity: This is the part outsiders never believe. The network was always here. I just needed someone to let me into it.

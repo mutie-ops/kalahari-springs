@@ -1,0 +1,60 @@
+if {GameState.chapter} == 9 and {GameState.petrus_hearts} >= 8 and {GameState.borehole_complete} == true and {GameState.petrus_arc_complete} == false:
+	jump petrus_scene_epilogue_convert/
+elif {GameState.chapter} == 8 and {GameState.borehole_complete} == true and {GameState.petrus_hearts} >= 7 and {GameState.petrus_herd_growing} == false:
+	jump petrus_scene_herd_grows/
+elif {GameState.chapter} == 7 and {GameState.petrus_hearts} >= 7 and {GameState.mkhize_workshop_active} == true and {GameState.petrus_traded_mangle} == false:
+	jump petrus_scene_the_trade/
+elif {GameState.chapter} == 4 and {GameState.petrus_hearts} >= 5 and {GameState.petrus_animal_scare_seen} == false:
+	jump petrus_scene_animal_scare/
+elif {GameState.quest_petrus_mill_stash} == "active" and {GameState.mill_plate_recovered} == true:
+	jump petrus_q2_complete/
+elif {GameState.quest_gogo_irrigation_referral} == "active" and {GameState.irrigation_parts_taken} == true:
+	jump petrus_q1_complete/
+elif {GameState.quest_lebo_mill_parts_main} == "active" and {GameState.quest_petrus_mill_stash} == "inactive":
+	jump petrus_q2_intro/
+elif {GameState.quest_ezekiel_test_plot} == "active" and {GameState.test_plot_tools_delivered} == false and {GameState.petrus_lent_ezekiel_tools} == false:
+	jump petrus_q3_tool_handover/
+elif {GameState.quest_gogo_irrigation_referral} == "active" and {GameState.petrus_stash_visited} == false:
+	jump petrus_q1_stash_intro/
+elif {GameState.petrus_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump petrus_seasonal_winter_ch9/
+elif {GameState.petrus_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.petrus_hearts_ambient} >= 8:
+	jump petrus_seasonal_autumn_ch8/
+elif {GameState.petrus_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.petrus_hearts_ambient} >= 7:
+	jump petrus_seasonal_summer_ch7/
+elif {GameState.petrus_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.petrus_hearts_ambient} >= 6:
+	jump petrus_seasonal_spring_ch6/
+elif {GameState.petrus_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.petrus_hearts_ambient} >= 5:
+	jump petrus_seasonal_winter_ch5/
+elif {GameState.petrus_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.petrus_hearts_ambient} >= 4:
+	jump petrus_seasonal_autumn_ch4/
+elif {GameState.petrus_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.petrus_hearts_ambient} >= 3:
+	jump petrus_seasonal_summer_ch3/
+elif {GameState.petrus_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump petrus_seasonal_spring_ch2/
+elif {GameState.petrus_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump petrus_seasonal_winter_ch1/
+elif {GameState.petrus_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump petrus_seasonal_autumn_ch0/
+elif {GameState.petrus_location} == "petrus_stash" and {GameState.petrus_deadpan_seen} == false:
+	jump petrus_ambient_02/
+elif {GameState.petrus_hearts_ambient} >= 9 and {GameState.chapter} >= 8:
+	jump petrus_ambient_08/
+elif {GameState.petrus_hearts_ambient} >= 7 and {GameState.chapter} >= 6:
+	jump petrus_ambient_07/
+elif {GameState.petrus_hearts_ambient} >= 5 and {GameState.petrus_location} == "petrus_stash":
+	jump petrus_ambient_05/
+elif {GameState.petrus_hearts_ambient} >= 5 and {GameState.chapter} >= 4:
+	jump petrus_ambient_06/
+elif {GameState.petrus_hearts_ambient} >= 5:
+	jump petrus_ambient_03/
+elif {GameState.petrus_hearts_ambient} >= 3 and {GameState.petrus_sideways_seen} == false:
+	jump petrus_ambient_03/
+elif {GameState.petrus_hearts_ambient} >= 3 and {GameState.chapter} >= 2:
+	jump petrus_ambient_04/
+elif {GameState.petrus_hearts_ambient} >= 3:
+	jump petrus_ambient_03/
+elif {GameState.petrus_hearts_ambient} < 3 and {GameState.chapter} <= 1:
+	jump petrus_ambient_01/
+else:
+	jump petrus_ambient_01/

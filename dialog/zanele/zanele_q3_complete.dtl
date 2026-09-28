@@ -1,0 +1,14 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: Eleven years I have taught in this village, and he is the first one to leave for something better rather than for work.
+Zanele: That is the whole point of it. I want to be clear that I know that.
+- It's still hard
+	Hope: It's still hard.
+	Zanele: It is very hard, and it is exactly what was supposed to happen, and I would not change one part of it.
+	Zanele: He left the physics textbook. The rained-on one, with the missing diagrams.
+	Zanele: He told you it was for whoever is next.
+Zanele: She has been ahead of the class since March. She has not mentioned it to anyone, which is how I know she is not doing it for attention.
+Zanele: It will be four or five years before it matters. That is all right. I have four or five years.
+[signal arg="hearts:zanele:3"]
+set {GameState.quest_zanele_sipho_farewell} = "complete"
+set {GameState.zanele_arc_complete} = true

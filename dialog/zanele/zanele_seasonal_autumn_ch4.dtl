@@ -1,0 +1,5 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: Thirty-four now, and Sipho takes the little ones for the first hour three days a week.
+Zanele: That hour is the only reason the number can keep going up. One person cannot teach thirty-four children. Two can teach thirty-four badly, which is better than one teaching twenty well.
+set {GameState.zanele_seasonal_last_chapter} = 4

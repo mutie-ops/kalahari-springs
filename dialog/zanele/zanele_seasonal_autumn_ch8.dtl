@@ -1,0 +1,5 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: Forty-one children. Forty-one, in one room, at the same time, sitting down.
+Zanele: Eleven years ago it was six, in a corner of the hall, and two of those were mine.
+set {GameState.zanele_seasonal_last_chapter} = 8

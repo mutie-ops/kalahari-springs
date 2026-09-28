@@ -1,0 +1,5 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+Lindi: Last year's stores are nearly finished. This is the thin part of the year — it's always thin, it's just never nothing.
+Lindi: Mama Zulu knows where the nothing isn't. That's the whole skill and I've got about a tenth of it.
+set {GameState.lindi_seasonal_last_chapter} = 1

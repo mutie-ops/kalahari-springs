@@ -1,0 +1,18 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+- What's wrong with her?
+	Hope: What's wrong with her?
+	Petrus: Bloat. Ate something green and wet and too much of it.
+	Petrus: Hold her head. Not tight — just steady. She'll fight you for a minute and then she won't.
+- Should we get someone?
+	Hope: Should we get someone?
+	Petrus: Who?
+	Petrus: Nearest animal doctor's in Tzaneen and he doesn't come out for a goat.
+	Petrus: It's this or it's nothing, and I've done this since I was nine.
+Petrus: There. Ungrateful animal.
+- You saved her
+	Hope: You saved her.
+	Petrus: I let the gas out of her. Different thing.
+	Petrus: Thank you for the head. Two hands is easier than one.
+[signal arg="hearts:petrus:2"]
+set {GameState.petrus_animal_scare_seen} = true

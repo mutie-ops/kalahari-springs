@@ -1,0 +1,32 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+Lindi: 'Second outbreak, reduced density, processing complete within forty-eight hours of collection.'
+Lindi: That's not how you talk to yourself in a field.
+- It sounded fine to me
+	Hope: It sounded fine to me.
+	Lindi: It sounded like a lab notebook.
+	Lindi: I did one semester. Environmental science, at the university. One.
+	- Ask what happened
+		Hope: What happened?
+		Lindi: I couldn't pay for the second one.
+		Lindi: So I came home.
+	- I didn't know that
+		Hope: I didn't know that.
+		Lindi: Ledi knows. Mama Zulu knows. It's not a secret, it's just not a thing I bring up.
+Lindi: I've kept doing it anyway. Four years of surveys nobody asked for, in a format nobody's going to read, because I liked the format.
+Lindi: It's the only way I know how to look at anything properly, I write it down and then I can see the —
+Lindi: Is that silly? Keeping it up like that. For nothing.
+- It's not for nothing. Charity uses your water data.
+	Hope: It's not for nothing. Charity uses your water data.
+	Lindi: She uses three numbers out of about four hundred pages.
+	Lindi: That's not a complaint. It's just — you asked, and that's the honest size of it.
+- No. It's not silly.
+	Hope: No. It's not silly.
+	Lindi: ...All right.
+Lindi: I don't know why I asked. I know it isn't.
+Lindi: I think I wanted somebody to have heard me say the word 'semester' out loud. That's all.
+Lindi: Right. There's a rack that needs turning.
+[signal arg="hearts:lindi:2"]
+set {GameState.quest_lindi_correspondence_course} = "complete"
+set {GameState.lindi_semester_admitted} = true
+[signal arg="unlock:lindi_ambient_08 becomes available"]

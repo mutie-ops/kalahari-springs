@@ -1,0 +1,4 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: First rains inside a fortnight, I reckon. Clouds are building wrong for anything else.
+set {GameState.sipho_seasonal_last_chapter} = 2

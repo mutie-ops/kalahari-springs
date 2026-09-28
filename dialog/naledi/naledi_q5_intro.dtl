@@ -1,0 +1,12 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: The mill's here and everyone has an opinion about where it goes.
+- Do you?
+	Hope: Do you?
+	Naledi: I have the correct one. Central, so nobody's walking further than anybody else, and clear of the stalls so the queue doesn't block trade.
+	Naledi: And the old hand-crank stays. Right beside it.
+	- Why keep the old one?
+		Hope: Why keep the old one?
+		Naledi: Because the sun doesn't shine every day and I'd rather look at an ugly machine than explain to nineteen households why there's no flour.
+	set {GameState.quest_naledi_solar_mill_placement} = "active"
+	[signal arg="objective:Help position and set up the solar mill at the market"]

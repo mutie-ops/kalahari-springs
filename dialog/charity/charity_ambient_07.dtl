@@ -1,0 +1,8 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: The children are outside. Don't let me talk about work.
+- How are they settling?
+	Hope: How are they settling?
+	Charity: Better than I expected. Worse than I tell my mother.
+	Charity: My son asked last month if we were staying. I said yes.
+	Charity: I didn't know if it was true when I said it.

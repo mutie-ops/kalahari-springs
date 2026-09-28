@@ -1,0 +1,16 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update 
+- Someone fixed your roof
+	Hope: Someone fixed your roof.
+	Mama Zulu\: Lebo. He was here about the stove and he looked up at it and then he went and got sheeting.
+	Mama Zulu\: He would not let me pay him. I tried twice.
+- How long had it been leaking?
+	Hope: How long had it been leaking?
+	Mama Zulu\: Eight years.
+	Mama Zulu\: My husband started that roof. He got the frame up and then he did not finish it.
+	Mama Zulu\: Lebo used the same frame. He said it was still square.
+Mama Zulu\: The rains come next month. We will be able to use this room.
+Mama Zulu\: Tell him thank you again for me. He will say it was nothing. It was not nothing.
+[signal arg="hearts:mama_zulu:2"]
+set {GameState.mama_zulu_roof_finished} = true

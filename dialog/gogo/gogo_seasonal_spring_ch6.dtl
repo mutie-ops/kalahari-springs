@@ -1,0 +1,8 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Aggravated)
+Gogo: Second rains I've watched come in since you arrived.
+- Is that a long time?
+	Hope: Is that a long time?
+	Gogo: It is nothing at all. And it is the fastest this village has changed in forty years.
+set {GameState.gogo_seasonal_last_chapter} = 6

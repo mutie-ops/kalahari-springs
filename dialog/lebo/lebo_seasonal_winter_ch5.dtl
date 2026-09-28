@@ -1,0 +1,8 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Latch for the pen, gutters at the meetinghouse, and the mill if the parts turn up. All this month.
+- That's a lot
+	Hope: That's a lot.
+	Lebo: It's brilliant. Ask me again in three weeks when I've slept badly and I'll say something different, but right now — brilliant.
+set {GameState.lebo_seasonal_last_chapter} = 5

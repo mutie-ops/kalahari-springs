@@ -1,0 +1,5 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+Lindi: People are buying preserved out of season now, which they never did, because they trust it'll be good.
+Lindi: That took four years and about two hundred ruined medlars to earn.
+set {GameState.lindi_seasonal_last_chapter} = 8

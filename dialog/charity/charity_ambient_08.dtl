@@ -1,0 +1,8 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: Rollers, filters, a tank at the meetinghouse, a pump running on sunlight.
+- That's a lot of paperwork
+	Hope: That's a lot of paperwork.
+	Charity: Four years of it. And every one of those submissions was somebody else's idea first — Sipho's numbers, Naledi's schedule, Dumi's contact.
+	Charity: I only ever wrote them down in the right order.

@@ -1,0 +1,17 @@
+join Hope (Neutral) right
+join Gogo (Neutral) left
+join Charity (Neutral) left
+Gogo: They say three days to reach the water, if it is there.
+- Think it's there?
+	Hope: Do you think it's there?
+	Gogo: The paper says it is. I have been shown papers before.
+	Gogo: But the paper did not come on the back of a lorry. This did.
+- What can I do?
+	Hope: What can I do?
+	Gogo: Come and watch. Watching is allowed. Most of us will be doing nothing else.
+Charity: The district signed for it. Unity Water paid for it. The committee will keep it — once there is a committee.
+Charity: That part is ours. It always was.
+set {GameState.quest_borehole_drilling_main} = "active"
+set {GameState.borehole_drilling_begun} = true
+[signal arg="objective:Be at the borehole site as the work goes on"]
+set {GameState.village_beat_matched} = true

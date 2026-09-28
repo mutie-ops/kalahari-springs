@@ -1,0 +1,14 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+join Sipho (Neutral) left
+Zanele: Sipho. Would you do something for me.
+Sipho: ...Now?
+Zanele: Three mornings a week, the first hour. The younger ones.
+Zanele: I am not doing you a kindness. I have thirty-four children and one of me, and you have just held four of them still for six minutes on the subject of gutters.
+Zanele: That is a skill. I would like to borrow it.
+- That was generous
+	Hope: That was generous.
+	Zanele: It was accurate.
+	Zanele: Generous would be giving him something he could not do. I have given him something he is already better at than I was at his age, and I have got an hour back.
+set {GameState.sipho_teaching_assistant} = true
+[signal arg="hearts:zanele:2"]

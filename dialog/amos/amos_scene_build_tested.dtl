@@ -1,0 +1,14 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+update Amos (Warm)
+- It held
+	Hope: It held.
+	Amos: Mm.
+	Amos: Everyone builds the house first. Then they find out where the water goes, and then they dig a channel where the water already is, and it's the wrong place, because by then the house has changed where the water goes.
+	Amos: I dug that channel in the spring. Before the pegs. Before anything.
+	Amos: Sat out here in the wet and watched where it ran and dug it there.
+	Amos: Nine years of drawing and the first thing I built was a ditch.
+	Amos: That's the whole trade. People think it's the building. It's the ditch.
+	Amos: Same down there. Same everywhere. You do the invisible thing first or you do the visible thing twice.
+[signal arg="hearts:amos:2"]
+set {GameState.amos_build_tested} = true

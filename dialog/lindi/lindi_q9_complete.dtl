@@ -1,0 +1,15 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Four years ago this was a blanket on the ground with whatever I'd found that morning.
+- It's a proper stall now
+	Hope: It's a proper stall now.
+	Lindi: It's a proper stall now.
+	Lindi: Do you remember the first afternoon? Colour, give, smell.
+	- And if the ants found it first, they were right and I was late
+		Hope: And if the ants found it first, they were right and I was late.
+		Lindi: You remembered the ants. Everybody forgets the ants.
+	Lindi: Come out with me next season. I still talk to myself and it still worries me.
+[signal arg="hearts:lindi:2"]
+set {GameState.quest_lindi_market_stall} = "complete"
+set {GameState.lindi_stall_open} = true

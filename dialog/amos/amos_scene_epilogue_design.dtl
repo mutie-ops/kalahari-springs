@@ -1,0 +1,16 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+update Amos (Warm)
+join Naledi (Neutral) left
+Naledi: I copied it off your extension. I hope that's all right.
+Amos: It's all right.
+- Your design's going on the borehole shelter
+	Hope: Your design's going on the borehole shelter.
+	Amos: Mm.
+- That must feel good
+	Hope: That must feel good.
+	Amos: Nine years in a notebook.
+	Amos: Now it's going to be a thing people stand under.
+Amos: That'll do.
+[signal arg="hearts:amos:2"]
+set {GameState.amos_arc_complete} = true

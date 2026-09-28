@@ -1,0 +1,60 @@
+if {GameState.chapter} == 6 and {GameState.zanele_hearts} >= 6 and {GameState.sipho_teaching_assistant} == true and {GameState.zanele_nomination_weight} == false:
+	jump zanele_scene_the_nomination/
+elif {GameState.chapter} == 3 and {GameState.test_plot_succeeded} == true and {GameState.zanele_hearts} >= 4 and {GameState.zanele_guest_teachers} == false:
+	jump zanele_scene_ezekiel_guest/
+elif {GameState.chapter} == 3 and {GameState.school_attendance_surge} == true and {GameState.zanele_hearts} >= 3 and {GameState.zanele_needs_building} == false:
+	jump zanele_scene_outgrowing_hall/
+elif {GameState.chapter} == 2 and {GameState.zanele_hearts} >= 3 and {GameState.zanele_mama_zulu_food} == false:
+	jump zanele_scene_mama_zulu_food/
+elif {GameState.quest_zanele_sipho_farewell} == "active" and {GameState.sipho_departed} == true:
+	jump zanele_q3_complete/
+elif {GameState.quest_zanele_schoolhouse_opening} == "active" and {GameState.opening_prep_complete} == true:
+	jump zanele_q2_complete/
+elif {GameState.quest_zanele_schoolhouse_opening} == "active" and {GameState.sipho_scholarship_received} == true and {GameState.zanele_nomination_revealed} == false:
+	jump zanele_q2_the_letter/
+elif {GameState.quest_sipho_schoolhouse_case} == "active" and {GameState.schoolhouse_case_documented} == true and {GameState.zanele_case_support_seen} == false:
+	jump zanele_q1_case_support/
+elif {GameState.chapter} == 4 and {GameState.quest_sipho_schoolhouse_case} == "active" and {GameState.sipho_teaching_assistant} == false:
+	jump zanele_q1_recognition/
+elif {GameState.chapter} == 9 and {GameState.sipho_scholarship_received} == true and {GameState.quest_zanele_sipho_farewell} == "inactive":
+	jump zanele_q3_intro/
+elif {GameState.chapter} == 8 and {GameState.school_construction_complete} == true and {GameState.quest_zanele_schoolhouse_opening} == "inactive":
+	jump zanele_q2_intro/
+elif {GameState.zanele_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump zanele_seasonal_winter_ch9/
+elif {GameState.zanele_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.zanele_hearts_ambient} >= 8:
+	jump zanele_seasonal_autumn_ch8/
+elif {GameState.zanele_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.zanele_hearts_ambient} >= 7:
+	jump zanele_seasonal_summer_ch7/
+elif {GameState.zanele_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.zanele_hearts_ambient} >= 6:
+	jump zanele_seasonal_spring_ch6/
+elif {GameState.zanele_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.zanele_hearts_ambient} >= 5:
+	jump zanele_seasonal_winter_ch5/
+elif {GameState.zanele_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.zanele_hearts_ambient} >= 4:
+	jump zanele_seasonal_autumn_ch4/
+elif {GameState.zanele_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.zanele_hearts_ambient} >= 3:
+	jump zanele_seasonal_summer_ch3/
+elif {GameState.zanele_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump zanele_seasonal_spring_ch2/
+elif {GameState.zanele_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump zanele_seasonal_winter_ch1/
+elif {GameState.zanele_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump zanele_seasonal_autumn_ch0/
+elif {GameState.zanele_hearts_ambient} >= 9 and {GameState.zanele_head_teacher} == true:
+	jump zanele_ambient_08/
+elif {GameState.zanele_hearts_ambient} >= 7 and {GameState.chapter} >= 6:
+	jump zanele_ambient_07/
+elif {GameState.zanele_hearts_ambient} >= 5 and {GameState.sipho_teaching_assistant} == true:
+	jump zanele_ambient_06/
+elif {GameState.zanele_hearts_ambient} >= 5:
+	jump zanele_ambient_05/
+elif {GameState.zanele_hearts_ambient} >= 3 and {GameState.zanele_device_seen} == false:
+	jump zanele_ambient_03/
+elif {GameState.zanele_hearts_ambient} >= 3 and {GameState.chapter} >= 3:
+	jump zanele_ambient_04/
+elif {GameState.zanele_hearts_ambient} >= 3:
+	jump zanele_ambient_03/
+elif {GameState.zanele_hearts_ambient} < 3 and {GameState.zanele_ambient_12_toggle} == false:
+	jump zanele_ambient_01/
+else:
+	jump zanele_ambient_02/

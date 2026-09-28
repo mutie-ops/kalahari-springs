@@ -1,0 +1,10 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Warm)
+Dumi: Charity's got her partner for the borehole.
+- Through your contact?
+	Hope: Through your contact?
+	Dumi: Through a name I gave her, which is not the same as through me.
+	Dumi: It was a cousin of somebody I traded with four years ago. I remembered them at a funeral.
+	Dumi: That's not a skill. That's just having been here a while and paying attention.
+set {GameState.dumi_seasonal_last_chapter} = 6

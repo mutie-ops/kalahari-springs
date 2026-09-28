@@ -1,0 +1,16 @@
+join Hope (Neutral) right
+join Charity (Neutral) left
+join Gogo (Neutral) left
+Charity: The rock behind Gogo's house. Best of the four by a distance.
+- Is that good?
+	Hope: Is that good?
+	Charity: It is a piece of paper that says there is water under a specific place, signed by somebody the district will believe.
+	Charity: So yes. That is very good.
+Gogo: I will need to move the goats off it.
+- That's your first thought?
+	Hope: That's your first thought?
+	Gogo: It is a practical problem and I am a practical woman.
+	Gogo: The other thought I am keeping.
+set {GameState.quest_hydrogeologist_survey_escort} = "complete"
+set {GameState.borehole_survey_done} = true
+set {GameState.village_beat_matched} = true

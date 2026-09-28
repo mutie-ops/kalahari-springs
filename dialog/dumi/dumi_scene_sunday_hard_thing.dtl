@@ -1,0 +1,14 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: I'm not going to ask you what happened to it.
+Dumi: I don't need to know. I'd rather not know, honestly.
+Dumi: What I need is for it to be replaced by the end of the month, and for you to be the one who tells people it was you who replaced it.
+Dumi: Then come and say so, to me, before the end of the month. Not after.
+Dumi: You're welcome here either way. That isn't in question and I want you to hear that clearly.
+Dumi: My father would have known how to do that better.
+- It sounded right to me
+	Hope: It sounded right to me.
+	Dumi: It sounded fair. Fair's easy. Kind is the hard part and I'm not sure I managed both.
+	Dumi: That's the bit nobody tells you about opening the hall on Sundays. It's not the talking. It's this.
+[signal arg="hearts:dumi:2"]
+set {GameState.dumi_sunday_test} = true

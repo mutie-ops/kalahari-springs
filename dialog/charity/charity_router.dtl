@@ -1,0 +1,82 @@
+if {GameState.chapter} == 8 and {GameState.schoolhouse_opening_complete} == true and {GameState.charity_hearts} >= 7 and {GameState.charity_home_realisation} == false:
+	jump charity_scene_home_not_posting/
+elif {GameState.chapter} == 0 and {GameState.charity_hearts} >= 1 and {GameState.charity_prologue_doubt_seen} == false:
+	jump charity_scene_new_posting/
+elif {GameState.quest_charity_one_last_petition} == "active" and {GameState.charity_paperwork_complete} == true:
+	jump charity_q5_complete/
+elif {GameState.quest_village_borehole_conversation_main} == "active" and {GameState.gogo_borehole_endorsement_given} == true:
+	jump charity_q6_complete/
+elif {GameState.quest_charity_mill_campaign} == "active" and {GameState.mill_case_assembled} == true:
+	jump charity_q4_complete/
+elif {GameState.quest_charity_outpost_upgrade_campaign} == "active" and {GameState.upkeep_accounts_collected} >= 3:
+	jump charity_q3_complete/
+elif {GameState.quest_charity_proof_it_works_main} == "active" and {GameState.outcomes_documented} >= 3 and {GameState.roller_fleet_count} >= 5:
+	jump charity_q2_complete/
+elif {GameState.quest_charity_roller_case_main} == "active" and {GameState.testimonies_gathered} >= 4:
+	jump charity_q1_complete/
+elif {GameState.quest_charity_one_last_petition} == "active" and {GameState.charity_paperwork_complete} == false:
+	jump charity_q5_checkin/
+elif {GameState.quest_charity_mill_campaign} == "active" and {GameState.mill_case_assembled} == false:
+	jump charity_q4_intro/
+elif {GameState.quest_charity_outpost_upgrade_campaign} == "active" and {GameState.upkeep_accounts_collected} < 3:
+	jump charity_q3_intro/
+elif {GameState.quest_charity_proof_it_works_main} == "active" and {GameState.outcomes_documented} < 3:
+	jump charity_q2_checkin/
+elif {GameState.quest_charity_proof_it_works_main} == "active" and {GameState.roller_fleet_count} < 5:
+	jump charity_q2_checkin/
+elif {GameState.quest_charity_roller_case_main} == "active" and {GameState.testimonies_gathered} < 4:
+	jump charity_q1_checkin/
+elif {GameState.chapter} == 9 and {GameState.charity_hearts} >= 7 and {GameState.borehole_blessing_complete} == false and {GameState.quest_charity_one_last_petition} == "inactive":
+	jump charity_q5_intro/
+elif {GameState.chapter} == 6 and {GameState.quest_village_borehole_conversation_main} == "inactive":
+	jump charity_q6_intro/
+elif {GameState.chapter} == 7 and {GameState.mill_frustration_established} == true and {GameState.quest_charity_mill_campaign} == "inactive":
+	jump charity_q4_intro/
+elif {GameState.chapter} == 5 and {GameState.outpost_upkeep_complaints} >= 3 and {GameState.quest_charity_outpost_upgrade_campaign} == "inactive":
+	jump charity_q3_intro/
+elif {GameState.chapter} == 2 and {GameState.sipho_roller_calc_shared} == true and {GameState.quest_charity_proof_it_works_main} == "inactive":
+	jump charity_q2_intro/
+elif {GameState.chapter} == 1 and {GameState.hope_raised_roller_shortage} == true and {GameState.quest_charity_roller_case_main} == "inactive":
+	jump charity_q1_intro/
+elif {GameState.charity_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump charity_seasonal_winter_ch9/
+elif {GameState.charity_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.charity_hearts_ambient} >= 8:
+	jump charity_seasonal_autumn_ch8/
+elif {GameState.charity_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.charity_hearts_ambient} >= 7:
+	jump charity_seasonal_summer_ch7/
+elif {GameState.charity_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.charity_hearts_ambient} >= 6:
+	jump charity_seasonal_spring_ch6/
+elif {GameState.charity_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.charity_hearts_ambient} >= 5:
+	jump charity_seasonal_winter_ch5/
+elif {GameState.charity_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.charity_hearts_ambient} >= 4:
+	jump charity_seasonal_autumn_ch4/
+elif {GameState.charity_seasonal_last_chapter} != 3 and {GameState.chapter} == 3:
+	jump charity_seasonal_summer_ch3/
+elif {GameState.charity_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump charity_seasonal_spring_ch2/
+elif {GameState.charity_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump charity_seasonal_winter_ch1/
+elif {GameState.charity_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump charity_seasonal_autumn_ch0/
+elif {GameState.charity_hearts_ambient} >= 9 and {GameState.chapter} == 9 and {GameState.quest_charity_one_last_petition} == "complete" and {GameState.charity_petition_filed} == true:
+	jump charity_ambient_09/
+elif {GameState.charity_hearts_ambient} >= 7 and {GameState.chapter} >= 7 and {GameState.charity_location} == "charity_outpost":
+	jump charity_ambient_08/
+elif {GameState.charity_hearts_ambient} >= 7 and {GameState.charity_home_access} == true and {GameState.charity_location} == "charity_homestead":
+	jump charity_ambient_07/
+elif {GameState.charity_hearts_ambient} >= 7 and {GameState.chapter} >= 7:
+	jump charity_ambient_08/
+elif {GameState.charity_hearts_ambient} >= 5 and {GameState.chapter} >= 5 and {GameState.borehole_ngo_contact_found} == true:
+	jump charity_ambient_06/
+elif {GameState.charity_hearts_ambient} >= 5:
+	jump charity_ambient_05/
+elif {GameState.charity_hearts_ambient} >= 3 and {GameState.chapter} >= 2 and {GameState.charity_location} == "charity_outpost":
+	jump charity_ambient_04/
+elif {GameState.charity_hearts_ambient} >= 3:
+	jump charity_ambient_03/
+elif {GameState.charity_hearts_ambient} < 3 and {GameState.chapter} >= 1 and {GameState.chapter} <= 2:
+	jump charity_ambient_02/
+elif {GameState.charity_hearts_ambient} < 3 and {GameState.chapter} == 0:
+	jump charity_ambient_01/
+else:
+	jump charity_ambient_02/

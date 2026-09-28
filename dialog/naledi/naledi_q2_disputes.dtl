@@ -1,0 +1,9 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Third argument this week about the schedule.
+- Do you want help?
+	Hope: Do you want help?
+	Naledi: No.
+	Naledi: If you settle it, they'll come to you next time, and you'll be settling roller disputes for the rest of your life.
+	Naledi: Let them come to me. I've the temperament for it and you haven't yet.
+set {GameState.naledi_disputes_seen} = true

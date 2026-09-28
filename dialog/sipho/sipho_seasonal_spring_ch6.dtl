@@ -1,0 +1,8 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: It rained for eleven minutes last night. Eleven.
+Sipho: The tank took nearly four hundred litres.
+- From eleven minutes?
+	Hope: From eleven minutes?
+	Sipho: From eleven minutes. Off one roof.
+set {GameState.sipho_seasonal_last_chapter} = 6

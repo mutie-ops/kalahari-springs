@@ -1,0 +1,14 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: You're right. And I want to be careful how I answer, because I don't want you to hear a promise.
+- Can you get more rollers?
+	Hope: Can you get more rollers?
+	Charity: I can't get anything. I can make a case.
+	Charity: An organisation will not fund a request. It will fund an assessment — evidence that the need is real, specific, and already being managed as well as it can be.
+	- Everyone here knows the need is real
+		Hope: Everyone here knows the need is real.
+		Charity: Everyone here, yes. The people who sign the cheques are not here. That's the whole difficulty of my job in one sentence.
+	Charity: So. Households. Their water burden in their own words — how long it takes, what it costs them, what they've given up for it.
+	Charity: Not my summary of it. Theirs.
+	set {GameState.quest_charity_roller_case_main} = "active"
+	[signal arg="objective:Gather water-burden testimony from several households"]

@@ -1,0 +1,5 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+Zanele: Attendance is good after harvest. Households can spare the children when there is food in the house.
+Zanele: It will fall again in June. It falls every June, and every June I go and fetch them back.
+set {GameState.zanele_seasonal_last_chapter} = 0

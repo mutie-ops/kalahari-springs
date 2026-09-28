@@ -1,0 +1,14 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Worried)
+Charity: He had a library at his last school. A small one. But a library.
+- Is he unhappy?
+	Hope: Is he unhappy?
+	Charity: He's eight. He's adaptable, which people say as though it costs nothing.
+	Charity: I told the organisation eighteen months. I've told my husband eighteen months. I've told myself considerably less than that.
+- You're a coordinator — can't you request a better posting?
+	Hope: You're a coordinator — can't you request a better posting?
+	Charity: I could.
+	Charity: Four of us in that house. A hundred and thirty litres a day. I do the same sums at my kitchen table that everyone here does at theirs, and I didn't expect that, and I don't quite know yet what to do with it.
+	Charity: Anyway. You'll want to know what I do here. I facilitate petitions to non-governmental organisations.
+set {GameState.charity_prologue_doubt_seen} = true

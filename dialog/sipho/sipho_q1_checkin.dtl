@@ -1,0 +1,7 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Worried)
+Sipho: Did anyone actually read the numbers, or did they just nod at them?
+- Charity read them
+	Hope: Charity read them.
+	Sipho: Good. She's the one who has to defend them.

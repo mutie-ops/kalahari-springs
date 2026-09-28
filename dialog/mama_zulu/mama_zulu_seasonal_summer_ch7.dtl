@@ -1,0 +1,4 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: He liked this sound.
+set {GameState.mama_zulu_seasonal_last_chapter} = 7

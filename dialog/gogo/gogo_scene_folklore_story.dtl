@@ -1,0 +1,9 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Aggravated)
+Gogo: There was a woman once, not so long ago, who came to this village a stranger and left it family.
+Gogo: She argued with everyone worth arguing with. She kept things nobody else wanted, until the day someone needed exactly that thing. She never once said thank you when she meant it — she said something else instead, and you had to learn what it meant.
+- Gogo — is that story about my grandmother?
+	Hope: Gogo — is that story about my grandmother?
+	Gogo: You'll know when the story's about you.
+set {GameState.gogo_folklore_story_seen} = true

@@ -1,0 +1,10 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Mill's jammed twice this week. Twice.
+- Is that bad?
+	Hope: Is that bad?
+	Lebo: It's a machine made of three other machines that never met. It's going to jam.
+	Lebo: I'd rather it jams and I fix it than it doesn't exist and everyone grinds by hand. But I know how it looks.
+	Lebo: People have started calling it 'Lebo's mill.' They don't mean it kindly. I've decided to take it kindly.
+set {GameState.lebo_seasonal_last_chapter} = 6

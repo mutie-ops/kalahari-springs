@@ -1,0 +1,9 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Warm)
+Petrus: Gave the Mkhize boys that old mangle. Been in the yard since before you were born.
+- What did you get?
+	Hope: What did you get?
+	Petrus: Proper gate hinges and a length of chain. Been needing both for six years.
+	Petrus: Everyone's had something out of that yard. First time it's been my turn.
+set {GameState.petrus_seasonal_last_chapter} = 7

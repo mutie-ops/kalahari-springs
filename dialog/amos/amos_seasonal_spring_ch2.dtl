@@ -1,0 +1,4 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: Ground's right today.
+set {GameState.amos_seasonal_last_chapter} = 2

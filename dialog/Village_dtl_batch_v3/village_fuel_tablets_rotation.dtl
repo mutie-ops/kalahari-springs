@@ -1,0 +1,14 @@
+join Hope (Neutral) right
+if {GameState.interaction_npc} == "petrus":
+	join Petrus (Neutral) left
+	Petrus: Date on the box. Not the date you fetched it — the date on the box.
+	- What's the difference?
+		Hope: What's the difference?
+		Petrus: About six weeks, if the shop has had it a while. I have been caught.
+elif {GameState.interaction_npc} == "lindi":
+	join Lindi (Neutral) left
+	Lindi: Look at the top of the sand. If it is grey and slimy it is working — that layer is the part that actually does the filtering, which is why you skim it and never dig it out.
+else:
+	[signal arg="npc_absent:true"]
+set {GameState.fuel_tablets_rotation_staffed} = true
+set {GameState.village_beat_matched} = true

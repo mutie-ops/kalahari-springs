@@ -1,0 +1,6 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: Greens are flushing and the fruit's setting and the worms are everywhere all in the same fortnight, it's ridiculous, it's the same every year and it's ridiculous every year.
+Lindi: I've got four containers and I need eleven.
+set {GameState.lindi_seasonal_last_chapter} = 3

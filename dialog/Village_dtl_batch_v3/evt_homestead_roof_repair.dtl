@@ -1,0 +1,12 @@
+join Hope (Neutral) right
+update Hope (Thoughtful)
+Hope: [i]Somebody has been on my roof.[/i]
+update Hope (Neutral)
+update Hope (Thoughtful)
+Hope: [i]Lebo said his brother tells him he fixes things twice. This is screwed down properly. This is the once.[/i]
+update Hope (Neutral)
+update Hope (Thoughtful)
+Hope: [i]I need to thank him. I need to remember to thank him before something else happens and I forget.[/i]
+update Hope (Neutral)
+set {GameState.evt_homestead_roof_repair} = "complete"
+set {GameState.village_beat_matched} = true

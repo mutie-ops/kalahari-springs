@@ -1,0 +1,9 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: My knees don't care for the rains. Never have.
+- Should we get you to the outpost?
+	Hope: Should we get you to the outpost?
+	Gogo: The outpost treats water. It doesn't treat knees.
+	Gogo: Walk me to Mama Zulu's instead. She'll know the right poultice. She always has.
+Gogo: You see? Some things don't need a clinic. They need someone who's been doing this since before either of us were born.
+set {GameState.gogo_mama_zulu_visit_complete} = true

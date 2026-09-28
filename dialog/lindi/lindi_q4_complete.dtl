@@ -1,0 +1,12 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: That's it. That's what we could do.
+- It's not nothing
+	Hope: It's not nothing.
+	Lindi: It's not nothing. It's about a third.
+	Lindi: The problem isn't that I can't find food. I can always find food. The problem is that I can't KEEP it, and knowing where things grow is completely useless against that.
+	Lindi: People used to smoke and dry things here. Properly. Nobody's done it in years and I don't know why not — I don't know how either, but that's a different problem and it's a solvable one.
+	Lindi: I'm going to work it out before next season.
+[signal arg="hearts:lindi:1"]
+set {GameState.quest_lindi_glut_triage} = "complete"

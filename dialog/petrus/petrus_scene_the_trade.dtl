@@ -1,0 +1,13 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Worried)
+join Lebo (Neutral) left
+Lebo: Petrus, where has this BEEN?
+Petrus: In my yard. Where you've walked past it about nine hundred times.
+- Could have just asked for the hinges
+	Hope: You could have just asked them for the hinges.
+	Petrus: Could have.
+	Petrus: Then I'd have been an old man being given things.
+	Petrus: This way I'm a man who had something they wanted.
+[signal arg="hearts:petrus:1"]
+set {GameState.petrus_traded_mangle} = true

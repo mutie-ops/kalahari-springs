@@ -1,0 +1,9 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+Ezekiel: Your beds. You've got them flat.
+- Should they not be?
+	Hope: Should they not be?
+	Ezekiel: Flat sheds water. Dig them a hand's depth lower than the path, so they sit in a dish.
+	Ezekiel: Then when it rains, the path feeds the bed instead of the road.
+	Ezekiel: Costs you an afternoon. Saves you a bucket a day.
+set {GameState.ezekiel_advice_a_seen} = true

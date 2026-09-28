@@ -1,0 +1,15 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Worried)
+Dumi: She'll be five next year. Which means school.
+- Isn't that good?
+	Hope: Isn't that good?
+	Dumi: The hall's got forty children in one room and one teacher who isn't paid.
+	Dumi: Zanele's remarkable. She's also one person, and my daughter will be the youngest in there by two years.
+	Dumi: I can teach her numbers. I've been teaching her numbers since she could hold a pencil, which my partner says is a personality flaw.
+	Dumi: I can't teach her to be in a room with forty other children. That she has to do.
+- She'll be fine
+	Hope: She'll be fine.
+	Dumi: She will.
+[signal arg="hearts:dumi:1"]
+set {GameState.dumi_school_worry_seen} = true

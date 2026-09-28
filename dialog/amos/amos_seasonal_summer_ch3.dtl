@@ -1,0 +1,9 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+- Ask what happened
+	Hope: What happened?
+	Amos: Water got in.
+	- Is it ruined?
+		Hope: Is it ruined?
+		Amos: Some.
+set {GameState.amos_seasonal_last_chapter} = 3

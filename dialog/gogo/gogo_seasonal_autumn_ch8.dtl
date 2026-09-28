@@ -1,0 +1,5 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: The rain is leaving and nobody is counting drums.
+Gogo: I have not seen that happen before.
+set {GameState.gogo_seasonal_last_chapter} = 8

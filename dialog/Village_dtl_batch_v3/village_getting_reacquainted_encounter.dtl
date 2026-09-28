@@ -1,0 +1,93 @@
+join Hope (Neutral) right
+if {GameState.interaction_npc} == "naledi":
+	join Naledi (Neutral) left
+	Naledi: You're the Nkosi granddaughter. Stall three is free if you ever have anything to sell.
+	- I've only just arrived
+		Hope: I've only just arrived.
+		Naledi: Then stall three will still be free next week.
+	set {GameState.met_naledi} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "sipho":
+	join Sipho (Neutral) left
+	Sipho: Morning. Sorry — can't stop, I'm already behind.
+	set {GameState.met_sipho} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "lindi":
+	join Lindi (Neutral) left
+	Lindi: Don't step there.
+	- Sorry —
+		Hope: Sorry —
+		Lindi: It's fine. It's just that they come back if you don't crush the ground.
+		Lindi: You'll learn the difference or you won't. Most people don't.
+	set {GameState.met_lindi} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "mama_zulu":
+	join Mama Zulu (Neutral) left
+	Mama Zulu: Nkosi place. Roof's gone at the back corner, I'd guess, from the last two summers.
+	- How do you know that?
+		Hope: How do you know that?
+		Mama Zulu: I know most things. It's not a talent, it's a location.
+	set {GameState.met_mama_zulu} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "zanele":
+	join Zanele (Neutral) left
+	Zanele: You'll have to forgive the noise. It's this or nothing, and nothing is worse.
+	set {GameState.met_zanele} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "dumi":
+	join Dumi (Neutral) left
+	Dumi: Hope, is it. Good.
+	Dumi: Come back when you need something. Everyone does eventually.
+	set {GameState.met_dumi} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "lebo":
+	join Lebo (Neutral) left
+	Lebo: Careful where you stand, the floor's got opinions.
+	- What is that?
+		Hope: What is that?
+		Lebo: It'll be a radio. It's currently an argument.
+	set {GameState.met_lebo} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "amos":
+	join Amos (Neutral) left
+	Amos: Ground's soft on the west path. Go round.
+	set {GameState.met_amos} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "ezekiel":
+	join Ezekiel (Neutral) left
+	Ezekiel: You're at the old Nkosi plot.
+	- I am
+		Hope: I am.
+		Ezekiel: Soil there's better than mine. Was, anyway.
+	set {GameState.met_ezekiel} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "petrus":
+	join Petrus (Neutral) left
+	Petrus: You'll want the spring, not here. This one needs boiling and people forget.
+	- Then why are you here?
+		Hope: Then why are you here?
+		Petrus: Queue's shorter.
+	set {GameState.met_petrus} = true
+	[signal arg="increment:roster_met_count:1"]
+	[signal arg="increment:roster_met_count:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_npc} == "charity":
+	jump charity_ambient_01/

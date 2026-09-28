@@ -1,0 +1,6 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: The tree's busy again. Properly busy — people staying past when they meant to.
+Naledi: That stopped happening for a few years. I'd half forgotten it was the normal state of things.
+set {GameState.naledi_seasonal_last_chapter} = 6

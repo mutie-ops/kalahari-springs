@@ -1,0 +1,5 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: Everything is cheap this month. So I buy and I dry and I put it away.
+Mama Zulu\: August is the month that decides whether I did enough now.
+set {GameState.mama_zulu_seasonal_last_chapter} = 0

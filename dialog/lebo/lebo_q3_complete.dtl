@@ -1,0 +1,12 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Worried)
+Lebo: It grinds. It grinds and it hasn't come apart and I've had my hands inside it for two days.
+- It's a proper mill again
+	Hope: It's a proper mill again.
+	Lebo: It's three mills in a coat pretending to be one mill.
+	Lebo: It'll jam. I want to say that out loud now while everyone's happy, because in about four months it'll jam and someone will look at me.
+	Lebo: But it grinds TODAY, and today nobody's grinding by hand, and that's —
+	Lebo: ...Yeah. That's good.
+[signal arg="hearts:lebo:3"]
+set {GameState.quest_lebo_mill_parts_main} = "complete"

@@ -1,0 +1,10 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: I'll tell you what I know, which isn't advice. It's just what happened to me.
+Gogo: I was not born in this village. I married into it. I could have left, after — more than once, if I'm honest.
+Gogo: I stayed because I kept finding one more reason. And then one day I noticed I had run out of counting them, because it was simply where I lived.
+- How do you know when that's happened?
+	Hope: How do you know when that's happened?
+	Gogo: You don't, while it's happening. You only know afterward, when someone asks you to leave and the question feels wrong in your mouth before you've even answered it.
+	Gogo: That's all I have for you. Not an answer. Just company while you find your own.
+set {GameState.gogo_this_is_home_scene_complete} = true

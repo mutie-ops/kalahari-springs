@@ -1,0 +1,7 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: They tell me the rock behind my house is the best catchment left in the village.
+Gogo: Good. It's done nothing but sit there since before I was born. Let it work for once.
+set {GameState.quest_gogo_rock_cistern} = "active"
+[signal arg="objective:Join the community build at Gogo's rock-outcrop site"]

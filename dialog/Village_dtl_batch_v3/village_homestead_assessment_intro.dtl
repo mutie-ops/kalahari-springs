@@ -1,0 +1,10 @@
+join Hope (Neutral) right
+update Hope (Thoughtful)
+Hope: [i]She did not leave expecting to be gone.[/i]
+update Hope (Neutral)
+update Hope (Thoughtful)
+Hope: [i]Four things. Everything is four things, until you write them down.[/i]
+update Hope (Neutral)
+[signal arg="objective:Walk the property and log what needs doing. Fix nothing yet."]
+set {GameState.quest_homestead_assessment} = "active"
+set {GameState.village_beat_matched} = true

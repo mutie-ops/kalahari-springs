@@ -1,0 +1,21 @@
+join Hope (Neutral) right
+if {GameState.interaction_npc} == "amos":
+	join Amos (Neutral) left
+	Amos: It is not the drain.
+	- Then what?
+		Hope: Then what?
+		Amos: The camber. Water goes where the ground sends it and the ground has been sending it here since they laid the stalls.
+		Amos: We dig it out today. Then in the dry I will fix the ground.
+elif {GameState.interaction_npc} == "dumi":
+	join Dumi (Neutral) left
+	Dumi: Seed sacks first, then the dry goods, then the things that are already wet, which can wait because they are already wet.
+elif {GameState.interaction_npc} == "mama_zulu":
+	join Mama Zulu (Neutral) left
+	Mama Zulu: Somebody has to feed eleven people who did not plan to be here.
+elif {GameState.interaction_npc} == "lindi":
+	join Lindi (Neutral) left
+	Lindi: This will be the best mopane year in a decade, you watch. The ones that flood do that.
+	- You're thinking about worms right now?
+		Hope: You're thinking about worms right now?
+		Lindi: I am thinking about February. Somebody has to.
+set {GameState.village_beat_matched} = true

@@ -1,0 +1,18 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: You manage that roller better than I expected.
+- Thank you?
+	Hope: Thank you?
+	Naledi: It wasn't entirely a compliment. It was an assessment.
+	Naledi: Mama Zulu can't make the trip anymore. Ezekiel can, but it costs him the whole morning and his farm needs that morning.
+	Naledi: Alternate days. One of them, then the other. Not every day — you'd resent it by the second week and then you'd stop.
+	- I wouldn't resent it
+		Hope: I wouldn't resent it.
+		Naledi: Everyone resents it by the second week. That's why I said alternate days.
+		set {GameState.quest_naledi_alternate_rotation_main} = "active"
+	- What do they give back?
+		Hope: What do they give back?
+		Naledi: Good. Ask that.
+		Naledi: Mama Zulu knows roots and what they're for. Ezekiel knows why your garden isn't growing. Neither will offer unless you're there often enough to be asked.
+		set {GameState.quest_naledi_alternate_rotation_main} = "active"
+	[signal arg="objective:Run water to Mama Zulu and Ezekiel on alternate days"]

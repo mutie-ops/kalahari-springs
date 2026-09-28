@@ -1,0 +1,25 @@
+join Hope (Neutral) right
+if {GameState.interaction_location} == "spring_basin":
+	join Gogo (Neutral) left
+	Gogo: It came up here. Not strongly, and not in the bad years, but it came up here.
+	- When did it stop?
+		Hope: When did it stop?
+		Gogo: Nineteen eighty-something. I could tell you the year if you gave me an afternoon and a reason.
+	[signal arg="increment:survey_sites_visited:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_location} == "rock_outcrop":
+	join Gogo (Neutral) left
+	Gogo: Sixty years I have looked at this rock and thought it was in the way.
+	set {GameState.rock_outcrop_site_confirmed} = true
+	[signal arg="increment:survey_sites_visited:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_location} == "market_stalls":
+	join Charity (Neutral) left
+	Charity: I am not going to guess. I have watched people guess from a number they did not understand and then be disappointed on purpose.
+	[signal arg="increment:survey_sites_visited:1"]
+	set {GameState.village_beat_matched} = true
+elif {GameState.interaction_location} == "grazing_land":
+	join Gogo (Neutral) left
+	Gogo: He will have an opinion by Thursday.
+	[signal arg="increment:survey_sites_visited:1"]
+	set {GameState.village_beat_matched} = true

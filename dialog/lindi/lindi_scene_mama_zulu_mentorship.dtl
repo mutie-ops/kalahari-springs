@@ -1,0 +1,12 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+join Mama Zulu (Neutral) left
+Mama Zulu: That one. Not the one beside it — that one is its cousin and it will only make you sleep.
+Lindi: How do you tell them apart before they flower?
+Mama Zulu: The stem. And the ground it chooses.
+Lindi: The ground it — you mean the soil. The drainage.
+Lindi: She's got fifty years of this. Fifty. And she's giving it away to me because her knees have got bad and she'd rather it went somewhere than nowhere.
+Lindi: I keep wanting to tell her what the words are for the things she knows. And then I think — she doesn't need the words. I need the words. She just needs somebody to carry it.
+set {GameState.lindi_mama_zulu_mentorship} = true
+[signal arg="unlock:lindi_ambient_03; feeds Mama Zulu's medicinal-knowledge thread"]

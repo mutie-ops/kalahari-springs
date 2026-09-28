@@ -1,0 +1,12 @@
+join Hope (Neutral) right
+join Naledi (Neutral) left
+Naledi: Boots or no boots?
+- No boots
+	Hope: No boots.
+	Naledi: Then you are on the dry end. Take what Dumi hands you and put it where he says.
+- Boots
+	Hope: Boots.
+	Naledi: Good. Down there with Amos, and do exactly what he tells you, because he is right about ground and the rest of us are guessing.
+set {GameState.quest_market_flood_dig} = "active"
+[signal arg="objective:Help dig out the market"]
+set {GameState.village_beat_matched} = true

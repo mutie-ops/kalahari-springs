@@ -1,0 +1,13 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: His arithmetic is right. His schedule wouldn't have survived a week.
+- Why not?
+	Hope: Why not?
+	Naledi: Because he's assumed everyone is equally able to come at any hour, and that isn't how people work.
+	Naledi: Petrus can't walk it before nine. The Nkosi boy has school. Mama Zulu needs someone else's legs entirely.
+	Naledi: So the maths stays and the hours move. Same five rollers, nineteen households, and nobody has to argue about it.
+- You should put your name on it too
+	Hope: You should put your name on it too.
+	Naledi: It's his number. I only made it fit.
+set {GameState.naledi_schedule_posted} = true
+[signal arg="hearts:naledi:1"]

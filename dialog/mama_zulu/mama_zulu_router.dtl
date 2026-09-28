@@ -1,0 +1,62 @@
+if {GameState.chapter} == 9 and {GameState.lindi_larder_established} == true and {GameState.mama_zulu_hearts} >= 8 and {GameState.mama_zulu_legacy_complete} == false:
+	jump mama_zulu_scene_epilogue_knowledge/
+elif {GameState.chapter} == 6 and {GameState.mama_zulu_hearts} >= 5 and {GameState.borehole_ngo_contact_found} == true and {GameState.leadership_talk_established} == false:
+	jump mama_zulu_scene_leadership_talk/
+elif {GameState.chapter} == 8 and {GameState.mama_zulu_hearts} >= 7 and {GameState.mama_zulu_accepted_payment} == false:
+	jump mama_zulu_scene_accepting_payment/
+elif {GameState.chapter} == 7 and {GameState.mama_zulu_hearts} >= 6 and {GameState.mama_zulu_roof_finished} == false:
+	jump mama_zulu_scene_the_roof/
+elif {GameState.chapter} == 6 and {GameState.lindi_mama_zulu_mentorship} == true and {GameState.mama_zulu_hearts} >= 6 and {GameState.mama_zulu_lindi_reciprocity} == false:
+	jump mama_zulu_scene_lindi_notices/
+elif {GameState.chapter} == 5 and {GameState.mama_zulu_hearts} >= 6 and {GameState.mama_zulu_ezekiel_confidant} == false:
+	jump mama_zulu_scene_ezekiel_confides/
+elif {GameState.chapter} == 4 and {GameState.naledi_treadle_running} == true and {GameState.mama_zulu_hearts} >= 5 and {GameState.mama_zulu_noticed_treadle} == false:
+	jump mama_zulu_scene_checking_naledi/
+elif {GameState.chapter} == 3 and {GameState.mama_zulu_hearts} >= 4 and {GameState.mama_zulu_debt_written_off} == false:
+	jump mama_zulu_scene_the_debt/
+elif {GameState.chapter} == 0 and {GameState.mama_zulu_hearts} >= 2 and {GameState.mama_zulu_tally_seen} == false:
+	jump mama_zulu_scene_the_tally/
+elif ({GameState.quest_naledi_alternate_rotation_main} == "active" or {GameState.quest_naledi_alternate_rotation_main} == "complete") and {GameState.mama_zulu_deliveries} >= 10 and {GameState.mama_zulu_trusted} == false:
+	jump mama_zulu_q1_knowledge_c/
+elif ({GameState.quest_naledi_alternate_rotation_main} == "active" or {GameState.quest_naledi_alternate_rotation_main} == "complete") and {GameState.mama_zulu_deliveries} >= 6 and {GameState.mama_zulu_knowledge_b_seen} == false:
+	jump mama_zulu_q1_knowledge_b/
+elif ({GameState.quest_naledi_alternate_rotation_main} == "active" or {GameState.quest_naledi_alternate_rotation_main} == "complete") and {GameState.mama_zulu_deliveries} >= 3 and {GameState.mama_zulu_knowledge_a_seen} == false:
+	jump mama_zulu_q1_knowledge_a/
+elif {GameState.mama_zulu_deliveries} >= 1 and {GameState.mama_zulu_reciprocity_established} == false:
+	jump mama_zulu_q1_first_delivery/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.lindi_larder_established} == true:
+	jump mama_zulu_seasonal_winter_ch9/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.mama_zulu_hearts_ambient} >= 8:
+	jump mama_zulu_seasonal_autumn_ch8/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.mama_zulu_hearts_ambient} >= 7:
+	jump mama_zulu_seasonal_summer_ch7/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.mama_zulu_hearts_ambient} >= 6:
+	jump mama_zulu_seasonal_spring_ch6/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.mama_zulu_hearts_ambient} >= 5:
+	jump mama_zulu_seasonal_winter_ch5/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.mama_zulu_hearts_ambient} >= 4:
+	jump mama_zulu_seasonal_autumn_ch4/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.mama_zulu_hearts_ambient} >= 3:
+	jump mama_zulu_seasonal_summer_ch3/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump mama_zulu_seasonal_spring_ch2/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump mama_zulu_seasonal_winter_ch1/
+elif {GameState.mama_zulu_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump mama_zulu_seasonal_autumn_ch0/
+elif {GameState.mama_zulu_hearts_ambient} >= 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump mama_zulu_ambient_08/
+elif {GameState.mama_zulu_hearts_ambient} >= 7:
+	jump mama_zulu_ambient_07/
+elif {GameState.mama_zulu_hearts_ambient} >= 5 and {GameState.lindi_mama_zulu_mentorship} == true:
+	jump mama_zulu_ambient_06/
+elif {GameState.mama_zulu_hearts_ambient} >= 5:
+	jump mama_zulu_ambient_05/
+elif {GameState.mama_zulu_hearts_ambient} >= 3 and {GameState.chapter} >= 2:
+	jump mama_zulu_ambient_04/
+elif {GameState.mama_zulu_hearts_ambient} >= 3:
+	jump mama_zulu_ambient_03/
+elif {GameState.mama_zulu_hearts_ambient} < 3 and {GameState.chapter} == 0:
+	jump mama_zulu_ambient_01/
+else:
+	jump mama_zulu_ambient_02/

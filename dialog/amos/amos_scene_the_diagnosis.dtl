@@ -1,0 +1,13 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+join Lebo (Neutral) left
+Lebo: ...What.
+Amos: Water still has to go somewhere.
+Lebo: Yes — obviously —
+Amos: Where.
+Lebo: ...Ah.
+- How long will it last?
+	Hope: How long will it last?
+	Amos: Two weeks. Less if it rains.
+[signal arg="hearts:amos:1"]
+set {GameState.amos_diagnosis_seen} = true

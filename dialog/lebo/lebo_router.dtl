@@ -1,0 +1,68 @@
+if {GameState.chapter} == 9 and {GameState.lebo_hearts} >= 8 and {GameState.sipho_departed} == true and {GameState.lebo_arc_complete} == false:
+	jump shared_mkhize_epilogue/
+elif {GameState.chapter} == 8 and {GameState.lebo_radio_introduced} == true and {GameState.lebo_hearts} >= 7 and {GameState.radio_works} == false:
+	jump lebo_scene_radio_works/
+elif {GameState.chapter} == 6 and {GameState.mill_repaired} == true and {GameState.lebo_hearts} >= 4 and {GameState.mill_frustration_established} == false:
+	jump lebo_scene_mill_nagging/
+elif {GameState.chapter} == 7 and {GameState.lebo_hearts} >= 6 and {GameState.mama_zulu_roof_finished} == true and {GameState.lebo_fixed_inn_roof} == false:
+	jump lebo_scene_mama_zulu_roof/
+elif {GameState.chapter} == 6 and {GameState.drying_racks_built} == false and {GameState.lebo_hearts} >= 2:
+	jump lebo_scene_lindi_racks/
+elif {GameState.chapter} == 0 and {GameState.lebo_hearts} >= 1 and {GameState.lebo_radio_introduced} == false:
+	jump lebo_scene_the_radio/
+elif {GameState.quest_lebo_mill_parts_main} == "active" and {GameState.mill_repaired} == true:
+	jump lebo_q3_complete/
+elif {GameState.mill_collar_missing} == true and {GameState.grandmothers_boxes_found} == true and {GameState.grandmothers_boxes_used_mill} == false:
+	jump lebo_q3_boxes_assist/
+elif {GameState.quest_lebo_mill_parts_main} == "active" and {GameState.mill_crankshaft_recovered} == true and {GameState.mill_plate_recovered} == true and {GameState.mill_collar_missing} == false:
+	jump lebo_q3_parts_arrive/
+elif {GameState.quest_watering_hole_outpost_build_main} == "active" and {GameState.outpost_operational} == true:
+	jump lebo_q1_commissioning/
+elif {GameState.quest_watering_hole_outpost_build_main} == "active" and {GameState.outpost_blockwork_complete} == true:
+	jump lebo_q1_fittings/
+elif {GameState.quest_mkhize_roller_pen} == "active" and {GameState.pen_frame_complete} == true:
+	jump shared_roller_pen_build/
+elif {GameState.quest_watering_hole_solar_install} == "active" and {GameState.solar_install_progress} < 1.0:
+	jump shared_q4_solar_exchange/
+elif {GameState.quest_lebo_mill_parts_main} == "active" and {GameState.mill_repaired} == false:
+	jump lebo_q3_intro/
+elif {GameState.chapter} == 5 and {GameState.dumi_introduced} == true and {GameState.petrus_stash_open} == true and {GameState.quest_lebo_mill_parts_main} == "inactive":
+	jump lebo_q3_intro/
+elif {GameState.lebo_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump lebo_seasonal_winter_ch9/
+elif {GameState.lebo_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.lebo_hearts_ambient} >= 8:
+	jump lebo_seasonal_autumn_ch8/
+elif {GameState.lebo_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.lebo_hearts_ambient} >= 7:
+	jump lebo_seasonal_summer_ch7/
+elif {GameState.lebo_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.lebo_hearts_ambient} >= 6:
+	jump lebo_seasonal_spring_ch6/
+elif {GameState.lebo_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.lebo_hearts_ambient} >= 5:
+	jump lebo_seasonal_winter_ch5/
+elif {GameState.lebo_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.lebo_hearts_ambient} >= 4:
+	jump lebo_seasonal_autumn_ch4/
+elif {GameState.lebo_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.lebo_hearts_ambient} >= 3:
+	jump lebo_seasonal_summer_ch3/
+elif {GameState.lebo_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump lebo_seasonal_spring_ch2/
+elif {GameState.lebo_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump lebo_seasonal_winter_ch1/
+elif {GameState.lebo_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump lebo_seasonal_autumn_ch0/
+elif {GameState.lebo_hearts_ambient} >= 9 and {GameState.radio_works} == true:
+	jump lebo_ambient_08/
+elif {GameState.lebo_hearts_ambient} >= 7 and {GameState.chapter} >= 7:
+	jump lebo_ambient_07/
+elif {GameState.lebo_hearts_ambient} >= 5 and {GameState.chapter} >= 5:
+	jump lebo_ambient_06/
+elif {GameState.lebo_hearts_ambient} >= 5:
+	jump lebo_ambient_05/
+elif {GameState.lebo_hearts_ambient} >= 3 and {GameState.chapter} >= 2:
+	jump lebo_ambient_04/
+elif {GameState.lebo_hearts_ambient} >= 3:
+	jump lebo_ambient_03/
+elif {GameState.lebo_hearts_ambient} < 3 and {GameState.chapter} == 2:
+	jump lebo_ambient_02/
+elif {GameState.lebo_hearts_ambient} < 3 and {GameState.chapter} <= 1:
+	jump lebo_ambient_01/
+else:
+	jump lebo_ambient_04/

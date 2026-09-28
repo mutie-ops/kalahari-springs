@@ -1,0 +1,7 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Worried)
+Zanele: I was up twice in the night with the youngest, and the class starts whether or not I did.
+Zanele: That is not a complaint, it is a description. Most mothers in this village could tell you the same one.
+Zanele: The children are here and the lesson happened. That is the part that counts at the end of the day.
+set {GameState.zanele_seasonal_last_chapter} = 2

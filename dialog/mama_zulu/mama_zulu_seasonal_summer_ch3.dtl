@@ -1,0 +1,9 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Warm)
+Mama Zulu\: The kitchen roof leaks in the corner when it rains like this. It has leaked there for eight years.
+- You've never fixed it?
+	Hope: You've never fixed it?
+	Mama Zulu\: No.
+	Mama Zulu\: Eat something. You are thin.
+set {GameState.mama_zulu_seasonal_last_chapter} = 3

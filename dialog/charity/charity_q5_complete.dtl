@@ -1,0 +1,20 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Aggravated)
+Charity: That's it. That's four hundred and first.
+- When will you hear?
+	Hope: When will you hear?
+	Charity: Six months. Possibly nine. Possibly a letter that says 'under review' and then nothing for a year.
+	Charity: I won't know for a long time. That used to bother me enormously.
+	- And now?
+		Hope: And now?
+		Charity: Now I've unpacked the good crockery.
+		Charity: You don't do that for a posting. I did it in March without noticing what I was doing.
+	- What if they say no?
+		Hope: What if they say no?
+		Charity: Then I'll appeal, and if that fails I'll find another route, because that is quite literally my profession.
+		Charity: I'm not leaving. The paperwork is a formality I'd like to have. It isn't the decision — the decision happened somewhere around the second dry season and nobody consulted me about it.
+Charity: Now. Gogo's blessing needs chairs carried, and I am told you are good at carrying things.
+[signal arg="hearts:charity:2"]
+set {GameState.quest_charity_one_last_petition} = "complete"
+set {GameState.charity_petition_filed} = true

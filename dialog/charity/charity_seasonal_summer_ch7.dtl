@@ -1,0 +1,5 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: I am currently writing a persuasive document about flour. Genuinely persuasive. With figures.
+Charity: Nobody warns you, in this profession, how much of it is flour.
+set {GameState.charity_seasonal_last_chapter} = 7

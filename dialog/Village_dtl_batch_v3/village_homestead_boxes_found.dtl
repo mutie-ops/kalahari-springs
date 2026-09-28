@@ -1,0 +1,8 @@
+join Hope (Neutral) right
+update Hope (Thoughtful)
+Hope: [i]Who keeps a box of hinges?[/i]
+update Hope (Neutral)
+[signal arg="restoration_goal:Sort through the boxes — eventually"]
+set {GameState.grandmothers_boxes_found} = true
+set {GameState.quest_homestead_assessment} = "complete"
+set {GameState.village_beat_matched} = true

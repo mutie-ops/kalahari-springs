@@ -1,0 +1,10 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+- That's a lot of equipment
+	Hope: That's a lot of equipment.
+	Petrus: Is it.
+- What's it all for?
+	Hope: What's it all for?
+	Petrus: Nothing. Yet.
+	Petrus: Everything in this yard was nothing until the day it wasn't. Then it was the only one in the village.
+set {GameState.petrus_deadpan_seen} = true

@@ -1,0 +1,50 @@
+if {GameState.chapter} == 3 and {GameState.days_in_chapter} >= 7 and {GameState.quest_sipho_gutter_repair} == "inactive" and {GameState.sipho_hearts} < 3 and {GameState.nudge_sipho_gutter_seen} == false:
+	jump village_thought_nudge_sipho_gutter/
+elif {GameState.chapter} == 4 and {GameState.days_in_chapter} >= 7 and {GameState.quest_sipho_gutter_repair} == "complete" and {GameState.quest_sipho_schoolhouse_case} == "inactive" and {GameState.sipho_hearts} < 5 and {GameState.nudge_sipho_schoolhouse_seen} == false:
+	jump village_thought_nudge_sipho_schoolhouse/
+elif {GameState.flood_event_active} == true and {GameState.quest_market_flood_dig} == "active" and {GameState.market_dig_progress} < 1.0 and {GameState.interaction_location} == "market_stalls":
+	jump village_flood_dig_underway/
+elif {GameState.quest_market_flood_dig} == "active" and {GameState.market_dig_progress} == 1.0:
+	jump village_flood_dig_complete/
+elif {GameState.flood_event_active} == true and {GameState.quest_market_flood_dig} == "inactive" and {GameState.interaction_location} == "market_stalls":
+	jump village_flood_dig_intro/
+elif {GameState.illness_reported} == true and {GameState.outpost_operational} == true and {GameState.quest_watering_hole_fuel_and_tablets_main} == "inactive":
+	jump village_fuel_tablets_intro/
+elif {GameState.chapter} == 6 and {GameState.homestead_door_flagged} == true and {GameState.evt_homestead_door_repair} != "complete" and {GameState.interaction_location} == "homestead_exterior":
+	jump evt_homestead_door_repair/
+elif {GameState.chapter} == 4 and {GameState.homestead_roof_flagged} == true and {GameState.evt_homestead_roof_repair} != "complete" and {GameState.interaction_location} == "homestead_interior":
+	jump evt_homestead_roof_repair/
+elif {GameState.sunday_pending} == true and {GameState.interaction_type} == "enter" and {GameState.sunday_dressing_shown} == false:
+	jump village_sunday_dressing/
+elif {GameState.quest_village_borehole_conversation_main} == "active" and {GameState.gogo_borehole_check_in_reached} == false:
+	jump village_borehole_checkins/
+elif {GameState.quest_hydrogeologist_survey_escort} == "active" and {GameState.hydrogeologist_arrived} == true and {GameState.borehole_survey_done} == false:
+	jump village_survey_escort_active/
+elif {GameState.quest_hydrogeologist_survey_escort} == "active" and {GameState.borehole_survey_done} == true:
+	jump village_survey_escort_complete/
+elif {GameState.quest_village_borehole_conversation_main} == "complete" and {GameState.hydrogeologist_arrived} == true and {GameState.quest_hydrogeologist_survey_escort} == "inactive":
+	jump village_survey_escort_intro/
+elif {GameState.quest_borehole_drilling_main} == "active" and {GameState.chapter} >= 8 and {GameState.evt_borehole_platform_pour} == "complete" and {GameState.interaction_location} == "borehole_site":
+	jump village_borehole_first_water/
+elif {GameState.quest_borehole_drilling_main} == "active" and {GameState.interaction_location} == "borehole_site":
+	jump village_borehole_drilling_underway/
+elif {GameState.chapter} >= 7 and {GameState.quest_hydrogeologist_survey_escort} == "complete" and {GameState.quest_borehole_drilling_main} == "inactive" and {GameState.interaction_type} == "enter":
+	jump village_borehole_drilling_intro/
+elif {GameState.quest_watering_hole_fuel_and_tablets_main} == "active" and {GameState.fuel_tablets_rotation_staffed} == false:
+	jump village_fuel_tablets_rotation/
+elif {GameState.quest_watering_hole_fuel_and_tablets_main} == "active" and {GameState.fuel_tablets_rotation_staffed} == true:
+	jump village_fuel_tablets_covered/
+elif {GameState.quest_homestead_assessment} == "active" and {GameState.homestead_rooms_assessed} < 4 and ({GameState.interaction_location} == "homestead_interior" or {GameState.interaction_location} == "homestead_exterior"):
+	jump village_homestead_assessment_progress/
+elif {GameState.quest_homestead_assessment} == "active" and {GameState.homestead_rooms_assessed} >= 4 and {GameState.grandmothers_boxes_found} == false:
+	jump village_homestead_boxes_found/
+elif {GameState.chapter} == 0 and {GameState.homestead_interior_entered} == true and {GameState.quest_homestead_assessment} == "inactive":
+	jump village_homestead_assessment_intro/
+elif {GameState.quest_village_getting_reacquainted_main} == "active" and {GameState.roster_met_count} >= 6 and {GameState.quest_gogo_reunion} != "complete" and {GameState.interaction_npc} == "gogo":
+	jump village_fallthrough/
+elif {GameState.quest_village_getting_reacquainted_main} == "active" and {GameState.interaction_type} == "talk" and {GameState.roster_met_count} < 6:
+	jump village_getting_reacquainted_encounter/
+elif {GameState.chapter} == 0 and {GameState.quest_village_getting_reacquainted_main} == "inactive":
+	jump village_getting_reacquainted_intro/
+else:
+	jump village_fallthrough/

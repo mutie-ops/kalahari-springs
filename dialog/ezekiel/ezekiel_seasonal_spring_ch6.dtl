@@ -1,0 +1,6 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Field came through the dry. All of it, not just the test plot.
+Ezekiel: That's the thing I didn't know. Now I know it.
+set {GameState.ezekiel_seasonal_last_chapter} = 6

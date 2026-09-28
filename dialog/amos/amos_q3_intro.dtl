@@ -1,0 +1,10 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: Rains are coming heavy this year. Lindi says so and she's right about these things.
+- Same as last time?
+	Hope: Same as last time?
+	Amos: No. Last time was smoothing. This is embankments and raised path.
+	Amos: Grading holds a year. This holds ten, if we do it properly.
+	Amos: Market flooded in the summer. Doesn't have to happen again.
+	set {GameState.quest_mkhize_storm_prep} = "active"
+	[signal arg="objective:Join the storm-prep effort — embankments and raised pathways"]

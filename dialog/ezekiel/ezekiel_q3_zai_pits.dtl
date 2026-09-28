@@ -1,0 +1,15 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Zai pits. Old method, older than me. My grandfather's people used them and then everybody forgot for fifty years.
+Ezekiel: Hole about so wide, so deep. Not a trench — a hole, on its own.
+- Why not a trench?
+	Hope: Why not a trench?
+	Ezekiel: Because a trench moves water along and a hole keeps it. You're not draining this ground, you're trapping the rain where the roots are.
+	Ezekiel: Now — the soil you take out doesn't go on the pile. It goes on the downhill lip, like a little wall. So the water that runs past falls in instead of going by.
+	Ezekiel: Then a handful of manure in the bottom. Not much. It draws the termites, and the termites tunnel, and the tunnels take the water down deeper than you could dig.
+	- You want termites in it?
+		Hope: You want termites in it?
+		Ezekiel: Everyone says that. Yes. They do the second half of the work and they don't ask to be paid.
+	Ezekiel: Plant in the middle of the pit, not the edge. Middle.
+	Ezekiel: That's it. That's the whole of it. Took me three bad years to try something that simple.

@@ -1,0 +1,13 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+Petrus: Somebody sent you.
+- Gogo did
+	Hope: Gogo did.
+	Petrus: Mm.
+	Petrus: Drip line, is it. For the garden up at the Nkosi place.
+	- How did you know?
+		Hope: How did you know?
+		Petrus: Because it's the only thing anybody wants from me in the winter, and that ground's been dry eleven years.
+	Petrus: Hose fittings. Half-inch. There'll be tubing behind the drums, and there'll be more of it than you need, so take what you need.
+	set {GameState.petrus_stash_visited} = true
+	[signal arg="objective:Retrieve tubing and fittings for the drip system"]

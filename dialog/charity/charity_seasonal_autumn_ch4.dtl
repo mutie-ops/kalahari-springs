@@ -1,0 +1,5 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: The irrigation kits are still in process. Four months and counting, which is normal, which does not make it less irritating.
+Charity: I've stopped promising timelines. I only promise that I'll keep asking.
+set {GameState.charity_seasonal_last_chapter} = 4

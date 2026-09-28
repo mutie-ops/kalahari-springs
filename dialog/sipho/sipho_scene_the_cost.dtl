@@ -1,0 +1,16 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+- Ask what happened
+	Hope: What happened?
+	Sipho: Nothing happened. The queue ran long.
+	Sipho: Lebo had the mill apart this morning. He said anyone who wanted to see the gearing could come and look while it was open.
+	Sipho: It's open maybe twice a year. He put it back together at ten.
+	Sipho: I got back at half past.
+- I'm sorry
+	Hope: I'm sorry.
+	Sipho: Don't. It's fine. It's a mill.
+Sipho: It's not that I mind fetching the water. Gogo can't do it. Someone has to and I'm the one who can.
+Sipho: It's that I'm always half an hour late to everything that isn't fetching water.
+Sipho: That's all. That's the whole of it.
+[signal arg="hearts:sipho:1"]
+set {GameState.sipho_cost_scene_seen} = true

@@ -1,0 +1,4 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: You come by more than you used to.
+set {GameState.gogo_q3_ambient_last_day} = {GameState.day}

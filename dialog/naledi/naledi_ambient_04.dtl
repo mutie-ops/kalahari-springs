@@ -1,0 +1,8 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: People have started asking me whether you're staying.
+- What do you tell them?
+	Hope: What do you tell them?
+	Naledi: That I don't know yet.
+	Naledi: Mama Zulu needs her Thursday run moved to Wednesday. Can you manage that?

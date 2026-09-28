@@ -1,0 +1,7 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: You've become quite useful to me, you know. I'd feel worse about saying that if it weren't a compliment.
+- How so?
+	Hope: How so?
+	Charity: People tell you things they wouldn't tell me. You're not from an organisation — you're just the woman who brings the water.
+	Charity: That's access I can't manufacture. And I've tried.

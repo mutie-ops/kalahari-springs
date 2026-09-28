@@ -1,0 +1,13 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: Where were you before here?
+- The city
+	Hope: The city.
+	Naledi: Long way to come back for a house that needs a roof.
+	- It needs more than a roof
+		Hope: It needs more than a roof.
+		Naledi: It does. Ezekiel knows thatch. Ask him before the rains, not during.
+- Does it matter?
+	Hope: Does it matter?
+	Naledi: Only if you're leaving again.

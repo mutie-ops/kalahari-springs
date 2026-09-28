@@ -1,0 +1,7 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: End of the rains is my busy time — everything that got wet is now everything that's seized.
+Lebo: Six things on the bench. Seven if you count the radio, which I don't, because that's a hobby.
+set {GameState.lebo_pathway_patch_laid} = true
+set {GameState.lebo_seasonal_last_chapter} = 0

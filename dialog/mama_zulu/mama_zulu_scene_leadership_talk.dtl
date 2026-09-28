@@ -1,0 +1,17 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: Three people have said the same thing in this room in a fortnight, which is more than usual.
+- Said what?
+	Hope: Said what?
+	Mama Zulu\: That when the water committee is formed there will need to be someone to hold it. And then, both times, a pause. And then Naledi's name.
+	Mama Zulu\: Nobody has said it to her. That is the part I find interesting.
+	- Why not?
+		Hope: Why not?
+		Mama Zulu\: Because she would say no, and then she would be a person who has said no, and it would be harder the second time.
+		Mama Zulu\: So they are saying it to each other first, until there are enough of them that it stops being a question.
+		Mama Zulu\: That is how this village decides things. Slowly, and then all at once, and never in a meeting.
+	- Who said it?
+		Hope: Who said it?
+		Mama Zulu\: People who were here.
+		Mama Zulu\: I do not carry names out of this room. I carry the shape of a thing, and the shape of this one is that it is going to happen.
+set {GameState.leadership_talk_established} = true

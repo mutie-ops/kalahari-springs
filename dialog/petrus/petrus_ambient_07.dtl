@@ -1,0 +1,8 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Aggravated)
+Petrus: That mill's still going.
+- You sound disappointed
+	Hope: You sound disappointed.
+	Petrus: I'd have been right if it broke.
+	Petrus: Grinds better than the old one ever did. So I'm wrong and there's flour. Bad trade, but there it is.

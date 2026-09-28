@@ -1,0 +1,10 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: Sit. The chair doesn't bite.
+- It's peaceful in here
+	Hope: It's peaceful in here.
+	Gogo: It's had a long time to become that.
+- Thank you for having me
+	Hope: Thank you for having me.
+	Gogo: You've always been allowed here. You simply hadn't asked yet.

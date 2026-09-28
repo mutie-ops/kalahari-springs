@@ -1,0 +1,6 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Worried)
+Gogo: My mother used to say it's the far end of the dry that tests you. Not the beginning.
+Gogo: She was right about most things.
+set {GameState.gogo_seasonal_last_chapter} = 5

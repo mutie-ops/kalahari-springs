@@ -1,0 +1,8 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+- Let me bring you some water
+	Hope: Let me bring you some water.
+	Gogo: I manage.
+	Gogo: But I won't stop you being stubborn about it, if that's what you've decided to be.
+	set {GameState.quest_gogo_quiet_watch} = "active"
+	[signal arg="objective:Deliver a full container of water to Gogo's homestead as part of Hope's regular rounds"]

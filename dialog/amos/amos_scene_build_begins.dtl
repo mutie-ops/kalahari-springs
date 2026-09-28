@@ -1,0 +1,11 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+- Is this —
+	Hope: Is this —
+	Amos: Mm.
+- Nine years
+	Hope: Nine years.
+	Amos: Ten now.
+	Amos: Paths are done. Properly done, this time. So.
+[signal arg="hearts:amos:2"]
+set {GameState.amos_build_started} = true

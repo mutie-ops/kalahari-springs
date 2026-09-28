@@ -1,0 +1,15 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: That garden of yours will die of thirst if you let the dry season do the deciding.
+- I don't know anything about irrigation
+	Hope: I don't know anything about irrigation.
+	Gogo: No reason you should. But someone here does.
+	Gogo: Go and ask about drip lines. Tubing, fittings, the kind of scavenged parts a place like this always has lying around if you know whose door to knock on.
+	set {GameState.quest_gogo_irrigation_referral} = "active"
+	[signal arg="objective:Find the NPC Gogo has pointed toward and learn to build a drip system"]
+- Could you show me?
+	Hope: Could you show me?
+	Gogo: I could. But my knees and a garden bed do not agree with each other anymore.
+	Gogo: There is a difference between wisdom and knees. Go find someone with better knees.
+	set {GameState.quest_gogo_irrigation_referral} = "active"

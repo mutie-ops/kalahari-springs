@@ -1,0 +1,10 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Warm)
+Mama Zulu\: You come on the days you say you will.
+- Of course
+	Hope: Of course.
+	Mama Zulu\: Not 'of course.' Most people do not.
+[signal arg="hearts:mama_zulu:2"]
+set {GameState.mama_zulu_trusted} = true
+[signal arg="unlock:medicinal preparation recipes available for purchase/learning at travellers_rest"]

@@ -1,0 +1,8 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Did you hear it last night? At the tree?
+- I did
+	Hope: I did.
+	Lebo: Two years and four months. I looked it up. I wrote the date on the back of the chassis and everything.
+	Lebo: I told you it was basically done.

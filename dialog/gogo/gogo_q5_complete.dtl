@@ -1,0 +1,7 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: Sixty years I've walked past that rock.
+Gogo: It only took the rest of you three weeks.
+[signal arg="hearts:gogo:1"]
+set {GameState.quest_gogo_rock_cistern} = "complete"

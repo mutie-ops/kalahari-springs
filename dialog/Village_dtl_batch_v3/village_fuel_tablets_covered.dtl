@@ -1,0 +1,10 @@
+join Hope (Neutral) right
+if {GameState.interaction_npc} == "petrus":
+	join Petrus (Neutral) left
+	Petrus: Not yours this week.
+	- Who has it?
+		Hope: Who has it?
+		Petrus: Somebody. It is on the list.
+else:
+	[signal arg="npc_absent:true"]
+set {GameState.village_beat_matched} = true

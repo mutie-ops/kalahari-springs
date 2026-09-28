@@ -1,0 +1,9 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: Unity Water sent enough for four. Which is either lucky or Charity being clever.
+- Do you need help?
+	Hope: Do you need help?
+	Sipho: Every install needs two people minimum. One up the ladder, one keeping the tank plumb while the stand beds in.
+	Sipho: It's not skilled work, the holding part. It's just work that can't be done alone.
+	set {GameState.quest_sipho_tanks_rollout_main} = "active"
+	[signal arg="objective:Assist Sipho with household tank installations"]

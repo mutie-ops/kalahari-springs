@@ -1,0 +1,13 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+join Lindi (Neutral) left
+Lebo: So it's — shelves. But with air.
+Lindi: Racks. With airflow underneath, and a separate corner for smoke, and the smoke corner has to hold about sixty degrees without going over —
+Lebo: Shelves with air, and a box that stays warm. I can do both of those. When do you need them?
+Lindi: Before the flight.
+Lebo: When's the flight?
+Lindi: I don't know. That's the whole problem with the flight.
+Lebo: Right. So it's urgent and I don't know when the deadline is. That's my favourite.
+[signal arg="hearts:lebo:1"]
+set {GameState.drying_racks_built} = true

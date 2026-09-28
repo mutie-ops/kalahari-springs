@@ -1,0 +1,8 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Aggravated)
+Petrus: Dlamini's got half my shed in his field.
+- Do you think it'll work?
+	Hope: Do you think it'll work?
+	Petrus: Tools work. Always have.
+set {GameState.petrus_seasonal_last_chapter} = 2

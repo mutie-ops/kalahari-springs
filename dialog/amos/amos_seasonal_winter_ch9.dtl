@@ -1,0 +1,6 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+update Amos (Warm)
+Amos: Nothing washing out. Nothing to fix.
+Amos: Strange month.
+set {GameState.amos_seasonal_last_chapter} = 9

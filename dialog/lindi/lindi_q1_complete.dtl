@@ -1,0 +1,10 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: That's a proper haul for a first afternoon. Take it — no, take it, I've got more than I can carry and you've got a kitchen with nothing in it.
+- Thank you
+	Hope: Thank you.
+	Lindi: Come out with me again. I talk to myself when nobody's here and it's starting to worry me.
+[signal arg="hearts:lindi:2"]
+set {GameState.quest_lindi_ripe_or_not} = "complete"
+[signal arg="unlock:foraging skill/UI introduced; foraging_grounds accessible"]

@@ -1,0 +1,7 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: Half the children in this village went straight into the puddles. Nobody stopped them.
+Naledi: I stood and watched it for longer than I meant to.
+Naledi: Tell Petrus his corner floods. He knows. Tell him anyway.
+set {GameState.naledi_seasonal_last_chapter} = 3

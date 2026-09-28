@@ -1,0 +1,11 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: Ezekiel's been telling people what you did with the mulch.
+- He told me how to do it
+	Hope: He told me how to do it.
+	Naledi: Yes. That's what I mean.
+	Naledi: It's working. Keep it going and I won't need to ask you about it again.
+[signal arg="hearts:naledi:2"]
+set {GameState.quest_naledi_alternate_rotation_main} = "complete"
+[signal arg="unlock:Mama Zulu medicinal-root thread; Ezekiel garden-advice thread"]

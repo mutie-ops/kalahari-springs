@@ -1,0 +1,58 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 0.8117647, 0.0627451, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "dialog-style-2",
+"suffix": ""
+},
+&"default_portrait": "Neutral",
+&"description": "",
+&"display_name": "Lebo",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(-85, -216),
+&"portraits": {
+"Aggravated": {
+"export_overrides": {
+"image": "\"res://dialog/dialog_ui/profiles/prfl-lebo-aggravated.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Neutral": {
+"export_overrides": {
+"image": "\"res://dialog/dialog_ui/profiles/prfl-lebo-neutral.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Warm": {
+"export_overrides": {
+"image": "\"res://dialog/dialog_ui/profiles/prfl-lebo-warm.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Worried": {
+"export_overrides": {
+"image": "\"res://dialog/dialog_ui/profiles/prfl-lebo-worried.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

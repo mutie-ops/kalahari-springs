@@ -1,0 +1,100 @@
+if {GameState.chapter} == 9 and {GameState.lindi_larder_established} == true and {GameState.lindi_hearts} >= 8 and {GameState.lindi_epilogue_scene_complete} == false:
+	jump lindi_scene_hunger_gap/
+elif {GameState.chapter} == 7 and {GameState.lindi_hearts} >= 7 and {GameState.quest_lindi_correspondence_course} == "inactive":
+	jump lindi_q8_intro/
+elif {GameState.chapter} == 1 and {GameState.lindi_hearts} >= 3 and {GameState.lindi_mama_zulu_mentorship} == false:
+	jump lindi_scene_mama_zulu_mentorship/
+elif {GameState.quest_lindi_kumbi_kumbi_two} == "active" and {GameState.kumbi_flight_active} == true:
+	jump lindi_q6_night/
+elif {GameState.quest_lindi_kumbi_kumbi_one} == "active" and {GameState.kumbi_flight_active} == true:
+	jump lindi_q2_night/
+elif {GameState.quest_lindi_market_stall} == "active" and {GameState.lindi_stall_setup} == true:
+	jump lindi_q9_complete/
+elif {GameState.quest_lindi_mopane_efficient} == "active" and {GameState.mopane_processed} == 1.0:
+	jump lindi_q7_complete/
+elif {GameState.quest_lindi_kumbi_kumbi_two} == "active" and {GameState.kumbi_flight_active} == false:
+	jump lindi_q6_complete/
+elif {GameState.quest_lindi_smoke_and_dry} == "active" and {GameState.preservation_learned} == true:
+	jump lindi_q5_complete/
+elif {GameState.quest_lindi_glut_triage} == "active" and {GameState.glut_processed} == 1.0:
+	jump lindi_q4_complete/
+elif {GameState.quest_lindi_big_haul} == "active" and {GameState.haul_progress} == 1.0:
+	jump lindi_q3_complete/
+elif {GameState.quest_lindi_kumbi_kumbi_one} == "active" and {GameState.kumbi_flight_active} == false:
+	jump lindi_q2_complete/
+elif {GameState.quest_lindi_ripe_or_not} == "active" and {GameState.ripe_sorting_complete} == true:
+	jump lindi_q1_complete/
+elif {GameState.quest_lindi_glut_triage} == "active" and {GameState.glut_processed} < 1.0:
+	jump lindi_q4_checkin/
+elif {GameState.quest_lindi_big_haul} == "active" and {GameState.haul_progress} < 1.0:
+	jump lindi_q3_checkin/
+elif {GameState.quest_lindi_market_stall} == "active" and {GameState.lindi_stall_setup} == false:
+	jump lindi_q9_intro/
+elif {GameState.quest_lindi_mopane_efficient} == "active" and {GameState.mopane_processed} < 1.0:
+	jump lindi_q7_intro/
+elif {GameState.quest_lindi_smoke_and_dry} == "active" and {GameState.preservation_learned} == false:
+	jump lindi_q5_intro/
+elif {GameState.quest_lindi_kumbi_kumbi_two} == "active" and {GameState.kumbi_window_approaching} == true:
+	jump lindi_q6_intro/
+elif {GameState.quest_lindi_kumbi_kumbi_one} == "active" and {GameState.kumbi_window_approaching} == true:
+	jump lindi_q2_tracking/
+elif {GameState.quest_lindi_ripe_or_not} == "active" and {GameState.ripe_sorting_complete} == false:
+	jump lindi_q1_intro/
+elif {GameState.chapter} == 8 and {GameState.naledi_lindi_stall_granted} == true and {GameState.quest_lindi_market_stall} == "inactive":
+	jump lindi_q9_intro/
+elif {GameState.chapter} == 7 and {GameState.mopane_second_outbreak} == true and {GameState.quest_lindi_mopane_efficient} == "inactive":
+	jump lindi_q7_intro/
+elif {GameState.chapter} == 6 and {GameState.kumbi_window_approaching} == true and {GameState.drying_racks_built} == true and {GameState.quest_lindi_kumbi_kumbi_two} == "inactive":
+	jump lindi_q6_intro/
+elif {GameState.chapter} == 5 and {GameState.quest_lindi_glut_triage} == "complete" and {GameState.quest_lindi_smoke_and_dry} == "inactive":
+	jump lindi_q5_intro/
+elif {GameState.chapter} == 4 and {GameState.marula_glut_active} == true and {GameState.quest_lindi_glut_triage} == "inactive":
+	jump lindi_q4_intro/
+elif {GameState.chapter} == 3 and {GameState.first_major_rain} == true and {GameState.quest_lindi_big_haul} == "inactive":
+	jump lindi_q3_intro/
+elif {GameState.chapter} == 2 and {GameState.kumbi_window_approaching} == true and {GameState.quest_lindi_kumbi_kumbi_one} == "inactive":
+	jump lindi_q2_tracking/
+elif {GameState.chapter} == 0 and {GameState.quest_lindi_ripe_or_not} == "inactive":
+	jump lindi_q1_intro/
+elif {GameState.lindi_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.lindi_larder_established} == true:
+	jump lindi_seasonal_winter_ch9/
+elif {GameState.lindi_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.lindi_hearts_ambient} >= 8:
+	jump lindi_seasonal_autumn_ch8/
+elif {GameState.lindi_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.lindi_hearts_ambient} >= 7:
+	jump lindi_seasonal_summer_ch7/
+elif {GameState.lindi_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.lindi_hearts_ambient} >= 6:
+	jump lindi_seasonal_spring_ch6/
+elif {GameState.lindi_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.lindi_hearts_ambient} >= 5:
+	jump lindi_seasonal_winter_ch5/
+elif {GameState.lindi_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.lindi_hearts_ambient} >= 4:
+	jump lindi_seasonal_autumn_ch4/
+elif {GameState.lindi_seasonal_last_chapter} != 3 and {GameState.chapter} == 3:
+	jump lindi_seasonal_summer_ch3/
+elif {GameState.lindi_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump lindi_seasonal_spring_ch2/
+elif {GameState.lindi_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump lindi_seasonal_winter_ch1/
+elif {GameState.lindi_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump lindi_seasonal_autumn_ch0/
+elif {GameState.lindi_hearts_ambient} >= 9 and {GameState.lindi_stall_open} == true:
+	jump lindi_ambient_09/
+elif {GameState.lindi_hearts_ambient} >= 7 and {GameState.lindi_semester_admitted} == true:
+	jump lindi_ambient_08/
+elif {GameState.lindi_hearts_ambient} >= 7:
+	jump lindi_ambient_07/
+elif {GameState.lindi_hearts_ambient} >= 5 and ({GameState.chapter} == 1 or {GameState.chapter} == 5 or {GameState.chapter} == 9):
+	jump lindi_ambient_06/
+elif {GameState.lindi_hearts_ambient} >= 5:
+	jump lindi_ambient_05/
+elif {GameState.lindi_hearts_ambient} >= 3 and {GameState.chapter} >= 2 and {GameState.lindi_location} == "naledi_homestead":
+	jump lindi_ambient_04/
+elif {GameState.lindi_hearts_ambient} >= 3 and {GameState.lindi_mama_zulu_mentorship} == true:
+	jump lindi_ambient_03/
+elif {GameState.lindi_hearts_ambient} >= 3:
+	jump lindi_ambient_02/
+elif {GameState.lindi_hearts_ambient} < 3 and {GameState.chapter} == 2:
+	jump lindi_ambient_02/
+elif {GameState.lindi_hearts_ambient} < 3 and {GameState.chapter} <= 1:
+	jump lindi_ambient_01/
+else:
+	jump lindi_ambient_02/

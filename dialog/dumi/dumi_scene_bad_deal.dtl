@@ -1,0 +1,17 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Aggravated)
+join Trader (Neutral) left
+Trader: — and you'd simply introduce me. Nothing more. You'd not be selling anything, you'd be making an introduction, and there'd be a consideration in it for you.
+Dumi: No.
+Trader: You haven't heard the figure.
+Dumi: I don't need the figure.
+Dumi: You want to buy from people who don't know what their crop is worth, and you want my name on it so they'll trust you.
+Dumi: My name is the only thing in this store that isn't for sale.
+- That was a lot of money
+	Hope: That was a lot of money.
+	Dumi: It was.
+	Dumi: I'm allergic to waste. People think that means seed and money.
+	Dumi: It's mostly trust. Trust is the thing that takes twenty years to make and one afternoon to spend.
+[signal arg="hearts:dumi:2"]
+set {GameState.dumi_refused_deal} = true

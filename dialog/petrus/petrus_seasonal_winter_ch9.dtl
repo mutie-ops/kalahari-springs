@@ -1,0 +1,6 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Warm)
+Petrus: Dry season. Herd's fine.
+Petrus: Two words I've not had in the same sentence since I was fifty.
+set {GameState.petrus_seasonal_last_chapter} = 9

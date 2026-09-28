@@ -1,0 +1,8 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Warm)
+Zanele: There is a cupboard. An actual cupboard, with a door, and the books live in it.
+- That's what you're most pleased about?
+	Hope: That's what you're most pleased about?
+	Zanele: Eleven years I have carried textbooks home in a rice sack every evening so the damp would not get them.
+	Zanele: I am pleased about the roof and the desks and the windows. But it is the cupboard I think about.

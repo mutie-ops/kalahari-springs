@@ -1,0 +1,16 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: That'll hold water now. Give it a season and you'll see the difference in the leaf.
+- Thank you. Really.
+	Hope: Thank you. Really.
+	Ezekiel: Mm.
+	Ezekiel: You want to know the truth of it — the water wasn't the thing.
+	- No?
+		Hope: No?
+		Ezekiel: Man on his own, bad knees, farm dying. Nobody came out that road for two years except to ask if I was selling.
+		Ezekiel: Then somebody came every other day. Didn't ask about the farm. Just brought the water and went.
+		Ezekiel: That's the thing I owed you for. The water was the smaller part.
+	Ezekiel: Right. Mulch that again in six weeks and don't let it get thin.
+[signal arg="hearts:ezekiel:3"]
+set {GameState.quest_ezekiel_repay_hope} = "complete"

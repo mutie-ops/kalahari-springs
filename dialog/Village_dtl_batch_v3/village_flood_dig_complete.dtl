@@ -1,0 +1,9 @@
+join Hope (Neutral) right
+join Naledi (Neutral) left
+Naledi: Two stalls lost stock. Mine was not one of them, which I am not going to pretend I am sorry about.
+- That was fast
+	Hope: That was fast.
+	Naledi: It was the fourth time. The first time it took two days and we lost half the market.
+	Naledi: You get better at things you have to do.
+set {GameState.quest_market_flood_dig} = "complete"
+set {GameState.village_beat_matched} = true

@@ -1,0 +1,6 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Warm)
+Dumi: Planting season. Best month of my year — everyone's optimistic and everyone's buying.
+Dumi: They'll be back in six weeks telling me something didn't take. That's also part of it.
+set {GameState.dumi_seasonal_last_chapter} = 3

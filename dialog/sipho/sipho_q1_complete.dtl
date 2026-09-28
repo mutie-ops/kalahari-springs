@@ -1,0 +1,11 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Worried)
+Sipho: They're just — there. They arrived and now they're there.
+- You did that
+	Hope: You did that.
+	Sipho: Naledi did the schedule. Charity did the campaign. Everyone did the testimonies.
+	Sipho: I did the arithmetic, though.
+	Sipho: That's not nothing, is it.
+[signal arg="hearts:sipho:1"]
+set {GameState.sipho_q1_complete_seen} = true

@@ -1,0 +1,94 @@
+if {GameState.chapter} == 9 and {GameState.quest_zanele_sipho_farewell} == "active" and {GameState.sipho_departed} == false:
+	jump sipho_scene_farewell/
+elif {GameState.chapter} == 8 and {GameState.schoolhouse_opening_complete} == true and {GameState.sipho_hearts} >= 7 and {GameState.sipho_scholarship_received} == false:
+	jump sipho_scene_scholarship_letter/
+elif {GameState.chapter} == 6 and {GameState.schoolhouse_system_built} == true and {GameState.first_rains_arrived} == true and {GameState.schoolhouse_system_proven} == false:
+	jump sipho_scene_it_works/
+elif {GameState.chapter} == 5 and {GameState.schoolhouse_system_delivered} == true and {GameState.sipho_hearts} >= 6 and {GameState.schoolhouse_system_built} == false:
+	jump sipho_scene_assembly/
+elif {GameState.chapter} == 1 and {GameState.sipho_hearts} >= 2 and {GameState.sipho_cost_scene_seen} == false:
+	jump sipho_scene_the_cost/
+elif {GameState.chapter} == 0 and {GameState.sipho_hearts} >= 1 and {GameState.sipho_lamplight_scene_seen} == false:
+	jump sipho_scene_lamplight/
+elif {GameState.quest_sipho_tanks_rollout_main} == "active" and {GameState.household_tanks_installed} >= 4:
+	jump sipho_q5_complete/
+elif {GameState.quest_watering_hole_solar_install} == "active" and {GameState.solar_install_progress} == 1.0:
+	jump sipho_q4_complete/
+elif {GameState.quest_sipho_schoolhouse_case} == "active" and {GameState.schoolhouse_case_submitted} == true:
+	jump sipho_q3_complete/
+elif {GameState.quest_sipho_gutter_repair} == "active" and {GameState.gutter_repair_progress} == 1.0:
+	jump sipho_q2_complete/
+elif {GameState.quest_charity_proof_it_works_main} == "complete" and {GameState.roller_fleet_count} >= 5 and {GameState.sipho_q1_complete_seen} == false:
+	jump sipho_q1_complete/
+elif {GameState.quest_sipho_tanks_rollout_main} == "active" and {GameState.household_tanks_installed} < 4:
+	jump sipho_q5_install_variant/
+elif {GameState.quest_watering_hole_solar_install} == "active" and {GameState.solar_install_progress} < 1.0:
+	jump shared_q4_solar_exchange/
+elif {GameState.quest_sipho_schoolhouse_case} == "active" and {GameState.schoolhouse_case_documented} == false:
+	jump sipho_q3_checkin/
+elif {GameState.quest_sipho_schoolhouse_case} == "active" and {GameState.schoolhouse_case_submitted} == false:
+	jump sipho_q3_checkin/
+elif {GameState.quest_sipho_gutter_repair} == "active" and {GameState.gutter_joint_reached} == true and {GameState.grandmothers_boxes_found} == true and {GameState.grandmothers_boxes_used_gutter} == false:
+	jump sipho_q2_boxes/
+elif {GameState.quest_sipho_gutter_repair} == "active" and {GameState.gutter_repair_progress} < 1.0:
+	jump sipho_ambient_03/
+elif {GameState.quest_charity_proof_it_works_main} == "active":
+	jump sipho_q1_checkin/
+elif {GameState.chapter} == 7 and {GameState.ngo_tank_donation_received} == true and {GameState.quest_sipho_tanks_rollout_main} == "inactive":
+	jump sipho_q5_intro/
+elif {GameState.chapter} == 7 and {GameState.solar_equipment_delivered} == true and {GameState.quest_watering_hole_solar_install} == "inactive":
+	jump sipho_q4_intro/
+elif {GameState.chapter} == 4 and {GameState.sipho_hearts} >= 5 and {GameState.quest_sipho_gutter_repair} == "complete" and {GameState.quest_sipho_schoolhouse_case} == "inactive":
+	jump sipho_q3_intro/
+elif {GameState.chapter} == 4 and {GameState.days_in_chapter} >= 14 and {GameState.quest_sipho_gutter_repair} == "complete" and {GameState.quest_sipho_schoolhouse_case} == "inactive":
+	jump sipho_q3_intro_late/
+elif {GameState.chapter} == 3 and {GameState.sipho_hearts} >= 3 and {GameState.quest_sipho_gutter_repair} == "inactive" and {GameState.sipho_location} == "homestead_exterior":
+	jump sipho_q2_intro/
+elif {GameState.chapter} == 3 and {GameState.days_in_chapter} >= 14 and {GameState.quest_sipho_gutter_repair} == "inactive":
+	jump sipho_q2_intro_late/
+elif {GameState.chapter} == 2 and {GameState.roller_schedule_running} == true and {GameState.sipho_roller_calc_shared} == false:
+	jump sipho_q1_calculation/
+elif {GameState.sipho_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.sipho_departed} == false and {GameState.borehole_complete} == true:
+	jump sipho_seasonal_winter_ch9/
+elif {GameState.sipho_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.sipho_hearts_ambient} >= 8:
+	jump sipho_seasonal_autumn_ch8/
+elif {GameState.sipho_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.sipho_hearts_ambient} >= 7:
+	jump sipho_seasonal_summer_ch7/
+elif {GameState.sipho_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.sipho_hearts_ambient} >= 6:
+	jump sipho_seasonal_spring_ch6/
+elif {GameState.sipho_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.sipho_hearts_ambient} >= 5:
+	jump sipho_seasonal_winter_ch5/
+elif {GameState.sipho_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.sipho_hearts_ambient} >= 4:
+	jump sipho_seasonal_autumn_ch4/
+elif {GameState.sipho_seasonal_last_chapter} != 3 and {GameState.chapter} == 3:
+	jump sipho_seasonal_summer_ch3/
+elif {GameState.sipho_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump sipho_seasonal_spring_ch2/
+elif {GameState.sipho_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump sipho_seasonal_winter_ch1/
+elif {GameState.sipho_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump sipho_seasonal_autumn_ch0/
+elif {GameState.sipho_hearts_ambient} >= 9 and {GameState.chapter} == 9 and {GameState.sipho_departed} == false:
+	jump sipho_ambient_10/
+elif {GameState.sipho_hearts_ambient} >= 9 and {GameState.chapter} == 8 and {GameState.sipho_scholarship_received} == true:
+	jump sipho_ambient_09/
+elif {GameState.sipho_hearts_ambient} >= 7 and {GameState.chapter} >= 6 and {GameState.sipho_location} == "meetinghouse":
+	jump sipho_ambient_08/
+elif {GameState.sipho_hearts_ambient} >= 7 and {GameState.quest_sipho_schoolhouse_case} == "complete":
+	jump sipho_ambient_07/
+elif {GameState.sipho_hearts_ambient} >= 5 and {GameState.sipho_teaching_assistant} == true and ({GameState.sipho_location} == "meetinghouse" or {GameState.sipho_location} == "school"):
+	jump sipho_ambient_05/
+elif {GameState.sipho_hearts_ambient} >= 5 and {GameState.roller_fleet_count} >= 5:
+	jump sipho_ambient_06/
+elif {GameState.sipho_hearts_ambient} >= 5 and {GameState.sipho_teaching_assistant} == true:
+	jump sipho_ambient_05/
+elif {GameState.sipho_hearts_ambient} >= 3 and {GameState.sipho_location} == "gogo_homestead":
+	jump sipho_ambient_04/
+elif {GameState.sipho_hearts_ambient} >= 3 and ({GameState.quest_sipho_gutter_repair} == "active" or {GameState.quest_sipho_gutter_repair} == "complete"):
+	jump sipho_ambient_03/
+elif {GameState.sipho_hearts_ambient} >= 3:
+	jump sipho_ambient_03/
+elif {GameState.sipho_hearts_ambient} < 3 and {GameState.chapter} == 0:
+	jump sipho_ambient_01/
+else:
+	jump sipho_ambient_02/

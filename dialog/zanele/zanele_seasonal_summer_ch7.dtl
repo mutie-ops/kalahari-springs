@@ -1,0 +1,9 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Warm)
+Zanele: We have incorporated it. The little ones now count hammer blows between words, which is not the lesson I planned but is arithmetic.
+- Doesn't it drive you mad?
+	Hope: Doesn't it drive you mad?
+	Zanele: They are building a school. It would be strange to be annoyed at the noise a school makes while it is arriving.
+	Zanele: They have stopped flinching. That took about a week.
+set {GameState.zanele_seasonal_last_chapter} = 7

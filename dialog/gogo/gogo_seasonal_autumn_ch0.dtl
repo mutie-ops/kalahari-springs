@@ -1,0 +1,4 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: The rains are packing up. Every year someone is surprised by it.
+set {GameState.gogo_seasonal_last_chapter} = 0

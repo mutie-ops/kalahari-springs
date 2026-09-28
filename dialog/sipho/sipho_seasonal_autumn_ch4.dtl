@@ -1,0 +1,5 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: Rain's finished for the year, so I've got until spring to get the case together.
+Sipho: That's about the right amount of time, if nobody stalls.
+set {GameState.sipho_seasonal_last_chapter} = 4

@@ -1,0 +1,5 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: Sourcing week. I've got eleven names and a list of things we can't afford new.
+Dumi: Most of those names will say no. Two won't, and I don't know yet which two.
+set {GameState.dumi_seasonal_last_chapter} = 2

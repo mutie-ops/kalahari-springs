@@ -1,0 +1,14 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Warm)
+join Ezekiel (Neutral) left
+Ezekiel: — and you put the manure in the bottom, not the top, because you're feeding the roots and not the birds.
+Ezekiel: Because the birds are quicker than you are. Next question.
+- You were meant to leave twenty minutes ago
+	Hope: You were meant to leave twenty minutes ago.
+	Zanele: I was. I am not going to.
+	Zanele: I can teach them that plants need water. I have taught them that plants need water for eleven years and it goes in one ear.
+	Zanele: He has just told them the birds will get the manure, and not one of them will ever forget it.
+	Zanele: That is the whole difference between knowing a thing and having done it. I cannot manufacture that. I can only find the people who have it and open the door.
+[signal arg="hearts:zanele:1"]
+set {GameState.zanele_guest_teachers} = true

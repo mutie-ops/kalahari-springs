@@ -1,0 +1,5 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+Lindi: Second flush and everything's going straight from the ground to a rack. Nothing sitting. Nothing spoiling.
+Lindi: Two years ago I'd have been standing in a pile of fruit deciding what to let rot.
+set {GameState.lindi_seasonal_last_chapter} = 7

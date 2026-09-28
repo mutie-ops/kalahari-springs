@@ -1,0 +1,68 @@
+if {GameState.chapter} == 9 and {GameState.dumi_hearts} >= 8 and {GameState.borehole_complete} == true and {GameState.dumi_arc_complete} == false:
+	jump dumi_scene_epilogue/
+elif {GameState.chapter} == 7 and {GameState.dumi_hearts} >= 7 and {GameState.borehole_drilling_begun} == true and {GameState.dumi_coop_drafting} == false:
+	jump dumi_scene_coop_ambition/
+elif {GameState.chapter} == 4 and {GameState.dumi_sunday_seen} == true and {GameState.dumi_hearts} >= 6 and {GameState.sunday_pending} == true and {GameState.dumi_sunday_test} == false:
+	jump dumi_scene_sunday_hard_thing/
+elif {GameState.chapter} == 4 and {GameState.dumi_hearts} >= 5 and {GameState.dumi_refused_deal} == false:
+	jump dumi_scene_bad_deal/
+elif {GameState.chapter} == 3 and {GameState.dumi_hearts} >= 4 and {GameState.dumi_school_worry_seen} == false:
+	jump dumi_scene_school_worry/
+elif {GameState.chapter} == 1 and {GameState.dumi_hearts} >= 3 and {GameState.dumi_favor_seen} == false:
+	jump dumi_scene_the_favor/
+elif {GameState.chapter} <= 2 and {GameState.dumi_hearts} >= 2 and {GameState.sunday_pending} == true and {GameState.dumi_sunday_seen} == false:
+	jump dumi_scene_sunday_gathering/
+elif {GameState.chapter} == 0 and {GameState.dumi_hearts} >= 1 and {GameState.dumi_ledger_seen} == false:
+	jump dumi_scene_the_ledger/
+elif {GameState.quest_dumi_mill_lead} == "active" and {GameState.mill_crankshaft_recovered} == true:
+	jump dumi_q2_complete/
+elif {GameState.quest_dumi_outpost_sourcing_main} == "active" and {GameState.outpost_leads_followed} >= 4:
+	jump dumi_q1_partial/
+elif {GameState.quest_dumi_outpost_sourcing_main} == "active" and {GameState.outpost_leads_followed} < 4:
+	jump dumi_q1_lead_checkin/
+elif {GameState.quest_dumi_mill_lead} == "active" and {GameState.mill_crankshaft_recovered} == false:
+	jump dumi_q2_intro/
+elif {GameState.quest_lebo_mill_parts_main} == "active" and {GameState.quest_dumi_mill_lead} == "inactive":
+	jump dumi_q2_intro/
+elif {GameState.chapter} == 2 and {GameState.outpost_materials_list_made} == true and {GameState.quest_dumi_outpost_sourcing_main} == "inactive":
+	jump dumi_q1_intro/
+elif {GameState.dumi_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump dumi_seasonal_winter_ch9/
+elif {GameState.dumi_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.dumi_hearts_ambient} >= 8:
+	jump dumi_seasonal_autumn_ch8/
+elif {GameState.dumi_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.dumi_hearts_ambient} >= 7:
+	jump dumi_seasonal_summer_ch7/
+elif {GameState.dumi_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.dumi_hearts_ambient} >= 6:
+	jump dumi_seasonal_spring_ch6/
+elif {GameState.dumi_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.dumi_hearts_ambient} >= 5:
+	jump dumi_seasonal_winter_ch5/
+elif {GameState.dumi_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.dumi_hearts_ambient} >= 4:
+	jump dumi_seasonal_autumn_ch4/
+elif {GameState.dumi_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.dumi_hearts_ambient} >= 3:
+	jump dumi_seasonal_summer_ch3/
+elif {GameState.dumi_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump dumi_seasonal_spring_ch2/
+elif {GameState.dumi_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump dumi_seasonal_winter_ch1/
+elif {GameState.dumi_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump dumi_seasonal_autumn_ch0/
+elif {GameState.dumi_hearts_ambient} >= 9 and {GameState.chapter} >= 8:
+	jump dumi_ambient_08/
+elif {GameState.dumi_hearts_ambient} >= 7 and {GameState.chapter} >= 6:
+	jump dumi_ambient_07/
+elif {GameState.dumi_hearts_ambient} >= 5 and {GameState.chapter} >= 3:
+	jump dumi_ambient_06/
+elif {GameState.dumi_hearts_ambient} >= 5:
+	jump dumi_ambient_05/
+elif {GameState.dumi_hearts_ambient} >= 3 and {GameState.dumi_economy_seen} == false:
+	jump dumi_ambient_03/
+elif {GameState.dumi_hearts_ambient} >= 3 and {GameState.chapter} >= 2:
+	jump dumi_ambient_04/
+elif {GameState.dumi_hearts_ambient} >= 3:
+	jump dumi_ambient_03/
+elif {GameState.dumi_hearts_ambient} < 3 and {GameState.chapter} == 2:
+	jump dumi_ambient_02/
+elif {GameState.dumi_hearts_ambient} < 3 and {GameState.chapter} <= 1:
+	jump dumi_ambient_01/
+else:
+	jump dumi_ambient_02/

@@ -1,0 +1,9 @@
+join Hope (Neutral) right
+update Hope (Thoughtful)
+Hope: [i]Zanele said he has been at the meetinghouse most evenings with a notebook. She did not say what for.[/i]
+update Hope (Neutral)
+update Hope (Thoughtful)
+Hope: [i]She sounded pleased about it, though. She sounded like someone watching something and not saying so.[/i]
+update Hope (Neutral)
+set {GameState.nudge_sipho_schoolhouse_seen} = true
+set {GameState.village_beat_matched} = true

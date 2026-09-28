@@ -1,0 +1,15 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Right. The mill. I've been thinking about the mill.
+- You've been thinking about the mill for three seasons
+	Hope: You've been thinking about the mill for three seasons.
+	Lebo: I have! And now I think it's actually possible, which is new.
+	Lebo: Crankshaft and grinding plate. Both have to be found, neither can be made — I've been over that about nine times.
+	Lebo: Two places worth looking. Dumi knows everybody between here and Tzaneen, and Petrus has got a yard full of things that used to be other things.
+	- I'll ask them both
+		Hope: I'll ask them both.
+		Lebo: Don't just ask. Neither of them works like that.
+		Lebo: Dumi'll want to think about who to phone and then he'll want you to go and see somebody. And Petrus — Petrus will make you move about forty years of tarpaulin.
+	set {GameState.quest_lebo_mill_parts_main} = "active"
+	[signal arg="objective:Follow two leads — Dumi's contacts and Petrus's stash"]

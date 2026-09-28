@@ -1,0 +1,6 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: Dry season again.
+Gogo: I have said those two words like a warning my whole life.
+set {GameState.gogo_seasonal_last_chapter} = 9

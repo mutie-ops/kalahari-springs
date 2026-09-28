@@ -1,0 +1,6 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: A hydrogeologist. An actual hydrogeologist, with equipment, arriving here.
+Charity: I've submitted eleven applications in four years. This is the first one that sent a person.
+set {GameState.charity_seasonal_last_chapter} = 6

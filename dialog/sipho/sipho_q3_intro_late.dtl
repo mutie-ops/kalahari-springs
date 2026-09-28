@@ -1,0 +1,21 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Aggravated)
+Sipho: You helped with the gutters. So you know I'm not making this up.
+- Making what up?
+	Hope: Making what up?
+	Sipho: I want to build a proper system at the schoolhouse. Tank on a stand, real gutters, a first-flush diverter.
+	Sipho: Charity says NGOs fund things that are already proven. So it has to be proven first, on paper, before anyone sends anything.
+	Sipho: I can do the numbers. That part's done, near enough.
+	- Then what do you need?
+		Hope: Then what do you need?
+		Sipho: Someone to help make them look like something an office in Polokwane will read. That isn't the same skill.
+		Sipho: It isn't a smaller one either. I know that.
+		set {GameState.quest_sipho_schoolhouse_case} = "active"
+		[signal arg="objective:Help Sipho document the schoolhouse's current shortfall and frame the NGO ask with Charity"]
+	- Show me the notebook
+		Hope: Show me the notebook.
+		Sipho: The roof measurements are at the back. Don't round anything up — if the number's soft they'll know.
+		set {GameState.quest_sipho_schoolhouse_case} = "active"
+		[signal arg="objective:Help Sipho document the schoolhouse's current shortfall and frame the NGO ask with Charity"]
+[signal arg="hearts:sipho:1"]

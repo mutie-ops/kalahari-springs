@@ -1,0 +1,5 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+Ezekiel: Pits across the whole east field before the ground goes hard. Two hundred of them, near enough.
+Ezekiel: I'll be at it until the rains. Suits me. I'd rather dig than sit.
+set {GameState.ezekiel_seasonal_last_chapter} = 4

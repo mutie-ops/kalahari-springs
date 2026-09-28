@@ -1,0 +1,7 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Three people have said my name this week about the leadership business. Same as last month.
+- What do you say?
+	Hope: What do you say?
+	Naledi: That I'm busy. Which is true, and also not an answer, and they know that.
+set {GameState.naledi_seasonal_last_chapter} = 7

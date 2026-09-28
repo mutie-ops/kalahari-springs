@@ -1,0 +1,9 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+update Amos (Aggravated)
+- Is that yours?
+	Hope: Is that yours?
+	Amos: Mm.
+- Can I look?
+	Hope: Can I look?
+	Amos: Not yet.

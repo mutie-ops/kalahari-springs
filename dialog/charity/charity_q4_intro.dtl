@@ -1,0 +1,11 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: Four people have told me the mill needs replacing. None of them were asked.
+- So you're doing a campaign
+	Hope: So you're doing a campaign.
+	Charity: I'm doing the paperwork for a campaign that has, as far as I can tell, already assembled itself.
+	Charity: Lebo has a list of every failure and what it cost to patch. Naledi has the milling hours. Mama Zulu has opinions, extensively.
+	Charity: Would you collect it? I'd do it myself, but they'll hand it to you faster.
+	set {GameState.quest_charity_mill_campaign} = "active"
+	[signal arg="objective:Coordinate the contributions villagers have already prepared"]

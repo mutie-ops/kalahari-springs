@@ -1,0 +1,24 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: I have been at this eleven years through the district. I am going to stop.
+- Stop asking?
+	Hope: Stop asking?
+	Charity: Stop asking THEM. The ward puts it in the plan, the plan goes to the district, the district does not get the allocation, and the following year we start again.
+	Charity: There are organisations that fund boreholes directly. I know how to write to them. I have known how for six years.
+	- Then why haven't you?
+		Hope: Then why haven't you?
+		Charity: Because it is not my village.
+		Charity: If I petition an NGO and it fails, this village has been through it twice and will not try a third time. That is not a decision I get to make on my own.
+Charity: There is a discussion at the Gathering Tree on Thursday. It was called before I decided anything — people have been talking about the water for weeks.
+- What do you need from me?
+	Hope: What do you need from me?
+	Charity: Be there. Listen to what people actually say rather than what I hope they say.
+	Charity: And watch Gogo. If she is behind it, the village is behind it, and I will spend the next month writing. If she is not, I will not, and that will be the correct outcome.
+	- Should I talk to her first?
+		Hope: Should I talk to her first?
+		Charity: No.
+		Charity: If she says yes because a friend asked her to, it is worth nothing. It has to be the room.
+		Charity: Thursday. Just come.
+set {GameState.quest_village_borehole_conversation_main} = "active"
+[signal arg="objective:Attend the discussion at the Gathering Tree"]
+[signal arg="hearts:charity:1"]

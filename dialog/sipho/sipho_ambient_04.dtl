@@ -1,0 +1,6 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Aggravated)
+- You look tired
+	Hope: You look tired.
+	Sipho: I'm fine.

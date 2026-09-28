@@ -1,0 +1,20 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Worried)
+Lebo: Third time this month. Third.
+- Same fault?
+	Hope: Same fault?
+	Lebo: Different fault. That is somehow worse.
+	Lebo: The collar goes. Then the belt. Then the collar again because the belt went and chewed it. It is a machine held together by me being available.
+- People keep asking you?
+	Hope: People keep asking you?
+	Lebo: Not asking. Mentioning. Somebody mentions it near me and then I am under it.
+	Lebo: I do not mind. That is the annoying part — I do not even mind. I just have four other things and the mill is not one of the interesting ones anymore. I already solved it. Solving it again is not the same.
+Lebo: It is a nineteen-sixties mill, you know. Parts do not exist. I am machining a collar on a lathe older than the mill.
+Lebo: Charity writes to people about rollers and tanks.
+- You think she'd write about a mill?
+	Hope: You think she'd write about a mill?
+	Lebo: I think somebody should ask her, and I think it should not be me, because I will say it badly and it will sound like complaining.
+	Lebo: It is not complaining. It is a village grinding a year of maize through a machine that is one collar away from being a shed ornament.
+set {GameState.mill_frustration_established} = true
+[signal arg="hearts:lebo:1"]

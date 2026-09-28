@@ -1,0 +1,7 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Rains coming and a schedule that holds. Both at once.
+- Say it is good news
+	Hope: That's good news.
+	Naledi: It's manageable news. I prefer that.
+set {GameState.naledi_seasonal_last_chapter} = 2

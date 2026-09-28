@@ -1,0 +1,9 @@
+join Hope (Neutral) right
+update Hope (Thoughtful)
+Hope: [i]Mama Zulu said the Nkosi boy has been measuring roofs. Not fixing them — measuring them, with a piece of string, and writing it down.[/i]
+update Hope (Neutral)
+update Hope (Thoughtful)
+Hope: [i]She said it like it was a strange thing to do. It is a strange thing to do.[/i]
+update Hope (Neutral)
+set {GameState.nudge_sipho_gutter_seen} = true
+set {GameState.village_beat_matched} = true

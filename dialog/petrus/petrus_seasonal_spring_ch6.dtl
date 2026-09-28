@@ -1,0 +1,10 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Aggravated)
+Petrus: Rollers. The mill. That path the Mkhize boy raised.
+Petrus: I said all three were a waste of everyone's time.
+- And?
+	Hope: And?
+	Petrus: And I was wrong about all three.
+	Petrus: Don't make anything of it. I'll be right about the next one.
+set {GameState.petrus_seasonal_last_chapter} = 6

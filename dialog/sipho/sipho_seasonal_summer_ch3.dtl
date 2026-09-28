@@ -1,0 +1,5 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: Our drum overflowed in the first hour and had gone bad by the next morning. Bird mess, mostly.
+Sipho: Sorry. It's just — it rained. It actually rained, and we still ended up carrying water. That shouldn't be how it goes.
+set {GameState.sipho_seasonal_last_chapter} = 3

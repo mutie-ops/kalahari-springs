@@ -1,0 +1,8 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: So it's done.
+Gogo: Come inside next time, instead of standing at the door like a stranger delivering news.
+[signal arg="hearts:gogo:1"]
+set {GameState.quest_gogo_irrigation_referral} = "complete"
+[signal arg="unlock:gogo_homestead interior now accessible"]

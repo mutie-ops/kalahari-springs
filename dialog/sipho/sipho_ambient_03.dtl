@@ -1,0 +1,9 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: Did you know a corrugated roof sheds nearly all of what lands on it? Almost none soaks in, not like thatch.
+- So?
+	Hope: So?
+	Sipho: So every roof in this village is a catchment surface we're just letting run into the dirt.
+	Sipho: Four metres by six is twenty-four square metres. One decent storm on that is — a lot. More than a drum holds, anyway. Which is the problem.
+	Sipho: Anyway. It's not complicated. That's what bothers me about it.

@@ -1,0 +1,8 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: Buckets, cloths, anything — someone's using a hat and I've decided not to think about it!
+Lindi: Don't chase them! Stand still and let them come to the light, they'll do the work!
+- How long do we have?
+	Hope: How long do we have?
+	Lindi: Until they stop! That's the only answer there is!

@@ -1,0 +1,5 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: I've told a hundred people that waiting is the normal part.
+Charity: It is remarkably unhelpful advice from this side of the desk.

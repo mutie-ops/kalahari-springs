@@ -1,0 +1,14 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: It's gone. Charity sent it this morning.
+- How do you feel?
+	Hope: How do you feel?
+	Sipho: Fine.
+	Sipho: It's got my name on it. If it's wrong, it's wrong with my name on it.
+	- It isn't wrong
+		Hope: It isn't wrong.
+		Sipho: No. I checked it four times. But it could still be no. Those are different things.
+[signal arg="hearts:sipho:1"]
+set {GameState.quest_sipho_schoolhouse_case} = "complete"
+[signal arg="unlock:Ch. 5 schoolhouse system assembly; Zanele teaching-assistant thread"]

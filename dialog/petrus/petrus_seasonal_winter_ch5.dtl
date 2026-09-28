@@ -1,0 +1,8 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Worried)
+Petrus: Two hours out to graze, two back. Every day.
+- That's a long walk
+	Hope: That's a long walk.
+	Petrus: Cattle don't mind.
+set {GameState.petrus_seasonal_last_chapter} = 5

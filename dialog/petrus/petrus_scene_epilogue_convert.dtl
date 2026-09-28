@@ -1,0 +1,18 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Warm)
+Petrus: How many head has your father got?
+Petrus: Mm. Had eleven, when I was your age. Four by the time I was sixty.
+Petrus: I said no to the rollers. Said no to the mill. Said no to the pathway and the tank and every other thing anybody's brought into this village in four years.
+Petrus: Every single one of them I was wrong about.
+Petrus: You can be careful. Careful's worth something. But don't be me — I was careful for eleven years and it cost me seven cattle.
+- That was a lot of words for you
+	Hope: That was a lot of words for you.
+	Petrus: Mm.
+	Petrus: Somebody said much the same to me once. About forty years ago.
+- Did you listen?
+	Hope: Did you listen?
+	Petrus: No.
+	Petrus: Took me until now. Boy might manage it quicker.
+[signal arg="hearts:petrus:2"]
+set {GameState.petrus_arc_complete} = true

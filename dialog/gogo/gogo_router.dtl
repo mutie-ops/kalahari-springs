@@ -1,0 +1,84 @@
+if {GameState.quest_naledi_this_is_home} == "active" and {GameState.hope_staying_decision_pending} == true and {GameState.gogo_this_is_home_scene_complete} == false:
+	jump gogo_scene_this_is_home/
+elif {GameState.chapter} == 7 and {GameState.gogo_hearts} >= 8 and {GameState.gogo_grandmother_memory_shared} == false:
+	jump gogo_scene_grandmother_memory/
+elif {GameState.chapter} == 6 and {GameState.sipho_schoolhouse_excitement_flag} == true and {GameState.gogo_hearts} >= 7 and {GameState.gogo_scholarship_foresight_flag} == false:
+	jump gogo_scene_scholarship_pride/
+elif {GameState.chapter} == 4 and {GameState.gogo_hearts} >= 5 and {GameState.gogo_sipho_mother_hint_given} == false:
+	jump gogo_scene_sipho_echo/
+elif {GameState.chapter} == 3 and {GameState.gogo_hearts} >= 4 and {GameState.gogo_mama_zulu_visit_complete} == false:
+	jump gogo_scene_poultice_walk/
+elif {GameState.chapter} == 2 and {GameState.gogo_hearts} >= 3 and {GameState.gogo_folklore_story_seen} == false:
+	jump gogo_scene_folklore_story/
+elif {GameState.quest_gogo_borehole_blessing} == "active" and {GameState.borehole_blessing_site_ready} == true:
+	jump gogo_q6_complete/
+elif {GameState.quest_gogo_rock_cistern} == "active" and {GameState.rock_cistern_progress} == 1.0:
+	jump gogo_q5_complete/
+elif {GameState.quest_gogo_quiet_watch} == "active" and {GameState.gogo_water_deliveries} >= 10:
+	jump gogo_q3_acknowledgment/
+elif {GameState.quest_gogo_irrigation_referral} == "active" and {GameState.hope_irrigation_built} == true:
+	jump gogo_q2_complete/
+elif {GameState.quest_gogo_rock_cistern} == "active" and {GameState.rock_cistern_progress} < 1.0:
+	jump gogo_q5_checkin/
+elif {GameState.quest_gogo_quiet_watch} == "active" and ({GameState.day} - {GameState.gogo_q3_ambient_last_day}) >= 7:
+	jump gogo_q3_standing_ambient/
+elif {GameState.quest_gogo_borehole_blessing} == "active" and {GameState.borehole_blessing_site_ready} == false:
+	jump gogo_q6_intro/
+elif {GameState.quest_gogo_irrigation_referral} == "active" and {GameState.hope_irrigation_built} == false:
+	jump gogo_q2_checkin/
+elif {GameState.borehole_complete} == true and {GameState.quest_naledi_this_is_home} == "complete" and {GameState.quest_gogo_borehole_blessing} == "inactive":
+	jump gogo_q6_intro/
+elif {GameState.rock_outcrop_site_confirmed} == true and {GameState.quest_gogo_rock_cistern} == "inactive":
+	jump gogo_q5_intro/
+elif {GameState.quest_village_borehole_conversation_main} == "active" and {GameState.gogo_borehole_check_in_reached} == true and {GameState.gogo_borehole_endorsement_given} == false:
+	jump gogo_q4_endorsement/
+elif {GameState.chapter} == 5 and {GameState.gogo_hearts} >= 6 and {GameState.gogo_homestead_visits} >= 6 and {GameState.quest_gogo_quiet_watch} == "inactive":
+	jump gogo_q3_intro/
+elif {GameState.homestead_garden_flagged} == true and {GameState.quest_gogo_reunion} == "complete" and {GameState.quest_gogo_irrigation_referral} == "inactive":
+	jump gogo_q2_intro/
+elif {GameState.day} >= 1 and {GameState.day} <= 10 and {GameState.quest_gogo_reunion} == "inactive":
+	jump gogo_q1_intro/
+elif {GameState.gogo_seasonal_last_chapter} != 9 and {GameState.chapter} == 9:
+	jump gogo_seasonal_winter_ch9/
+elif {GameState.gogo_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.gogo_hearts_ambient} >= 8:
+	jump gogo_seasonal_autumn_ch8/
+elif {GameState.gogo_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.gogo_hearts_ambient} >= 7:
+	jump gogo_seasonal_summer_ch7/
+elif {GameState.gogo_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.gogo_hearts_ambient} >= 6:
+	jump gogo_seasonal_spring_ch6/
+elif {GameState.gogo_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.gogo_hearts_ambient} >= 5:
+	jump gogo_seasonal_winter_ch5/
+elif {GameState.gogo_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.gogo_hearts_ambient} >= 5:
+	jump gogo_seasonal_autumn_ch4/
+elif {GameState.gogo_seasonal_last_chapter} != 3 and {GameState.chapter} == 3:
+	jump gogo_seasonal_summer_ch3/
+elif {GameState.gogo_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump gogo_seasonal_spring_ch2/
+elif {GameState.gogo_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump gogo_seasonal_winter_ch1/
+elif {GameState.gogo_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump gogo_seasonal_autumn_ch0/
+elif {GameState.gogo_hearts_ambient} >= 10 and {GameState.borehole_complete} == true and {GameState.quest_gogo_borehole_blessing} == "complete":
+	jump gogo_ambient_09/
+elif {GameState.gogo_hearts_ambient} >= 9 and {GameState.gogo_grandmother_memory_shared} == true:
+	jump gogo_ambient_08/
+elif {GameState.gogo_hearts_ambient} >= 7 and ({GameState.quest_gogo_quiet_watch} == "active" or {GameState.quest_gogo_quiet_watch} == "complete"):
+	jump gogo_ambient_07/
+elif {GameState.gogo_hearts_ambient} >= 7:
+	jump gogo_ambient_06/
+elif {GameState.gogo_hearts_ambient} >= 5 and {GameState.gogo_location} == "gogo_homestead":
+	jump gogo_ambient_05/
+elif {GameState.gogo_hearts_ambient} >= 5 and {GameState.borehole_complete} == false:
+	jump gogo_ambient_06/
+elif {GameState.gogo_hearts_ambient} >= 5:
+	jump gogo_ambient_03/
+elif {GameState.gogo_hearts_ambient} >= 3 and ({GameState.chapter} == 2 or {GameState.chapter} == 6):
+	jump gogo_ambient_04/
+elif {GameState.gogo_hearts_ambient} >= 3 and {GameState.quest_gogo_reunion} == "complete":
+	jump gogo_ambient_03/
+elif {GameState.gogo_hearts_ambient} >= 3:
+	jump gogo_ambient_02/
+elif {GameState.gogo_hearts_ambient} < 3 and {GameState.day} <= 5:
+	jump gogo_ambient_01/
+else:
+	jump gogo_ambient_02/

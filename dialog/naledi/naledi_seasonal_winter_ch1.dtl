@@ -1,0 +1,5 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Market's quieter. When water is tight, people stop buying and start conserving.
+Naledi: Can't blame them. I do the same.
+set {GameState.naledi_seasonal_last_chapter} = 1

@@ -1,0 +1,8 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+Mama Zulu\: Now. Where.
+Mama Zulu\: Morning side of the ridge, under the thorn. Never the flat. It will not grow on the flat and I do not know why.
+- Lindi would know why
+	Hope: Lindi would know why.
+	Mama Zulu\: Lindi would have a word for why. That is not the same thing.
+set {GameState.mama_zulu_knowledge_b_seen} = true

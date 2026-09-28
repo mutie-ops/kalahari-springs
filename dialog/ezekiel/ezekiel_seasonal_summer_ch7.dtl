@@ -1,0 +1,6 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Walked past six gardens on the way in. Mulch on every one of them.
+Ezekiel: Two years ago you'd not have seen mulch on any garden in this village. Including mine.
+set {GameState.ezekiel_seasonal_last_chapter} = 7

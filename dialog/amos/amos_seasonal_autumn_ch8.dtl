@@ -1,0 +1,5 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: Roof's on. Door's hung.
+Amos: Bit of work on the inside and it's done.
+set {GameState.amos_seasonal_last_chapter} = 8

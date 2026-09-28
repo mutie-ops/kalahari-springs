@@ -1,0 +1,17 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Aggravated)
+Ezekiel: You'll do a job for me. Paid or not, I don't mind which.
+- What kind of job?
+	Hope: What kind of job?
+	Ezekiel: Carting. Petrus has tools I need and neither of us has the back for it.
+	Ezekiel: Mattock, long spade, hand auger if he's still got the one. He's already said yes, so there's nothing to arrange.
+- What's the plot for?
+	Hope: What's the plot for?
+	Ezekiel: One plot. Everything the books say and I've never done.
+	Ezekiel: It's late to be starting. I know that. Ground's right for another week and then it isn't.
+	- Why now?
+		Hope: Why now?
+		Ezekiel: Because I'd rather fail on the land than wonder off it.
+	set {GameState.quest_ezekiel_test_plot} = "active"
+	[signal arg="objective:Collect the tools from Petrus's equipment graveyard and deliver them to Ezekiel's farm"]

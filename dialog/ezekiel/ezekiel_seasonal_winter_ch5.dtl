@@ -1,0 +1,12 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Aggravated)
+Ezekiel: Driest it's been since the bad three. I know what that ground looked like at the end.
+- The practices are holding, though
+	Hope: The practices are holding, though.
+	Ezekiel: So far.
+	Ezekiel: They held in a good year. That's not the same as holding in a bad one, and this is shaping like a bad one.
+- You look like you haven't slept
+	Hope: You look like you haven't slept.
+	Ezekiel: Plenty of time to sleep in the rains.
+set {GameState.ezekiel_seasonal_last_chapter} = 5

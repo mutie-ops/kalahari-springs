@@ -1,0 +1,9 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: Five rollers now. Paths won't take it.
+- What needs doing?
+	Hope: What needs doing?
+	Amos: Grading. Three bad stretches.
+	Amos: Saturday. Bring a spade if you've got one.
+	set {GameState.quest_amos_pathway_smoothing} = "active"
+	[signal arg="objective:Join the community work-day and help grade the pathways"]

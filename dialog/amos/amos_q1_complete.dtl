@@ -1,0 +1,10 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+update Amos (Warm)
+Amos: That'll do for a year.
+- Only a year?
+	Hope: Only a year?
+	Amos: Grading's not drainage. Water still comes.
+	Amos: Proper job needs embankments. Bigger job than a Saturday.
+[signal arg="hearts:amos:2"]
+set {GameState.quest_amos_pathway_smoothing} = "complete"

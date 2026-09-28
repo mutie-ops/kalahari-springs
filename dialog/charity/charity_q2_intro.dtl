@@ -1,0 +1,16 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: The boy did this himself. I want that noted, because I intend to put his name on it.
+- Is five realistic?
+	Hope: Is five realistic?
+	Charity: Five is defensible, which is better than realistic. The difference matters to funders.
+	Charity: But here's the difficulty. Last time I argued that you were suffering. That's an easy case.
+	Charity: This time I have to argue that you were given something and used it well. Which sounds simpler and is considerably harder.
+	- Why harder?
+		Hope: Why harder?
+		Charity: Because suffering is visible and stewardship isn't. Nobody photographs a schedule being followed.
+		Charity: So — go and find me what changed. A garden that survived the dry. An hour someone got back. Whatever people volunteer.
+		Charity: Good news, this time. Not hardship.
+	set {GameState.quest_charity_proof_it_works_main} = "active"
+	[signal arg="objective:Document positive outcomes from the first three rollers and the sharing schedule"]

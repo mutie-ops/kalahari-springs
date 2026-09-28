@@ -1,0 +1,9 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: You know the shape of this by now.
+- Solar pump and auto-chlorination
+	Hope: Solar pump and auto-chlorination.
+	Charity: And the volunteers' hours, which are the actual case. Nobody funds convenience; they fund sustainability.
+	Charity: I need what the upkeep genuinely costs people. You'll have it by Thursday without trying very hard — half of them have been complaining to you already.
+	set {GameState.quest_charity_outpost_upgrade_campaign} = "active"
+	[signal arg="objective:Collect upkeep-burden accounts from outpost volunteers"]

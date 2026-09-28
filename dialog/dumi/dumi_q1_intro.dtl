@@ -1,0 +1,15 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: Before anybody spends money we haven't got, I want to know what's already in this district doing nothing.
+- Know where to find it?
+	Hope: Do you know where to find it?
+	Dumi: I know who to ask. That's different and it's less reliable.
+	Dumi: Sand and stone we can get locally. Cement has to be bought — no way round that.
+	Dumi: Pipe, valves, sheeting, and the tank: those exist somewhere. Somebody's got them in a yard.
+	Dumi: These are leads. Not addresses of things — people who might know somebody. Two of them will send you on to somebody else.
+	- And if they say no?
+		Hope: And if they say no?
+		Dumi: Then they say no and you thank them and you don't push. I'll work on them after.
+		Dumi: Half of this is me going back a second time when it's less awkward.
+	set {GameState.quest_dumi_outpost_sourcing_main} = "active"
+	[signal arg="objective:Follow Dumi's leads and source what materials you can"]

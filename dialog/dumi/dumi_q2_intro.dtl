@@ -1,0 +1,15 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: A crankshaft. Off a mill.
+Dumi: There was a mill at Nkowankowa that closed — Petrus's brother had gear off it, but that's the plate, not the shaft.
+Dumi: ...There's a man at Ga-Kgapane who took the rest of it. I bought fencing wire off him in — nineteen, twenty? A while ago.
+- Will he still have it?
+	Hope: Will he still have it?
+	Dumi: He'll still have it. He doesn't throw things away either — that's why I remember him.
+	Dumi: Don't go to him first. Go to her. She's his sister-in-law and she's at the trade fair on Thursday.
+	- Why not go straight to him?
+		Hope: Why not go straight to him?
+		Dumi: Because he doesn't know you, and he'll say no to a stranger asking for something specific.
+		Dumi: If she mentions you on Wednesday, you're not a stranger on Thursday. Same request, different answer.
+	set {GameState.quest_dumi_mill_lead} = "active"
+	[signal arg="objective:Approach the sister-in-law at the trade fair before approaching the owner"]

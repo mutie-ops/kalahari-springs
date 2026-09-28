@@ -1,0 +1,26 @@
+join Hope (Neutral) right
+if {GameState.borehole_checkins_heard} == 0:
+	join Petrus (Neutral) left
+	Petrus: Third borehole I have been asked to be hopeful about.
+	- What happened to the others?
+		Hope: What happened to the others?
+		Petrus: One was drilled and never fitted with a pump. It is still out there. You can drop a stone down it.
+		Petrus: I am not saying no. I am saying I have dropped a stone down a promise before.
+elif {GameState.borehole_checkins_heard} == 1:
+	join Zanele (Neutral) left
+	Zanele: I want to say the part that is working first, because it usually gets forgotten in a room like this.
+	- Which part?
+		Hope: Which part?
+		Zanele: Forty children are reading. The rollers arrived. The rotation runs. None of that came from the district either.
+		Zanele: So when somebody says the government route has failed, I would rather we heard it as information than as defeat. We have been managing without them for some time.
+elif {GameState.borehole_checkins_heard} == 2:
+	join Ezekiel (Neutral) left
+	Ezekiel: How many years?
+	- Charity said eleven
+		Hope: Charity said eleven.
+		Ezekiel: Eleven years of somebody else's forms.
+		Ezekiel: I will go with whatever the room decides. I want that on the record. But I would like somebody to say out loud that eleven years is a long time to be told to wait, and then we can carry on being sensible about it.
+[signal arg="increment:borehole_checkins_heard:1"]
+set {GameState.village_beat_matched} = true
+if {GameState.borehole_checkins_heard} >= 3:
+	set {GameState.gogo_borehole_check_in_reached} = true

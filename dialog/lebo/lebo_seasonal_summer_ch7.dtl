@@ -1,0 +1,9 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: The Nkosi boy's been teaching me what a multimeter's actually for. Fifteen years I've owned one.
+- You didn't know?
+	Hope: You didn't know?
+	Lebo: I knew what it did! I knew roughly what it did. I've been using it as a — well. Roughly.
+	Lebo: He's very patient about it. That's the part that stings.
+set {GameState.lebo_seasonal_last_chapter} = 7

@@ -1,0 +1,9 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: I have watched three boreholes get promised and two get started and none get finished, in this district, in my lifetime.
+Gogo: I am not interested in promises anymore.
+- Then why say yes to this one?
+	Hope: Then why say yes to this one?
+	Gogo: Because Charity does not make promises. She makes petitions, and petitions have paperwork, and paperwork is harder to walk away from than a promise is.
+	Gogo: That, and I am tired of being right about disappointment. I would like, once, to be wrong.
+set {GameState.gogo_borehole_endorsement_given} = true

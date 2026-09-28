@@ -1,0 +1,7 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Warm)
+Zanele: Attendance has not dropped.
+Zanele: Every winter of my working life the number falls in June, because the queue takes the mornings. This June it did not move.
+Zanele: I checked the register three times, in case I had made an error. I had not made an error.
+set {GameState.zanele_seasonal_last_chapter} = 9

@@ -1,0 +1,5 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: My first dry season here starts in a few weeks. Everyone keeps telling me I'm not ready for it.
+Charity: They may be right. I've read about it. That isn't the same thing.
+set {GameState.charity_seasonal_last_chapter} = 0

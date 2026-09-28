@@ -1,0 +1,19 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: Can I show you something? I worked it out twice.
+- Go on
+	Hope: Go on.
+	Sipho: Three rollers, ninety litres each, and you can realistically run two trips a day per roller before people are too tired to keep it up.
+	Sipho: That covers about eleven households if you're strict about the schedule. We've got nineteen.
+	Sipho: Five rollers. Five does everyone, with slack in it for when someone's sick or a wheel goes.
+	- Have you shown Charity?
+		Hope: Have you shown Charity?
+		Sipho: Not yet. She'll want it written properly, not on the back of this.
+		Sipho: I'll copy it out neat first.
+	- Five. You're sure?
+		Hope: Five. You're sure?
+		Sipho: I did it twice. I'll do it a third time if you want, but it'll still be five.
+set {GameState.sipho_roller_calc_shared} = true
+[signal arg="unlock:quest_charity_proof_it_works_main becomes available from Charity"]
+[signal arg="hearts:sipho:1"]

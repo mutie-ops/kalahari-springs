@@ -1,0 +1,19 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: I've been drafting something. It's probably foolish.
+- What is it?
+	Hope: What is it?
+	Dumi: Rules for the co-op. Membership, what's shared, who decides, what happens if someone leaves.
+	Dumi: Twelve pages so far. It reads like a school exercise and I keep starting again.
+	- Why now?
+		Hope: Why now?
+		Dumi: Because there's going to be water.
+		Dumi: You can't write ten-year rules for a village that doesn't know if it'll be here in ten years. Now we know. So now it's worth writing down.
+Dumi: There's another thing I've been turning over. When the new school opens, the hall stops being a schoolhouse.
+- And the Sunday gathering?
+	Hope: And the Sunday gathering?
+	Dumi: Everyone assumes it moves. Newer building, better roof.
+	Dumi: I don't think it should. Thirty-one years of my father's Sundays are in that hall, and about nine of mine.
+	Dumi: Some things take root in a place. You don't move them just because you can.
+[signal arg="hearts:dumi:2"]
+set {GameState.dumi_coop_drafting} = true

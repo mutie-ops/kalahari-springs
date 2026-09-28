@@ -1,0 +1,6 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Hey! Hey — mind the — no, you're fine, that's fine, it's only a gearbox, it's been on the floor since March.
+Lebo: You're the one at the Nkosi place, my brother said, he said there's someone up there now, and I said about time, that roof's been asking for it for — actually, what did you need?
+set {GameState.mkhize_workshop_active} = true

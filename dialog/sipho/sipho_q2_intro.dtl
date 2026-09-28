@@ -1,0 +1,17 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+update Sipho (Warm)
+Sipho: Your grandmother had a capture system on this house. Did you know that?
+- I didn't
+	Hope: I didn't.
+	Sipho: It's still mostly here. The run's broken in two places and the drum's got no lid, which is worse than it sounds — open water grows things.
+	Sipho: It's not a big job. Half a day if the joints hold.
+	- Would you help me?
+		Hope: Would you help me?
+		Sipho: I was going to offer anyway. I want to see how she routed it.
+		set {GameState.quest_sipho_gutter_repair} = "active"
+		[signal arg="objective:Repair the gutter run, fit a lid to the drum, reposition the drum"]
+- Is it worth fixing?
+	Hope: Is it worth fixing?
+	Sipho: Anything that catches water is worth fixing. This roof throws away a few hundred litres a storm right now.
+	set {GameState.quest_sipho_gutter_repair} = "active"

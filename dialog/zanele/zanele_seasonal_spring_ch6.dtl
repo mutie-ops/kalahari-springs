@@ -1,0 +1,6 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Warm)
+Zanele: He explained pressure to a six-year-old this week, correctly, using a bucket and his hands.
+Zanele: There is a point at which a teacher is no longer the most useful person in a child's life. I think I can see it from here.
+set {GameState.zanele_seasonal_last_chapter} = 6

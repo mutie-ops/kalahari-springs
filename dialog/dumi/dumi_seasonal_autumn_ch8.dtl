@@ -1,0 +1,6 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Warm)
+Dumi: Biggest surplus this village has had since before I took over the store.
+Dumi: And that man who wanted to buy at half price is back. Paying full, this time, because there's enough that nobody has to take a bad offer.
+set {GameState.dumi_seasonal_last_chapter} = 8

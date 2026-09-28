@@ -1,0 +1,9 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+Lindi: Same as last time. Except not really the same at all.
+- What's different?
+	Hope: What's different?
+	Lindi: Racks are up, smoke corner's ready, and I've got containers stacked and waiting instead of running round the village at ten at night asking to borrow buckets.
+	Lindi: Last time we gathered and then panicked. This time we gather and it goes straight onto a rack and I go to bed.
+	set {GameState.quest_lindi_kumbi_kumbi_two} = "active"
+	[signal arg="objective:Gather during the flight — processing infrastructure is already in place"]

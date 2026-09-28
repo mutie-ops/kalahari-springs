@@ -1,0 +1,9 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: He talks like that when he doesn't know yet how far it's going to take him.
+- You think he'll leave?
+	Hope: You think he'll leave?
+	Gogo: I think a boy who can explain pressure that clearly to a six-year-old does not stay in one village his whole life. And I think that is exactly as it should be.
+	Gogo: I have already lost people to smaller reasons than that.
+set {GameState.gogo_scholarship_foresight_flag} = true

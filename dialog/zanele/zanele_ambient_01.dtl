@@ -1,0 +1,10 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Warm)
+- How many do you teach?
+	Hope: How many do you teach?
+	Zanele: It depends what you mean by teach, which is not me being difficult — it genuinely has three answers.
+	Zanele: Nine come every day. Another six or seven come when their households can spare them, which is fewer in the dry season and more after the rains.
+	Zanele: And there are four I would call students who have not been here since March, because the water queue takes their mornings.
+	Zanele: So: nine, sixteen, or twenty. I count all three, because forgetting the last four is how you end up teaching nine forever.
+set {GameState.zanele_ambient_12_toggle} = true

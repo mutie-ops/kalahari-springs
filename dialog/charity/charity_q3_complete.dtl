@@ -1,0 +1,9 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: That took you four days. The first campaign took six weeks.
+- People just told me
+	Hope: People just told me.
+	Charity: Yes. That's what integration looks like. I've been here as long as you and they still tell you first.
+[signal arg="hearts:charity:1"]
+set {GameState.quest_charity_outpost_upgrade_campaign} = "complete"

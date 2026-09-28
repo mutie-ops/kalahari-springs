@@ -1,0 +1,8 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Worried)
+Naledi: Second dry season with the rollers. It's better. It isn't easy, but it's better, and people can feel the difference.
+- Can you?
+	Hope: Can you?
+	Naledi: I can feel the schedule holding. That's the part I'd notice.
+set {GameState.naledi_seasonal_last_chapter} = 5

@@ -1,0 +1,10 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Warm)
+Ezekiel: Cold this morning.
+- It is
+	Hope: It is.
+	Ezekiel: Mm.
+[signal arg="hearts:ezekiel:2"]
+set {GameState.ezekiel_trusted} = true
+[signal arg="unlock:garden best-practice tips available from Ezekiel; feeds qst_gogo_irrigation_referral"]

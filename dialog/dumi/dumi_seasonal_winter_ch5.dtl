@@ -1,0 +1,5 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: Nobody's buying in the dry, so this is when I'm useful for something other than selling.
+Dumi: Half my week is finding people things. Mill parts at the moment — I've got three leads and one of them will come to nothing.
+set {GameState.dumi_seasonal_last_chapter} = 5

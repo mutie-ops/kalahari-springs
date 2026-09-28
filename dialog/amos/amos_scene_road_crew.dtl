@@ -1,0 +1,11 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+- Who put you in charge of this?
+	Hope: Who put you in charge of this?
+	Amos: Nobody.
+- Then why you?
+	Hope: Then why you?
+	Amos: Somebody has to know where the water goes.
+	Amos: I know where the water goes.
+[signal arg="hearts:amos:1"]
+set {GameState.amos_road_crew_seen} = true

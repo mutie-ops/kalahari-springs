@@ -1,0 +1,78 @@
+if {GameState.chapter} == 9 and {GameState.ezekiel_hearts} >= 8 and {GameState.borehole_complete} == true and {GameState.ezekiel_arc_complete} == false:
+	jump ezekiel_scene_epilogue/
+elif {GameState.chapter} == 5 and {GameState.ezekiel_hearts} >= 6 and {GameState.mama_zulu_ezekiel_confidant} == true and {GameState.ezekiel_bad_winter_seen} == false:
+	jump ezekiel_scene_bad_winter/
+elif {GameState.chapter} == 3 and {GameState.test_plot_succeeded} == true and {GameState.ezekiel_hearts} >= 4 and {GameState.ezekiel_taught_students} == false:
+	jump ezekiel_scene_students_visit/
+elif {GameState.chapter} == 3 and {GameState.first_major_rain} == true and {GameState.test_plot_succeeded} == false:
+	jump ezekiel_scene_plot_succeeds/
+elif (({GameState.chapter} <= 1 and {GameState.time_of_day} == "evening") or {GameState.chapter} == 2) and {GameState.ezekiel_hearts} >= 1 and {GameState.ezekiel_letter_seen} == false:
+	jump ezekiel_scene_the_letter/
+elif {GameState.quest_ezekiel_rounds_main} == "active" and {GameState.households_visited} >= 6:
+	jump ezekiel_q4_complete/
+elif {GameState.quest_ezekiel_repay_hope} == "active" and {GameState.hope_plot_improved} == true:
+	jump ezekiel_q3_complete/
+elif {GameState.quest_ezekiel_test_plot} == "active" and {GameState.test_plot_tools_delivered} == true:
+	jump ezekiel_q2_complete/
+elif {GameState.quest_ezekiel_rounds_main} == "active" and {GameState.households_visited} < 6:
+	jump ezekiel_q4_visit_variant/
+elif {GameState.quest_ezekiel_repay_hope} == "active" and {GameState.mulch_stage} == true:
+	jump ezekiel_q3_mulch_and_stone/
+elif {GameState.quest_ezekiel_repay_hope} == "active" and {GameState.zai_pits_stage} == true:
+	jump ezekiel_q3_zai_pits/
+elif {GameState.quest_ezekiel_repay_hope} == "active" and {GameState.hope_plot_improved} == false:
+	jump ezekiel_q3_intro/
+elif {GameState.quest_ezekiel_test_plot} == "active" and {GameState.test_plot_tools_delivered} == false:
+	jump ezekiel_q2_checkin/
+elif ({GameState.quest_naledi_alternate_rotation_main} == "active" or {GameState.quest_naledi_alternate_rotation_main} == "complete") and {GameState.ezekiel_deliveries} >= 10 and {GameState.ezekiel_trusted} == false:
+	jump ezekiel_q1_advice_c/
+elif ({GameState.quest_naledi_alternate_rotation_main} == "active" or {GameState.quest_naledi_alternate_rotation_main} == "complete") and {GameState.ezekiel_deliveries} >= 6 and {GameState.ezekiel_advice_b_seen} == false:
+	jump ezekiel_q1_advice_b/
+elif ({GameState.quest_naledi_alternate_rotation_main} == "active" or {GameState.quest_naledi_alternate_rotation_main} == "complete") and {GameState.ezekiel_deliveries} >= 3 and {GameState.ezekiel_advice_a_seen} == false:
+	jump ezekiel_q1_advice_a/
+elif {GameState.ezekiel_deliveries} >= 1 and {GameState.ezekiel_reciprocity_established} == false:
+	jump ezekiel_q1_first_delivery/
+elif {GameState.chapter} == 6 and {GameState.quest_ezekiel_repay_hope} == "complete" and {GameState.quest_ezekiel_rounds_main} == "inactive":
+	jump ezekiel_q4_intro/
+elif {GameState.chapter} == 4 and {GameState.test_plot_succeeded} == true and {GameState.quest_ezekiel_repay_hope} == "inactive":
+	jump ezekiel_q3_intro/
+elif {GameState.chapter} == 2 and {GameState.ezekiel_hearts} >= 3 and {GameState.ezekiel_letter_seen} == true and {GameState.quest_ezekiel_test_plot} == "inactive":
+	jump ezekiel_q2_intro/
+elif {GameState.chapter} == 2 and {GameState.days_in_chapter} >= 14 and {GameState.ezekiel_letter_seen} == true and {GameState.quest_ezekiel_test_plot} == "inactive":
+	jump ezekiel_q2_intro_late/
+elif {GameState.ezekiel_seasonal_last_chapter} != 9 and {GameState.chapter} == 9 and {GameState.borehole_complete} == true:
+	jump ezekiel_seasonal_winter_ch9/
+elif {GameState.ezekiel_seasonal_last_chapter} != 8 and {GameState.chapter} == 8 and {GameState.ezekiel_hearts_ambient} >= 8:
+	jump ezekiel_seasonal_autumn_ch8/
+elif {GameState.ezekiel_seasonal_last_chapter} != 7 and {GameState.chapter} == 7 and {GameState.ezekiel_hearts_ambient} >= 7:
+	jump ezekiel_seasonal_summer_ch7/
+elif {GameState.ezekiel_seasonal_last_chapter} != 6 and {GameState.chapter} == 6 and {GameState.ezekiel_hearts_ambient} >= 6:
+	jump ezekiel_seasonal_spring_ch6/
+elif {GameState.ezekiel_seasonal_last_chapter} != 5 and {GameState.chapter} == 5 and {GameState.ezekiel_hearts_ambient} >= 5:
+	jump ezekiel_seasonal_winter_ch5/
+elif {GameState.ezekiel_seasonal_last_chapter} != 4 and {GameState.chapter} == 4 and {GameState.ezekiel_hearts_ambient} >= 4:
+	jump ezekiel_seasonal_autumn_ch4/
+elif {GameState.ezekiel_seasonal_last_chapter} != 3 and {GameState.chapter} == 3 and {GameState.ezekiel_hearts_ambient} >= 3:
+	jump ezekiel_seasonal_summer_ch3/
+elif {GameState.ezekiel_seasonal_last_chapter} != 2 and {GameState.chapter} == 2:
+	jump ezekiel_seasonal_spring_ch2/
+elif {GameState.ezekiel_seasonal_last_chapter} != 1 and {GameState.chapter} == 1:
+	jump ezekiel_seasonal_winter_ch1/
+elif {GameState.ezekiel_seasonal_last_chapter} != 0 and {GameState.chapter} == 0:
+	jump ezekiel_seasonal_autumn_ch0/
+elif {GameState.ezekiel_hearts_ambient} >= 9 and {GameState.chapter} >= 8:
+	jump ezekiel_ambient_08/
+elif {GameState.ezekiel_hearts_ambient} >= 7 and {GameState.chapter} >= 6:
+	jump ezekiel_ambient_07/
+elif {GameState.ezekiel_hearts_ambient} >= 5 and {GameState.chapter} >= 4:
+	jump ezekiel_ambient_06/
+elif {GameState.ezekiel_hearts_ambient} >= 5 and {GameState.test_plot_succeeded} == true:
+	jump ezekiel_ambient_05/
+elif {GameState.ezekiel_hearts_ambient} >= 3 and {GameState.ezekiel_ambient_34_toggle} == false:
+	jump ezekiel_ambient_03/
+elif {GameState.ezekiel_hearts_ambient} >= 3:
+	jump ezekiel_ambient_04/
+elif {GameState.ezekiel_hearts_ambient} < 3 and {GameState.chapter} <= 1:
+	jump ezekiel_ambient_01/
+else:
+	jump ezekiel_ambient_02/

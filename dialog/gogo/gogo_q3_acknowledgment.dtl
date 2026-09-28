@@ -1,0 +1,10 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: You know I never asked you for this.
+- I know
+	Hope: I know.
+	Gogo: Good. Then we don't need to discuss it further.
+	Gogo: Sit a while. The tea's already made.
+[signal arg="hearts:gogo:1"]
+set {GameState.quest_gogo_quiet_watch} = "complete"

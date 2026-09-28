@@ -1,0 +1,17 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+Gogo: I'll tell you a true one this time. Not the fireside kind.
+Gogo: Your grandmother once walked four hours to bring me quinine when my second husband had fever. Nobody asked her to. She simply heard, and went.
+Gogo: She got back at midnight, soaked through, and the first thing she said to me was not 'is he alive.' It was 'I brought too much — you'll have extra for next time.'
+Gogo: That was her. Already thinking of the next emergency before this one was finished.
+- That sounds exactly like something a Nkosi — or a person from this house — would do
+	Hope: That sounds exactly like something a Nkosi — or a person from this house — would do.
+	Gogo: Don't flatter yourself into her yet. You've a way to go. But you're closer than you were.
+- I wish I remembered more of her
+	Hope: I wish I remembered more of her.
+	Gogo: You're building new memories of her every day. Through this village. Through what you're rebuilding at that homestead.
+	Gogo: That's not the same as remembering. But it isn't nothing, either.
+Gogo: She would be unbearably proud of you. And she would never once have said so directly.
+Gogo: Some things, apparently, you do inherit.
+set {GameState.gogo_grandmother_memory_shared} = true
+[signal arg="hearts:gogo:1"]

@@ -1,0 +1,14 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Aggravated)
+Petrus: Two born. Both living.
+- That's the first time in a while
+	Hope: That's the first time in a while.
+	Petrus: Third time I've had two born. First time both lived.
+	Petrus: Water's the whole of it. Nothing clever. Animal that drinks enough carries a kid to term, animal that doesn't, doesn't.
+	Petrus: Ten years I've been telling people that and getting looked at like I'm talking about the weather.
+- You were talking about the weather
+	Hope: You were talking about the weather.
+	Petrus: ...Yes. All right.
+[signal arg="hearts:petrus:2"]
+set {GameState.petrus_herd_growing} = true

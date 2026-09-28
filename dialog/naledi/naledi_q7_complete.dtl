@@ -1,0 +1,13 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: Good.
+Naledi: Then you'll want a proper bed before next winter. That mat is going to ruin your back and I'm not listening to you complain about it for the next thirty years.
+- Thirty years?
+	Hope: Thirty years?
+	Naledi: I'd assumed. Correct me if I'm wrong.
+Naledi: I'm glad. That's all — I'm not making a speech about it.
+Naledi: Amos has timber. Ask him about the bed.
+[signal arg="hearts:naledi:2"]
+set {GameState.quest_naledi_this_is_home} = "complete"
+set {GameState.hope_staying_confirmed} = true

@@ -1,0 +1,14 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: Five. Exactly as he said.
+- You made it happen
+	Hope: You made it happen.
+	Charity: I wrote a document. Sipho made it true before I wrote it, and Naledi is making it work now that it's here.
+	Charity: That isn't modesty, it's accuracy. A case only ever describes something that already exists.
+- And Unity Water?
+	Hope: And Unity Water?
+	Charity: They read it and did what they said they would, in the time they said they would do it.
+	Charity: You would be astonished how much of this work is chasing people who did not. Unity Water have been the most dependable partner this village has, and I do not say that about many.
+[signal arg="hearts:charity:1"]
+set {GameState.quest_charity_proof_it_works_main} = "complete"

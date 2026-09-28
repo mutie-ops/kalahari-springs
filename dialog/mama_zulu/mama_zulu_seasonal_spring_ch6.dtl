@@ -1,0 +1,7 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Warm)
+Mama Zulu\: The Dube girl brought me dried worms from her racks. A whole sack.
+Mama Zulu\: I did not ask. She did not mention it.
+Mama Zulu\: That is how it should be done.
+set {GameState.mama_zulu_seasonal_last_chapter} = 6

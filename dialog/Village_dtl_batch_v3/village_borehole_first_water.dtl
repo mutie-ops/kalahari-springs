@@ -1,0 +1,23 @@
+join Hope (Neutral) right
+join Ezekiel (Neutral) left
+join Petrus (Neutral) left
+join Gogo (Neutral) left
+join Charity (Neutral) left
+Ezekiel: Is it running?
+Petrus: It is running.
+Ezekiel: No. I mean — is it still running.
+Petrus: …It is still running.
+- It's real
+	Hope: It's real.
+	Gogo: It is real today. Tomorrow it has to be real again, and the day after.
+- …
+	Hope: …
+	Gogo: Good. There is nothing to say yet.
+Gogo: A pump nobody looks after is a statue. It needs keepers.
+Charity: The district will not hand it over without a committee. That is the rule, and it is a good rule.
+Gogo: Then we will have a committee. Tonight. Everyone who drinks from it has a say.
+Gogo: And everyone who drinks from it has a turn.
+set {GameState.quest_borehole_drilling_main} = "complete"
+set {GameState.borehole_complete} = true
+set {GameState.water_committee_formed} = true
+set {GameState.village_beat_matched} = true

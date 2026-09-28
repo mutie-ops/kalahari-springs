@@ -1,0 +1,20 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+- What is it?
+	Hope: What is it?
+	Charity: It's a — It's a posting request.
+	Charity: I want to stay. Permanently. Not renewed every eighteen months — properly, with my family, as a person who lives here.
+	Charity: I have filed four hundred documents for other people. I've been looking at this one since Tuesday.
+	- Why is this one harder?
+		Hope: Why is this one harder?
+		Charity: Because if they refuse the mill, the village doesn't get a mill.
+		Charity: If they refuse this, I have to explain it to my children.
+	- What do you need?
+		Hope: What do you need?
+		Charity: A countersignature from the ward councillor, and the previous posting record, which is filed in a drawer in Tzaneen that nobody has opened since 2019.
+		Charity: It's tedious and it's nothing to do with you and I'd be very grateful.
+	set {GameState.quest_charity_one_last_petition} = "active"
+	[signal arg="objective:Obtain the councillor's countersignature and retrieve the archived posting record"]
+Charity: I am at the house on Sundays, if the outpost is shut and you need something signed.
+Charity: Or if you do not. The kettle works there and it does not here.
+set {GameState.charity_home_access} = true

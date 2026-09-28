@@ -1,0 +1,6 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+update Naledi (Warm)
+Naledi: A mill to place, a stall to give Lindi, and a hole in the ground everyone's watching.
+Naledi: I've had worse weeks. I've not had a fuller one.
+set {GameState.naledi_seasonal_last_chapter} = 8

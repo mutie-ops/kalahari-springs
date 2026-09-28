@@ -1,0 +1,10 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Right — I've had the whole thing apart on the bench and I know exactly what's wrong with it.
+Lebo: Crankshaft's sheared, and the grinding plate's worn past anything I can true up. Both. Not one, both.
+- Can you make new ones?
+	Hope: Can you make new ones?
+	Lebo: Make a crankshaft? With what — I've got a file and a lot of enthusiasm.
+	Lebo: No. Those have to be found. Somebody, somewhere, has a mill they're not using.
+set {GameState.lebo_seasonal_last_chapter} = 2

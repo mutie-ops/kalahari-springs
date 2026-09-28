@@ -1,0 +1,9 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: You'll be wanting seed for that plot. Everyone does, first month, and most of them buy the wrong thing.
+- What's the right thing?
+	Hope: What's the right thing?
+	Dumi: Depends on your soil and I haven't seen your soil.
+	Dumi: Ezekiel Dlamini's been farming that side of the valley thirty-eight years. Ask him what your ground does before you spend money with me.
+	Dumi: I'll still be here after.
+set {GameState.dumi_introduced} = true

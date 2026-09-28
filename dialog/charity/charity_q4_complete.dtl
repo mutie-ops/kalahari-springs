@@ -1,0 +1,10 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: I contributed the covering letter and the correct postal address.
+- That's not nothing
+	Hope: That's not nothing.
+	Charity: No. But four years ago I'd have written all of this alone and it would have been worse.
+	Charity: A village that assembles its own case doesn't really need a field coordinator. I find I don't mind that as much as I expected to.
+[signal arg="hearts:charity:1"]
+set {GameState.quest_charity_mill_campaign} = "complete"

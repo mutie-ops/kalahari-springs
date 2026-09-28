@@ -1,0 +1,22 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+join Charity (Neutral) left
+Gogo: I have led three funerals for people who died still waiting for this water.
+Gogo: I did not think I would get to lead something else instead.
+Gogo: So — this. This is that instead.
+Gogo: Before we bless the pump, I want it said plainly, so it is remembered plainly: Charity Mokoena did not stop asking. Not once, in all the years the government told this village to wait. She is the reason we are standing here and not still waiting.
+Charity: I just kept filing paperwork.
+Gogo: Yes. That is exactly what I said.
+Gogo: Water. Clean water. No fire needed to make it safe, no tablets, no waiting for it to settle.
+Gogo: My mother carried water on her head from a river three hours from here. I carried it from a spring an hour away. My grandchildren will walk to the end of this yard.
+Gogo: That is the whole of what we did here. Nothing more complicated than that, and nothing less important.
+Gogo: Let it run.
+Gogo: You were here for the last part of the long way, and the whole of the easy part that's coming.
+- I'm glad I got to see this with you
+	Hope: I'm glad I got to see this with you.
+	Gogo: So am I.
+	Gogo: Your grandmother would have made a scene about today. Cried, probably, loudly, embarrassed everyone.
+	Gogo: I'm glad you didn't inherit that part.
+set {GameState.quest_gogo_borehole_blessing} = "complete"
+set {GameState.borehole_blessing_complete} = true

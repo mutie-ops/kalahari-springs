@@ -1,0 +1,7 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+Lindi: Racks are up, smoke corner's built, and I've been watching the mopane since the middle of the month.
+- You're ready
+	Hope: You're ready.
+	Lindi: I'm ready. Last time I was ready about four hours before it started, which is a different kind of ready.
+set {GameState.lindi_seasonal_last_chapter} = 6

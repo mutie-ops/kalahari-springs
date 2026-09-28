@@ -1,0 +1,10 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+Ezekiel: Six households have asked. I can't get to six households on these knees carrying my own tools.
+- I can carry the tools
+	Hope: I can carry the tools.
+	Ezekiel: That's what I was working round to, yes.
+	Ezekiel: And you know these people better than I do. I've kept to my own fence a long time.
+	Ezekiel: You get me in the door. I'll do the rest.
+	set {GameState.quest_ezekiel_rounds_main} = "active"
+	[signal arg="objective:Accompany Ezekiel on a circuit of households — carry tools, make introductions"]

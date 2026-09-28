@@ -1,0 +1,14 @@
+join Hope (Neutral) right
+join Petrus (Neutral) left
+join Lindi (Neutral) left
+Petrus: Third one this season.
+- Then why is anyone still drawing here?
+	Hope: Then why is anyone still drawing here?
+	Petrus: Because the spring is forty minutes each way and this is nine.
+	Petrus: You can tell a woman with three children and a full day that she should walk eighty minutes. She will listen politely.
+	Petrus: The outpost has a filter now. What it does not have is anybody making sure the tablets are there when the filter has done its part.
+Lindi: Filter first, then the tablets. In that order — the tablets do not work properly through muck, which is the thing nobody tells you.
+Lindi: And the tablets go off. Two months, maybe a bit more. So it is not a thing you do once.
+set {GameState.quest_watering_hole_fuel_and_tablets_main} = "active"
+[signal arg="objective:Take a turn on the fuel and tablets rotation"]
+set {GameState.village_beat_matched} = true

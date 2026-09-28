@@ -1,0 +1,19 @@
+join Zanele (Neutral) left
+join Hope (Neutral) right
+update Zanele (Worried)
+- You knew about the nomination
+	Hope: You knew about the nomination.
+	Zanele: I put his name forward in March.
+	Zanele: I did not tell him, because if it came to nothing I did not want him to have had it and lost it. There is a particular damage in that, at fifteen.
+	- Why didn't you tell anyone?
+		Hope: Why didn't you tell anyone?
+		Zanele: Gogo would have worried for a year. Naledi would have started planning. And he would have known within a week, because this is a small village.
+	Zanele: So I filled in the form at my kitchen table in March, and I have said nothing about it for five months.
+- You must be so proud
+	Hope: You must be so proud.
+	Zanele: I am.
+	Zanele: I am also going to lose the only other person who can teach in this village, in the same week that I finally have a building to teach in.
+	Zanele: Both of those are true. I have not worked out yet how to hold them at the same time.
+	Zanele: I expect I will manage it by Saturday. People generally do.
+[signal arg="hearts:zanele:2"]
+set {GameState.zanele_nomination_revealed} = true

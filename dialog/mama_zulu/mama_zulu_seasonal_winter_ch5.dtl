@@ -1,0 +1,9 @@
+join "Mama Zulu" left
+join Hope (Neutral) right
+update  Zulu (Aggravated)
+Mama Zulu\: Thin month.
+- Do you need anything?
+	Hope: Do you need anything?
+	Mama Zulu\: No.
+	Mama Zulu\: Ask me again in three weeks.
+set {GameState.mama_zulu_seasonal_last_chapter} = 5

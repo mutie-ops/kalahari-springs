@@ -1,0 +1,9 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+update Amos (Warm)
+Amos: Embankments this month. Raised path on the low track.
+Amos: And I've started my own thing again. Evenings.
+- You've got the time now?
+	Hope: You've got the time now?
+	Amos: First year I have.
+set {GameState.amos_seasonal_last_chapter} = 6

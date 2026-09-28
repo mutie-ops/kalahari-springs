@@ -1,0 +1,15 @@
+join Hope (Neutral) right
+join Charity (Neutral) left
+join Gogo (Neutral) left
+Charity: This is the survey. It is part of the funded project — it is not a favour and nobody is being generous.
+- Who arranged it?
+	Hope: Who arranged it?
+	Charity: The district. Because the ward put the need through the IDP, because this village put it to the ward.
+	Charity: Which is to say: you are looking at eleven years of meetings, arriving in a bakkie.
+Gogo: She wants to know where the spring was. I can tell her where the spring was.
+- Should I come?
+	Hope: Should I come?
+	Gogo: Somebody has to carry the tripod. She has a bad back and I have a worse one.
+set {GameState.quest_hydrogeologist_survey_escort} = "active"
+[signal arg="objective:Walk the four survey sites with Gogo and Charity"]
+set {GameState.village_beat_matched} = true

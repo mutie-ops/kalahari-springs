@@ -1,0 +1,6 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Aggravated)
+Ezekiel: Rain came down hard Tuesday. Ran straight off the old field and into the road, same as always.
+Ezekiel: Pits held it. Every one of them. Ground in there was still damp on Friday.
+set {GameState.ezekiel_seasonal_last_chapter} = 3

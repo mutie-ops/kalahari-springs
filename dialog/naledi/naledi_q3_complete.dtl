@@ -1,0 +1,13 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: It runs.
+- Going to use it?
+	Hope: Are you going to use it?
+	Naledi: I don't know.
+	Naledi: He got sick from the water. That's what it was. The river, most likely, though nobody could say for certain.
+	Naledi: Everyone knows. Nobody says it out loud, because saying it out loud means saying it could have been anybody.
+	Naledi: It could have been anybody.
+Naledi: Right. Thank you for the bobbin. The market opens in an hour and I've a stall-holder who'll take the wrong pitch if I'm not there to stop him.
+[signal arg="hearts:naledi:2"]
+set {GameState.quest_naledi_treadle_rediscovery} = "complete"
+set {GameState.naledi_treadle_running} = true

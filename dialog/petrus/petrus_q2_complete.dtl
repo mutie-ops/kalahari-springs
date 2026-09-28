@@ -1,0 +1,11 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Warm)
+Petrus: Hm. There it is.
+- You knew it was there
+	Hope: You knew it was there.
+	Petrus: I hoped it was there.
+	Petrus: Thirty-one years I've moved that tarpaulin out of the way to get to other things. Wife's asked me every one of those years why I keep it.
+	Petrus: Tell Mkhize it wants soaking in oil for a week before he touches it with a wire brush. He won't listen. Tell him anyway.
+[signal arg="hearts:petrus:2"]
+set {GameState.quest_petrus_mill_stash} = "complete"

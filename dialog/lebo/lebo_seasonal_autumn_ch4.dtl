@@ -1,0 +1,7 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Warm)
+Lebo: Everyone else is laying block, which is honest work and I'd be terrible at it.
+Lebo: Give me the valve and the fittings. Twenty little things that all have to be right or the whole thing weeps.
+Lebo: That's my favourite kind of job, actually. Nobody notices when it's right.
+set {GameState.lebo_seasonal_last_chapter} = 4

@@ -1,0 +1,11 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Warm)
+- Have any spare tubing?
+	Hope: Do you have any spare tubing?
+	Petrus: Probably.
+	Petrus: Come back tomorrow.
+	- You don't want to look now?
+		Hope: You don't want to look now?
+		Petrus: I know where it is.
+		Petrus: I want to think about whether I'm giving it to you.

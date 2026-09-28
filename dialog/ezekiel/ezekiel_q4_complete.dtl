@@ -1,0 +1,11 @@
+join Ezekiel (Neutral) left
+join Hope (Neutral) right
+update Ezekiel (Worried)
+Ezekiel: Two of them have already shown their neighbours. Didn't wait for me.
+- Does that bother you?
+	Hope: Does that bother you?
+	Ezekiel: Bother me?
+	Ezekiel: That's the whole point of it. A thing one man knows dies with the man.
+	Ezekiel: My father knew things I never asked him about. I'm not doing that twice.
+[signal arg="hearts:ezekiel:2"]
+set {GameState.quest_ezekiel_rounds_main} = "complete"

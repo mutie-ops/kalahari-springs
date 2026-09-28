@@ -1,0 +1,20 @@
+join Hope (Neutral) right
+if {GameState.evt_borehole_platform_pour} != "complete":
+	join Petrus (Neutral) left
+	join Amos (Neutral) left
+	Petrus: Forty metres yesterday. He told me. He tells me because I ask.
+	- Is that good?
+		Hope: Is that good?
+		Petrus: It is deeper than my father ever dug. Whether it is deep enough, the ground will say.
+	Amos: When they hit it, I pour. Slab first, then the pump.
+	Amos: I have the forms cut.
+	set {GameState.village_beat_matched} = true
+elif {GameState.evt_borehole_platform_pour} == "complete":
+	join Naledi (Neutral) left
+	join Amos (Neutral) left
+	Naledi: Everyone walks past here now. Nobody has a reason to.
+	- Waiting for the pump?
+		Hope: Waiting for the pump?
+		Naledi: Waiting to see if it is real. The pump is only the proof.
+	Amos: Leave it wet another day. Concrete is patient if you are.
+	set {GameState.village_beat_matched} = true

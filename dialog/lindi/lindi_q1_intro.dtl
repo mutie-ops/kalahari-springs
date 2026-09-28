@@ -1,0 +1,11 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: You've got hands. Do you want to be useful or do you want to be somewhere else? Both are fine.
+- I'll help
+	Hope: I'll help.
+	Lindi: Good. Right — three things to know and then you'll be better at this than most people in the village.
+	Lindi: Colour tells you it's close. Give tells you it's ready. Smell tells you it's past.
+	Lindi: And if it's on the ground and the ants have found it first, they were right and you're late.
+	set {GameState.quest_lindi_ripe_or_not} = "active"
+	[signal arg="objective:Sort foraged items — ripe / not yet / leave it"]

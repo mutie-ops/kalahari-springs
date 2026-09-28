@@ -1,0 +1,5 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: Everyone's got produce and nobody's got money, which sounds like a problem and isn't — it's just a different currency for a few weeks.
+Dumi: I've taken payment in pumpkin four times this week. I'll take it a fifth.
+set {GameState.dumi_seasonal_last_chapter} = 0

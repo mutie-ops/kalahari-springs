@@ -1,0 +1,15 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+update Charity (Warm)
+Charity: How are you finding it? Truly, not politely.
+- It's hard
+	Hope: It's hard.
+	Charity: Mm. Which part — the water, the house, or the being-new?
+	Charity: You said 'hard' and then looked toward the queue. So. The water.
+	- Do you do that to everyone?
+		Hope: Do you do that to everyone?
+		Charity: Yes. Constantly. It's a terrible habit and it's also my entire profession.
+- It's fine
+	Hope: It's fine.
+	Charity: That's the word people use when they'd rather not be asked a second question.
+	Charity: I'll ask a second question another day.

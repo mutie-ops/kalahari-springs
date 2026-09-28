@@ -1,0 +1,11 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+- Two sets of books?
+	Hope: Two sets of books?
+	Dumi: Store and home. Different books, same handwriting.
+	Dumi: Hundred and ten litres a day for three of us. Sixty-two rand this week on things that weren't food.
+	- That's very exact
+		Hope: That's very exact.
+		Dumi: Waste is just money you spent on nothing. It doesn't matter whether it's a sack of seed or an hour.
+		Dumi: My father kept these. His were worse than mine, which I've never told anybody, and I'd rather you didn't either.
+set {GameState.dumi_ledger_seen} = true

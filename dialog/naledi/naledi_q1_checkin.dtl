@@ -1,0 +1,9 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Ezekiel today or Mama Zulu?
+- Mama Zulu
+	Hope: Mama Zulu.
+	Naledi: She'll be cooking. Go round the back, she won't hear the front.
+- Ezekiel
+	Hope: Ezekiel.
+	Naledi: He'll be at the far plot until midday. Don't leave it at the house, he won't find it till dark.

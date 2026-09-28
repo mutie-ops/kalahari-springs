@@ -1,0 +1,4 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: Last of the rain this week, probably. Then it's the queue every morning until spring.
+set {GameState.sipho_seasonal_last_chapter} = 0

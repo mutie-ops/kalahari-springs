@@ -1,0 +1,5 @@
+join Naledi (Neutral) left
+join Hope (Neutral) right
+Naledi: Everything comes in at once at this time of year and nothing keeps. So it sells now or it rots.
+Naledi: Which is why I'm short two tables and standing here talking.
+set {GameState.naledi_seasonal_last_chapter} = 0

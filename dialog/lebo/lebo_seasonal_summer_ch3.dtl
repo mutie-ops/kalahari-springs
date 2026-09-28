@@ -1,0 +1,6 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Worried)
+Lebo: Roof's coming in over the east bench and everything I own is under it.
+Lebo: Tools first. I know that sounds — no, tools first. A wet tool is a rusted tool and a rusted tool is a tool I have to buy again.
+set {GameState.lebo_seasonal_last_chapter} = 3

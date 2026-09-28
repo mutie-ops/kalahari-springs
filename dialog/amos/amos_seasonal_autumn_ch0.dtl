@@ -1,0 +1,5 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: Ground's still soft. Good digging for another month.
+Amos: Nobody digs in autumn. They wait until it's hard and then complain.
+set {GameState.amos_seasonal_last_chapter} = 0

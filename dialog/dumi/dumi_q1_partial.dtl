@@ -1,0 +1,14 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+Dumi: Sheeting, most of the pipe, and a tank that needs work. That's what we've got.
+- That's not everything
+	Hope: That's not everything.
+	Dumi: No. We're short the valves and about half the cement.
+	Dumi: Nobody builds this in a fortnight. It'll be after harvest before there are hands free anyway, and by then I'll have found the valves.
+	- How can you be sure?
+		Hope: How can you be sure?
+		Dumi: I can't. But I've got three months and eleven people I haven't asked yet.
+	Dumi: This is the slow part. It's not the stuck part. There's a difference and people confuse them.
+[signal arg="hearts:dumi:2"]
+set {GameState.quest_dumi_outpost_sourcing_main} = "complete"
+set {GameState.outpost_materials_partial} = true

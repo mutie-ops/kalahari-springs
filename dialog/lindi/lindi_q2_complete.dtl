@@ -1,0 +1,10 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Worried)
+Lindi: That's more than last year. That's much more than last year, and it's because eleven people came instead of four.
+- That's a lot to process
+	Hope: That's a lot to process.
+	Lindi: It is. We'll get through most of it.
+[signal arg="hearts:lindi:2"]
+set {GameState.quest_lindi_kumbi_kumbi_one} = "complete"
+set {GameState.kumbi_harvest_one_complete} = true

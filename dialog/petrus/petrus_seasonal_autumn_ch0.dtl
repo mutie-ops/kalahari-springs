@@ -1,0 +1,6 @@
+join Petrus (Neutral) left
+join Hope (Neutral) right
+update Petrus (Aggravated)
+Petrus: Herd drinks at the hole. Nowhere else to take them.
+Petrus: That one's off her feed. Has been four days.
+set {GameState.petrus_seasonal_last_chapter} = 0

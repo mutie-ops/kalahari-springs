@@ -1,0 +1,19 @@
+join Charity (Neutral) left
+join Hope (Neutral) right
+Charity: She said yes.
+- How did you know?
+	Hope: How did you know?
+	Charity: Because you walked in like someone carrying something.
+Charity: Right. Three organisations fund groundwater in this province. Two want a hydrogeological report before they will look at you, which we do not have, and one funds the survey as part of the application.
+- So the third one
+	Hope: So the third one.
+	Charity: So Unity Water. The most thorough of the three, and the only one of them that answers letters inside a month.
+	Charity: They funded the rollers. They did not have to look at us twice, and they did.
+	Charity: Tell people it will take a year. Not because of them — because a borehole takes a year. If I say a year they will be pleased when it is ten months. If I say six months they will stop believing me in month seven.
+- You've been ready for this for a while
+	Hope: You've been ready for this for a while.
+	Charity: Six years. I have re-read the guidance every time it was updated.
+	Charity: It was never the writing that was missing.
+set {GameState.quest_village_borehole_conversation_main} = "complete"
+set {GameState.borehole_ngo_contact_found} = true
+[signal arg="hearts:charity:2"]

@@ -1,0 +1,19 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+Sipho: There's a capture system on this house. Broken, but it's there.
+- There is?
+	Hope: There is?
+	Sipho: You'd have seen it if you'd looked up.
+	Sipho: The run's split in two places and the drum's open. Open water grows things.
+	Sipho: Half a day's work. I'd want to see how it was routed.
+	- You're offering to fix it?
+		Hope: You're offering to fix it?
+		Sipho: I'm offering to look at it. If it's what I think it is, then yes.
+		set {GameState.quest_sipho_gutter_repair} = "active"
+		[signal arg="objective:Repair the gutter run, fit a lid to the drum, reposition the drum"]
+	- Why does it matter to you?
+		Hope: Why does it matter to you?
+		Sipho: Because it's throwing away a few hundred litres a storm and I walk past it twice a day.
+		Sipho: That's all. It's not complicated.
+		set {GameState.quest_sipho_gutter_repair} = "active"
+[signal arg="hearts:sipho:1"]

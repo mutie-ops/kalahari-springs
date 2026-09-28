@@ -1,0 +1,20 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+- Is that everything?
+	Hope: Is that everything?
+	Sipho: Gogo keeps putting things in and I keep taking them out. She's tried to send a whole pumpkin twice.
+	- You're not taking it?
+		Hope: You're not taking it?
+		Sipho: They'll have better ones. And someone at the school might want this one.
+		Sipho: Tell Zanele it's for whoever's next. She'll know who.
+Sipho: I worked out I've walked about eleven thousand kilometres to the spring and back. Since I was nine.
+- You counted that too?
+	Hope: You counted that too?
+	Sipho: Last night. Couldn't sleep.
+	Sipho: I don't know why it mattered to know. It just did.
+Sipho: The tanks need checking before the rains. The diverters clog if nobody clears them.
+- I'll see to it
+	Hope: I'll see to it.
+	Sipho: I know you will. I wasn't worried.
+	Sipho: That's why I said it.
+set {GameState.sipho_departed} = true

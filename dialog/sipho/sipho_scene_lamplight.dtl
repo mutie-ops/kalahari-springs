@@ -1,0 +1,11 @@
+join Sipho (Neutral) left
+join Hope (Neutral) right
+- What are you reading?
+	Hope: What are you reading?
+	Sipho: Physics. Someone left it at the school about six years ago and nobody's asked for it back.
+	Sipho: Half the diagrams are missing. I work those out myself, mostly.
+	- You read this every night?
+		Hope: You read this every night?
+		Sipho: It's the only hour that's mine.
+		Sipho: The chapter on pressure is good. Everything in it is about water, which is convenient.
+set {GameState.sipho_lamplight_scene_seen} = true

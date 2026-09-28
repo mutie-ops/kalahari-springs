@@ -1,0 +1,11 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+- That was nice
+	Hope: That was nice.
+	Dumi: It's mostly the singing. People come for the singing and stay for the tea.
+	- You lead it every week?
+		Hope: You lead it every week?
+		Dumi: Every week. My father did thirty-one years of them.
+		Dumi: I'm not a pastor. I want to be clear about that — I've no training and I'd be embarrassed by the word.
+		Dumi: Somebody opens the hall on a Sunday. It's been a Khumalo for a long time. That's all it is.
+set {GameState.dumi_sunday_seen} = true

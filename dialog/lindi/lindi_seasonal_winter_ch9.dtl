@@ -1,0 +1,6 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: The gap's here. Same as every year — the stores get thin, the ground gives you roots and stubbornness.
+Lindi: Difference is people ask me what's left instead of asking whether there's anything left. That's not a small difference.
+set {GameState.lindi_seasonal_last_chapter} = 9

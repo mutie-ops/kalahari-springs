@@ -1,0 +1,11 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Ledi gave me a pitch. A real one, with a roof, on the east side where the light's good.
+- She said it was a commercial decision
+	Hope: She said it was a commercial decision.
+	Lindi: Of course she did. She said it exactly like that, didn't she. 'Preserved goods keep, you can trade on days fresh produce can't.'
+	Lindi: She's been holding that pitch empty for two months. Petrus told me.
+	set {GameState.quest_lindi_market_stall} = "active"
+	[signal arg="objective:Help Lindi set up her stall — organise the preserved goods, arrange the display"]
+set {GameState.lindi_reputation_established} = true

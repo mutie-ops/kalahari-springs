@@ -1,0 +1,10 @@
+join Lindi (Neutral) left
+join Hope (Neutral) right
+update Lindi (Warm)
+Lindi: Right. I've been at this for three weeks and I've worked out about half of it, so you're going to learn the half I know and help me ruin things finding the rest.
+- That's an unusual offer
+	Hope: That's an unusual offer.
+	Lindi: It's an honest one. Drying's straightforward — air, shade, turn them. Smoking is where I keep going wrong.
+	Lindi: Too hot and you cook them, too cool and they spoil while you're being careful. There's a middle and I keep missing it.
+	set {GameState.quest_lindi_smoke_and_dry} = "active"
+	[signal arg="objective:Learn drying and smoke-curing under Lindi's guidance"]

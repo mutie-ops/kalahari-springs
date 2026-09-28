@@ -1,0 +1,10 @@
+join Lebo (Neutral) left
+join Hope (Neutral) right
+update Lebo (Aggravated)
+Lebo: No drips.
+- Lebo. Look at what you've all built.
+	Hope: Lebo. Look at what you've all built.
+	Lebo: I know. I know.
+	Lebo: Anyway that union's going to want checking in six months, and someone's going to have to actually do that, and I know how this village is about maintenance —
+	Lebo: — I'm putting my name on the roster. Don't let me forget.
+[signal arg="hearts:lebo:2"]

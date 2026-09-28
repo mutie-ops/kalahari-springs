@@ -1,0 +1,11 @@
+join Dumi (Neutral) left
+join Hope (Neutral) right
+update Dumi (Warm)
+Dumi: He let it go, then.
+- For less than I expected
+	Hope: For less than I expected.
+	Dumi: He'll have wanted something. Not money — a favour, or to be asked about something else later.
+	Dumi: I keep a note. Not to collect — to remember. If he needs something in two years and I've forgotten he did this, that's the whole system broken.
+	Dumi: That's what people mean when they say I know everybody. I don't. I just write things down.
+[signal arg="hearts:dumi:2"]
+set {GameState.quest_dumi_mill_lead} = "complete"

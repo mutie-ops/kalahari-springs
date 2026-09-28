@@ -1,0 +1,8 @@
+join Amos (Neutral) left
+join Hope (Neutral) right
+Amos: Drainage before the paths. Always.
+- Ask why
+	Hope: Why?
+	Amos: Path's the easy part. Water's the problem.
+	Amos: Fix the path first and you've built a nice road for a river.
+set {GameState.amos_seasonal_last_chapter} = 4

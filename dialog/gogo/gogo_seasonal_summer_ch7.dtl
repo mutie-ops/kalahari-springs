@@ -1,0 +1,6 @@
+join Gogo (Neutral) left
+join Hope (Neutral) right
+update Gogo (Warm)
+Gogo: This is the season I sleep best. Funny thing, given how loud it is.
+Gogo: Rain on a roof is the only noise that has ever sounded like enough.
+set {GameState.gogo_seasonal_last_chapter} = 7
