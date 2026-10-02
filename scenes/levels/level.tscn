@@ -79,7 +79,8 @@
 [ext_resource type="AudioStream" uid="uid://p5sdcn7ohl81" path="res://audio/Moonlit Tavern Path.ogg" id="76_eli2t"]
 [ext_resource type="PackedScene" uid="uid://yi8boi7cwh13" path="res://scenes/objects/hippo_roller.tscn" id="77_rp5kh"]
 [ext_resource type="PackedScene" uid="uid://cmy02oogrp77k" path="res://scenes/ui/quest_hud.tscn" id="78_d1svo"]
-[ext_resource type="PackedScene" path="res://addons/quest_weaver/core/quest_controller.tscn" id="79_tns0x"]
+[ext_resource type="Script" uid="uid://c2raltmk3kolp" path="res://debug/debug_panel_toggle.gd" id="81_67naj"]
+[ext_resource type="Script" uid="uid://k53ksiw77uvg" path="res://debug/state_editor_panel.gd" id="81_nqnma"]
 
 [sub_resource type="Gradient" id="Gradient_ouxo3"]
 offsets = PackedFloat32Array(0, 0.294849, 0.4777975, 1)
@@ -1344,6 +1345,11 @@ gravity = Vector3(0, 0, 0)
 anim_speed_min = 0.39999998
 anim_speed_max = 2.0
 
+[sub_resource type="Theme" id="Theme_67naj"]
+default_font_size = 8
+
+[sub_resource type="FontVariation" id="FontVariation_67naj"]
+
 [node name="Level" type="Node2D" unique_id=705653829]
 script = ExtResource("1_urvlt")
 daytime_color = SubResource("Gradient_ouxo3")
@@ -1784,7 +1790,55 @@ position = Vector2(382, 160)
 
 [node name="QuestHUD" parent="." unique_id=652308244 instance=ExtResource("78_d1svo")]
 
-[node name="QuestController" parent="." unique_id=223020695 instance=ExtResource("79_tns0x")]
+[node name="QuestController" parent="." unique_id=223020695]
+
+[node name="Debug Layer" type="CanvasLayer" parent="." unique_id=1362600798]
+visible = false
+script = ExtResource("81_67naj")
+
+[node name="TabContainer" type="TabContainer" parent="Debug Layer" unique_id=1989487499]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_67naj")
+theme_override_fonts/font = SubResource("FontVariation_67naj")
+theme_override_font_sizes/font_size = 16
+current_tab = 0
+
+[node name="State Editor" type="MarginContainer" parent="Debug Layer/TabContainer" unique_id=2055229282]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+metadata/_tab_index = 0
+
+[node name="State Editor Control" type="Control" parent="Debug Layer/TabContainer/State Editor" unique_id=771293083]
+layout_mode = 2
+script = ExtResource("81_nqnma")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Debug Layer/TabContainer/State Editor/State Editor Control" unique_id=317289824]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -349.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="PropertyList" type="VBoxContainer" parent="Debug Layer/TabContainer/State Editor/State Editor Control/ScrollContainer" unique_id=2095194151]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [connection signal="build" from="Objects/Player" to="." method="_on_player_build"]
 [connection signal="close_shop" from="Objects/Player" to="." method="_on_player_close_shop"]

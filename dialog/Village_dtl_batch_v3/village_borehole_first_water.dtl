@@ -1,8 +1,8 @@
-join Hope (Neutral) right
-join Ezekiel (Neutral) left
+join Hope (Neutral) rightmost
+join Ezekiel (Neutral) leftmost
 join Petrus (Neutral) left
-join Gogo (Neutral) left
-join Charity (Neutral) left
+join Gogo (Neutral) center
+join Charity (Neutral) right
 Ezekiel: Is it running?
 Petrus: It is running.
 Ezekiel: No. I mean — is it still running.

@@ -1,7 +1,6 @@
-join "Mama Zulu" left
+join "Mama Zulu" (Neutral) left
 join Hope (Neutral) right
-update 
-Mama Zulu\: Sit. Eat.
-- I can't pay for this
-	Hope: I can't pay for this.
-	Mama Zulu\: I did not ask you to.
+"Mama Zulu" (Neutral): Sit. Eat.
+Hope: I can't pay for this.
+"Mama Zulu" (Warm): I did not ask you to.
+update Hope (Warm)
