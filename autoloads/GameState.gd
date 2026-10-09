@@ -187,6 +187,24 @@ signal npc_was_absent()
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	
+	# Saving Logic
+func get_save_dict() -> Dictionary:
+	var save_data: Dictionary = {}
+	# Automatically grab every variable defined in this script
+	for prop in get_property_list():
+		if prop.usage & PROPERTY_USAGE_SCRIPT_VARIABLE:
+			save_data[prop.name] = get(prop.name)
+	return save_data
+	
+	# Load Saved data 
+func load_from_dict(data: Dictionary) -> void:
+	for key in data.keys():
+		if key in self:
+			set(key, data[key])
+	
+	# Trigger the floor logic so ambient hearts are correct on load
+	_on_chapter_changed()
 
 func _on_dialogic_signal(argument: String) -> void:
 	var parts := argument.split(":", true, 1)  # max 1 split -> [kind, payload]

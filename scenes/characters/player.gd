@@ -50,6 +50,27 @@ signal water_updated(new_amount: float)
 func _ready() -> void:
 	add_to_group("player")
 
+
+#Saving Player information
+func get_save_dict() -> Dictionary:
+	return {
+		"pos_x": global_position.x,
+		"pos_y": global_position.y,
+		"has_hippo_roller": has_hippo_roller,
+		"current_water": current_water
+	}
+#Loading saved player information
+
+func load_from_dict(data: Dictionary) -> void:
+	# Position will be applied by the SaveManager/Scene Load, but we handle state here
+	if data.get("has_hippo_roller", false):
+		equip_hippo_roller()
+	
+	current_water = data.get("current_water", 0.0)
+	water_updated.emit(current_water)
+	
+	
+	
 func _physics_process(_delta: float) -> void:
 	match current_state:
 		Enum.State.DEFAULT:
