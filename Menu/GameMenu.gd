@@ -1,43 +1,14 @@
 extends CanvasLayer
 
 # ============================================================
-# GAME MENU PREVIEW SCRIPT
-# For Godot 4
-#
-# What this does:
-# - Press ESC to open/close menu
-# - X button closes menu
-# - Buttons print their name
-# - Inventory items can show images/icons
-# - Inventory category buttons filter items
-# - Character profile image can be attached
-# - Character information is editable at the top
-# - Menu is forced above other UI layers
-# - Designed to fit 1280 x 720
+# GAME MENU SCRIPT (10-SLOT + DELETE & OVERWRITE CONFIRMATION)
 # ============================================================
-
-
-# ============================================================
-# IMPORTANT TEST SETTING
-# ============================================================
-
-# Keep this FALSE while testing.
-# Once everything works, you can change it to TRUE
-# if you want the game to pause when menu is open.
 const PAUSE_GAME_WHEN_MENU_OPEN := false
 
-
-# ============================================================
-# CHANGE THESE VALUES FIRST
-# ============================================================
-
 const MENU_SIZE := Vector2(1220, 660)
-
 const BACKGROUND_DIM_COLOR := Color(0, 0, 0, 0.55)
-
 const MAIN_PANEL_COLOR := Color(0.03, 0.04, 0.045, 0.94)
 const MAIN_PANEL_BORDER_COLOR := Color(0.55, 0.48, 0.33, 0.7)
-
 const INNER_PANEL_COLOR := Color(0.025, 0.03, 0.032, 0.96)
 const INNER_PANEL_BORDER_COLOR := Color(0.28, 0.27, 0.22, 1.0)
 
@@ -47,146 +18,34 @@ const GOLD_TEXT_COLOR := Color(0.95, 0.88, 0.65)
 
 const TOP_BUTTON_SIZE := Vector2(145, 48)
 const CLOSE_BUTTON_SIZE := Vector2(52, 48)
-
 const INVENTORY_SLOT_SIZE := Vector2(72, 58)
-
 const INVENTORY_PANEL_WIDTH := 430
 const ITEM_DETAILS_PANEL_WIDTH := 360
 const CHARACTER_PANEL_WIDTH := 360
-
 const INVENTORY_SLOT_COUNT := 20
 const INVENTORY_GRID_COLUMNS := 5
 
-
-# ============================================================
-# CHARACTER PROFILE IMAGE
-# ============================================================
-# Change this to your character portrait image.
-#
-# Example:
-# const CHARACTER_PROFILE_IMAGE_PATH := "res://graphics/npcs/hippo_default.png"
-# ============================================================
-
 const CHARACTER_PROFILE_IMAGE_PATH := "res://graphics/npcs/hippo_default.png"
 
-
 # ============================================================
-# CHARACTER INFORMATION
+# DATA
 # ============================================================
-# CHANGE YOUR CHARACTER DETAILS HERE.
-# These are the ONLY character variables now used by the UI.
-# Removed variables:
-# level, health_max, mana, attack, defense, magic, crit chance, move speed.
-# ============================================================
-
 var character_info := {
-	"name": "Hope",
-	"class": "Farmer",
-	"affection_points": 12,
-
-	"experience_current": 1250,
-	"experience_next": 2000,
-
-	"health_current": 350,
-	"hippo_roller_water_level": 350,
-
-	"stamina_current": 150,
-	"stamina_max": 150,
-
+	"name": "Hope", "class": "Farmer", "affection_points": 12,
+	"experience_current": 1250, "experience_next": 2000,
+	"health_current": 350, "hippo_roller_water_level": 350,
+	"stamina_current": 150, "stamina_max": 150,
 	"status_effects": "No active effects"
 }
 
-
-# ============================================================
-# INVENTORY ITEMS
-# ============================================================
-# CATEGORY FILTERING USES THIS FIELD:
-#
-# "category": "Crops"
-# "category": "Accessories"
-# "category": "Quest Items"
-#
-# The category text must match the button text exactly.
-# ============================================================
-
 var inventory_items := [
-	{
-		"name": "Tomatoes",
-		"amount": 5,
-		"category": "Crops",
-		"description": "Fresh tomatoes grown on the farm.",
-		"icon": "res://assets/items/tomatoes.png"
-	},
-	{
-		"name": "Corn",
-		"amount": 3,
-		"category": "Crops",
-		"description": "Corn harvested from the field.",
-		"icon": "res://assets/items/corn.png"
-	},
-	{
-		"name": "Carrot",
-		"amount": 8,
-		"category": "Crops",
-		"description": "A fresh carrot from the garden.",
-		"icon": "res://assets/items/carrot.png"
-	},
-	{
-		"name": "Wheat",
-		"amount": 12,
-		"category": "Crops",
-		"description": "Useful for making bread and other foods.",
-		"icon": "res://assets/items/wheat.png"
-	},
-	{
-		"name": "Silver Ring",
-		"amount": 1,
-		"category": "Accessories",
-		"description": "A simple silver ring. It looks valuable.",
-		"icon": "res://assets/items/ring.png"
-	},
-	{
-		"name": "Lucky Charm",
-		"amount": 1,
-		"category": "Accessories",
-		"description": "A small charm said to bring good fortune.",
-		"icon": "res://assets/items/charm.png"
-	},
-	{
-		"name": "Necklace",
-		"amount": 1,
-		"category": "Accessories",
-		"description": "A decorative necklace.",
-		"icon": "res://assets/items/necklace.png"
-	},
-	{
-		"name": "Old Key",
-		"amount": 1,
-		"category": "Quest Items",
-		"description": "A key needed to open an old locked door.",
-		"icon": "res://assets/items/key.png"
-	},
-	{
-		"name": "Ancient Scroll",
-		"amount": 1,
-		"category": "Quest Items",
-		"description": "A scroll with writing from an old civilization.",
-		"icon": "res://assets/items/scroll.png"
-	},
-	{
-		"name": "Village Letter",
-		"amount": 1,
-		"category": "Quest Items",
-		"description": "A letter that must be delivered to someone in the village.",
-		"icon": "res://assets/items/letter.png"
-	}
+	{"name": "Tomatoes", "amount": 5, "category": "Crops", "description": "Fresh tomatoes.", "icon": "res://assets/items/tomatoes.png"},
+	{"name": "Old Key", "amount": 1, "category": "Quest Items", "description": "A key.", "icon": "res://assets/items/key.png"}
 ]
-
 
 # ============================================================
 # INTERNAL VARIABLES
 # ============================================================
-
 var menu_open: bool = false
 var menu_panel: Control
 var item_description_label: Label
@@ -197,822 +56,554 @@ var tab_character: HBoxContainer
 var tab_load: PanelContainer
 var tab_save: PanelContainer
 
+var confirm_overlay: ColorRect
+var confirm_label: Label
+var pending_action: String = ""
+var pending_slot: int = -1
+
 var current_inventory_filter := "All"
 var previous_mouse_mode := Input.MOUSE_MODE_VISIBLE
-
+var current_selected_slot: int = -1
 
 # ============================================================
-# READY
+# READY & INPUT
 # ============================================================
-
 func _ready() -> void:
-	# Put this menu above other HUDs / overlays / CanvasLayers.
 	add_to_group("GameMenu")
 	layer = 999
-
-	# Keep script active.
 	process_mode = Node.PROCESS_MODE_ALWAYS
-
 	_build_menu_ui()
-
-	# Keep generated UI active.
 	_force_menu_controls_active(menu_panel)
-
 	menu_panel.visible = false
-
-	print("Menu preview loaded.")
-
-
-# ============================================================
-# ESCAPE KEY OPEN / CLOSE
-# ============================================================
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		toggle_menu()
+		if confirm_overlay and confirm_overlay.visible:
+			_on_confirm_no() # ESC closes prompt if it's open
+		else:
+			toggle_menu()
 		get_viewport().set_input_as_handled()
 
-
 func toggle_menu() -> void:
-	if menu_open:
-		close_menu()
-	else:
-		open_menu()
-
+	if menu_open: close_menu()
+	else: open_menu()
 
 func open_menu() -> void:
 	menu_open = true
 	menu_panel.visible = true
-
+	if confirm_overlay: confirm_overlay.visible = false
 	previous_mouse_mode = Input.mouse_mode
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
 	_force_menu_controls_active(menu_panel)
-
-	if PAUSE_GAME_WHEN_MENU_OPEN:
-		get_tree().paused = true
-
-	print("Menu opened")
-
+	if PAUSE_GAME_WHEN_MENU_OPEN: get_tree().paused = true
 
 func close_menu() -> void:
 	menu_open = false
 	menu_panel.visible = false
-
-	if PAUSE_GAME_WHEN_MENU_OPEN:
-		get_tree().paused = false
-
+	if PAUSE_GAME_WHEN_MENU_OPEN: get_tree().paused = false
 	Input.mouse_mode = previous_mouse_mode
 
-	print("Menu closed")
-
-
 # ============================================================
-# BUILD FULL MENU UI
+# UI BUILDERS
 # ============================================================
-
 func _build_menu_ui() -> void:
 	menu_panel = Control.new()
-	menu_panel.name = "MenuPanel"
 	menu_panel.process_mode = Node.PROCESS_MODE_ALWAYS
-	menu_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	menu_panel.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(menu_panel)
 
 	var dim_background := ColorRect.new()
-	dim_background.name = "DimBackground"
 	dim_background.color = BACKGROUND_DIM_COLOR
-	dim_background.mouse_filter = Control.MOUSE_FILTER_STOP
 	dim_background.set_anchors_preset(Control.PRESET_FULL_RECT)
 	menu_panel.add_child(dim_background)
 
 	var main_frame := Panel.new()
-	main_frame.name = "MainFrame"
-
 	var screen_size := get_viewport().get_visible_rect().size
 	main_frame.position = (screen_size - MENU_SIZE) / 2.0
 	main_frame.size = MENU_SIZE
-	main_frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-	main_frame.add_theme_stylebox_override(
-		"panel",
-		_make_panel_style(
-			MAIN_PANEL_COLOR,
-			MAIN_PANEL_BORDER_COLOR,
-			2
-		)
-	)
-
+	main_frame.add_theme_stylebox_override("panel", _make_panel_style(MAIN_PANEL_COLOR, MAIN_PANEL_BORDER_COLOR, 2))
 	menu_panel.add_child(main_frame)
 
 	var main_vbox := VBoxContainer.new()
-	main_vbox.name = "MainVBox"
 	main_vbox.position = Vector2(12, 12)
 	main_vbox.size = MENU_SIZE - Vector2(24, 24)
-	main_vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	main_vbox.add_theme_constant_override("separation", 14)
 	main_frame.add_child(main_vbox)
 
 	_build_top_bar(main_vbox)
 	_build_content_area(main_vbox)
 	_build_bottom_hint(main_vbox)
-
-
-# ============================================================
-# TOP BAR
-# ============================================================
+	
+	# MUST be built last so it draws on top of everything
+	_build_confirmation_overlay()
 
 func _build_top_bar(parent: VBoxContainer) -> void:
 	var top_tabs := HBoxContainer.new()
-	top_tabs.name = "TopTabs"
 	top_tabs.custom_minimum_size = Vector2(0, 50)
-	top_tabs.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	top_tabs.add_theme_constant_override("separation", 4)
 	parent.add_child(top_tabs)
-
 	_add_top_button(top_tabs, "Inventory")
 	_add_top_button(top_tabs, "Load")
 	_add_top_button(top_tabs, "Save")
 	_add_top_button(top_tabs, "Character")
-
 	var spacer := Control.new()
 	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	top_tabs.add_child(spacer)
-
 	_add_close_button(top_tabs)
-
 
 func _add_top_button(parent: HBoxContainer, text_value: String) -> void:
 	var button := Button.new()
-
-	button.name = text_value + "Button"
 	button.text = text_value
 	button.custom_minimum_size = TOP_BUTTON_SIZE
-	button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	button.mouse_filter = Control.MOUSE_FILTER_STOP
 	button.focus_mode = Control.FOCUS_NONE
 	button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-
-	button.add_theme_stylebox_override(
-		"normal",
-		_make_button_style(Color(0.08, 0.085, 0.08, 0.92))
-	)
-
-	button.add_theme_stylebox_override(
-		"hover",
-		_make_button_style(Color(0.32, 0.24, 0.08, 1.0))
-	)
-
-	button.add_theme_stylebox_override(
-		"pressed",
-		_make_button_style(Color(0.35, 0.25, 0.08, 1.0))
-	)
-
+	button.add_theme_stylebox_override("normal", _make_button_style(Color(0.08, 0.085, 0.08, 0.92)))
+	button.add_theme_stylebox_override("hover", _make_button_style(Color(0.32, 0.24, 0.08, 1.0)))
 	button.add_theme_color_override("font_color", TITLE_COLOR)
-	button.add_theme_color_override("font_hover_color", Color(1.0, 0.92, 0.62))
-	button.add_theme_color_override("font_pressed_color", Color(1.0, 0.82, 0.40))
-
 	button.pressed.connect(_on_button_pressed.bind(text_value))
-
 	parent.add_child(button)
-
 
 func _add_close_button(parent: HBoxContainer) -> void:
 	var button := Button.new()
-
-	button.name = "CloseButton"
 	button.text = "X"
 	button.custom_minimum_size = CLOSE_BUTTON_SIZE
-	button.size_flags_horizontal = Control.SIZE_SHRINK_END
-	button.mouse_filter = Control.MOUSE_FILTER_STOP
-	button.focus_mode = Control.FOCUS_NONE
 	button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-
-	button.add_theme_stylebox_override(
-		"normal",
-		_make_button_style(Color(0.10, 0.08, 0.08, 0.95))
-	)
-
-	button.add_theme_stylebox_override(
-		"hover",
-		_make_button_style(Color(0.55, 0.08, 0.05, 1.0))
-	)
-
-	button.add_theme_stylebox_override(
-		"pressed",
-		_make_button_style(Color(0.70, 0.05, 0.04, 1.0))
-	)
-
-	button.add_theme_color_override("font_color", Color(1.0, 0.85, 0.78))
-	button.add_theme_color_override("font_hover_color", Color(1.0, 1.0, 1.0))
-
+	button.add_theme_stylebox_override("normal", _make_button_style(Color(0.10, 0.08, 0.08, 0.95)))
+	button.add_theme_stylebox_override("hover", _make_button_style(Color(0.55, 0.08, 0.05, 1.0)))
 	button.pressed.connect(close_menu)
-
 	parent.add_child(button)
 
-
-# ============================================================
-# MAIN CONTENT AREA
-# ============================================================
-
 func _build_content_area(parent: VBoxContainer) -> void:
-	# Change this to a standard Control so tabs can overlap each other
 	var content_area := Control.new()
-	content_area.name = "ContentArea"
 	content_area.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	content_area.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	content_area.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	parent.add_child(content_area)
 
-	# --- 1. INVENTORY TAB (Inventory + Details) ---
 	tab_inventory = HBoxContainer.new()
-	tab_inventory.name = "TabInventory"
 	tab_inventory.set_anchors_preset(Control.PRESET_FULL_RECT)
-	tab_inventory.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	tab_inventory.add_theme_constant_override("separation", 14)
 	content_area.add_child(tab_inventory)
-	
 	_build_inventory_panel(tab_inventory)
 	_build_item_details_panel(tab_inventory)
 
-	# --- 2. CHARACTER TAB ---
 	tab_character = HBoxContainer.new()
-	tab_character.name = "TabCharacter"
 	tab_character.set_anchors_preset(Control.PRESET_FULL_RECT)
-	tab_character.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	content_area.add_child(tab_character)
-	
-	# We pass tab_character so the character panel is built inside this tab
-	_build_character_panel(tab_character) 
+	_build_character_panel(tab_character)
 
-	# --- 3. LOAD & SAVE TABS (Placeholders for now) ---
-	tab_load = _build_placeholder_tab("Load Game Screen Will Go Here")
+	tab_load = PanelContainer.new()
+	tab_load.set_anchors_preset(Control.PRESET_FULL_RECT)
+	tab_load.add_theme_stylebox_override("panel", _make_panel_style(INNER_PANEL_COLOR, INNER_PANEL_BORDER_COLOR, 1))
 	content_area.add_child(tab_load)
 	
-	tab_save = _build_placeholder_tab("Save Game Screen Will Go Here")
+	tab_save = PanelContainer.new()
+	tab_save.set_anchors_preset(Control.PRESET_FULL_RECT)
+	tab_save.add_theme_stylebox_override("panel", _make_panel_style(INNER_PANEL_COLOR, INNER_PANEL_BORDER_COLOR, 1))
 	content_area.add_child(tab_save)
-
-	# Start by showing only the inventory tab
 	_switch_tab("Inventory")
 
+# ============================================================
+# CONFIRMATION MODAL OVERLAY
+# ============================================================
+func _build_confirmation_overlay() -> void:
+	confirm_overlay = ColorRect.new()
+	confirm_overlay.color = Color(0, 0, 0, 0.88)
+	confirm_overlay.set_anchors_preset(Control.PRESET_FULL_RECT)
+	confirm_overlay.mouse_filter = Control.MOUSE_FILTER_STOP
+	confirm_overlay.visible = false
+	menu_panel.add_child(confirm_overlay)
+
+	var center = CenterContainer.new()
+	center.set_anchors_preset(Control.PRESET_FULL_RECT)
+	confirm_overlay.add_child(center)
+
+	var panel = PanelContainer.new()
+	panel.custom_minimum_size = Vector2(500, 250)
+	panel.add_theme_stylebox_override("panel", _make_panel_style(MAIN_PANEL_COLOR, MAIN_PANEL_BORDER_COLOR, 3))
+	center.add_child(panel)
+
+	var vbox = VBoxContainer.new()
+	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
+	vbox.add_theme_constant_override("separation", 40)
+	panel.add_child(vbox)
+
+	confirm_label = Label.new()
+	confirm_label.text = "Are you sure?"
+	confirm_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	confirm_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	confirm_label.add_theme_font_size_override("font_size", 22)
+	confirm_label.add_theme_color_override("font_color", TITLE_COLOR)
+	vbox.add_child(confirm_label)
+
+	var hbox = HBoxContainer.new()
+	hbox.alignment = BoxContainer.ALIGNMENT_CENTER
+	hbox.add_theme_constant_override("separation", 30)
+	vbox.add_child(hbox)
+
+	var yes_btn = Button.new()
+	yes_btn.text = "YES"
+	yes_btn.custom_minimum_size = Vector2(120, 45)
+	yes_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	yes_btn.add_theme_stylebox_override("normal", _make_button_style(Color(0.55, 0.2, 0.05, 1.0)))
+	yes_btn.add_theme_stylebox_override("hover", _make_button_style(Color(0.7, 0.25, 0.05, 1.0)))
+	yes_btn.add_theme_color_override("font_color", TITLE_COLOR)
+	yes_btn.pressed.connect(_on_confirm_yes)
+	hbox.add_child(yes_btn)
+
+	var no_btn = Button.new()
+	no_btn.text = "NO"
+	no_btn.custom_minimum_size = Vector2(120, 45)
+	no_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	no_btn.add_theme_stylebox_override("normal", _make_button_style(Color(0.08, 0.085, 0.08, 0.92)))
+	no_btn.add_theme_stylebox_override("hover", _make_button_style(Color(0.32, 0.24, 0.08, 1.0)))
+	no_btn.add_theme_color_override("font_color", TITLE_COLOR)
+	no_btn.pressed.connect(_on_confirm_no)
+	hbox.add_child(no_btn)
+
+func _prompt_confirmation(action: String, slot_index: int) -> void:
+	pending_action = action
+	pending_slot = slot_index
+	
+	if action == "overwrite":
+		confirm_label.text = "Are you sure you want to overwrite Slot %d?\nPrevious progress will be permanently lost." % slot_index
+	elif action == "delete":
+		confirm_label.text = "Are you sure you want to delete Slot %d?\nThis cannot be undone." % slot_index
+		
+	confirm_overlay.visible = true
+
+func _on_confirm_yes() -> void:
+	confirm_overlay.visible = false
+	if pending_action == "overwrite":
+		_execute_save(pending_slot)
+	elif pending_action == "delete":
+		_execute_delete(pending_slot)
+		
+	pending_action = ""
+	pending_slot = -1
+
+func _on_confirm_no() -> void:
+	confirm_overlay.visible = false
+	pending_action = ""
+	pending_slot = -1
+
+func _execute_delete(slot_index: int) -> void:
+	SaveManager.delete_save(slot_index)
+	# Re-render whichever tab is currently active to reflect the deleted slot
+	if tab_save.visible:
+		_refresh_save_load_tab(tab_save, true)
+	else:
+		_refresh_save_load_tab(tab_load, false)
 
 # ============================================================
-# LEFT PANEL: INVENTORY
+# INVENTORY BUILDERS
 # ============================================================
-
 func _build_inventory_panel(parent: HBoxContainer) -> void:
 	var panel := PanelContainer.new()
-	panel.name = "InventoryPanel"
 	panel.custom_minimum_size = Vector2(INVENTORY_PANEL_WIDTH, 0)
 	panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-	panel.add_theme_stylebox_override(
-		"panel",
-		_make_panel_style(
-			INNER_PANEL_COLOR,
-			INNER_PANEL_BORDER_COLOR,
-			1
-		)
-	)
-
+	panel.add_theme_stylebox_override("panel", _make_panel_style(INNER_PANEL_COLOR, INNER_PANEL_BORDER_COLOR, 1))
 	parent.add_child(panel)
 
 	var vbox := VBoxContainer.new()
-	vbox.name = "InventoryVBox"
-	vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	vbox.add_theme_constant_override("separation", 10)
 	panel.add_child(vbox)
 
 	var title := Label.new()
 	title.text = "INVENTORY"
-	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	title.add_theme_font_size_override("font_size", 24)
 	title.add_theme_color_override("font_color", TITLE_COLOR)
 	vbox.add_child(title)
 
 	_build_inventory_categories(vbox)
 	_build_inventory_grid(vbox)
-	_build_inventory_bottom(vbox)
-
 
 func _build_inventory_categories(parent: VBoxContainer) -> void:
 	var categories := HBoxContainer.new()
-	categories.name = "CategoryButtons"
 	categories.custom_minimum_size = Vector2(0, 45)
-	categories.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	categories.add_theme_constant_override("separation", 4)
 	parent.add_child(categories)
-
 	for category in ["All", "Accessories", "Crops", "Quest Items"]:
 		var b := Button.new()
 		b.text = category
 		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		b.mouse_filter = Control.MOUSE_FILTER_STOP
-		b.focus_mode = Control.FOCUS_NONE
-		b.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-
-		b.add_theme_stylebox_override(
-			"normal",
-			_make_button_style(Color(0.08, 0.08, 0.08, 0.95))
-		)
-
-		b.add_theme_stylebox_override(
-			"hover",
-			_make_button_style(Color(0.26, 0.20, 0.08, 1.0))
-		)
-
-		b.add_theme_stylebox_override(
-			"pressed",
-			_make_button_style(Color(0.35, 0.25, 0.08, 1.0))
-		)
-
-		b.add_theme_color_override("font_color", TITLE_COLOR)
-		b.add_theme_color_override("font_hover_color", Color(1.0, 0.92, 0.62))
-
-		# CATEGORY FILTER HAPPENS HERE
+		b.add_theme_stylebox_override("normal", _make_button_style(Color(0.08, 0.08, 0.08, 0.95)))
 		b.pressed.connect(_filter_inventory.bind(category))
-
 		categories.add_child(b)
-
 
 func _build_inventory_grid(parent: VBoxContainer) -> void:
 	item_grid = GridContainer.new()
-	item_grid.name = "ItemGrid"
 	item_grid.columns = INVENTORY_GRID_COLUMNS
 	item_grid.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	item_grid.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	item_grid.add_theme_constant_override("h_separation", 6)
-	item_grid.add_theme_constant_override("v_separation", 6)
 	parent.add_child(item_grid)
-
-	# Load all items by default.
 	_populate_inventory_grid("All")
 
-
 func _populate_inventory_grid(filter_category: String) -> void:
-	if item_grid == null:
-		return
-
-	# Clear old slots before rebuilding the grid.
+	if item_grid == null: return
 	for child in item_grid.get_children():
 		item_grid.remove_child(child)
 		child.queue_free()
 
 	var filtered_items := []
-
 	for item in inventory_items:
-		var item_category: String = str(item.get("category", ""))
-
-		if filter_category == "All" or item_category == filter_category:
+		if filter_category == "All" or str(item.get("category", "")) == filter_category:
 			filtered_items.append(item)
 
 	for i in range(INVENTORY_SLOT_COUNT):
 		var slot := Button.new()
-
 		slot.custom_minimum_size = INVENTORY_SLOT_SIZE
-		slot.mouse_filter = Control.MOUSE_FILTER_STOP
-		slot.focus_mode = Control.FOCUS_NONE
-		slot.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-		slot.text = ""
-
-		slot.add_theme_stylebox_override(
-			"normal",
-			_make_button_style(Color(0.055, 0.055, 0.055, 0.96))
-		)
-
-		slot.add_theme_stylebox_override(
-			"hover",
-			_make_button_style(Color(0.22, 0.17, 0.08, 1.0))
-		)
-
-		slot.add_theme_stylebox_override(
-			"pressed",
-			_make_button_style(Color(0.35, 0.25, 0.08, 1.0))
-		)
-
-		slot.add_theme_color_override("font_color", NORMAL_TEXT_COLOR)
-		slot.add_theme_color_override("font_hover_color", Color(1.0, 0.92, 0.62))
-
+		slot.add_theme_stylebox_override("normal", _make_button_style(Color(0.055, 0.055, 0.055, 0.96)))
 		if i < filtered_items.size():
-			var item: Dictionary = filtered_items[i]
-			_create_item_visual(slot, item)
-			slot.pressed.connect(_on_item_pressed.bind(item))
-		else:
-			slot.pressed.connect(_on_button_pressed.bind("Empty slot " + str(i + 1)))
-
+			_create_item_visual(slot, filtered_items[i])
+			slot.pressed.connect(_on_item_pressed.bind(filtered_items[i]))
 		item_grid.add_child(slot)
-
 
 func _filter_inventory(category: String) -> void:
 	current_inventory_filter = category
-
-	print("Filtering inventory by: ", category)
-
 	_populate_inventory_grid(category)
 
-	if item_description_label != null:
-		item_description_label.text = "Showing: " + category
-
-
 func _create_item_visual(slot: Button, item: Dictionary) -> void:
-	var item_name: String = str(item.get("name", "Unknown Item"))
-	var amount: int = int(item.get("amount", 1))
-	var icon_path: String = str(item.get("icon", ""))
-
-	slot.tooltip_text = item_name + " x" + str(amount)
-
 	var icon := TextureRect.new()
-	icon.name = "ItemIcon"
-	icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	icon.set_anchors_preset(Control.PRESET_FULL_RECT)
-
-	icon.offset_left = 6
-	icon.offset_top = 6
-	icon.offset_right = -6
-	icon.offset_bottom = -14
-
 	icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-
-	if icon_path != "":
-		if ResourceLoader.exists(icon_path):
-			icon.texture = load(icon_path)
-		else:
-			push_warning("Item icon not found: " + icon_path)
-
+	if item.get("icon", "") != "" and ResourceLoader.exists(item.get("icon", "")):
+		icon.texture = load(item.get("icon", ""))
 	slot.add_child(icon)
-
-	var amount_label := Label.new()
-	amount_label.name = "AmountLabel"
-	amount_label.text = "x" + str(amount)
-	amount_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	amount_label.set_anchors_preset(Control.PRESET_FULL_RECT)
-
-	amount_label.offset_left = 4
-	amount_label.offset_top = 4
-	amount_label.offset_right = -5
-	amount_label.offset_bottom = -3
-
-	amount_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	amount_label.vertical_alignment = VERTICAL_ALIGNMENT_BOTTOM
-	amount_label.add_theme_color_override("font_color", Color(1.0, 0.92, 0.62))
-	amount_label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 1))
-	amount_label.add_theme_constant_override("shadow_offset_x", 1)
-	amount_label.add_theme_constant_override("shadow_offset_y", 1)
-
-	slot.add_child(amount_label)
-
-
-func _build_inventory_bottom(parent: VBoxContainer) -> void:
-	var bottom := Label.new()
-	bottom.text = "Weight: 18.6 / 50.0        Gold: 1,250"
-	bottom.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	bottom.add_theme_color_override("font_color", GOLD_TEXT_COLOR)
-	parent.add_child(bottom)
-
-
-# ============================================================
-# MIDDLE PANEL: ITEM DETAILS
-# ============================================================
 
 func _build_item_details_panel(parent: HBoxContainer) -> void:
 	var panel := PanelContainer.new()
-	panel.name = "ItemDetailsPanel"
 	panel.custom_minimum_size = Vector2(ITEM_DETAILS_PANEL_WIDTH, 0)
 	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-	panel.add_theme_stylebox_override(
-		"panel",
-		_make_panel_style(
-			INNER_PANEL_COLOR,
-			INNER_PANEL_BORDER_COLOR,
-			1
-		)
-	)
-
+	panel.add_theme_stylebox_override("panel", _make_panel_style(INNER_PANEL_COLOR, INNER_PANEL_BORDER_COLOR, 1))
 	parent.add_child(panel)
 
 	var vbox := VBoxContainer.new()
-	vbox.name = "ItemDetailsVBox"
-	vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	vbox.add_theme_constant_override("separation", 20)
 	panel.add_child(vbox)
-
-	var title := Label.new()
-	title.text = "ITEM DETAILS"
-	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	title.add_theme_font_size_override("font_size", 22)
-	title.add_theme_color_override("font_color", TITLE_COLOR)
-	vbox.add_child(title)
-
-	var spacer := Control.new()
-	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	vbox.add_child(spacer)
 	
-	# --- CORRECTED IMAGE HOLDER BUILDER ---
 	item_details_icon = TextureRect.new()
-	item_details_icon.name = "ItemDetailsIcon"
-	item_details_icon.custom_minimum_size = Vector2(100, 100) 
+	item_details_icon.custom_minimum_size = Vector2(100, 100)
 	item_details_icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	item_details_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	
-	# Use size flags to center the image box instead of text alignment!
-	item_details_icon.size_flags_horizontal = Control.SIZE_SHRINK_CENTER 
-	
-	item_details_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	vbox.add_child(item_details_icon)
-	# --------------------------------------
 	
 	item_description_label = Label.new()
-	item_description_label.name = "ItemDescription"
-	item_description_label.text = "Select an item to see details."
-	item_description_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	item_description_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	item_description_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	item_description_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	item_description_label.add_theme_color_override("font_color", Color(0.75, 0.72, 0.66))
 	vbox.add_child(item_description_label)
 
-	var bottom_spacer := Control.new()
-	bottom_spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	bottom_spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	vbox.add_child(bottom_spacer)
-
-
 func _on_item_pressed(item: Dictionary) -> void:
-	var item_name: String = str(item.get("name", "Unknown Item"))
-	var amount: int = int(item.get("amount", 1))
-	var category: String = str(item.get("category", "Unknown"))
-	var description: String = str(item.get("description", "No description."))
-	var icon_path: String = str(item.get("icon", "")) # <--- GET ICON PATH
-	
-	print("Item clicked: ", item_name)
+	item_description_label.text = item.get("name", "") + "\n\n" + item.get("description", "")
+	if item.get("icon", "") != "" and ResourceLoader.exists(item.get("icon", "")):
+		item_details_icon.texture = load(item.get("icon", ""))
 
-	if item_description_label != null:
-		item_description_label.text = item_name + "\n\nCategory: " + category + "\nAmount: x" + str(amount) + "\n\n" + description
-
-	# --- ADD THESE LINES TO CHANGE THE VISUAL ICON ---
-	if item_details_icon != null:
-		if icon_path != "" and ResourceLoader.exists(icon_path):
-			item_details_icon.texture = load(icon_path)
-		else:
-			item_details_icon.texture = null # Clear it if there is no image
-	# -------------------------------------------------
 # ============================================================
-# RIGHT PANEL: CHARACTER INFORMATION
+# CHARACTER BUILDERS
 # ============================================================
-
 func _build_character_panel(parent: HBoxContainer) -> void:
 	var panel := PanelContainer.new()
-	panel.name = "CharacterPanel"
 	panel.custom_minimum_size = Vector2(CHARACTER_PANEL_WIDTH, 0)
 	panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-	panel.add_theme_stylebox_override(
-		"panel",
-		_make_panel_style(
-			INNER_PANEL_COLOR,
-			INNER_PANEL_BORDER_COLOR,
-			1
-		)
-	)
-
+	panel.add_theme_stylebox_override("panel", _make_panel_style(INNER_PANEL_COLOR, INNER_PANEL_BORDER_COLOR, 1))
 	parent.add_child(panel)
-
-	var scroll := ScrollContainer.new()
-	scroll.name = "CharacterScroll"
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	scroll.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	panel.add_child(scroll)
-
-	var vbox := VBoxContainer.new()
-	vbox.name = "CharacterVBox"
-	vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	vbox.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	vbox.add_theme_constant_override("separation", 8)
-	scroll.add_child(vbox)
-
-	var title := Label.new()
-	title.text = "CHARACTER INFORMATION"
-	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	title.add_theme_font_size_override("font_size", 22)
-	title.add_theme_color_override("font_color", TITLE_COLOR)
-	vbox.add_child(title)
-
-	_build_character_top_info(vbox)
-	_build_character_stats(vbox)
-
-
-func _build_character_top_info(parent: VBoxContainer) -> void:
-	var info_row := HBoxContainer.new()
-	info_row.name = "CharacterTopInfo"
-	info_row.custom_minimum_size = Vector2(0, 125)
-	info_row.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	info_row.add_theme_constant_override("separation", 12)
-	parent.add_child(info_row)
-
-	var portrait_box := PanelContainer.new()
-	portrait_box.name = "CharacterPortraitBox"
-	portrait_box.custom_minimum_size = Vector2(120, 120)
-	portrait_box.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	portrait_box.add_theme_stylebox_override(
-		"panel",
-		_make_panel_style(
-			Color(0.12, 0.11, 0.10, 1.0),
-			Color(0.40, 0.34, 0.22, 1.0),
-			1
-		)
-	)
-	info_row.add_child(portrait_box)
-
-	var portrait := TextureRect.new()
-	portrait.name = "CharacterPortraitImage"
-	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	portrait.custom_minimum_size = Vector2(120, 120)
-	portrait.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	portrait_box.add_child(portrait)
-
-	if CHARACTER_PROFILE_IMAGE_PATH != "":
-		if ResourceLoader.exists(CHARACTER_PROFILE_IMAGE_PATH):
-			portrait.texture = load(CHARACTER_PROFILE_IMAGE_PATH)
-		else:
-			push_warning("Character profile image not found: " + CHARACTER_PROFILE_IMAGE_PATH)
-
-	var info := Label.new()
-	info.text = _get_character_top_text()
-	info.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	info.add_theme_color_override("font_color", TITLE_COLOR)
-	info_row.add_child(info)
-
-
-func _build_character_stats(parent: VBoxContainer) -> void:
-	var stats_title := Label.new()
-	stats_title.text = "VITALS"
-	stats_title.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	stats_title.add_theme_font_size_override("font_size", 20)
-	stats_title.add_theme_color_override("font_color", TITLE_COLOR)
-	parent.add_child(stats_title)
-
-	var stats := Label.new()
-	stats.text = _get_character_stats_text()
-	stats.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	stats.add_theme_color_override("font_color", NORMAL_TEXT_COLOR)
-	parent.add_child(stats)
-
-
-func _get_character_top_text() -> String:
-	return "Name\n%s\n\nClass\n%s\n\nAffection Points\n%s\n\nExperience\n%s / %s" % [
-		character_info["name"],
-		character_info["class"],
-		character_info["affection_points"],
-		character_info["experience_current"],
-		character_info["experience_next"]
-	]
-
-
-func _get_character_stats_text() -> String:
-	return """
-Health                  %s
-Hippo Roller Water      %s
-Stamina                 %s / %s
-
-STATUS EFFECTS
-
-%s
-""" % [
-		character_info["health_current"],
-		character_info["hippo_roller_water_level"],
-		character_info["stamina_current"],
-		character_info["stamina_max"],
-		character_info["status_effects"]
-	]
-
-
-# ============================================================
-# BOTTOM HINT
-# ============================================================
 
 func _build_bottom_hint(parent: VBoxContainer) -> void:
 	var bottom_hint := Label.new()
-	bottom_hint.name = "BottomHint"
 	bottom_hint.text = "ESC  Close Menu"
-	bottom_hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bottom_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	bottom_hint.add_theme_color_override("font_color", TITLE_COLOR)
 	parent.add_child(bottom_hint)
 
-
 # ============================================================
-# BUTTON CLICK & TAB LOGIC
+# BUTTON & TAB LOGIC
 # ============================================================
-
 func _on_button_pressed(button_name: String) -> void:
-	print("Button clicked: ", button_name)
-	
-	# If the button clicked matches one of our tabs, switch to it
 	if button_name in ["Inventory", "Load", "Save", "Character"]:
 		_switch_tab(button_name)
 
-
 func _switch_tab(tab_name: String) -> void:
-	# Hide everything first, then only show the requested tab
 	if tab_inventory: tab_inventory.visible = (tab_name == "Inventory")
 	if tab_character: tab_character.visible = (tab_name == "Character")
-	if tab_load: tab_load.visible = (tab_name == "Load")
-	if tab_save: tab_save.visible = (tab_name == "Save")
-
-
-func _build_placeholder_tab(text_label: String) -> PanelContainer:
-	var panel = PanelContainer.new()
-	panel.set_anchors_preset(Control.PRESET_FULL_RECT)
 	
-	panel.add_theme_stylebox_override("panel", _make_panel_style(INNER_PANEL_COLOR, INNER_PANEL_BORDER_COLOR, 1))
-	
-	var label = Label.new()
-	label.text = text_label
-	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	label.add_theme_color_override("font_color", NORMAL_TEXT_COLOR)
-	panel.add_child(label)
-	
-	return panel
-
+	if tab_load: 
+		tab_load.visible = (tab_name == "Load")
+		if tab_name == "Load": 
+			current_selected_slot = -1
+			_refresh_save_load_tab(tab_load, false)
+			
+	if tab_save: 
+		tab_save.visible = (tab_name == "Save")
+		if tab_name == "Save": 
+			current_selected_slot = -1
+			_refresh_save_load_tab(tab_save, true)
 
 # ============================================================
-# HOVER / PAUSE FIX
+# RPG SAVE / LOAD 10-SLOT SYSTEM
 # ============================================================
+func _refresh_save_load_tab(panel: PanelContainer, is_save_mode: bool) -> void:
+	for child in panel.get_children():
+		child.queue_free()
+		
+	var main_vbox = VBoxContainer.new()
+	main_vbox.add_theme_constant_override("separation", 20)
+	panel.add_child(main_vbox)
+	
+	var header = Label.new()
+	header.text = "SAVE GAME" if is_save_mode else "LOAD GAME"
+	header.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	header.add_theme_font_size_override("font_size", 28)
+	header.add_theme_color_override("font_color", TITLE_COLOR)
+	main_vbox.add_child(header)
+	
+	var scroll = ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	main_vbox.add_child(scroll)
+	
+	var slot_vbox = VBoxContainer.new()
+	slot_vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	slot_vbox.add_theme_constant_override("separation", 10)
+	scroll.add_child(slot_vbox)
+	
+	for i in range(1, 11):
+		var save_meta = SaveManager.get_save_metadata(i)
+		var has_save = not save_meta.is_empty()
+		
+		var slot_panel = PanelContainer.new()
+		slot_panel.custom_minimum_size = Vector2(700, 80)
+		slot_panel.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+		
+		if i == current_selected_slot:
+			slot_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.2, 0.2, 0.15, 0.95), GOLD_TEXT_COLOR, 2))
+		else:
+			slot_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.05, 0.05, 0.05, 0.9), MAIN_PANEL_BORDER_COLOR, 1))
+			
+		slot_vbox.add_child(slot_panel)
+		
+		var slot_hbox = HBoxContainer.new()
+		slot_hbox.add_theme_constant_override("separation", 20)
+		slot_panel.add_child(slot_hbox)
+		
+		var details_vbox = VBoxContainer.new()
+		details_vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		details_vbox.alignment = BoxContainer.ALIGNMENT_CENTER
+		slot_hbox.add_child(details_vbox)
+		
+		var slot_title = Label.new()
+		slot_title.add_theme_font_size_override("font_size", 18)
+		details_vbox.add_child(slot_title)
+		
+		var time_label = Label.new()
+		time_label.add_theme_font_size_override("font_size", 14)
+		time_label.add_theme_color_override("font_color", NORMAL_TEXT_COLOR)
+		details_vbox.add_child(time_label)
+		
+		if has_save:
+			slot_title.text = "Slot %d: Chapter %s - Day %s" % [i, save_meta.get("chapter", 0), save_meta.get("day", 0)]
+			slot_title.add_theme_color_override("font_color", GOLD_TEXT_COLOR)
+			time_label.text = "Saved: " + save_meta.get("timestamp", "Unknown time")
+		else:
+			slot_title.text = "Slot %d: --- EMPTY ---" % i
+			slot_title.add_theme_color_override("font_color", NORMAL_TEXT_COLOR)
+			time_label.text = "No save data."
+			
+		var click_btn = Button.new()
+		click_btn.set_anchors_preset(Control.PRESET_FULL_RECT)
+		click_btn.flat = true
+		click_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		click_btn.pressed.connect(_on_slot_selected.bind(panel, is_save_mode, i))
+		slot_panel.add_child(click_btn)
+		
+	# ACTION HBOX AT THE BOTTOM
+	var action_hbox = HBoxContainer.new()
+	action_hbox.alignment = BoxContainer.ALIGNMENT_CENTER
+	action_hbox.add_theme_constant_override("separation", 20)
+	action_hbox.custom_minimum_size = Vector2(0, 70)
+	main_vbox.add_child(action_hbox)
+	
+	if current_selected_slot != -1:
+		var target_meta = SaveManager.get_save_metadata(current_selected_slot)
+		var target_has_save = not target_meta.is_empty()
+		
+		var action_btn = Button.new()
+		action_btn.custom_minimum_size = Vector2(300, 50)
+		action_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		action_btn.add_theme_color_override("font_color", TITLE_COLOR)
+		action_hbox.add_child(action_btn)
+		
+		# Build a delete button if data exists
+		var del_btn = null
+		if target_has_save:
+			del_btn = Button.new()
+			del_btn.text = "DELETE"
+			del_btn.custom_minimum_size = Vector2(150, 50)
+			del_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+			del_btn.add_theme_color_override("font_color", TITLE_COLOR)
+			del_btn.add_theme_stylebox_override("normal", _make_button_style(Color(0.25, 0.05, 0.05, 0.9)))
+			del_btn.add_theme_stylebox_override("hover", _make_button_style(Color(0.45, 0.1, 0.1, 1.0)))
+			del_btn.pressed.connect(_prompt_confirmation.bind("delete", current_selected_slot))
+		
+		if is_save_mode:
+			if target_has_save:
+				action_btn.text = "OVERWRITE SLOT " + str(current_selected_slot)
+				action_btn.add_theme_stylebox_override("normal", _make_button_style(Color(0.55, 0.2, 0.05, 1.0)))
+				action_btn.add_theme_stylebox_override("hover", _make_button_style(Color(0.7, 0.25, 0.05, 1.0)))
+				action_btn.pressed.connect(_prompt_confirmation.bind("overwrite", current_selected_slot))
+			else:
+				action_btn.text = "CREATE SAVE IN SLOT " + str(current_selected_slot)
+				action_btn.add_theme_stylebox_override("normal", _make_button_style(Color(0.08, 0.085, 0.08, 0.92)))
+				action_btn.add_theme_stylebox_override("hover", _make_button_style(Color(0.32, 0.24, 0.08, 1.0)))
+				action_btn.pressed.connect(_execute_save.bind(current_selected_slot))
+				
+			if del_btn:
+				action_hbox.add_child(del_btn)
+		else:
+			if target_has_save:
+				action_btn.text = "LOAD SLOT " + str(current_selected_slot)
+				action_btn.add_theme_stylebox_override("normal", _make_button_style(Color(0.08, 0.085, 0.08, 0.92)))
+				action_btn.add_theme_stylebox_override("hover", _make_button_style(Color(0.32, 0.24, 0.08, 1.0)))
+				action_btn.pressed.connect(_execute_load.bind(current_selected_slot))
+				action_hbox.add_child(del_btn)
+			else:
+				action_btn.text = "SLOT IS EMPTY"
+				action_btn.disabled = true
+				action_btn.add_theme_stylebox_override("disabled", _make_button_style(Color(0.1, 0.1, 0.1, 0.5)))
+	else:
+		var hint_label = Label.new()
+		hint_label.text = "Select a slot above."
+		hint_label.add_theme_color_override("font_color", NORMAL_TEXT_COLOR)
+		action_hbox.add_child(hint_label)
 
+func _on_slot_selected(panel: PanelContainer, is_save_mode: bool, slot_index: int) -> void:
+	current_selected_slot = slot_index
+	_refresh_save_load_tab(panel, is_save_mode)
+
+func _execute_save(slot_index: int) -> void:
+	SaveManager.save_game(slot_index)
+	_refresh_save_load_tab(tab_save, true)
+
+func _execute_load(slot_index: int) -> void:
+	SaveManager.load_game(slot_index)
+	close_menu()
+
+# ============================================================
+# HELPERS
+# ============================================================
 func _force_menu_controls_active(node: Node) -> void:
 	node.process_mode = Node.PROCESS_MODE_ALWAYS
-
 	for child in node.get_children():
 		_force_menu_controls_active(child)
 
-
-# ============================================================
-# STYLE HELPERS
-# ============================================================
-
 func _make_panel_style(bg_color: Color, border_color: Color, border_width: int) -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()
-
 	style.bg_color = bg_color
 	style.border_color = border_color
 	style.set_border_width_all(border_width)
-
-	style.corner_radius_top_left = 4
-	style.corner_radius_top_right = 4
-	style.corner_radius_bottom_left = 4
-	style.corner_radius_bottom_right = 4
-
-	style.content_margin_left = 14
-	style.content_margin_right = 14
-	style.content_margin_top = 14
-	style.content_margin_bottom = 14
-
+	style.corner_radius_top_left = 4; style.corner_radius_top_right = 4
+	style.corner_radius_bottom_left = 4; style.corner_radius_bottom_right = 4
+	style.content_margin_left = 14; style.content_margin_right = 14
+	style.content_margin_top = 14; style.content_margin_bottom = 14
 	return style
-
 
 func _make_button_style(bg_color: Color) -> StyleBoxFlat:
 	var style := StyleBoxFlat.new()
-
 	style.bg_color = bg_color
 	style.border_color = Color(0.35, 0.31, 0.22, 0.9)
 	style.set_border_width_all(1)
-
-	style.corner_radius_top_left = 3
-	style.corner_radius_top_right = 3
-	style.corner_radius_bottom_left = 3
-	style.corner_radius_bottom_right = 3
-
 	return style
-
-func add_item(item_data: Dictionary) -> void:
-	var found = false
-	for item in inventory_items:
-		if item["name"] == item_data["name"]:
-			item["amount"] += item_data["amount"]
-			found = true
-			break
-	if not found:
-		inventory_items.append(item_data)
-	_populate_inventory_grid(current_inventory_filter)
-
-func remove_item(item_name: String, amount_to_remove: int = 1) -> void:
-	for i in range(inventory_items.size() - 1, -1, -1):
-		if inventory_items[i]["name"] == item_name:
-			inventory_items[i]["amount"] -= amount_to_remove
-			if inventory_items[i]["amount"] <= 0:
-				inventory_items.remove_at(i)
-			break
-	_populate_inventory_grid(current_inventory_filter)
