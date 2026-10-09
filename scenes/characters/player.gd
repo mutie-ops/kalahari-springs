@@ -49,7 +49,17 @@ signal water_updated(new_amount: float)
 
 func _ready() -> void:
 	add_to_group("player")
-
+	# If we just loaded a game, apply the pending data
+	if not SaveManager.pending_player_data.is_empty():
+		load_from_dict(SaveManager.pending_player_data)
+		global_position = Vector2(
+			SaveManager.pending_player_data["pos_x"], 
+			SaveManager.pending_player_data["pos_y"]
+		)
+		# Clear it so it doesn't accidentally trigger on normal map transitions
+		SaveManager.pending_player_data = {}
+	
+	
 
 #Saving Player information
 func get_save_dict() -> Dictionary:

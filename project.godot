@@ -25,6 +25,7 @@ Enum="*res://global/enums.gd"
 Data="*res://global/data.gd"
 Dialogic="*uid://ds2q0uclmolvu"
 GameState="*uid://bsr7o0llcpkp1"
+SaveManager="*uid://1xxtc50ywri6"
 
 [dialogic]
 

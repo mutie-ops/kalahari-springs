@@ -3,6 +3,8 @@
 [node name="Node2D" type="SubViewportContainer" unique_id=682335960]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1971129550]
+handle_input_locally = false
+render_target_update_mode = 4
 
 [node name="BG_Landscape" type="Sprite2D" parent="SubViewport" unique_id=418644352]
 
