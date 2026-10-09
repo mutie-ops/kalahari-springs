@@ -4,4 +4,4 @@
 
 [resource]
 atlas = ExtResource("1_kthuh")
-region = Rect2(38.832703, 378.83334, 96, 107.33334)
+region = Rect2(25.410004, 372.32, 114.5, 115.5)

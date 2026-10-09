@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://cqhykhx23v1su"]
+[gd_scene format=4 uid="uid://cqhykhx23v1su"]
 
 [ext_resource type="Script" uid="uid://c62jkv65meuxr" path="res://scenes/levels/house.gd" id="1_g6yoe"]
 [ext_resource type="TileSet" uid="uid://cw45kfg2c8mfk" path="res://premade/HouseTileSet.tres" id="1_mfwd8"]
@@ -55,93 +55,94 @@ size = Vector2(10, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbbkb"]
 size = Vector2(24, 14)
 
-[node name="House" type="Node2D"]
+[node name="House" type="Node2D" unique_id=30335257]
 y_sort_enabled = true
 script = ExtResource("1_g6yoe")
 
-[node name="FloorLayer" type="TileMapLayer" parent="."]
+[node name="FloorLayer" type="TileMapLayer" parent="." unique_id=1992544001]
 z_index = -2
 tile_set = SubResource("TileSet_ap60n")
 
-[node name="WallsLayer" type="TileMapLayer" parent="."]
+[node name="WallsLayer" type="TileMapLayer" parent="." unique_id=956031480]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAAAAIAAAACAAIAAAAAAAEAAAACAAEAAAAAAAAAAAACAAEAAAAAAP//AAACAAAAAAD//wIAAAABAAIAAAD//wEAAAABAAEAAAD//wAAAAABAAEAAAD/////AAABAAAAAAD+/wIAAAABAAIAAAD+/wEAAAABAAEAAAD+/wAAAAABAAEAAAD+////AAABAAAAAAD9/wIAAAAAAAQAAAD9/wEAAAABAAEAAAD9/wAAAAABAAEAAAD9////AAABAAAAAAD8/wIAAAABAAIAAAD8/wEAAAABAAEAAAD8/wAAAAABAAEAAAD8////AAABAAAAAAD7/wIAAAABAAIAAAD7/wEAAAABAAEAAAD7/wAAAAABAAEAAAD7////AAABAAAAAAD6/wIAAAAAAAIAAAD6/wEAAAAAAAEAAAD6/wAAAAAAAAEAAAD6////AAAAAAAAAAA=")
 tile_set = ExtResource("1_mfwd8")
 
-[node name="RoofLayer" type="TileMapLayer" parent="."]
+[node name="RoofLayer" type="TileMapLayer" parent="." unique_id=1082423384]
+visible = false
 z_index = 2
 tile_map_data = PackedByteArray("AAD6/wIAAAAAAAUAAAD7/wIAAAABAAUAAAD8/wIAAAABAAUAAAD9/wIAAAABAAUAAAD+/wIAAAABAAUAAAD//wIAAAABAAUAAAAAAAIAAAACAAUAAAD6/wEAAAAAAAQAAAD6/wAAAAAAAAQAAAD7/wAAAAABAAQAAAD8/wAAAAABAAQAAAD9/wAAAAABAAQAAAD+/wAAAAABAAQAAAD//wAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAEAAAACAAQAAAD//wEAAAABAAQAAAD+/wEAAAABAAQAAAD9/wEAAAABAAQAAAD8/wEAAAABAAQAAAD7/wEAAAABAAQAAAD6//7/AAAAAAAAAAAAAP7/AAACAAAAAAD///7/AAABAAAAAAD+//7/AAABAAAAAAD9//7/AAABAAAAAAD8//7/AAABAAAAAAD7//7/AAABAAAAAAD6////AAAAAAIAAAAAAP//AAACAAIAAAD7////AAABAAIAAAD8////AAABAAIAAAD9////AAABAAIAAAD+////AAABAAIAAAD/////AAABAAIAAAA=")
 tile_set = SubResource("TileSet_4yql1")
 
-[node name="HouseArea" type="Area2D" parent="."]
+[node name="HouseArea" type="Area2D" parent="." unique_id=999035488]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HouseArea"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HouseArea" unique_id=921375806]
 polygon = PackedVector2Array(-93, 42, -92, -10, 12, -10, 12, 43, -32, 43, -32, 55, -48, 55, -48, 43)
 
-[node name="TV" parent="." instance=ExtResource("5_ap60n")]
+[node name="TV" parent="." unique_id=1872742921 instance=ExtResource("5_ap60n")]
 position = Vector2(-62, -1)
 
-[node name="Bed" parent="." instance=ExtResource("6_4yql1")]
+[node name="Bed" parent="." unique_id=2051062471 instance=ExtResource("6_4yql1")]
 position = Vector2(-4, 22)
 
-[node name="Plant" type="StaticBody2D" parent="."]
+[node name="Plant" type="StaticBody2D" parent="." unique_id=401383617]
 position = Vector2(-84, 0)
 metadata/_edit_group_ = true
 
-[node name="Plant" type="Sprite2D" parent="Plant"]
+[node name="Plant" type="Sprite2D" parent="Plant" unique_id=344759945]
 texture = ExtResource("7_dc68u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plant"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plant" unique_id=1856109543]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_e6eqm")
 
-[node name="Plant2" type="StaticBody2D" parent="."]
+[node name="Plant2" type="StaticBody2D" parent="." unique_id=474376546]
 position = Vector2(3, -4)
 metadata/_edit_group_ = true
 
-[node name="Plant" type="Sprite2D" parent="Plant2"]
+[node name="Plant" type="Sprite2D" parent="Plant2" unique_id=1653582696]
 texture = ExtResource("7_dc68u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plant2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plant2" unique_id=719630056]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_e6eqm")
 
-[node name="Carpet" type="Sprite2D" parent="."]
+[node name="Carpet" type="Sprite2D" parent="." unique_id=1740812598]
 z_index = -1
 position = Vector2(-5, 23)
 texture = ExtResource("8_e6eqm")
 
-[node name="Bookshelf" type="StaticBody2D" parent="."]
+[node name="Bookshelf" type="StaticBody2D" parent="." unique_id=460442831]
 position = Vector2(-37, -3)
 metadata/_edit_group_ = true
 
-[node name="Bookshelf" type="Sprite2D" parent="Bookshelf"]
+[node name="Bookshelf" type="Sprite2D" parent="Bookshelf" unique_id=402906743]
 texture = ExtResource("9_ctgqc")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookshelf"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bookshelf" unique_id=560743820]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_ar8a6")
 
-[node name="NightStand" type="StaticBody2D" parent="."]
+[node name="NightStand" type="StaticBody2D" parent="." unique_id=1914008932]
 position = Vector2(-19, 11)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="NightStand"]
+[node name="Sprite2D" type="Sprite2D" parent="NightStand" unique_id=947428180]
 texture = ExtResource("10_op4as")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NightStand"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NightStand" unique_id=508761426]
 shape = SubResource("RectangleShape2D_xg87n")
 
-[node name="Table" type="StaticBody2D" parent="."]
+[node name="Table" type="StaticBody2D" parent="." unique_id=810719732]
 position = Vector2(-75, 28)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Table"]
+[node name="Sprite2D" type="Sprite2D" parent="Table" unique_id=1358410276]
 texture = ExtResource("11_wryub")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table" unique_id=781909432]
 shape = SubResource("RectangleShape2D_dbbkb")
 
 [connection signal="body_entered" from="HouseArea" to="." method="_on_house_area_body_entered"]

@@ -4,4 +4,4 @@
 
 [resource]
 atlas = ExtResource("1_plkcu")
-region = Rect2(0, 209.75, 81.5, 68.5)
+region = Rect2(0.1325531, 208.01189, 91.55554, 78.66667)

@@ -174,12 +174,12 @@ func animate():
 func start_fishing():
 	$FishingGame.reveal()
 	current_state = Enum.State.FISHING
-	$Animation/AnimationTree.set("parameters/FishBlend/blend_amo
-	return coord * Data.TILE_SIZE + Vector2i(8,8)
+	$Animation/AnimationTree.set("parameters/FishBlend/blend_amount", 1)
+	# return coord * Data.TILE_SIZE + Vector2i(8,8)
 
 
-func _on_step_timer_timeout() -> void:unt", 1)
-
+func _on_step_timer_timeout() -> void:
+	$Sounds/Step.play()
 
 func stop_fishing():
 	can_move = true
@@ -209,8 +209,7 @@ func get_machine_coord() -> Vector2i:
 	var coord = Vector2i(pos.x / Data.TILE_SIZE, pos.y / Data.TILE_SIZE)
 	coord.x += -1 if pos.x < 0 else 0
 	coord.y += -1 if pos.y < 0 else 0
-	$Sounds/Step.play()
-	return coord * Data.TILE_SIZE + Vector2i(8,8) # <--- THIS IS THE LINE THAT WENT MISSINGs
+	return coord * Data.TILE_SIZE + Vector2i(8,8)
 
 
 func equip_hippo_roller() -> void:
