@@ -42,7 +42,8 @@ directories/dch_directory={
 "Petrus": "res://dialog/dialog_ui/profiles/Petrus.dch",
 "Sipho": "res://dialog/dialog_ui/profiles/Sipho.dch",
 "Zanele": "res://dialog/dialog_ui/profiles/Zanele.dch",
-"archive/character": "res://dialog/dialog_ui/profiles/archive/character.dch",
+"character": "res://dialog/dialog_ui/profiles/archive/character.dch",
+"hippo": "res://dialog/hippo.dch",
 "naledi": "res://dialog/naledi.dch"
 }
 directories/dtl_directory={
@@ -335,6 +336,7 @@ directories/dtl_directory={
 "mama_zulu_seasonal_winter_ch1": "res://dialog/mama_zulu/mama_zulu_seasonal_winter_ch1.dtl",
 "mama_zulu_seasonal_winter_ch5": "res://dialog/mama_zulu/mama_zulu_seasonal_winter_ch5.dtl",
 "mama_zulu_seasonal_winter_ch9": "res://dialog/mama_zulu/mama_zulu_seasonal_winter_ch9.dtl",
+"naledi/naledi_router": "res://dialog/naledi/naledi_router.dtl",
 "naledi_ambient_01": "res://dialog/naledi/naledi_ambient_01.dtl",
 "naledi_ambient_02": "res://dialog/naledi/naledi_ambient_02.dtl",
 "naledi_ambient_03": "res://dialog/naledi/naledi_ambient_03.dtl",
@@ -362,7 +364,6 @@ directories/dtl_directory={
 "naledi_q8_complete": "res://dialog/naledi/naledi_q8_complete.dtl",
 "naledi_q8_intro": "res://dialog/naledi/naledi_q8_intro.dtl",
 "naledi_q8_setup": "res://dialog/naledi/naledi_q8_setup.dtl",
-"naledi_router": "res://dialog/naledi/naledi_router.dtl",
 "naledi_scene_committee_chair": "res://dialog/naledi/naledi_scene_committee_chair.dtl",
 "naledi_scene_firepit_ch6": "res://dialog/naledi/naledi_scene_firepit_ch6.dtl",
 "naledi_scene_headwoman_election": "res://dialog/naledi/naledi_scene_headwoman_election.dtl",
