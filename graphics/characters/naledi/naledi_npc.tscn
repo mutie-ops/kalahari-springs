@@ -1068,12 +1068,10 @@ radius = 21.023796
 script = ExtResource("1_hjxb7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87035413]
-position = Vector2(55, 0)
 sprite_frames = SubResource("SpriteFrames_dwlrb")
 animation = &"walk_up_bucket_full"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=467225075]
-position = Vector2(56, 3)
 shape = SubResource("CapsuleShape2D_mc6h2")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1888674885 groups=["Layer 2 / Mask 2", "Player", "hope"]]
@@ -1081,5 +1079,4 @@ collision_layer = 5
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=520613713]
-position = Vector2(54, 3)
 shape = SubResource("CircleShape2D_57ebd")
