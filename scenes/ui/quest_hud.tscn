@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://5ah0e5xqpb8j" path="res://scenes/ui/quest_hud.gd" id="1_qa7di"]
 
 [node name="QuestHUD" type="CanvasLayer" unique_id=652308244]
+visible = false
 script = ExtResource("1_qa7di")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=477624201]

@@ -21,6 +21,12 @@ var raining: bool:
 @export var daytime_color: Gradient
 @export var rain_color: Color
 @export var volume_curve: Curve
+@export_group("Clock")
+@export var day_start_hour: float = 6.0      # the day begins at 6 a.m.
+@export var day_end_hour: float = 24.0       # ...and ends at midnight
+var _day_over := false         # the DayTimer ran out
+var _day_ending := false       # forced bedtime has started
+var _restarting := false       # a day_restart() is in progress
 
 const MACHINE_PREVIEW_TEXTURES = {
 	Enum.Machine.SPRINKLER: {'texture':preload("res://graphics/icons/sprinkler.png"), 'offset': Vector2i(0,0)},
@@ -113,6 +119,8 @@ func _ready() -> void:
 	Data.forecast_rain = [true, false].pick_random()
 	for character in get_tree().get_nodes_in_group('Characters'):
 		character.connect('open_shop', open_shop)
+	$Timers/DayTimer.timeout.connect(_on_day_timer_timeout)
+	GameClock.hour = day_start_hour
 
 
 func _process(_delta: float) -> void:
@@ -124,17 +132,34 @@ func _process(_delta: float) -> void:
 	# machine preview
 	$Overlay/MachinePreviewSprite.visible = player.current_state == Enum.State.BUILDING
 	$Overlay/MachinePreviewSprite.position = player.get_machine_coord() + MACHINE_PREVIEW_TEXTURES[player.current_machine]['offset']
+	
+	# NEW: drive the village clock from the DayTimer
+	if not _day_over:
+		GameClock.hour = day_start_hour + daytime_point * (day_end_hour - day_start_hour) + GameClock.debug_offset
+	_try_end_day()
 
 
 func day_restart():
+	if _restarting:
+		return
+	_restarting = true
 	var tween = create_tween()
 	tween.tween_property(day_transition_material, "shader_parameter/progress", 1.0, 1.0)
 	tween.tween_interval(0.5)
 	tween.tween_callback(level_reset)
 	tween.tween_property(day_transition_material, "shader_parameter/progress", 0.0, 1.0)
+	tween.tween_callback(_day_restart_finished)
 
 
 func level_reset():
+	var passed_out := _day_ending
+	_day_over = false
+	_day_ending = false
+	GameClock.debug_offset = 0.0
+	GameClock.hour = day_start_hour
+	# GameState.start_new_day()   # <- see the note below before turning this on
+	BuildingManager.start_new_day(passed_out)
+	
 	for plant in get_tree().get_nodes_in_group('Plants'):
 		# --- SOIL DISABLED ---
 		# plant.grow(plant.coord in $Layers/SoilWaterLayer.get_used_cells())
@@ -194,3 +219,32 @@ func _on_blob_timer_timeout() -> void:
 func open_shop(shop_type: Enum.Shop):
 	$Overlay/CanvasLayer/ShopUI.reveal(shop_type)
 	player.current_state = Enum.State.SHOP
+
+func _on_day_timer_timeout() -> void:
+	_day_over = true
+	GameClock.hour = day_end_hour - 0.01      # freeze the clock at 11:59 p.m.
+
+
+func _try_end_day() -> void:
+	## Called every frame. Once the day is over, waits for a safe moment, then puts Hope to bed.
+	if not _day_over or _day_ending or _restarting:
+		return
+	if Dialogic.current_timeline != null:
+		return                                 # let the conversation finish
+	if BuildingManager.is_busy() or not player.can_move:
+		return                                 # mid fade or mid tool swing
+	_day_ending = true
+	match player.current_state:
+		Enum.State.SHOP:
+			player.close_shop.emit()           # level hides the shop and returns to DEFAULT
+		Enum.State.FISHING:
+			player.stop_fishing()
+		Enum.State.BUILDING:
+			player.current_state = Enum.State.DEFAULT
+	player.frozen = true
+	day_restart()
+
+
+func _day_restart_finished() -> void:
+	_restarting = false
+	player.frozen = false

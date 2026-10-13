@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bd3rs7oca6b07"]
+
+[ext_resource type="Texture2D" uid="uid://dbri2v2b6pkvr" path="res://graphics/structures/charityoutpost.tres" id="1_t3iwr"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_56hrd"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="2_cinu4"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="3_56hrd"]
+
+[node name="CharityOutpost" type="Sprite2D" unique_id=1368145699]
+texture = ExtResource("1_t3iwr")
+script = ExtResource("2_56hrd")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_cinu4")]
+position = Vector2(-1, 38)
+building_id = "charity_outpost"
+display_name = "The Outpost"
+interior_scene = ExtResource("3_56hrd")
+access = 1
+open_hour = 10.0
+close_hour = 16.0
+closed_message = "My hours are 10am to 4pm...most days. See you soon!"
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=873381589]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=504798573]
+build_mode = 1
+polygon = PackedVector2Array(-16, 50, -39, 49, -41, 55, -54, 53, -59, 40, -44, 36, -44, 7, 50, 7, 50, 36, 60, 40, 61, 54, 45, 55, 45, 50, 15, 49, 15, 39, -16, 39)

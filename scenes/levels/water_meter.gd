@@ -12,6 +12,7 @@ func _ready() -> void:
 	if player:
 		player.hippo_roller_equipped.connect(_on_roller_equipped)
 		player.water_updated.connect(update_water_display)
+		player.hippo_roller_dropped.connect(_on_roller_dropped)
 
 # 4. This runs exactly when the Player yells "I have the roller!"
 func _on_roller_equipped() -> void:
@@ -27,3 +28,6 @@ func _on_roller_equipped() -> void:
 # 5. We will call this function later when we stand in the river!
 func update_water_display(current_amount: float) -> void:
 	value = current_amount
+	
+func _on_roller_dropped() -> void:
+	hide()

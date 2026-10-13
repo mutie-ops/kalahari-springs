@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var objective_label = $PanelContainer/VBoxContainer/QuestObjective
 
 func _ready() -> void:
+	## Saved hidden so it doesn't clutter the editor; shown whenever the game runs.
+	visible = true
 	# Tell the HUD to update itself every time ANY dialogue finishes
 	Dialogic.timeline_ended.connect(_update_quest_hud)
 	

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dx0er76ojah0e"]
+
+[ext_resource type="Texture2D" uid="uid://cvg2gsx0jmu1l" path="res://graphics/structures/workshop.tres" id="1_vgnu6"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="2_na8yn"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_s3vkj"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="3_s3vkj"]
+
+[node name="MkhizeWorkshop" type="Sprite2D" unique_id=685592618]
+texture = ExtResource("1_vgnu6")
+script = ExtResource("2_s3vkj")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_na8yn")]
+position = Vector2(14, 23)
+scale = Vector2(1.5, 1)
+building_id = "mkhize_workshop"
+display_name = "The Workshop"
+interior_scene = ExtResource("3_s3vkj")
+access = 1
+close_hour = 16.0
+closed_message = "Normal hours are 8am to 4pm. Or, if we're not here, we'll be back shortly."
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=1638393369]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=754385163]
+build_mode = 1
+polygon = PackedVector2Array(-9, 31, -20, 44, -53, 42, -58, 22, -53, -7, 53, -6, 63, 23, 62, 42, 39, 42, 38, 20, -9, 20)

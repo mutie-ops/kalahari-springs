@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://wmqdepn7emch"]
+
+[ext_resource type="Texture2D" uid="uid://lfab462nw2dx" path="res://graphics/structures/homestead01.tres" id="1_6fdvf"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_gpc8m"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="2_oo4if"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="3_gpc8m"]
+
+[node name="Gogo Homestead" type="Sprite2D" unique_id=2032653351]
+texture = ExtResource("1_6fdvf")
+script = ExtResource("2_gpc8m")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_oo4if")]
+position = Vector2(7, 34)
+building_id = "gogo_homestead"
+display_name = "Gogo's Home"
+interior_scene = ExtResource("3_gpc8m")
+access = 2
+host_npc = "gogo"
+required_hearts = 1
+trust_message = "Gogo will welcome you into her home once you gain more trust."
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=1157461674]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1849929632]
+build_mode = 1
+polygon = PackedVector2Array(-9, 57, -43, 56, -44, 47, -71, 45, -65, 3, 73, 3, 72, 56, 22, 55, 22, 35, -9, 35)

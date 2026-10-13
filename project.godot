@@ -19,6 +19,10 @@ run/main_scene="uid://dkaf0otbgtrp5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://cla0rionb2prm"
+
 [autoload]
 
 Enum="*res://global/enums.gd"
@@ -26,6 +30,8 @@ Data="*res://global/data.gd"
 Dialogic="*uid://ds2q0uclmolvu"
 GameState="*uid://bsr7o0llcpkp1"
 SaveManager="*uid://1xxtc50ywri6"
+GameClock="*uid://efhohkkh2cjf"
+BuildingManager="*uid://drbf81t2xt3e5"
 
 [dialogic]
 

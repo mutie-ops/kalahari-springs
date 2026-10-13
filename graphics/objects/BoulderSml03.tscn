@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cv7xwjf51272l"]
+
+[ext_resource type="Texture2D" uid="uid://cxnkpqb0oqo7p" path="res://graphics/objects/boulder-sml-03.tres" id="1_3hhtt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_irgnb"]
+height = 40.0
+
+[node name="BoulderSml03" type="StaticBody2D" unique_id=1276327202]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=227537923]
+texture = ExtResource("1_3hhtt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=591043861]
+position = Vector2(0, 2)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_irgnb")

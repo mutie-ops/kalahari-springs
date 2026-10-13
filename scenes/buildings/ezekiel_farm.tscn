@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b6dy33lmbwerb"]
+
+[ext_resource type="Texture2D" uid="uid://bl0ykwu4wfgus" path="res://graphics/structures/homestead02.tres" id="1_ydwie"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_gus22"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="2_yt8f7"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="3_gus22"]
+
+[node name="EzekielFarm" type="Sprite2D" unique_id=620414800]
+texture = ExtResource("1_ydwie")
+script = ExtResource("2_gus22")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_yt8f7")]
+position = Vector2(32, 41)
+building_id = "ezekiel_farm"
+display_name = "Ezekiel's Farm"
+interior_scene = ExtResource("3_gus22")
+access = 2
+host_npc = "ezekiel"
+required_hearts = 3
+trust_message = "Ezekiel will welcome you into his home once you gain more trust."
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=56706132]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=2042886476]
+build_mode = 1
+polygon = PackedVector2Array(24, 52, 16, 68, 9, 67, 3, 53, -24, 53, -33, 55, -66, 58, -69, 19, -65, -3, 71, -2, 73, 41, 60, 41, 46, 39, 21, 39)

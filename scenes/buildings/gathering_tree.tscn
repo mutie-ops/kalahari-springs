@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cg7nsrpkq842b"]
+
+[ext_resource type="Texture2D" uid="uid://b7rnfybgknpao" path="res://graphics/structures/gatheringpavillion.tres" id="1_5en00"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="2_437jy"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_dddmt"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="3_dddmt"]
+
+[node name="GatheringTree" type="Sprite2D" unique_id=56487726]
+y_sort_enabled = true
+texture = ExtResource("1_5en00")
+offset = Vector2(0, -20)
+script = ExtResource("2_dddmt")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_437jy")]
+position = Vector2(-36, 39)
+building_id = "gathering_tree"
+display_name = "Gathering Tree"
+interior_scene = ExtResource("3_dddmt")
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=1396627051]
+position = Vector2(1, 17)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1637854351]
+position = Vector2(0, -37)
+build_mode = 1
+polygon = PackedVector2Array(-52, 57, -55, 70, -82, 79, -83, 58, -78, 54, -79, 33, 33, 33, 46, 53, -6, 57, -5, 75, -21, 74, -22, 57)

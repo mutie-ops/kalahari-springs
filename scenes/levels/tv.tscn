@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxxa2cdh5ipd1"]
+[gd_scene format=3 uid="uid://dxxa2cdh5ipd1"]
 
 [ext_resource type="Script" uid="uid://y0rdgl85eosn" path="res://scenes/levels/tv.gd" id="1_bif1e"]
 [ext_resource type="Texture2D" uid="uid://d4nnmlscu1se6" path="res://graphics/machines/tv.png" id="1_i6lrx"]
@@ -57,22 +57,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qawod"]
-size = Vector2(14, 12)
+size = Vector2(14, 16)
 
-[node name="TV" type="StaticBody2D"]
+[node name="TV" type="StaticBody2D" unique_id=252027650]
 collision_layer = 12
 collision_mask = 0
 script = ExtResource("1_bif1e")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=818784141]
 sprite_frames = SubResource("SpriteFrames_pk4yt")
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1646256426]
+y_sort_enabled = true
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_qawod")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1968069992]
 wait_time = 3.0
 one_shot = true
 

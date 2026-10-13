@@ -1,0 +1,43 @@
+[gd_scene format=4 uid="uid://by3k5vt1g1mho"]
+
+[ext_resource type="Script" uid="uid://cg8e354boynvc" path="res://scripts/interior.gd" id="1_007ir"]
+[ext_resource type="Texture2D" uid="uid://dpvg3yddudamn" path="res://graphics/tilesets/walls_floor_tile.png" id="2_fvuk1"]
+[ext_resource type="TileSet" uid="uid://cw45kfg2c8mfk" path="res://premade/HouseTileSet.tres" id="2_r6i1r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvuk1"]
+size = Vector2(1.625, 1)
+
+[node name="Interior" type="Node2D" unique_id=117278631]
+y_sort_enabled = true
+script = ExtResource("1_007ir")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=633195845]
+z_index = -10
+offset_left = -1200.0
+offset_top = -800.0
+offset_right = 1200.0
+offset_bottom = 800.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Floor" type="Polygon2D" parent="." unique_id=372631859]
+z_index = -2
+texture_repeat = 2
+scale = Vector2(1.0689347, 1)
+texture = ExtResource("2_fvuk1")
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=1070994081]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD+/wEAAAABAAEAAAD//wEAAAABAAEAAAAAAAEAAAABAAEAAAABAAEAAAABAAEAAAD9/wAAAAABAAEAAAD8/wAAAAABAAEAAAD7/wAAAAABAAEAAAACAAAAAAABAAEAAAAEAAAAAAABAAEAAAADAAAAAAABAAEAAAD6/wAAAAABAAEAAAAFAAAAAAABAAEAAAD6////AAABAAEAAAD6//7/AAABAAEAAAD6//3/AAABAAEAAAD6//z/AAABAAEAAAD6//v/AAABAAEAAAAFAP//AAABAAEAAAAFAP7/AAABAAEAAAAFAP3/AAABAAEAAAAFAPz/AAABAAEAAAAFAPv/AAABAAEAAAD6//r/AAABAAEAAAAFAPr/AAABAAEAAAD7//r/AAABAAEAAAD8//r/AAABAAEAAAD9//r/AAABAAEAAAD+//r/AAABAAEAAAD///r/AAABAAEAAAAAAPr/AAABAAEAAAABAPr/AAABAAEAAAACAPr/AAABAAEAAAADAPr/AAABAAEAAAAEAPr/AAABAAEAAAD6/wEAAAABAAEAAAD7/wEAAAABAAEAAAD8/wEAAAABAAEAAAD9/wEAAAABAAEAAAD//wMAAAABAAEAAAAAAAMAAAABAAEAAAABAAMAAAABAAEAAAABAAQAAAABAAEAAAD+/wIAAAABAAEAAAD9/wIAAAABAAEAAAD8/wIAAAABAAEAAAABAAIAAAABAAEAAAACAAIAAAABAAEAAAADAAIAAAABAAEAAAA=")
+tile_set = ExtResource("2_r6i1r")
+
+[node name="EntryPoint" type="Marker2D" parent="." unique_id=92430207]
+
+[node name="CameraAnchor" type="Marker2D" parent="." unique_id=2074094820]
+
+[node name="ExitArea" type="Area2D" parent="." unique_id=1731558983]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" unique_id=286383687]
+position = Vector2(0, 52)
+scale = Vector2(16, 8)
+shape = SubResource("RectangleShape2D_fvuk1")

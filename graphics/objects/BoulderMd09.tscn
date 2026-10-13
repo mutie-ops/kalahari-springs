@@ -8,6 +8,7 @@ size = Vector2(100.4973, 24.072487)
 [node name="BoulderLrg01" type="Node2D" unique_id=1818154890]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1679283942]
+y_sort_enabled = true
 texture = ExtResource("1_m6cyq")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1837038964]

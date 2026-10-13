@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cdhsijl3l54ib"]
+
+[ext_resource type="Script" uid="uid://deg1drqy3atf8" path="res://scripts/hud_clock.gd" id="1_0mwgc"]
+[ext_resource type="Script" uid="uid://bb4k3tjhpkrvj" path="res://scripts/hud.gd" id="1_bo48s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqnrr"]
+bg_color = Color(0.08627451, 0.2901961, 0.1764706, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.85490197, 0.7254902, 0.53333336, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="HUD" type="CanvasLayer" unique_id=1553390180 groups=["hud"]]
+layer = 10
+visible = false
+script = ExtResource("1_bo48s")
+
+[node name="HUDRoot" type="Control" parent="." unique_id=1290485208]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ClockLabel" type="Label" parent="HUDRoot" unique_id=841890560]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 10.0
+offset_right = 715.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_hqnrr")
+text = "9 a.m."
+horizontal_alignment = 1
+autowrap_mode = 3
+script = ExtResource("1_0mwgc")

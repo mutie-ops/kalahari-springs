@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d02isss00kbay"]
+
+[ext_resource type="Texture2D" uid="uid://cj8wq4ho8qhah" path="res://graphics/structures/schoolhouse.tres" id="1_ek1m4"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_fxytb"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="2_rd1xa"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="3_fxytb"]
+
+[node name="School" type="Sprite2D" unique_id=37375314]
+texture = ExtResource("1_ek1m4")
+script = ExtResource("2_fxytb")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_rd1xa")]
+position = Vector2(-5, 58)
+building_id = "school"
+display_name = "School"
+interior_scene = ExtResource("3_fxytb")
+access = 1
+close_hour = 15.0
+closed_message = "School hours are 8am to 3pm."
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=1567333930]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=1146598376]
+build_mode = 1
+polygon = PackedVector2Array(-20, 66, -25, 73, -60, 73, -67, 64, -66, 17, 52, 18, 52, 66, 10, 66, 9, 58, -20, 57)

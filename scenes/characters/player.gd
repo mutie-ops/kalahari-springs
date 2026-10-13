@@ -4,6 +4,7 @@ var direction: Vector2
 var last_direction: Vector2
 var speed := 50
 var can_move: bool = true
+var frozen: bool = false   # set by BuildingManager during fades
 @onready var move_state_machine = $Animation/AnimationTree.get("parameters/MoveStateMachine/playback")
 @onready var tool_state_machine = $Animation/AnimationTree.get("parameters/ToolStateMachine/playback")
 var current_tool: Enum.Tool = Enum.Tool.AXE
@@ -44,6 +45,7 @@ signal build(current_machine: Enum.Machine)
 signal machine_change(current_machine: Enum.Machine)
 signal close_shop
 signal hippo_roller_equipped
+signal hippo_roller_dropped
 signal water_updated(new_amount: float)
 
 
@@ -82,6 +84,13 @@ func load_from_dict(data: Dictionary) -> void:
 	
 	
 func _physics_process(_delta: float) -> void:
+	if frozen:
+		velocity = Vector2.ZERO
+		direction = Vector2.ZERO
+		$Sounds/StepTimer.stop()
+		move_state_machine.travel('RollerIdle' if has_hippo_roller else 'Idle')
+		return
+
 	match current_state:
 		Enum.State.DEFAULT:
 			if can_move:
@@ -256,6 +265,7 @@ func equip_hippo_roller() -> void:
 
 func drop_hippo_roller() -> void:
 	has_hippo_roller = false
+	hippo_roller_dropped.emit()
 	
 	# Find the menu and remove the item from the inventory
 	var menu = get_tree().get_first_node_in_group("GameMenu")

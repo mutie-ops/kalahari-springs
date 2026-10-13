@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cfeu5jtu3iet2"]
+
+[ext_resource type="Texture2D" uid="uid://dbphfw4tf2s7v" path="res://graphics/objects/boulder-sml-07.tres" id="1_g26ql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir7ub"]
+size = Vector2(57, 26)
+
+[node name="BoulderSml07" type="StaticBody2D" unique_id=1553395431]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=740242490]
+texture = ExtResource("1_g26ql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=302235522]
+position = Vector2(0.5, 5)
+shape = SubResource("RectangleShape2D_ir7ub")

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://coqajtxrqupwp"]
+
+[ext_resource type="Texture2D" uid="uid://dt3yf64m8hh47" path="res://graphics/structures/structure04.tres" id="1_0k2kh"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="2_gx8m3"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_n0v7b"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="3_n0v7b"]
+
+[node name="TravellersRest" type="Sprite2D" unique_id=1316399231]
+texture = ExtResource("1_0k2kh")
+script = ExtResource("2_n0v7b")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_gx8m3")]
+position = Vector2(3, 36)
+building_id = "travellers_rest"
+display_name = "Traveller's Rest"
+interior_scene = ExtResource("3_n0v7b")
+open_hour = 6.0
+close_hour = 20.0
+closed_message = "We open early, but if it's after 8pm, come back tomorrow."
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=628343102]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=760738563]
+build_mode = 1
+polygon = PackedVector2Array(-16, 63, -62, 63, -72, 52, -69, 2, 54, 2, 54, 27, 63, 40, 63, 60, 38, 67, 22, 63, 19, 33, -12, 33)

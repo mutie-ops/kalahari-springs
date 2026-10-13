@@ -11,9 +11,8 @@
 [ext_resource type="AudioStream" uid="uid://c3f7txlnei6mm" path="res://audio/water.ogg" id="9_jk2m4"]
 [ext_resource type="AudioStream" uid="uid://do4sqscm88cyg" path="res://audio/step.mp3" id="10_7vyk4"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_atpat"]
-radius = 4.0
-height = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vyk4"]
+size = Vector2(15, 4)
 
 [sub_resource type="Animation" id="Animation_hdner"]
 length = 0.001
@@ -1783,7 +1782,6 @@ transitions = ["Axe", "Hoe", SubResource("AnimationNodeStateMachineTransition_n7
 graph_offset = Vector2(-27.836843, 104.0665)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_inhyd"]
-graph_offset = Vector2(-35.367554, -182.6116)
 nodes/output/position = Vector2(1069.5652, -104.34783)
 nodes/ToolStateMachine/node = SubResource("AnimationNodeStateMachine_w5sjy")
 nodes/ToolStateMachine/position = Vector2(104.34783, 104.34783)
@@ -1798,18 +1796,21 @@ nodes/FishBlendSpace2D/position = Vector2(634.7826, -8.695652)
 node_connections = [&"output", 0, &"FishBlend", &"ToolOneShot", 0, &"MoveStateMachine", &"ToolOneShot", 1, &"ToolStateMachine", &"FishBlend", 0, &"ToolOneShot", &"FishBlend", 1, &"FishBlendSpace2D"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1939110972 groups=["Layer 2 / Mask 2", "Player", "hope"]]
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("2_76oj4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1386973280]
+position = Vector2(0, -13)
 texture = ExtResource("3_6eyoc")
 hframes = 33
 vframes = 8
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127240967]
-shape = SubResource("CapsuleShape2D_atpat")
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_7vyk4")
 
 [node name="Animation" type="Node" parent="." unique_id=1081846997]
 
@@ -1844,6 +1845,7 @@ zoom = Vector2(4, 4)
 [node name="ToolUI" parent="." unique_id=194591279 instance=ExtResource("3_76oj4")]
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=319231974]
+visible = false
 target_position = Vector2(0, 20)
 collision_mask = 8
 
