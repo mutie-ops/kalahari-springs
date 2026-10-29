@@ -1,21 +1,218 @@
 [gd_scene format=3 uid="uid://cg3shvukbev8j"]
 
+[ext_resource type="Texture2D" uid="uid://bci18l2siesl6" path="res://cutscenes/hope_arrives/art/bg_landscape.png" id="1_46yy0"]
+[ext_resource type="Script" uid="uid://dwhfumcaw2nbv" path="res://scenes/levels/cutscene_hope_arrives.gd" id="1_e3gvs"]
+[ext_resource type="Texture2D" uid="uid://t66uqwje5p12" path="res://cutscenes/hope_arrives/art/hope-neutral.png" id="2_7hd0a"]
+[ext_resource type="Texture2D" uid="uid://t37myi4jd7cl" path="res://cutscenes/hope_arrives/art/bus-doors-open-overlay.png" id="3_5ef15"]
+[ext_resource type="Texture2D" uid="uid://coxpn1wq5rqmt" path="res://cutscenes/hope_arrives/art/hope-look-right.png" id="3_k80kn"]
+[ext_resource type="Texture2D" uid="uid://b6hpypnqro7pj" path="res://cutscenes/hope_arrives/art/hope-look-left.png" id="4_7ov86"]
+[ext_resource type="Texture2D" uid="uid://cqqt4fo2senwo" path="res://cutscenes/hope_arrives/art/hope-musing.png" id="5_cahmt"]
+[ext_resource type="Texture2D" uid="uid://bpubki27d82ch" path="res://cutscenes/hope_arrives/art/photo_closeup.png" id="6_xlhvv"]
+[ext_resource type="Texture2D" uid="uid://bvy1j0br0t1e5" path="res://cutscenes/hope_arrives/art/bus-body_doors-closed.png" id="9_cahmt"]
+
+[sub_resource type="Animation" id="Animation_xlhvv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/BusProp:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(24, 218)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/BG_Landscape:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/BG_BusDoors:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SubViewport/Hope:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SubViewport/PhotoCloseup:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SubViewport/PhotoCloseup:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o283i"]
+resource_name = "bus_exit"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/BusProp:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.001, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(24, 214), Vector2(1008, 214)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/BG_Landscape:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/BG_BusDoors:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_q51gs"]
+resource_name = "scene_open"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_byydq"]
+resource_name = "show_photo"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/Hope:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7744021, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.031997383), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/PhotoCloseup:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/PhotoCloseup:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r46le"]
+_data = {
+&"RESET": SubResource("Animation_xlhvv"),
+&"bus_exit": SubResource("Animation_o283i"),
+&"scene_open": SubResource("Animation_q51gs"),
+&"show_photo": SubResource("Animation_byydq")
+}
+
 [node name="Node2D" type="SubViewportContainer" unique_id=682335960]
+offset_left = -3.0
+offset_top = 3.0
+offset_right = 1286.0
+offset_bottom = 720.0
+script = ExtResource("1_e3gvs")
+portrait_neutral = ExtResource("2_7hd0a")
+portrait_look_right = ExtResource("3_k80kn")
+portrait_look_left = ExtResource("4_7ov86")
+portrait_musing = ExtResource("5_cahmt")
+portrait_holds_photo = ExtResource("6_xlhvv")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1971129550]
 handle_input_locally = false
 render_target_update_mode = 4
 
 [node name="BG_Landscape" type="Sprite2D" parent="SubViewport" unique_id=418644352]
+position = Vector2(320, 182)
+texture = ExtResource("1_46yy0")
 
 [node name="BG_BusDoors" type="Sprite2D" parent="SubViewport" unique_id=1568178653]
+visible = false
+position = Vector2(-46, 206)
+texture = ExtResource("3_5ef15")
 
 [node name="BusProp" type="Sprite2D" parent="SubViewport" unique_id=1374973659]
+position = Vector2(24, 218)
+scale = Vector2(0.8774423, 0.8069445)
+texture = ExtResource("9_cahmt")
 
 [node name="Hope" type="Sprite2D" parent="SubViewport" unique_id=1590627620]
+texture = ExtResource("2_7hd0a")
 
 [node name="PhotoCloseup" type="Sprite2D" parent="SubViewport" unique_id=1540263420]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=157464080]
+libraries/ = SubResource("AnimationLibrary_r46le")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1307319028]

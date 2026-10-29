@@ -74,7 +74,7 @@ scene = ExtResource("10_6ihea")
 
 [resource]
 script = ExtResource("11_un6gr")
-name = "dialog-style-2"
+name = "CutsceneThought"
 layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
 layer_info = {
 "": SubResource("Resource_o3wn6"),
