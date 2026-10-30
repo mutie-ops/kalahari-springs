@@ -49,7 +49,7 @@ directories/dch_directory={
 "Petrus": "res://dialog/dialog_ui/profiles/Petrus.dch",
 "Sipho": "res://dialog/dialog_ui/profiles/Sipho.dch",
 "Zanele": "res://dialog/dialog_ui/profiles/Zanele.dch",
-"archive/character": "res://dialog/dialog_ui/profiles/archive/character.dch",
+"character": "res://dialog/dialog_ui/profiles/archive/character.dch",
 "hippo": "res://dialog/hippo.dch",
 "naledi": "res://dialog/naledi.dch"
 }
@@ -235,6 +235,7 @@ directories/dtl_directory={
 "gogo_seasonal_winter_ch1": "res://dialog/gogo/gogo_seasonal_winter_ch1.dtl",
 "gogo_seasonal_winter_ch5": "res://dialog/gogo/gogo_seasonal_winter_ch5.dtl",
 "gogo_seasonal_winter_ch9": "res://dialog/gogo/gogo_seasonal_winter_ch9.dtl",
+"hope_arrives": "res://dialog/Hope/hope_arrives.dtl",
 "lebo_ambient_01": "res://dialog/lebo/lebo_ambient_01.dtl",
 "lebo_ambient_02": "res://dialog/lebo/lebo_ambient_02.dtl",
 "lebo_ambient_03": "res://dialog/lebo/lebo_ambient_03.dtl",
@@ -343,6 +344,7 @@ directories/dtl_directory={
 "mama_zulu_seasonal_winter_ch1": "res://dialog/mama_zulu/mama_zulu_seasonal_winter_ch1.dtl",
 "mama_zulu_seasonal_winter_ch5": "res://dialog/mama_zulu/mama_zulu_seasonal_winter_ch5.dtl",
 "mama_zulu_seasonal_winter_ch9": "res://dialog/mama_zulu/mama_zulu_seasonal_winter_ch9.dtl",
+"naledi/naledi_router": "res://dialog/naledi/naledi_router.dtl",
 "naledi_ambient_01": "res://dialog/naledi/naledi_ambient_01.dtl",
 "naledi_ambient_02": "res://dialog/naledi/naledi_ambient_02.dtl",
 "naledi_ambient_03": "res://dialog/naledi/naledi_ambient_03.dtl",
@@ -370,7 +372,6 @@ directories/dtl_directory={
 "naledi_q8_complete": "res://dialog/naledi/naledi_q8_complete.dtl",
 "naledi_q8_intro": "res://dialog/naledi/naledi_q8_intro.dtl",
 "naledi_q8_setup": "res://dialog/naledi/naledi_q8_setup.dtl",
-"naledi_router": "res://dialog/naledi/naledi_router.dtl",
 "naledi_scene_committee_chair": "res://dialog/naledi/naledi_scene_committee_chair.dtl",
 "naledi_scene_firepit_ch6": "res://dialog/naledi/naledi_scene_firepit_ch6.dtl",
 "naledi_scene_headwoman_election": "res://dialog/naledi/naledi_scene_headwoman_election.dtl",
@@ -515,7 +516,7 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://dialog/dialog-style-2.tres",
-"dialog-style-2": "res://dialog/dialog-style-2.tres"
+"CutsceneThought": "res://dialog/dialog-style-2.tres"
 }
 layout/style_list=["res://dialog/dialog-style-2.tres"]
 layout/default_style="res://dialog/dialog-style-2.tres"

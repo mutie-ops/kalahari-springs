@@ -556,6 +556,7 @@ var ezekiel_letter_seen: bool = false
 var ezekiel_reciprocity_established: bool = false
 var ezekiel_taught_students: bool = false
 var ezekiel_trusted: bool = false
+var first_launch_complete: bool = false  # ⚠ SET BY CUTSCENE CODE
 var first_major_rain: bool = false  # ⚠ SET BY GAMEPLAY CODE
 var first_rains_arrived: bool = false  # ⚠ SET BY GAMEPLAY CODE
 var flood_event_active: bool = false  # ⚠ SET BY GAMEPLAY CODE

@@ -35,7 +35,20 @@ const MACHINE_PREVIEW_TEXTURES = {
 	Enum.Machine.DELETE: {'texture':preload("res://graphics/icons/delete.png"), 'offset': Vector2i(0,0)}
 }
 
+func _ready() -> void:
+	# 1. CUTSCENE INTERCEPT: If it's a new game, jump to the cutscene immediately
+	if not GameState.first_launch_complete:
+		get_tree().change_scene_to_file("res://cutscenes/hope_arrives/CutsceneHopeArrives.tscn")
+		return # Stop running the rest of _ready()		
 
+	# 2. NORMAL STARTUP: This only runs if the cutscene is already finished
+	Data.forecast_rain = [true, false].pick_random()
+	for character in get_tree().get_nodes_in_group('Characters'):
+		character.connect('open_shop', open_shop)
+	$Timers/DayTimer.timeout.connect(_on_day_timer_timeout)
+	GameClock.hour = day_start_hour
+	
+	
 func _on_player_tool_use(tool: Enum.Tool, pos: Vector2) -> void:
 	var grid_coord: Vector2i = Vector2i(int(pos.x / Data.TILE_SIZE),int(pos.y / Data.TILE_SIZE))
 	grid_coord.x += -1 if pos.x < 0 else 0
@@ -114,13 +127,6 @@ func _on_player_close_shop() -> void:
 	$Overlay/CanvasLayer/ShopUI.hide()
 	player.current_state = Enum.State.DEFAULT
 
-
-func _ready() -> void:
-	Data.forecast_rain = [true, false].pick_random()
-	for character in get_tree().get_nodes_in_group('Characters'):
-		character.connect('open_shop', open_shop)
-	$Timers/DayTimer.timeout.connect(_on_day_timer_timeout)
-	GameClock.hour = day_start_hour
 
 
 func _process(_delta: float) -> void:

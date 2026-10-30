@@ -1,0 +1,99 @@
+# hope_arrives.dtl
+
+# ─────────────────────────────────────────────
+
+# Style is set to CutsceneThought globally
+
+set 
+
+# ── SHOT 1: Hope at bus doors ─────────────────
+
+# The scene opens already staged: bg_bus_doors visible,
+
+# Hope visible in neutral pose. AnimationPlayer has played
+
+# its "scene_open" animation before this timeline starts.
+
+# Signal: tell the scene to play Hope's "look right" animation
+
+signal look_right
+
+# Pause briefly to let the animation settle
+
+wait 0.6
+
+# Signal: play Hope's "look left" animation  
+
+hippo: signal look_left
+
+wait 0.6
+
+# Signal: return Hope to neutral/musing expression
+
+signal hope_musing
+
+wait 0.3
+
+# ── THOUGHT BUBBLE: Line 1 ────────────────────
+
+# Each text event advances on player click
+
+hippo: Kalahari Springs, my new home!
+
+# Signal: update Hope to warmer expression mid-speech
+
+signal hope_warm
+
+Hope: I fondly remember family visits here as a child.
+
+Hope: Now I have my grandmother's home to look after.
+
+# Signal: transition Hope to determined/excited expression
+
+signal hope_determined
+
+Hope: Let the adventure begin!
+
+# ── BUS DEPARTS ───────────────────────────────
+
+# Last click closes the thought bubble (happens automatically
+
+# after the last text event). Now we trigger the bus exit.
+
+# Signal: play bus departure animation + audio
+
+signal bus_depart
+
+# Wait for the bus animation to complete (tune this to match
+
+# your animation length)
+
+wait 2.5
+
+# ── SHOT 2: Hope holds up photo ───────────────
+
+# Signal: swap Hope to "holds_photo" portrait
+
+signal hope_holds_photo
+
+wait 0.5
+
+# ── SHOT 3: Camera cuts to photo closeup ──────
+
+# Signal: hide Hope + bus bg, show photo closeup fullscreen
+
+signal show_photo_closeup
+
+wait 0.8
+
+# ── THOUGHT BUBBLE: Line 2 ────────────────────
+
+Hope: And now to find my grandmother's house.
+
+Hope: I hope it's not in terrible condition after all these years...
+
+# ── END ──────────────────────────────────────
+
+# After the last click, signal the scene to end
+
+signal cutscene_end
