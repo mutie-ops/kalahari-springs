@@ -152,6 +152,8 @@ func day_restart():
 
 
 func level_reset():
+	get_tree().call_group("carryable", "reset_for_new_day")
+	
 	var passed_out := _day_ending
 	_day_over = false
 	_day_ending = false

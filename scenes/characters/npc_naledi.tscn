@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bwmfmshn0erse"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_05m4b"]
+[ext_resource type="Script" uid="uid://c2gxr24g268ly" path="res://scenes/characters/naledi_npc.gd" id="2_qwe3d"]
+[ext_resource type="SpriteFrames" uid="uid://dt7kivfr0o4f4" path="res://graphics/characters/naledi/naledi_frames.tres" id="3_buhal"]
+
+[node name="NPCNaledi" unique_id=386603033 instance=ExtResource("1_05m4b")]
+script = ExtResource("2_qwe3d")
+npc_id = "naledi"
+dialog_timeline = "naledi_router"
+start_facing = "left"
+door_drop_offset = Vector2(-16, 16)
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = ExtResource("3_buhal")
+animation = &"stoop_up"

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dxkn3drlrpaqq"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_lm1ew"]
+[ext_resource type="Texture2D" uid="uid://c7l1ik3tpuo0r" path="res://graphics/characters/zanele/zanele-single-frame.png" id="2_58a7m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vjt3"]
+atlas = ExtResource("2_58a7m")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5cqb1"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vjt3")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCZanele" unique_id=386603033 instance=ExtResource("1_lm1ew")]
+npc_id = "zanele"
+dialog_timeline = "zanele_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_5cqb1")
+animation = &"single-frame"

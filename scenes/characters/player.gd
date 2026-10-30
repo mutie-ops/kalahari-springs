@@ -24,6 +24,9 @@ var current_machine_index: int
 }
 
 var has_hippo_roller: bool = false
+# NEW: the roller (or other item) Hope is carrying. Its water lives ON the item,
+# so current_water / max_water below are just a copy of it for the HUD.
+var held_item: Carryable = null
 
 var max_water: float = 90.0
 var current_water: float = 0.0
@@ -69,17 +72,20 @@ func get_save_dict() -> Dictionary:
 		"pos_x": global_position.x,
 		"pos_y": global_position.y,
 		"has_hippo_roller": has_hippo_roller,
-		"current_water": current_water
+		"current_water": current_water,
+		"held_item_id": held_item.item_id if held_item != null else ""
 	}
 #Loading saved player information
 
 func load_from_dict(data: Dictionary) -> void:
 	# Position will be applied by the SaveManager/Scene Load, but we handle state here
+	var saved_water: float = data.get("current_water", 0.0)
 	if data.get("has_hippo_roller", false):
-		equip_hippo_roller()
-	
-	current_water = data.get("current_water", 0.0)
-	water_updated.emit(current_water)
+		# Wait one moment so every roller in the level exists, then pick one up
+		_restore_held_roller.call_deferred(saved_water, str(data.get("held_item_id", "")))
+	else:
+		current_water = 0.0
+		water_updated.emit(current_water)
 	
 	
 	
@@ -252,6 +258,98 @@ func get_machine_coord() -> Vector2i:
 	return coord * Data.TILE_SIZE + Vector2i(8,8)
 
 
+# =====================================================================
+#  CARRYING A HIPPO ROLLER
+#  The roller is a real object (carryable.gd) that remembers its own water.
+#  The functions below are what the roller, BuildingManager and the new-day
+#  reset use to talk to Hope.
+# =====================================================================
+
+func can_carry_item() -> bool:
+	## False while Hope is already pushing something.
+	return held_item == null and not has_hippo_roller
+
+
+func get_carried_item() -> Carryable:
+	return held_item
+
+
+func equip_carryable(item: Carryable) -> void:
+	## Called by the roller right after it has been picked up.
+	held_item = item
+	max_water = item.capacity
+	current_water = item.water
+	if not item.water_changed.is_connected(_on_held_item_water_changed):
+		item.water_changed.connect(_on_held_item_water_changed)
+	equip_hippo_roller()                 # push animations, HUD signal, inventory entry
+	water_updated.emit(current_water)
+
+
+func release_carried_item(at: Vector2) -> void:
+	## Puts the item down at "at". It keeps its water.
+	## (Also used by BuildingManager so nothing is carried indoors.)
+	if held_item == null:
+		return
+	var item := held_item
+	_forget_held_item()
+	item.put_down(at)
+	_clear_roller_state()
+
+
+func on_carryable_reset(item) -> void:
+	## The new-day reset took the item away from Hope.
+	if item == held_item:
+		_forget_held_item()
+		_clear_roller_state()
+
+
+func _forget_held_item() -> void:
+	if held_item != null and is_instance_valid(held_item):
+		if held_item.water_changed.is_connected(_on_held_item_water_changed):
+			held_item.water_changed.disconnect(_on_held_item_water_changed)
+	held_item = null
+
+
+func _on_held_item_water_changed(amount: float) -> void:
+	current_water = amount
+	water_updated.emit(amount)
+
+
+func _clear_roller_state() -> void:
+	has_hippo_roller = false
+	hippo_roller_dropped.emit()
+	
+	# Find the menu and remove the item from the inventory
+	var menu = get_tree().get_first_node_in_group("GameMenu")
+	if menu != null:
+		if menu.has_method("remove_item"):
+			menu.remove_item("Hippo Roller")
+	
+	current_water = 0.0
+	water_updated.emit(current_water)
+
+
+func _restore_held_roller(saved_water: float, wanted_id: String = "") -> void:
+	## After loading a save that says Hope was holding a roller.
+	## With several rollers, wanted_id says which one (saves made before item_id
+	## existed have no id, so the first free roller is used).
+	for item in get_tree().get_nodes_in_group("carryable"):
+		var roller := item as HippoRoller
+		if roller == null or roller.is_carried:
+			continue
+		if wanted_id != "" and roller.item_id != wanted_id:
+			continue
+		if roller.pick_up(self):
+			roller.set_water(saved_water)
+			equip_carryable(roller)
+			return
+	# No roller object in the level: fall back to the old behaviour
+	push_warning("Saved game says Hope held a hippo roller, but there is no free roller in the level.")
+	equip_hippo_roller()
+	current_water = saved_water
+	water_updated.emit(current_water)
+
+
 func equip_hippo_roller() -> void:
 	has_hippo_roller = true
 	hippo_roller_equipped.emit()
@@ -264,22 +362,23 @@ func equip_hippo_roller() -> void:
 			menu.add_item(hippo_roller_item_data)
 
 func drop_hippo_roller() -> void:
-	has_hippo_roller = false
-	hippo_roller_dropped.emit()
+	if held_item != null:
+		# Put the SAME roller down, so it keeps its water
+		release_carried_item(position + last_direction * 20)
+		return
 	
-	# Find the menu and remove the item from the inventory
-	var menu = get_tree().get_first_node_in_group("GameMenu")
-	if menu != null:
-		if menu.has_method("remove_item"):
-			menu.remove_item("Hippo Roller")
-	
-	# Spawn the roller back into the world
+	# A roller with no object behind it (for example from an old save): behave as before
+	_clear_roller_state()
 	var dropped_roller = hippo_roller_scene.instantiate()
 	dropped_roller.global_position = position + last_direction * 20 
 	get_parent().add_child(dropped_roller)
 
 func add_water(amount: float) -> void:
-	if has_hippo_roller:
+	if held_item != null:
+		# The roller keeps the water (and never holds more than its capacity)
+		held_item.add_water(amount)
+		print("DEBUG: Filled from water source! Current level: ", current_water)
+	elif has_hippo_roller:
 		# clampf prevents the water from ever going above max_water (90)
 		current_water = clampf(current_water + amount, 0.0, max_water)
 		
@@ -288,7 +387,10 @@ func add_water(amount: float) -> void:
 		print("DEBUG: Filled from water source! Current level: ", current_water)
 
 func pour_water(amount: float) -> void:
-	if has_hippo_roller:
+	if held_item != null:
+		held_item.remove_water(amount)
+		print("DEBUG: Poured water! Current water: ", current_water)
+	elif has_hippo_roller:
 		# Empty the roller, stopping at 0L
 		current_water = clampf(current_water - amount, 0.0, max_water)
 		water_updated.emit(current_water)

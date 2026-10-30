@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://crmyhmby7v043"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_fxuek"]
+[ext_resource type="Texture2D" uid="uid://dhl5nywxjm3n1" path="res://graphics/characters/charity/charity-single-frame.png" id="2_lco4v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dim7b"]
+atlas = ExtResource("2_lco4v")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0tkp7"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dim7b")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCCharity" unique_id=386603033 instance=ExtResource("1_fxuek")]
+npc_id = "charity"
+dialog_timeline = "charity_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_0tkp7")
+animation = &"single-frame"

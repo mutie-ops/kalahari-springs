@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dv1hnq8eftv4i"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_sevbg"]
+[ext_resource type="Texture2D" uid="uid://cdvihpkw40idw" path="res://graphics/characters/zulu/zulu-single-frame.png" id="2_2oig1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8ahg"]
+atlas = ExtResource("2_2oig1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pcphu"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8ahg")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCZulu" unique_id=386603033 instance=ExtResource("1_sevbg")]
+npc_id = "mama_zulu"
+dialog_timeline = "mama_zulu_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_pcphu")
+animation = &"single-frame"

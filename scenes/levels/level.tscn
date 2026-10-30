@@ -15,8 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://gxfhn8vu2d0l" path="res://scenes/ui/plant_info_container.tscn" id="10_rmjfq"]
 [ext_resource type="PackedScene" uid="uid://cmtd78wgmkmhx" path="res://graphics/objects/BoulderLrg01.tscn" id="10_tntks"]
 [ext_resource type="PackedScene" uid="uid://cagc4p07vimcf" path="res://graphics/objects/BoulderLrg02.tscn" id="11_b8i65"]
-[ext_resource type="Texture2D" uid="uid://cq7cqm7etrpd3" path="res://graphics/objects/bucket-empty.png" id="11_g4khr"]
-[ext_resource type="Texture2D" uid="uid://b00iunioqg14g" path="res://graphics/objects/bucket-full.png" id="12_jup16"]
 [ext_resource type="PackedScene" uid="uid://bxk6qs1umg0t6" path="res://graphics/objects/BoulderLrg03.tscn" id="12_nss4m"]
 [ext_resource type="Texture2D" uid="uid://da1u0rhfjt8a3" path="res://graphics/weather/drops.png" id="12_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://3wf6xxsms16g" path="res://graphics/objects/BoulderLrg04.tscn" id="13_shov2"]
@@ -57,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://davyn0wgvtb38" path="res://graphics/plants/tree-bramble-02.tres" id="42_shov2"]
 [ext_resource type="Texture2D" uid="uid://dcb1co4x0w5wr" path="res://graphics/plants/tree-sml-02.tres" id="49_8okjc"]
 [ext_resource type="Texture2D" uid="uid://cqi0gha147oso" path="res://graphics/structures/barn01.tres" id="51_g4khr"]
+[ext_resource type="PackedScene" uid="uid://2ano1peljhim" path="res://scenes/buildings/naledi_homestead.tscn" id="51_j04fl"]
 [ext_resource type="PackedScene" uid="uid://bhdcmdlrahxe2" path="res://scenes/buildings/hope_cottage.tscn" id="51_rp5kh"]
 [ext_resource type="Texture2D" uid="uid://dqjymfqo2kt1f" path="res://graphics/structures/barn2.tres" id="51_tntks"]
 [ext_resource type="Texture2D" uid="uid://btc27as3itnjj" path="res://graphics/structures/marketstalls.tres" id="52_8e6uo"]
@@ -68,15 +67,29 @@
 [ext_resource type="PackedScene" uid="uid://b6dy33lmbwerb" path="res://scenes/buildings/ezekiel_farm.tscn" id="58_g8t53"]
 [ext_resource type="PackedScene" uid="uid://bqxdc168vx8vg" path="res://scenes/buildings/seed_store.tscn" id="60_o3qm4"]
 [ext_resource type="PackedScene" uid="uid://cg7nsrpkq842b" path="res://scenes/buildings/gathering_tree.tscn" id="62_52vfo"]
+[ext_resource type="PackedScene" uid="uid://bwmfmshn0erse" path="res://scenes/characters/npc_naledi.tscn" id="62_d1svo"]
+[ext_resource type="PackedScene" uid="uid://1bg4rtwv50pa" path="res://scenes/characters/npc_amos.tscn" id="63_d1svo"]
 [ext_resource type="PackedScene" uid="uid://cdo1h5jj8ynfy" path="res://graphics/objects/BoulderSml02.tscn" id="63_jup16"]
-[ext_resource type="PackedScene" uid="uid://dj3ig64fcs2x0" path="res://graphics/characters/naledi/naledi_npc.tscn" id="65_hkrhu"]
-[ext_resource type="PackedScene" uid="uid://cy2edbfo5csix" path="res://scenes/levels/water_source.tscn" id="75_eli2t"]
+[ext_resource type="PackedScene" uid="uid://dqy8qa8lea06n" path="res://scenes/levels/spring_basin.tscn" id="63_rp5kh"]
+[ext_resource type="PackedScene" uid="uid://crmyhmby7v043" path="res://scenes/characters/npc_charity.tscn" id="64_tns0x"]
+[ext_resource type="PackedScene" uid="uid://djylhvatlglh8" path="res://scenes/characters/npc_dumi.tscn" id="65_eli2t"]
+[ext_resource type="PackedScene" uid="uid://kpcfw0hdbm12" path="res://scenes/characters/npc_ezekiel.tscn" id="66_nqnma"]
+[ext_resource type="PackedScene" uid="uid://cemcsbgjoy1p1" path="res://scenes/characters/npc_gogo.tscn" id="67_67naj"]
+[ext_resource type="PackedScene" uid="uid://csxh7a01ax1sq" path="res://scenes/characters/npc_lebo.tscn" id="68_g8t53"]
+[ext_resource type="PackedScene" uid="uid://djekbiu2rqevi" path="res://scenes/characters/npc_lindi.tscn" id="69_o3qm4"]
+[ext_resource type="PackedScene" uid="uid://dv1hnq8eftv4i" path="res://scenes/characters/npc_mama_zulu.tscn" id="70_52vfo"]
+[ext_resource type="PackedScene" uid="uid://bvh3sdy5138wk" path="res://scenes/characters/npc_petrus.tscn" id="71_3yo2f"]
+[ext_resource type="PackedScene" uid="uid://bx3np7siqxk8b" path="res://scenes/characters/npc_sipho.tscn" id="72_nmh5j"]
+[ext_resource type="PackedScene" uid="uid://dlq7bqion66rv" path="res://scenes/objects/water_bucket.tscn" id="72_ua33g"]
+[ext_resource type="PackedScene" uid="uid://dxkn3drlrpaqq" path="res://scenes/characters/npc_zanele.tscn" id="73_8d2x0"]
 [ext_resource type="AudioStream" uid="uid://p5sdcn7ohl81" path="res://audio/Moonlit Tavern Path.ogg" id="76_eli2t"]
 [ext_resource type="PackedScene" uid="uid://cdhsijl3l54ib" path="res://scenes/ui/hud.tscn" id="76_tns0x"]
 [ext_resource type="PackedScene" uid="uid://yi8boi7cwh13" path="res://scenes/objects/hippo_roller.tscn" id="77_rp5kh"]
 [ext_resource type="PackedScene" uid="uid://cmy02oogrp77k" path="res://scenes/ui/quest_hud.tscn" id="78_d1svo"]
 [ext_resource type="Script" uid="uid://c2raltmk3kolp" path="res://debug/debug_panel_toggle.gd" id="81_67naj"]
 [ext_resource type="Script" uid="uid://k53ksiw77uvg" path="res://debug/state_editor_panel.gd" id="81_nqnma"]
+[ext_resource type="Script" uid="uid://ova1ebuaq7bs" path="res://scripts/npc_route.gd" id="89_j04fl"]
+[ext_resource type="Script" uid="uid://c76qffxbeo6xr" path="res://scripts/path_point.gd" id="90_dv6lw"]
 
 [sub_resource type="Gradient" id="Gradient_ouxo3"]
 offsets = PackedFloat32Array(0, 0.294849, 0.4777975, 1)
@@ -86,30 +99,6 @@ colors = PackedColorArray(0.92941177, 0.8627451, 0.8156863, 1, 1, 1, 1, 1, 1, 1,
 _limits = [-30.0, 0.52996475, 0.0, 1.0]
 _data = [Vector2(0.0007107407, -14.83148), 0.0, 0.0, 0, 0, Vector2(0.26723528, -8.258118), 0.0, 0.0, 0, 0, Vector2(0.7078892, -8.359246), 0.0, 0.0, 0, 0, Vector2(1, -27.371433), 0.0, 0.0, 0, 0]
 point_count = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eli2t"]
-bg_color = Color(0.08627451, 0.2901961, 0.1764706, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.85490197, 0.7254902, 0.53333336, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqnma"]
-bg_color = Color(1.1551381e-06, 0.6486348, 0.89971495, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c8ctg"]
 texture = ExtResource("2_4ab0e")
@@ -1376,6 +1365,30 @@ gravity = Vector3(0, 0, 0)
 anim_speed_min = 0.39999998
 anim_speed_max = 2.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eli2t"]
+bg_color = Color(0.08627451, 0.2901961, 0.1764706, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.85490197, 0.7254902, 0.53333336, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqnma"]
+bg_color = Color(1.1551381e-06, 0.6486348, 0.89971495, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="Theme" id="Theme_67naj"]
 default_font_size = 8
 
@@ -1387,28 +1400,6 @@ script = ExtResource("1_urvlt")
 daytime_color = SubResource("Gradient_ouxo3")
 rain_color = Color(0.8156863, 0.8156863, 0.8156863, 1)
 volume_curve = SubResource("Curve_4ab0e")
-
-[node name="WaterHUD" type="CanvasLayer" parent="." unique_id=1103266661]
-visible = false
-script = ExtResource("2_nqnma")
-
-[node name="WaterMeter" type="ProgressBar" parent="WaterHUD" unique_id=1129608243]
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -35.0
-offset_top = 244.0
-offset_right = -5.0
-offset_bottom = -276.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_eli2t")
-theme_override_styles/fill = SubResource("StyleBoxFlat_nqnma")
-value = 50.0
-fill_mode = 3
-show_percentage = false
-script = ExtResource("2_eli2t")
 
 [node name="GameMenuRoot" parent="." unique_id=1537923219 instance=ExtResource("2_l4bmn")]
 
@@ -1454,15 +1445,7 @@ z_index = 6
 y_sort_enabled = true
 
 [node name="Player" parent="Objects" unique_id=1465421677 instance=ExtResource("2_b2cq8")]
-position = Vector2(263, 313)
-
-[node name="BucketEmpty" type="Sprite2D" parent="Objects" unique_id=1654854227]
-position = Vector2(-1, 594)
-texture = ExtResource("11_g4khr")
-
-[node name="BucketFull" type="Sprite2D" parent="Objects" unique_id=1060130190]
-position = Vector2(13, 606)
-texture = ExtResource("12_jup16")
+position = Vector2(201, 345)
 
 [node name="BoulderLrg01" parent="Objects" unique_id=1818154890 instance=ExtResource("10_tntks")]
 position = Vector2(535, 435)
@@ -1626,7 +1609,13 @@ position = Vector2(-354, -91)
 position = Vector2(683, 515)
 
 [node name="Gogo Homestead" parent="Objects" unique_id=2032653351 instance=ExtResource("54_eli2t")]
-position = Vector2(-155, 272)
+position = Vector2(-531, 103)
+
+[node name="Naledi Homestead" parent="Objects" unique_id=784503606 instance=ExtResource("51_j04fl")]
+position = Vector2(-202, 244)
+
+[node name="BucketNaledi_Home" type="Marker2D" parent="Objects/Naledi Homestead" unique_id=1956751046]
+position = Vector2(-19, 74)
 
 [node name="Barn1" type="Sprite2D" parent="Objects" unique_id=1276990559]
 position = Vector2(-349, 248)
@@ -1655,8 +1644,136 @@ texture = ExtResource("52_8e6uo")
 [node name="GatheringTree" parent="Objects" unique_id=56487726 instance=ExtResource("62_52vfo")]
 position = Vector2(385, 490)
 
-[node name="NalediNPC" parent="Objects" unique_id=386603033 instance=ExtResource("65_hkrhu")]
-position = Vector2(133, 400)
+[node name="SpringBasin" parent="Objects" unique_id=547010072 instance=ExtResource("63_rp5kh")]
+position = Vector2(790, 247)
+
+[node name="NPCNaledi" parent="Objects" unique_id=386603033 instance=ExtResource("62_d1svo")]
+position = Vector2(132, 396)
+walk_speed = 30.0
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+
+[node name="NPCAmos" parent="Objects" unique_id=1571112727 instance=ExtResource("63_d1svo")]
+position = Vector2(133, 526)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCCharity" parent="Objects" unique_id=720417341 instance=ExtResource("64_tns0x")]
+position = Vector2(189, 526)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCDumi" parent="Objects" unique_id=1332256094 instance=ExtResource("65_eli2t")]
+position = Vector2(249, 528)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCEzekiel" parent="Objects" unique_id=803280956 instance=ExtResource("66_nqnma")]
+position = Vector2(224, 611)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCGogo" parent="Objects" unique_id=1871052089 instance=ExtResource("67_67naj")]
+position = Vector2(276, 621)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCLebo" parent="Objects" unique_id=882292523 instance=ExtResource("68_g8t53")]
+position = Vector2(348, 621)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCLindi" parent="Objects" unique_id=291964445 instance=ExtResource("69_o3qm4")]
+position = Vector2(394, 540)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCZulu" parent="Objects" unique_id=509842223 instance=ExtResource("70_52vfo")]
+position = Vector2(322, 546)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCPetrus" parent="Objects" unique_id=707809199 instance=ExtResource("71_3yo2f")]
+position = Vector2(407, 618)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCSipho" parent="Objects" unique_id=1823333599 instance=ExtResource("72_nmh5j")]
+position = Vector2(157, 600)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="NPCZanele" parent="Objects" unique_id=835662903 instance=ExtResource("73_8d2x0")]
+position = Vector2(436, 573)
+walk_speed = 30.0
+start_facing = "down"
+starting_carry = 0
+player_group = &"hope"
+talk_delay = 0.3
+pickup_reach = 48.0
+door_drop_offset = Vector2(16, 8)
+
+[node name="BucketNaledi" parent="Objects" unique_id=392879287 node_paths=PackedStringArray("home_marker") instance=ExtResource("72_ua33g")]
+position = Vector2(-171, 357)
+home_marker = NodePath("../Naledi Homestead/BucketNaledi_Home")
+capacity = 25.0
+
+[node name="BucketGogo" parent="Objects" unique_id=1235124795 instance=ExtResource("72_ua33g")]
+position = Vector2(-12, 571)
+item_id = "bucket_gogo"
+capacity = 25.0
 
 [node name="Overlay" type="Node2D" parent="." unique_id=114813407]
 metadata/_edit_group_ = true
@@ -1693,9 +1810,6 @@ process_material = SubResource("ParticleProcessMaterial_8iyoh")
 [node name="MachinePreviewSprite" type="Sprite2D" parent="Overlay" unique_id=1287679009]
 texture = ExtResource("18_qhnmj")
 
-[node name="WaterSource" parent="." unique_id=547010072 instance=ExtResource("75_eli2t")]
-position = Vector2(790, 256)
-
 [node name="Timers" type="Node" parent="." unique_id=1329007673]
 
 [node name="DayTimer" type="Timer" parent="Timers" unique_id=2127094519]
@@ -1706,42 +1820,6 @@ autostart = true
 [node name="BlobTimer" type="Timer" parent="Timers" unique_id=1617614721]
 wait_time = 20.0
 autostart = true
-
-[node name="BlobSpawnPositions" type="Node2D" parent="." unique_id=1353853652]
-metadata/_edit_lock_ = true
-
-[node name="Marker2D" type="Marker2D" parent="BlobSpawnPositions" unique_id=1567510016]
-position = Vector2(455, 194)
-
-[node name="Marker2D2" type="Marker2D" parent="BlobSpawnPositions" unique_id=908453883]
-position = Vector2(575, 212)
-
-[node name="Marker2D3" type="Marker2D" parent="BlobSpawnPositions" unique_id=1699474939]
-position = Vector2(656, 311)
-
-[node name="Marker2D4" type="Marker2D" parent="BlobSpawnPositions" unique_id=392701013]
-position = Vector2(687, 409)
-
-[node name="Marker2D5" type="Marker2D" parent="BlobSpawnPositions" unique_id=60689569]
-position = Vector2(633, 488)
-
-[node name="Marker2D6" type="Marker2D" parent="BlobSpawnPositions" unique_id=895928923]
-position = Vector2(595, 570)
-
-[node name="Marker2D7" type="Marker2D" parent="BlobSpawnPositions" unique_id=385954870]
-position = Vector2(342, 643)
-
-[node name="Marker2D8" type="Marker2D" parent="BlobSpawnPositions" unique_id=1319434974]
-position = Vector2(33, 641)
-
-[node name="Marker2D9" type="Marker2D" parent="BlobSpawnPositions" unique_id=665944829]
-position = Vector2(-43, 482)
-
-[node name="Marker2D10" type="Marker2D" parent="BlobSpawnPositions" unique_id=2076615324]
-position = Vector2(7, 203)
-
-[node name="Marker2D11" type="Marker2D" parent="BlobSpawnPositions" unique_id=591092782]
-position = Vector2(292, 185)
 
 [node name="Music" type="Node" parent="." unique_id=1998086291]
 
@@ -1755,7 +1833,29 @@ mix_target = 1
 stream = ExtResource("21_p62il")
 
 [node name="HippoRoller" parent="." unique_id=338558915 groups=["hippo_roller_item"] instance=ExtResource("77_rp5kh")]
-position = Vector2(382, 160)
+position = Vector2(49, 453)
+
+[node name="WaterHUD" type="CanvasLayer" parent="." unique_id=1103266661]
+visible = false
+script = ExtResource("2_nqnma")
+
+[node name="WaterMeter" type="ProgressBar" parent="WaterHUD" unique_id=1129608243]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = 244.0
+offset_right = -5.0
+offset_bottom = 250.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_eli2t")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nqnma")
+value = 50.0
+fill_mode = 3
+show_percentage = false
+script = ExtResource("2_eli2t")
 
 [node name="HUD" parent="." unique_id=1553390180 instance=ExtResource("76_tns0x")]
 
@@ -1808,6 +1908,42 @@ scale = Vector2(2, 2)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Routes" type="Node2D" parent="." unique_id=1844072114]
+
+[node name="naledi_to_naledi_homestead" type="Node2D" parent="Routes" unique_id=58098609]
+script = ExtResource("89_j04fl")
+metadata/_custom_type_script = "uid://ova1ebuaq7bs"
+
+[node name="PathPoint1" type="Marker2D" parent="Routes/naledi_to_naledi_homestead" unique_id=763457136 node_paths=PackedStringArray("item")]
+position = Vector2(57, 445)
+script = ExtResource("90_dv6lw")
+pause_seconds = 1.0
+action = "pick_up_item"
+carry = 3
+item = NodePath("../../../HippoRoller")
+metadata/_custom_type_script = "uid://c76qffxbeo6xr"
+
+[node name="PathPoint2" type="Marker2D" parent="Routes/naledi_to_naledi_homestead" unique_id=1371397120 node_paths=PackedStringArray("item")]
+position = Vector2(-125, 411)
+script = ExtResource("90_dv6lw")
+pause_seconds = 1.0
+face_after = "up"
+action = "put_down_item"
+carry = 3
+item = NodePath("../../../HippoRoller")
+drop_offset = Vector2(10, 0)
+metadata/_custom_type_script = "uid://c76qffxbeo6xr"
+
+[node name="PathPoint3" type="Marker2D" parent="Routes/naledi_to_naledi_homestead" unique_id=174788096 node_paths=PackedStringArray("item")]
+position = Vector2(-162, 357)
+script = ExtResource("90_dv6lw")
+pause_seconds = 1.0
+face_after = "up"
+action = "pick_up_item"
+carry = 1
+item = NodePath("../../../Objects/BucketNaledi")
+metadata/_custom_type_script = "uid://c76qffxbeo6xr"
 
 [connection signal="build" from="Objects/Player" to="." method="_on_player_build"]
 [connection signal="close_shop" from="Objects/Player" to="." method="_on_player_close_shop"]

@@ -13,6 +13,7 @@ const MESSAGE_SECONDS := 2.5         # how long a message stays
 const RETRIGGER_COOLDOWN_MSEC := 1500
 const HOME_BUILDING_ID := "homestead_interior"    # the door Hope wakes up behind after a forced bedtime
 const DEBUG_KEYS := true             # set to false before shipping
+const CARRIED_ITEM_DROP_OFFSET := Vector2(16, 8)
 
 # ---- Internals --------------------------------------------------------------
 @onready var fade_rect: ColorRect = $FadeLayer/FadeRect
@@ -86,6 +87,7 @@ func _enter(door, player) -> void:
 	_current_door = door
 	_player = player
 	_player.frozen = true
+	_leave_carried_item_outside(door)
 	await _fade(1.0)
 
 	# Build the interior the first time, then reuse it (so chests, etc. keep their contents)
@@ -204,7 +206,20 @@ func npc_exit(npc, building_id: String) -> bool:
 	npc.global_position = door.get_exit_position()
 	npc.velocity = Vector2.ZERO
 	return true
+	
+# =============================================================================
+#  LEAVE CARRIED ITEM OUTSIDE.
+# =============================================================================
 
+func _leave_carried_item_outside(door) -> void:
+	## Anything the player is pushing or carrying stays outside the door.
+	if not _player.has_method("get_carried_item"):
+		return
+	var item = _player.get_carried_item()
+	if item == null:
+		return
+	_player.release_carried_item(door.get_exit_position() + CARRIED_ITEM_DROP_OFFSET)
+	show_message("You leave the %s outside." % item.display_name())
 
 # =============================================================================
 #  CAMERA — fixed inside the room, normal outside

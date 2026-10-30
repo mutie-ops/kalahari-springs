@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dyj3nwcnttgm6"]
+
+[ext_resource type="Script" uid="uid://cmb5jne3fw5oh" path="res://scripts/npc_base.gd" id="1_jbf6t"]
+[ext_resource type="SpriteFrames" uid="uid://c73b3k5m7d1hs" path="res://graphics/characters/generic/generic_frames.tres" id="2_2ehiv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7foy"]
+size = Vector2(12, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57ebd"]
+radius = 15.0
+
+[node name="NPC" type="CharacterBody2D" unique_id=386603033 groups=["npc"]]
+collision_layer = 8
+script = ExtResource("1_jbf6t")
+npc_id = null
+dialog_timeline = null
+walk_speed = null
+start_facing = null
+starting_carry = null
+player_group = null
+talk_delay = null
+pickup_reach = null
+door_drop_offset = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87035413]
+sprite_frames = ExtResource("2_2ehiv")
+animation = &"walk_right"
+
+[node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=467225075]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_x7foy")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1888674885]
+collision_layer = 0
+collision_mask = 2
+
+[node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea" unique_id=520613713]
+shape = SubResource("CircleShape2D_57ebd")

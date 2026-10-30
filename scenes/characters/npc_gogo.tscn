@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cemcsbgjoy1p1"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_1hjtl"]
+[ext_resource type="Texture2D" uid="uid://bp6aqni2eq8sf" path="res://graphics/characters/gogo/gogo-single-frame.png" id="2_lg18k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vstei"]
+atlas = ExtResource("2_lg18k")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wkooo"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vstei")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCGogo" unique_id=386603033 instance=ExtResource("1_1hjtl")]
+npc_id = "gogo"
+dialog_timeline = "gogo_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_wkooo")
+animation = &"single-frame"

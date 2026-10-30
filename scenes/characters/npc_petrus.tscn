@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bvh3sdy5138wk"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_w4eet"]
+[ext_resource type="Texture2D" uid="uid://bogtweyu1u83w" path="res://graphics/characters/petrus/petrus-single-frame.png" id="2_hhhmd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jyis"]
+atlas = ExtResource("2_hhhmd")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22wwg"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jyis")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCPetrus" unique_id=386603033 instance=ExtResource("1_w4eet")]
+npc_id = "petrus"
+dialog_timeline = "petrus_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_22wwg")
+animation = &"single-frame"

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://1bg4rtwv50pa"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_45pd5"]
+[ext_resource type="Texture2D" uid="uid://bufuwcj3ofp68" path="res://graphics/characters/amos/amos-single-frame.png" id="2_ueapn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peyop"]
+atlas = ExtResource("2_ueapn")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_teyv1"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peyop")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCAmos" unique_id=386603033 instance=ExtResource("1_45pd5")]
+npc_id = "amos"
+dialog_timeline = "amos_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_teyv1")
+animation = &"single-frame"

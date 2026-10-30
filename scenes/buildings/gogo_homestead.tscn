@@ -12,7 +12,7 @@ script = ExtResource("2_gpc8m")
 [node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("2_oo4if")]
 position = Vector2(7, 34)
 building_id = "gogo_homestead"
-display_name = "Gogo's Home"
+display_name = "Gogo Homestead"
 interior_scene = ExtResource("3_gpc8m")
 access = 2
 host_npc = "gogo"

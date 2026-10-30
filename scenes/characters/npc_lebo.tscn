@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://csxh7a01ax1sq"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_ng03x"]
+[ext_resource type="Texture2D" uid="uid://m3x0qsjl6sa8" path="res://graphics/characters/lebo/lebo-single-frame.png" id="2_i7e0n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1f72"]
+atlas = ExtResource("2_i7e0n")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8eais"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1f72")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCLebo" unique_id=386603033 instance=ExtResource("1_ng03x")]
+npc_id = "lebo"
+dialog_timeline = "lebo_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_8eais")
+animation = &"single-frame"

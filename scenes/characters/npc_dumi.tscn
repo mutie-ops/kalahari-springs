@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://djylhvatlglh8"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_bs1gb"]
+[ext_resource type="Texture2D" uid="uid://gk2vk2tyb88y" path="res://graphics/characters/dumi/dumi-single-frame.png" id="2_yep1v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6ilk"]
+atlas = ExtResource("2_yep1v")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjd4w"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6ilk")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCDumi" unique_id=386603033 instance=ExtResource("1_bs1gb")]
+npc_id = "dumi"
+dialog_timeline = "dumi_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_qjd4w")
+animation = &"single-frame"

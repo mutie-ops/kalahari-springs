@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dj3ig64fcs2x0"]
 
-[ext_resource type="Script" uid="uid://c2gxr24g268ly" path="res://scenes/levels/naledi_npc.gd" id="1_hjxb7"]
+[ext_resource type="Script" uid="uid://c2gxr24g268ly" path="res://scenes/characters/naledi_npc.gd" id="1_hjxb7"]
 [ext_resource type="Texture2D" uid="uid://darepyjfjpqd5" path="res://graphics/characters/naledi/naledi_idle_walk.png" id="2_spbj1"]
 [ext_resource type="Texture2D" uid="uid://brvg3px7vj6d6" path="res://graphics/characters/naledi/naledi-carry-empty.png" id="3_x7foy"]
 [ext_resource type="Texture2D" uid="uid://cfk5e8q4uqtwl" path="res://graphics/characters/naledi/naledi-carry-full.png" id="4_68xgb"]
@@ -1057,26 +1057,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mc6h2"]
-radius = 7.0
-height = 26.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7foy"]
+size = Vector2(12, 4)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57ebd"]
 radius = 21.023796
 
-[node name="NalediNPC" type="CharacterBody2D" unique_id=386603033]
+[node name="NalediNPC" type="CharacterBody2D" unique_id=386603033 groups=["npc"]]
+collision_layer = 8
 script = ExtResource("1_hjxb7")
+dialog_timeline = "naledi_router"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=87035413]
 sprite_frames = SubResource("SpriteFrames_dwlrb")
-animation = &"walk_up_bucket_full"
+animation = &"idle_left"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=467225075]
-shape = SubResource("CapsuleShape2D_mc6h2")
+[node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=467225075]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_x7foy")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1888674885 groups=["Layer 2 / Mask 2", "Player", "hope"]]
-collision_layer = 5
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1888674885]
+collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=520613713]
+[node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea" unique_id=520613713]
 shape = SubResource("CircleShape2D_57ebd")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://2ano1peljhim"]
+
+[ext_resource type="Texture2D" uid="uid://lfab462nw2dx" path="res://graphics/structures/homestead01.tres" id="1_npi0g"]
+[ext_resource type="Script" uid="uid://cdo70tl4pwctn" path="res://scripts/building.gd" id="2_1i6xf"]
+[ext_resource type="PackedScene" uid="uid://dxcw35sw0owvd" path="res://scenes/systems/building_door.tscn" id="3_817y8"]
+[ext_resource type="PackedScene" uid="uid://dy4kcvt5nhmwf" path="res://scenes/interiors/interior_placeholder.tscn" id="4_5fd8t"]
+
+[node name="Naledi Homestead" type="Sprite2D" unique_id=784503606]
+texture = ExtResource("1_npi0g")
+script = ExtResource("2_1i6xf")
+
+[node name="BuildingDoor" parent="." unique_id=112051161 instance=ExtResource("3_817y8")]
+position = Vector2(7, 34)
+building_id = "naledi_homestead"
+display_name = "Naledi & Lindi Home"
+interior_scene = ExtResource("4_5fd8t")
+access = 2
+host_npc = "naledi"
+required_hearts = 1
+trust_message = "Naledi will welcome you into her home once you gain more trust."
+
+[node name="Collision" type="StaticBody2D" parent="." unique_id=282213267]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision" unique_id=463462886]
+build_mode = 1
+polygon = PackedVector2Array(-9, 57, -43, 56, -44, 47, -71, 45, -65, 3, 73, 3, 72, 56, 22, 55, 22, 35, -9, 35)

@@ -1798,7 +1798,7 @@ node_connections = [&"output", 0, &"FishBlend", &"ToolOneShot", 0, &"MoveStateMa
 [node name="Player" type="CharacterBody2D" unique_id=1939110972 groups=["Layer 2 / Mask 2", "Player", "hope"]]
 y_sort_enabled = true
 collision_layer = 2
-collision_mask = 5
+collision_mask = 13
 script = ExtResource("2_76oj4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1386973280]

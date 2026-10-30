@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://djekbiu2rqevi"]
+
+[ext_resource type="PackedScene" uid="uid://dyj3nwcnttgm6" path="res://scenes/characters/npc_base.tscn" id="1_db5ca"]
+[ext_resource type="Texture2D" uid="uid://cn1hog8y21aod" path="res://graphics/characters/lindi/lindi-single-frame.png" id="2_61tyw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvdtp"]
+atlas = ExtResource("2_61tyw")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_salyd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvdtp")
+}],
+"loop": true,
+"name": &"single-frame",
+"speed": 5.0
+}]
+
+[node name="NPCLindi" unique_id=386603033 instance=ExtResource("1_db5ca")]
+npc_id = "lindi"
+dialog_timeline = "lindi_router"
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=87035413]
+sprite_frames = SubResource("SpriteFrames_salyd")
+animation = &"single-frame"
