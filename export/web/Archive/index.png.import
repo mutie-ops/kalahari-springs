@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwp07harm8a75"
-path="res://.godot/imported/hope-splash.svg-3f231268742f5a23236377f878dfb633.ctex"
+uid="uid://gr5vutoncf8d"
+path="res://.godot/imported/index.png-e22e774cc21b5a819c2dbaadde6e8c99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://export/web/hope-splash.svg"
-dest_files=["res://.godot/imported/hope-splash.svg-3f231268742f5a23236377f878dfb633.ctex"]
+source_file="res://export/web/Archive/index.png"
+dest_files=["res://.godot/imported/index.png-e22e774cc21b5a819c2dbaadde6e8c99.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

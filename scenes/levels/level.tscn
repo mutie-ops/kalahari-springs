@@ -1445,7 +1445,7 @@ z_index = 6
 y_sort_enabled = true
 
 [node name="Player" parent="Objects" unique_id=1465421677 instance=ExtResource("2_b2cq8")]
-position = Vector2(201, 345)
+position = Vector2(535, 38)
 
 [node name="BoulderLrg01" parent="Objects" unique_id=1818154890 instance=ExtResource("10_tntks")]
 position = Vector2(535, 435)
@@ -1696,7 +1696,7 @@ pickup_reach = 48.0
 door_drop_offset = Vector2(16, 8)
 
 [node name="NPCGogo" parent="Objects" unique_id=1871052089 instance=ExtResource("67_67naj")]
-position = Vector2(276, 621)
+position = Vector2(594, 11)
 walk_speed = 30.0
 start_facing = "down"
 starting_carry = 0

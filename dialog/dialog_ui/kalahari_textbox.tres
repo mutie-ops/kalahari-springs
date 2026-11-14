@@ -6,3 +6,4 @@
 content_margin_left = 35.0
 content_margin_top = 70.0
 texture = ExtResource("1_fufmb")
+texture_margin_right = 30.0

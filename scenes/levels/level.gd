@@ -38,7 +38,7 @@ const MACHINE_PREVIEW_TEXTURES = {
 func _ready() -> void:
 	# 1. CUTSCENE INTERCEPT: If it's a new game, jump to the cutscene immediately
 	if not GameState.first_launch_complete:
-		get_tree().change_scene_to_file("res://cutscenes/hope_arrives/CutsceneHopeArrives.tscn")
+		get_tree().change_scene_to_file("res://scenes/levels/CutsceneHopeArrives.tscn")
 		return # Stop running the rest of _ready()		
 
 	# 2. NORMAL STARTUP: This only runs if the cutscene is already finished

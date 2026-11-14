@@ -1,11 +1,11 @@
-extends Node2D
+extends SubViewportContainer
 
 # ── Node references ──────────────────────────
-@onready var hope: Sprite2D = $SubViewportContainer/SubViewport/Hope
-@onready var bus_prop: Sprite2D = $SubViewportContainer/SubViewport/BusProp
-@onready var bg_landscape: Sprite2D = $SubViewportContainer/SubViewport/BG_Landscape
-@onready var bg_bus_doors: Sprite2D = $SubViewportContainer/SubViewport/BG_BusDoors
-@onready var photo_closeup: Sprite2D = $SubViewportContainer/SubViewport/PhotoCloseup
+@onready var hope: Sprite2D = $SubViewport/Hope
+@onready var bus_prop: Sprite2D = $SubViewport/BusProp
+@onready var bg_landscape: Sprite2D = $SubViewport/BG_Landscape
+@onready var bg_bus_doors: Sprite2D = $SubViewport/BG_BusDoors
+@onready var photo_closeup: Sprite2D = $SubViewport/PhotoCloseup
 @onready var anim: AnimationPlayer = $AnimationPlayer
 # @onready var bus_audio: AudioStreamPlayer = $AudioStreamPlayer # Uncomment when you add audio
 
@@ -19,7 +19,7 @@ extends Node2D
 @export var portrait_holds_photo: Texture2D
 
 func _ready() -> void:
-	bg_landscape.visible = false
+	bg_landscape.visible = true
 	photo_closeup.visible = false
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -27,7 +27,7 @@ func _ready() -> void:
 	# Play the opening staging animation, then start the timeline
 	anim.play("scene_open")
 	await anim.animation_finished
-	Dialogic.start("HopeArrives")
+	Dialogic.start("hope_arrives")
 
 func _on_dialogic_signal(arg: String) -> void:
 	match arg:
@@ -37,8 +37,8 @@ func _on_dialogic_signal(arg: String) -> void:
 			if portrait_look_left: hope.texture = portrait_look_left
 		"hope_musing":
 			if portrait_musing: hope.texture = portrait_musing
-		"hope_warm":
-			if portrait_warm: hope.texture = portrait_warm
+		"hope_neutral":
+			if portrait_neutral: hope.texture = portrait_neutral
 		"hope_determined":
 			if portrait_determined: hope.texture = portrait_determined
 		"hope_holds_photo":
@@ -59,4 +59,5 @@ func _show_photo_closeup() -> void:
 
 func _end_cutscene() -> void:
 	GameState.first_launch_complete = true
-	get_tree().change_scene_to_file("res://scenes/world/World.tscn")
+	SaveManager.save_game(0)
+	get_tree().change_scene_to_file("res://scenes/levels/level.tscn")

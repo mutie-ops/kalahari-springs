@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://v6r642myljwv"]
+
+[ext_resource type="PackedScene" path="res://dialog/CustomKsDefault/custom_ks_default.tscn" id="1_h65xh"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_01641"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="11_un6gr"]
+
+[sub_resource type="Resource" id="Resource_s04g6"]
+script = ExtResource("2_01641")
+scene = ExtResource("1_h65xh")
+
+[resource]
+script = ExtResource("11_un6gr")
+name = "KS-Default"
+layer_info = {
+"": SubResource("Resource_s04g6")
+}
+metadata/_latest_layer = ""

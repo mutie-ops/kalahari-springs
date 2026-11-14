@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://dljn33yrk5tna"]
+
+[ext_resource type="PackedScene" path="res://dialog/dialog_ui/CustomKalahariDefault/custom_kalahari_default.tscn" id="1_ji5i8"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_xehm8"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_ji5i8"]
+
+[sub_resource type="Resource" id="Resource_ji5i8"]
+script = ExtResource("1_xehm8")
+scene = ExtResource("1_ji5i8")
+
+[resource]
+script = ExtResource("2_ji5i8")
+name = "kalahari_default"
+layer_info = {
+"": SubResource("Resource_ji5i8")
+}
+metadata/_latest_layer = ""
