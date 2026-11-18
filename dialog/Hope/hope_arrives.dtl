@@ -3,7 +3,7 @@
 # ─────────────────────────────────────────────
 
 # Style is set to CutsceneThought globally
-[style name="CutsceneThought"]
+[style name="dialog-style-2"]
 
 # ── SHOT 1: Hope at bus doors ─────────────────
 
@@ -14,7 +14,7 @@
 # its "scene_open" animation before this timeline starts.
 
 # Signal: tell the scene to play Hope's "look right" animation
-[wait time="3.0"]
+[wait time="0.5"]
 [signal arg="bus_depart"]
 [signal arg="look_right"]
 [wait time="3.5"]
@@ -41,7 +41,7 @@ Hope: Let the adventure begin!
 [signal arg="hope_neutral"]
 [wait time="2.0"]
 [signal arg="hope_musing"]
-[wait time="1.5"]
+[wait time="1.0"]
 
 # ── SHOT 2: Camera cuts to photo closeup ──────
 [signal arg="hope_holds_photo"]

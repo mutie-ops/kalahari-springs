@@ -20,7 +20,7 @@ extends SubViewportContainer
 
 func _ready() -> void:
 	bg_landscape.visible = true
-	photo_closeup.visible = false
+	# photo_closeup.visible = false
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	

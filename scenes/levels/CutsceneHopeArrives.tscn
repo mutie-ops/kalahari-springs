@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://t66uqwje5p12" path="res://cutscenes/hope_arrives/art/hope-neutral.png" id="2_7hd0a"]
 [ext_resource type="Texture2D" uid="uid://t37myi4jd7cl" path="res://cutscenes/hope_arrives/art/bus-doors-open-overlay.png" id="3_5ef15"]
 [ext_resource type="Texture2D" uid="uid://bpubki27d82ch" path="res://cutscenes/hope_arrives/art/photo_closeup.png" id="6_xlhvv"]
+[ext_resource type="AudioStream" uid="uid://beiv6e2yrks3" path="res://audio/bus-pulling-away.ogg" id="7_k80kn"]
 [ext_resource type="Texture2D" uid="uid://bvy1j0br0t1e5" path="res://cutscenes/hope_arrives/art/bus-body_doors-closed.png" id="9_cahmt"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cahmt"]
@@ -39,7 +40,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(77, 180)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -65,11 +66,23 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SubViewport/PhotoCloseup:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(320, 180)]
+}
 
 [sub_resource type="Animation" id="Animation_o283i"]
 resource_name = "bus_exit"
-length = 3.17
-step = 3.0
+length = 9.0
+step = 0.33333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -77,7 +90,7 @@ tracks/0/path = NodePath("SubViewport/BusProp:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.001, 1.1866667, 2.96),
+"times": PackedFloat32Array(0.001, 3, 6),
 "transitions": PackedFloat32Array(1, 1, 3.7321339),
 "update": 0,
 "values": [Vector2(77, 180), Vector2(77, 180), Vector2(1200, 180)]
@@ -101,11 +114,26 @@ tracks/2/path = NodePath("SubViewport/BG_BusDoors:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.0009999999, 0.36),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.6666666, 2.3333333),
+"transitions": PackedFloat32Array(2.4622889, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 1.3647,
+"start_offset": 0.0,
+"stream": ExtResource("7_k80kn")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="Animation" id="Animation_q51gs"]
 resource_name = "scene_open"
@@ -113,7 +141,7 @@ length = 0.001
 
 [sub_resource type="Animation" id="Animation_byydq"]
 resource_name = "show_photo"
-length = 0.001
+length = 1.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -125,6 +153,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SubViewport/PhotoCloseup:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(320, 180)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r46le"]
@@ -161,6 +201,7 @@ position = Vector2(320, 180)
 texture = ExtResource("1_46yy0")
 
 [node name="BusProp" type="Sprite2D" parent="SubViewport" unique_id=1374973659]
+position = Vector2(77, 180)
 texture = ExtResource("9_cahmt")
 
 [node name="BG_BusDoors" type="Sprite2D" parent="SubViewport" unique_id=1568178653]
