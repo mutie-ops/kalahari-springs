@@ -35,7 +35,7 @@ Hope: I fondly remember family visits here as a child.
 [signal arg="hope_musing"]
 [wait time="1.5"]
 
-Hope: Now I have my grandmother's home to look after.
+Amos: Now I have my grandmother's home to look after.
 
 Hope: Let the adventure begin!
 [signal arg="hope_neutral"]
@@ -44,7 +44,7 @@ Hope: Let the adventure begin!
 [wait time="1.0"]
 
 # ── SHOT 2: Camera cuts to photo closeup ──────
-[signal arg="hope_holds_photo"]
+[signal arg="show_photo_closeup"]
 [wait time="2.0"]
 
 Hope: And now to find my grandmother's house.

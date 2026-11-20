@@ -20,7 +20,7 @@ extends SubViewportContainer
 
 func _ready() -> void:
 	bg_landscape.visible = true
-	# photo_closeup.visible = false
+	photo_closeup.visible = false
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
@@ -55,6 +55,8 @@ func _play_bus_departure() -> void:
 	anim.play("bus_exit")
 
 func _show_photo_closeup() -> void:
+	#photo_closeup.position = Vector2(620, 360)
+	photo_closeup.visible = true
 	anim.play("show_photo")
 
 func _end_cutscene() -> void:
